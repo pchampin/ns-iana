@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="link-relations">
   <title>Link Relations</title>
   <created>2005-08-26</created>
-  <updated>2024-09-13</updated>
+  <updated>2025-03-18</updated>
 
 <registry id="link-relations-1">
   <title>Link Relation Types</title>
@@ -37,6 +37,12 @@ using the <xref type="uri" data="https://github.com/protocol-registries/link-rel
     <value>amphtml</value>
     <description>Used to reference alternative content that uses the AMP profile of the HTML format.</description>
     <spec><xref type="uri" data="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/">AMP HTML</xref></spec>
+  </record>
+
+  <record date="2024-12-23">
+    <value>api-catalog</value>
+    <description>Refers to a list of APIs available from the publisher of the link context.</description>
+    <spec><xref type="draft" data="RFC-ietf-httpapi-api-catalog-08"/></spec>
   </record>
   
   <record>
@@ -160,6 +166,12 @@ using the <xref type="uri" data="https://github.com/protocol-registries/link-rel
     <spec><xref type="rfc" data="rfc5005"/></spec>
   </record>
   
+  <record date="2024-10-07" updated="2025-03-13">
+    <value>deprecation</value>
+    <description>Refers to documentation (intended for human consumption) about the deprecation of the link's context.</description>
+    <spec><xref type="rfc" data="rfc9745"/>, section 3</spec>
+  </record>
+
   <record>
     <value>describedby</value>
     <description>Refers to a resource providing information about the
@@ -285,9 +297,9 @@ using the <xref type="uri" data="https://github.com/protocol-registries/link-rel
     <note>This relation type was requested by Brett Slatkin.</note>
   </record>
   
-  <record date="2024-08-27">
+  <record date="2024-08-27" updated="2025-03-18">
     <value>ice-server</value>
-    <description>Conveys the STUN and TURN servers that can be used by an ICE Agent to establish a connection with a peer.</description>
+    <description>Conveys the STUN and TURN servers that can be used by an ICE agent to establish a connection with a peer.</description>
     <spec><xref type="draft" data="RFC-ietf-wish-whip-16"/></spec>
   </record>
 

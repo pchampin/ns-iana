@@ -6,9 +6,9 @@
 @prefix w: <https://solidproject.org/TR/wac#>.
 @prefix lin: <https://html.spec.whatwg.org/multipage/links.html#>.
 @prefix n0: <https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/>.
+@prefix html: <https://tools.ietf.org/html/>.
 @prefix htm: <https://www.w3.org/TR/html401/>.
 @prefix li: <http://www.w3.org/TR/2011/WD-html5-20110113/links.html#>.
-@prefix html: <https://tools.ietf.org/html/>.
 @prefix C2P: <https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#>.
 @prefix n1: <http://www.w3.org/TR/powder-dr/#>.
 @prefix web: <https://www.w3.org/TR/websub/>.
@@ -48,6 +48,12 @@
         "Used to reference alternative content that uses the AMP profile of the HTML format.";
     rd:label "amphtml";
     reg:spec [ reg:xref n0: ].
+:api-catalog
+    terms:date "2024-12-23"^^XML:date;
+    terms:description
+        "Refers to a list of APIs available from the publisher of the link context.";
+    rd:label "api-catalog";
+    reg:spec [ reg:xref html:RFC-ietf-httpapi-api-catalog-08 ].
 :appendix
     terms:description "Refers to an appendix.";
     rd:label "appendix";
@@ -164,6 +170,13 @@
       item(s) in a collection of resources.""";
     rd:label "current";
     reg:spec [ reg:xref html:rfc5005 ].
+:deprecation
+    terms:date "2024-10-07"^^XML:date;
+    terms:description
+        "Refers to documentation (intended for human consumption) about the deprecation of the link's context.";
+    rd:label "deprecation";
+    reg:spec "rfc9745 , section 3";
+    reg:updated "2025-03-13"^^XML:date.
 :describedby
     terms:description
         """Refers to a resource providing information about the
@@ -281,9 +294,10 @@
 :ice-server
     terms:date "2024-08-27"^^XML:date;
     terms:description
-        "Conveys the STUN and TURN servers that can be used by an ICE Agent to establish a connection with a peer.";
+        "Conveys the STUN and TURN servers that can be used by an ICE agent to establish a connection with a peer.";
     rd:label "ice-server";
-    reg:spec [ reg:xref html:RFC-ietf-wish-whip-16 ].
+    reg:spec [ reg:xref html:RFC-ietf-wish-whip-16 ];
+    reg:updated "2025-03-18"^^XML:date.
 :icon
     terms:date "2010-11-09"^^XML:date;
     terms:description "Refers to an icon representing the link's context.";
@@ -445,7 +459,7 @@
     terms:title "Link Relations";
     reg:id "link-relations";
     reg:registry :link-relations-1;
-    reg:updated "2024-09-13".
+    reg:updated "2025-03-18".
 :link-relations-1
     terms:title "Link Relation Types";
     rd:comment
@@ -454,15 +468,15 @@ using the  https://github.com/protocol-registries/link-relations  or the mailing
     reg:expert "Mark Nottingham, Julian Reschke, Jan Algermissen";
     reg:id "link-relations-1";
     reg:record
-        :about, :acl, :alternate, :amphtml, :appendix, :apple-touch-icon,
-        :apple-touch-startup-image, :archives, :author, :blocked-by, :bookmark,
-        :c2pa-manifest, :canonical, :chapter, :cite-as, :collection,
-        :compression-dictionary, :contents, :convertedfrom, :copyright,
-        :create-form, :current, :describedby, :describes, :disclosure,
-        :dns-prefetch, :duplicate, :edit, :edit-form, :edit-media, :enclosure,
-        :external, :first, :glossary, :help, :hosts, :hub, :ice-server, :icon,
-        :index, :intervalafter, :intervalbefore, :intervalcontains,
-        :intervaldisjoint, :intervalduring, :intervalequals,
+        :about, :acl, :alternate, :amphtml, :api-catalog, :appendix,
+        :apple-touch-icon, :apple-touch-startup-image, :archives, :author,
+        :blocked-by, :bookmark, :c2pa-manifest, :canonical, :chapter, :cite-as,
+        :collection, :compression-dictionary, :contents, :convertedfrom,
+        :copyright, :create-form, :current, :deprecation, :describedby,
+        :describes, :disclosure, :dns-prefetch, :duplicate, :edit, :edit-form,
+        :edit-media, :enclosure, :external, :first, :glossary, :help, :hosts,
+        :hub, :ice-server, :icon, :index, :intervalafter, :intervalbefore,
+        :intervalcontains, :intervaldisjoint, :intervalduring, :intervalequals,
         :intervalfinishedby, :intervalfinishes, :intervalin, :intervalmeets,
         :intervalmetby, :intervaloverlappedby, :intervaloverlaps,
         :intervalstartedby, :intervalstarts, :item, :last, :latest-version,

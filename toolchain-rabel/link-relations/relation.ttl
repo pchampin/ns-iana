@@ -51,6 +51,14 @@
          reg:spec  [
              reg:xref <https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/> ] .
     
+    <#api-catalog>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2024-12-23"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a list of APIs available from the publisher of the link context.";
+         :definedBy <link-relations>;
+         :label "api-catalog";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/RFC-ietf-httpapi-api-catalog-08> ] .
+    
     <#appendix>     a rdf:Property;
          <http://purl.org/dc/terms/description> "Refers to an appendix.";
          :definedBy <link-relations>;
@@ -201,6 +209,14 @@
          reg:spec  [
              reg:xref <https://tools.ietf.org/html/rfc5005> ] .
     
+    <#deprecation>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2024-10-07"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to documentation (intended for human consumption) about the deprecation of the link's context.";
+         :definedBy <link-relations>;
+         :label "deprecation";
+         reg:spec "rfc9745 , section 3";
+         reg:updated "2025-03-13"^^XML:date .
+    
     <#describedby>     a rdf:Property;
          <http://purl.org/dc/terms/description> """Refers to a resource providing information about the
       link's context.""";
@@ -345,11 +361,12 @@
     
     <#ice-server>     a rdf:Property;
          <http://purl.org/dc/terms/date> "2024-08-27"^^XML:date;
-         <http://purl.org/dc/terms/description> "Conveys the STUN and TURN servers that can be used by an ICE Agent to establish a connection with a peer.";
+         <http://purl.org/dc/terms/description> "Conveys the STUN and TURN servers that can be used by an ICE agent to establish a connection with a peer.";
          :definedBy <link-relations>;
          :label "ice-server";
          reg:spec  [
-             reg:xref <https://tools.ietf.org/html/RFC-ietf-wish-whip-16> ] .
+             reg:xref <https://tools.ietf.org/html/RFC-ietf-wish-whip-16> ];
+         reg:updated "2025-03-18"^^XML:date .
     
     <#icon>     a rdf:Property;
          <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
@@ -525,7 +542,7 @@
          <http://purl.org/dc/terms/title> "Link Relations";
          reg:id "link-relations";
          reg:registry <#link-relations-1>;
-         reg:updated "2024-09-13" .
+         reg:updated "2025-03-18" .
     
     <#link-relations-1>     <http://purl.org/dc/terms/title> "Link Relation Types";
          :comment """New link relations, along with changes to existing relations, can be requested 
@@ -536,6 +553,7 @@ using the  https://github.com/protocol-registries/link-relations  or the mailing
                 <#acl>,
                 <#alternate>,
                 <#amphtml>,
+                <#api-catalog>,
                 <#appendix>,
                 <#apple-touch-icon>,
                 <#apple-touch-startup-image>,
@@ -554,6 +572,7 @@ using the  https://github.com/protocol-registries/link-relations  or the mailing
                 <#copyright>,
                 <#create-form>,
                 <#current>,
+                <#deprecation>,
                 <#describedby>,
                 <#describes>,
                 <#disclosure>,
