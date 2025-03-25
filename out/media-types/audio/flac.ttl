@@ -9,6 +9,6 @@
     terms:date "2024-02-29"^^XML:date;
     reg:file [ reg:file "audio/flac"; reg:type "template" ];
     reg:name "flac";
-    reg:xref html:RFC-ietf-cellar-flac-14.
+    reg:xref html:rfc9639.
 medi:audio reg:record :Resource.
 

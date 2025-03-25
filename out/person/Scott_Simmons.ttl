@@ -1,6 +1,7 @@
 @prefix : <#>.
-@prefix cit: <../media-types/application/city+json#>.
+@prefix cit: <../media-types/application/city+json-seq#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ci: <../media-types/application/city+json#>.
 @prefix geop: <../media-types/application/geopackage+sqlite3#>.
 @prefix geo: <../media-types/application/geopose+json#>.
 @prefix geox: <../media-types/application/geoxacml+json#>.
@@ -8,6 +9,8 @@
 @prefix medi: <../media-types/media-types.ttl#>.
 
 cit:Resource reg:xref :.
+
+ci:Resource reg:xref :.
 
 geop:Resource reg:xref :.
 
@@ -22,5 +25,5 @@ medi:n0 reg:person :.
 :
     reg:id "Scott_Simmons";
     reg:name "Scott Simmons";
-    reg:updated "2024-08-19";
+    reg:updated "2024-10-30";
     reg:uri "mailto:ssimmons&ogc.org".

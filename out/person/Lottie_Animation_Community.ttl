@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix lot: <../media-types/video/lottie+json#>.
+
+medi:n0 reg:person :.
+
+lot:Resource reg:xref :.
+
+:
+    reg:id "Lottie_Animation_Community";
+    reg:name "Lottie Animation Community";
+    reg:updated "2025-02-18";
+    reg:uri "mailto:lottie-dev&googlegroups.com".

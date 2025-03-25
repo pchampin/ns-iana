@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OMA: <../../person/OMA_Push_to_Talk_over_Cellular_POC_Working_Group#>.
+@prefix OMA: <../../person/OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

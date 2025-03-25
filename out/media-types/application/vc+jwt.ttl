@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Iv: <../../person/Ivan_Herman#>.
+@prefix W3C: <../../person/W3C_Verifiable_Credentials_WG#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-12-09"^^XML:date;
+    reg:file [ reg:file "application/vc+jwt"; reg:type "template" ];
+    reg:name "vc+jwt";
+    reg:xref Iv:, W3C:.
+medi:application reg:record :Resource.
+

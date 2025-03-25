@@ -10,6 +10,6 @@
     reg:file
     [ reg:file "application/gnap-binding-rotation-jws"; reg:type "template" ];
     reg:name "gnap-binding-rotation-jws";
-    reg:xref html:RFC-ietf-gnap-core-protocol-20.
+    reg:xref html:rfc9635.
 medi:application reg:record :Resource.
 

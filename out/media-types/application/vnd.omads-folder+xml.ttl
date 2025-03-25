@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OMA: <../../person/OMA_Data_Synchronization_Working_Group#>.
+@prefix OMA: <../../person/OMA_Data_Synchronization_WG#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

@@ -19,5 +19,5 @@ medi:n0 reg:person :.
 :
     reg:id "Aidan_Murdock";
     reg:name "Aidan Murdock";
-    reg:updated "2023-11-27";
+    reg:updated "2024-12-23";
     reg:uri "mailto:aidan.murdock&ncia.nato.int".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix pro: <../media-types/application/provided-claims+jwt#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+pro:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OpenID_Foundation_eKYC_and_IDA_WG";
+    reg:name "OpenID Foundation eKYC & IDA Work Group";
+    reg:updated "2024-11-26";
+    reg:uri "https://lists.openid.net/mailman/listinfo/openid-specs-ekyc-ida".

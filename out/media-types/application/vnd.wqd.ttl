@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/Jan_Bostrom#>.
+@prefix J: <../../person/Jan_Boström#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

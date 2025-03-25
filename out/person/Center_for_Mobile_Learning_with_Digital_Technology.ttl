@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.sketchometry#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Center_for_Mobile_Learning_with_Digital_Technology";
+    reg:name "Center for Mobile Learning with Digital Technology";
+    reg:updated "2024-11-26";
+    reg:uri "mailto:sketchometry&uni-bayreuth.de".

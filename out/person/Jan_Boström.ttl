@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.dcmp+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.wqd#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jan_Bostr\u00f6m";
+    reg:name "Jan Bostr\u00f6m";
+    reg:updated "2024-12-23";
+    reg:uri "mailto:jan&sundahus.se".

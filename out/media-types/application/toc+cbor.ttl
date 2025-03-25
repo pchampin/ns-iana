@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ned: <../../person/Ned_M._Smith#>.
+@prefix TCG: <../../person/TCG_DICE#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-12-23"^^XML:date;
+    reg:file [ reg:file "application/toc+cbor"; reg:type "template" ];
+    reg:name "toc+cbor";
+    reg:xref Ned:, TCG:.
+medi:application reg:record :Resource.
+

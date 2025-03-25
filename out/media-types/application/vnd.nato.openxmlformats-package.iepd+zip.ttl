@@ -13,6 +13,7 @@
                 reg:type "template"
             ];
     reg:name "vnd.nato.openxmlformats-package.iepd+zip";
+    reg:updated "2024-12-23"^^XML:date;
     reg:xref Aid:.
 medi:application reg:record :Resource.
 

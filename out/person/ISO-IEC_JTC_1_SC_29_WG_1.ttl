@@ -1,11 +1,17 @@
 @prefix : <#>.
 @prefix j2c: <../media-types/image/j2c#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix j: <../media-types/image/jaii#>.
+@prefix j0: <../media-types/image/jais#>.
 @prefix jpx: <../media-types/image/jpx#>.
 @prefix jxl: <../media-types/image/jxl#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 j2c:Resource reg:xref :.
+
+j:Resource reg:xref :.
+
+j0:Resource reg:xref :.
 
 jpx:Resource reg:xref :.
 

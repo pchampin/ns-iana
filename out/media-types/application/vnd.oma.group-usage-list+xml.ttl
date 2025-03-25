@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OMA: <../../person/OMA_Presence_and_Availability_PAG_Working_Group#>.
+@prefix OMA: <../../person/OMA_Presence_and_Availability_PAG_WG#>.
 @prefix Se: <../../person/Sean_Kelley#>.
 @prefix medi: <../media-types.ttl#>.
 

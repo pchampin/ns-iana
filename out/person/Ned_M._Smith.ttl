@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix ce: <../media-types/application/ce+cbor#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix toc: <../media-types/application/toc+cbor#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ce:Resource reg:xref :.
+
+toc:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ned_M._Smith";
+    reg:name "Ned M. Smith";
+    reg:updated "2025-01-02";
+    reg:uri "mailto:ned.smith&intel.com".

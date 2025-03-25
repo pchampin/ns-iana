@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.openvpi.dspx+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Crindzebra_Sjimo";
+    reg:name "Crindzebra Sjimo";
+    reg:updated "2024-10-16";
+    reg:uri "mailto:crindzebra&sjimo.dev".

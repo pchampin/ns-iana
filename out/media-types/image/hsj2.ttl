@@ -9,7 +9,8 @@
 :Resource
     terms:date "2019-05-17"^^XML:date;
     reg:file [ reg:file "image/hsj2"; reg:type "template" ];
-    reg:name "hsj2";
+    reg:name "hsj2 (OBSOLETE)";
+    reg:updated "2024-10-16"^^XML:date;
     reg:xref ISO:, ITU:.
 medi:image reg:record :Resource.
 

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.vocalshaper.vsp4#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Wu_Chang";
+    reg:name "Wu Chang";
+    reg:updated "2024-11-26";
+    reg:uri "mailto:Warsic.WuChang&gmail.com".

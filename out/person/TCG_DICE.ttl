@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix ce: <../media-types/application/ce+cbor#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix toc: <../media-types/application/toc+cbor#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ce:Resource reg:xref :.
+
+toc:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "TCG_DICE";
+    reg:name "Trusted Computing Group (TCG) DICE Architecture Working Group";
+    reg:updated "2024-12-23";
+    reg:uri "https://trustedcomputinggroup.org".

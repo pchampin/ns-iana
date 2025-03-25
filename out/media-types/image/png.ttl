@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix PNG: <../../person/PNG_Working_Group#>.
+@prefix PNG: <../../person/PNG_WG#>.
 @prefix W3C: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 

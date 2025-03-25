@@ -9,6 +9,6 @@
     terms:date "2024-05-24"^^XML:date;
     reg:file [ reg:file "application/rpki-signed-tal"; reg:type "template" ];
     reg:name "rpki-signed-tal";
-    reg:xref html:RFC-ietf-sidrops-signed-tal-16.
+    reg:xref html:rfc9691.
 medi:application reg:record :Resource.
 

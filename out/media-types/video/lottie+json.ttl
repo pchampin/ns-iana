@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Lot: <../../person/Lottie_Animation_Community#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2025-02-18"^^XML:date;
+    reg:file [ reg:file "video/lottie+json"; reg:type "template" ];
+    reg:name "lottie+json";
+    reg:xref Lot:.

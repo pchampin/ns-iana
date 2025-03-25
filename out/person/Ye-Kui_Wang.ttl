@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix j: <../media-types/image/jaii#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix j0: <../media-types/image/jais#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+j:Resource reg:xref :.
+
+j0:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ye-Kui_Wang";
+    reg:name "Ye-Kui Wang";
+    reg:updated "2025-01-01";
+    reg:uri "mailto:yekui.wang&bytedance.com".

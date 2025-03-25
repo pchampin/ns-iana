@@ -9,6 +9,6 @@
     terms:date "2023-10-27"^^XML:date;
     reg:file [ reg:file "audio/matroska"; reg:type "template" ];
     reg:name "matroska";
-    reg:xref html:RFC-ietf-cellar-matroska-21.
+    reg:xref html:rfc9559.
 medi:audio reg:record :Resource.
 

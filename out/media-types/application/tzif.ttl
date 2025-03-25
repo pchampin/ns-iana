@@ -10,6 +10,6 @@
     reg:file [ reg:file "application/tzif"; reg:type "template" ];
     reg:name "tzif";
     reg:updated "2024-05-09"^^XML:date;
-    reg:xref html:RFC-murchison-rfc8536bis-15.
+    reg:xref html:rfc9636.
 medi:application reg:record :Resource.
 

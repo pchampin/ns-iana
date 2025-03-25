@@ -1,11 +1,12 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ch: <../../person/Chad_Trabant#>.
+@prefix Int: <../../person/International_FDSN#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/vnd.fdsn.mseed"; reg:type "template" ];
     reg:name "vnd.fdsn.mseed";
-    reg:xref Ch:.
+    reg:updated "2025-01-02";
+    reg:xref Int:.
 medi:application reg:record :Resource.
 

@@ -1,8 +1,9 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.geogebra.file#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.geogebra.slides#>.
-@prefix v: <../media-types/application/vnd.geogebra.tool#>.
+@prefix vn: <../media-types/application/vnd.geogebra.pinboard#>.
+@prefix v: <../media-types/application/vnd.geogebra.slides#>.
+@prefix n1: <../media-types/application/vnd.geogebra.tool#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 vnd:Resource reg:xref :.
@@ -10,6 +11,8 @@ vnd:Resource reg:xref :.
 vn:Resource reg:xref :.
 
 v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
 
 medi:n0 reg:person :.
 

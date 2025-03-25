@@ -6,7 +6,11 @@
 @prefix lpf: <../media-types/application/lpf+zip#>.
 @prefix pro: <../media-types/application/provenance+xml#>.
 @prefix vc: <../media-types/application/vc#>.
+@prefix v: <../media-types/application/vc+cose#>.
+@prefix n1: <../media-types/application/vc+jwt#>.
 @prefix vp: <../media-types/application/vp#>.
+@prefix n2: <../media-types/application/vp+cose#>.
+@prefix n3: <../media-types/application/vp+jwt#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 @prefix pr: <../media-types/text/provenance-notation#>.
 
@@ -22,7 +26,15 @@ pro:Resource reg:xref :.
 
 vc:Resource reg:xref :.
 
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
 vp:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
@@ -31,5 +43,5 @@ pr:Resource reg:xref :.
 :
     reg:id "Ivan_Herman";
     reg:name "Ivan Herman";
-    reg:updated "2024-07-05";
+    reg:updated "2024-12-09";
     reg:uri "mailto:ivan&w3.org".

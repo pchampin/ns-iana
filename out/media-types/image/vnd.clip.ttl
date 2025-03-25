@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ryo: <../../person/Ryo_Inaba#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2025-03-06"^^XML:date;
+    reg:file [ reg:file "image/vnd.clip"; reg:type "template" ];
+    reg:name "vnd.clip";
+    reg:xref Ryo:.
+medi:image reg:record :Resource.
+

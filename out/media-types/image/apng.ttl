@@ -2,7 +2,7 @@
 @prefix terms: <http://purl.org/dc/terms/>.
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix W3C: <../../person/W3C_PNG_Working_Group#>.
+@prefix W3C: <../../person/W3C_PNG_WG#>.
 @prefix W3: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 

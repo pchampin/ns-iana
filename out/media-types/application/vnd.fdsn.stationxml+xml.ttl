@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Int: <../../person/International_FDSN#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2025-01-02"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.fdsn.stationxml+xml"; reg:type "template" ];
+    reg:name "vnd.fdsn.stationxml+xml";
+    reg:xref Int:.
+medi:application reg:record :Resource.
+

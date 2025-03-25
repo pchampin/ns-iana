@@ -1,7 +1,7 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Jun: <../../person/Jun_Sato#>.
-@prefix Ope: <../../person/Open_Mobile_Alliance_BAC_DLDRM_Working_Group#>.
+@prefix Ope: <../../person/Open_Mobile_Alliance_BAC_DLDRM_WG#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

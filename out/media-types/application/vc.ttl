@@ -3,7 +3,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Iv: <../../person/Ivan_Herman#>.
-@prefix W3C: <../../person/W3C#>.
+@prefix W3C: <../../person/W3C_Verifiable_Credentials_WG#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

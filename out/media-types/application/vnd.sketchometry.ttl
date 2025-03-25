@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cen: <../../person/Center_for_Mobile_Learning_with_Digital_Technology#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-11-26"^^XML:date;
+    reg:file [ reg:file "application/vnd.sketchometry"; reg:type "template" ];
+    reg:name "vnd.sketchometry";
+    reg:xref Cen:.
+medi:application reg:record :Resource.
+

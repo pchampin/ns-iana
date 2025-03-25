@@ -6,6 +6,7 @@
 :Resource
     reg:file [ reg:file "application/pkixcmp"; reg:type "template" ];
     reg:name "pkixcmp";
-    reg:xref html:rfc2510.
+    reg:updated "2025-01-14";
+    reg:xref html:RFC-ietf-lamps-rfc6712bis-10.
 medi:application reg:record :Resource.
 

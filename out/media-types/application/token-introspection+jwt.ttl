@@ -10,6 +10,7 @@
     reg:file
     [ reg:file "application/token-introspection+jwt"; reg:type "template" ];
     reg:name "token-introspection+jwt";
-    reg:xref html:RFC-oauth-jwt-introspection-response-12.
+    reg:updated "2024-12-11"^^XML:date;
+    reg:xref html:rfc9701.
 medi:application reg:record :Resource.
 

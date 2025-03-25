@@ -28,5 +28,5 @@ medi:n0 reg:person :.
 :
     reg:id "OpenID_Foundation_Artifact_Binding_WG";
     reg:name "OpenID Foundation Artifact Binding Working Group";
-    reg:updated "2024-08-29";
-    reg:uri "mailto:openid-specs-ab&lists.openid.net".
+    reg:updated "2024-11-26";
+    reg:uri "https://lists.openid.net/mailman/listinfo/openid-specs-ab".

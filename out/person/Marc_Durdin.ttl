@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.keyman.kmp+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.keyman.kmx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marc_Durdin";
+    reg:name "Marc Durdin";
+    reg:updated "2024-09-27";
+    reg:uri "mailto:marc&keyman.com".
