@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "image/tiff-fx"; reg:type "template" ];
+    reg:name "tiff-fx";
+    reg:xref html:rfc3950.
+medi:image reg:record :Resource.
+

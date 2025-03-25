@@ -1,0 +1,82 @@
+@prefix : <#>.
+@prefix s: <../media-types/application/sarif-external-properties+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix s0: <../media-types/application/sarif+json#>.
+@prefix sti: <../media-types/application/stix+json#>.
+@prefix t: <../media-types/application/taxii+json#>.
+@prefix vnd: <../media-types/application/vnd.oasis.opendocument.base#>.
+@prefix vn: <../media-types/application/vnd.oasis.opendocument.chart-template#>.
+@prefix v: <../media-types/application/vnd.oasis.opendocument.chart#>.
+@prefix n1: <../media-types/application/vnd.oasis.opendocument.database#>.
+@prefix n2: <../media-types/application/vnd.oasis.opendocument.formula-template#>.
+@prefix n3: <../media-types/application/vnd.oasis.opendocument.formula#>.
+@prefix n4: <../media-types/application/vnd.oasis.opendocument.graphics-template#>.
+@prefix n5: <../media-types/application/vnd.oasis.opendocument.graphics#>.
+@prefix n6: <../media-types/application/vnd.oasis.opendocument.image-template#>.
+@prefix n7: <../media-types/application/vnd.oasis.opendocument.image#>.
+@prefix n8: <../media-types/application/vnd.oasis.opendocument.presentation-template#>.
+@prefix n9: <../media-types/application/vnd.oasis.opendocument.presentation#>.
+@prefix n10: <../media-types/application/vnd.oasis.opendocument.spreadsheet-template#>.
+@prefix n11: <../media-types/application/vnd.oasis.opendocument.spreadsheet#>.
+@prefix n12: <../media-types/application/vnd.oasis.opendocument.text-master-template#>.
+@prefix n13: <../media-types/application/vnd.oasis.opendocument.text-master#>.
+@prefix n14: <../media-types/application/vnd.oasis.opendocument.text-template#>.
+@prefix n15: <../media-types/application/vnd.oasis.opendocument.text-web#>.
+@prefix n16: <../media-types/application/vnd.oasis.opendocument.text#>.
+@prefix xli: <../media-types/application/xliff+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+s:Resource reg:xref :.
+
+s0:Resource reg:xref :.
+
+sti:Resource reg:xref :.
+
+t:Resource reg:xref :.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+n4:Resource reg:xref :.
+
+n5:Resource reg:xref :.
+
+n6:Resource reg:xref :.
+
+n7:Resource reg:xref :.
+
+n8:Resource reg:xref :.
+
+n9:Resource reg:xref :.
+
+n10:Resource reg:xref :.
+
+n11:Resource reg:xref :.
+
+n12:Resource reg:xref :.
+
+n13:Resource reg:xref :.
+
+n14:Resource reg:xref :.
+
+n15:Resource reg:xref :.
+
+n16:Resource reg:xref :.
+
+xli:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OASIS";
+    reg:name "OASIS";
+    reg:uri "https://www.oasis-open.org", "mailto:tc-admin&oasis-open.org".

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/ODA"; reg:type "template" ];
+    reg:name "ODA";
+    reg:updated "2018-08-28";
+    reg:xref html:rfc1494.
+medi:application reg:record :Resource.
+

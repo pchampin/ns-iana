@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ann: <../../person/Anne_van_Kesteren#>.
+@prefix WHA: <../../person/WHATWG#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file
+    [ reg:file "application/x-www-form-urlencoded"; reg:type "template" ];
+    reg:name "x-www-form-urlencoded";
+    reg:updated "2020-07-14";
+    reg:xref Ann:, WHA:.
+medi:application reg:record :Resource.
+

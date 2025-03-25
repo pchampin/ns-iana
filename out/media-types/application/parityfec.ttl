@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/parityfec"; reg:type "template" ];
+    reg:name "parityfec";
+    reg:updated "2020-10-12";
+    reg:xref html:rfc3009.
+medi:application reg:record :Resource.
+

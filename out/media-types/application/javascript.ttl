@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/javascript"; reg:type "template" ];
+    reg:name "javascript (OBSOLETED in favor of text/javascript)";
+    reg:updated "2022-03-08";
+    reg:xref html:rfc4329, html:rfc9239.
+medi:application reg:record :Resource.
+
