@@ -3,17 +3,18 @@
   - reg: https://www.w3.org/ns/assignments/reg#
     dct: http://purl.org/dc/terms/
     rdfs: http://www.w3.org/2000/01/rdf-schema#
+    owl: http://www.w3.org/2002/07/owl#
     schema: http://schema.org/
     "@vocab": "UNDEFINED:"  # any typo will generate an IRI with this prefix
 
 "@included":
 
   - type: TriplesMap
-    id: "#legacy-record"
+    id: "record"
     # Generate each media-type's outgoing triples, in the media-type's file
 
     logicalSource:
-      id: "#legacy-record-logicalSource"
+      id: "#record-logicalSource"
       source:
         id: "#media-types.xml"
         type: RelativePathSource
@@ -21,15 +22,34 @@
         path: media-types.xml
       referenceFormulation: XPath
       iterator: "/registry/registry/record"
+      # class: rdfs:Class
+
+    subjectMap:
+      reference: concat("x-relative:?", substring-after(file, '/'))
+      # ⚠  do not use 'template' here, because some characters like '+' would be escaped
+      # NB: see explanation about the 'x-relative:?' hack at the bottom
+      graphMap:
+        id: "#record-graphMap"
+        reference: concat("x-output:/media-types/", file, ".ttl")
+        # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+
+    objectMapsPerPredicate:
+      owl:sameAs:
+        objectMap:
+          template: "x-relative:?#Resource"
+          # NB: see explanation about the 'x-relative:?' hack at the bottom
+
+  - type: TriplesMap
+    id: "#legacy-record"
+    # Generate each media-type's outgoing legacy triples, in the media-type's file
+
+    logicalSource: "#record-logicalSource"
 
     subjectMap:
       id: "#legacy-record-subjectMap"
       template: "x-relative:?#Resource"
       # NB: see explanation about the 'x-relative:?' hack at the bottom
-      graphMap:
-        id: "#legacy-record-graphMap"
-        reference: concat("x-output:/media-types/", file, ".ttl")
-        # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+      graphMap: "#record-graphMap"
 
     objectMapsPerPredicate:
       reg:name:
@@ -62,7 +82,7 @@
             type: TriplesMap
             # Generate the blank node object of reg:file with its properties
 
-            logicalSource: "#legacy-record-logicalSource"
+            logicalSource: "#record-logicalSource"
             # NB: this map only works as expected because there is exactly one file per record.
             # Otherwise we would need a logicalSource iterating on 'record/file',
             # with the appropriate joinCondition.
@@ -70,7 +90,7 @@
             subjectMap:
               termType: BlankNode
               reference: .
-              graphMap: "#legacy-record-graphMap"
+              graphMap: "#record-graphMap"
 
             objectMapsPerPredicate:
               reg:type:
@@ -110,15 +130,15 @@
 
   - type: TriplesMap
     id: "#legacy-record-incoming"
-    # Generate arc from top-level to media-type, in the media-type's file
+    # Generate legacy triple from top-level to media-type, in the media-type's file
 
-    logicalSource: "#legacy-record-logicalSource"
+    logicalSource: "#record-logicalSource"
 
     subjectMap:
       template: "x-relative:?../media-types.ttl#{../@id}"
       # NB: see explanation about the 'x-relative:?' hack at the bottom
       # LEGACY: is it deliberate that we keep the '.ttl' extension in this IRI?
-      graphMap: "#legacy-record-graphMap"
+      graphMap: "#record-graphMap"
 
     objectMapsPerPredicate:
       reg:record:
@@ -156,7 +176,7 @@
 
   - type: TriplesMap
     id: "#legacy-person"
-    # Generate each person's outgoing triples, in the person's file
+    # Generate each person's outgoing legacy triples, in the person's file
 
     logicalSource:
       id: "#legacy-person-logicalSource"
@@ -193,7 +213,7 @@
 
   - type: TriplesMap
     id: "#legacy-person-incoming"
-    # Generate the triple from media-types.ttl#n0 to each person, in the person's file
+    # Generate the legacy triple from media-types.ttl#n0 to each person, in the person's file
 
     logicalSource: "#legacy-person-logicalSource"
 
