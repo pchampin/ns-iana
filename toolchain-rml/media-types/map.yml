@@ -22,12 +22,12 @@
         path: media-types.xml
       referenceFormulation: XPath
       iterator: "/registry/registry/record"
-      # class: rdfs:Class
 
     subjectMap:
       reference: concat("x-relative:?", substring-after(file, '/'))
       # ⚠  do not use 'template' here, because some characters like '+' would be escaped
       # NB: see explanation about the 'x-relative:?' hack at the bottom
+      class: rdfs:Class
       graphMap:
         id: "#record-graphMap"
         reference: concat("x-output:/media-types/", file, ".ttl")
