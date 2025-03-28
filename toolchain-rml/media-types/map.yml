@@ -1,0 +1,238 @@
+"@context": 
+  - "./rml_context.jsonld"
+  - reg: https://www.w3.org/ns/assignments/reg#
+    dct: http://purl.org/dc/terms/
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    schema: http://schema.org/
+    "@vocab": "UNDEFINED:"  # any typo will generate an IRI with this prefix
+
+"@included":
+
+  - type: TriplesMap
+    id: "#legacy-record"
+    # Generate each media-type's outgoing triples, in the media-type's file
+
+    logicalSource:
+      id: "#legacy-record-logicalSource"
+      source: ./media-types.xml
+      referenceFormulation: XPath
+      iterator: "/registry/registry/record"
+
+    subjectMap:
+      id: "#legacy-record-subjectMap"
+      template: "x-relative:?#Resource"
+      # NB: see explanation about the 'x-relative:?' hack at the bottom
+      graphMap:
+        id: "#legacy-record-graphMap"
+        reference: concat("x-output:/media-types/", file, ".ttl")
+        # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+
+    objectMapsPerPredicate:
+      reg:name:
+        - objectMap:
+            reference: name[not(./xref)]
+        - objectMap:
+            # ad-hoc rule to handle the few xrefs contained in names
+            # (the else returns nothing, by design -- I don't know how to do that more cleanly)
+            reference: | 
+              if (name/xref)
+              then replace(string(name), "by ", concat("by  ", name/xref/@data, " "))
+              else name/xref
+
+      dct:date:
+        objectMap:
+          reference: "@date"
+          datatype: date
+
+      reg:updated:
+        # LEGACY: for some reason, reg:update only has datatype xsd:date when @date is also present
+        - objectMap:
+            reference: ".[not(@date)]/@updated"
+        - objectMap:
+            reference: ".[@date]/@updated"
+            datatype: date
+
+      reg:file:
+        objectMap:
+          parentTriplesMap:
+            type: TriplesMap
+            # Generate the blank node object of reg:file with its properties
+
+            logicalSource: "#legacy-record-logicalSource"
+            # NB: this map only works as expected because there is exactly one file per record.
+            # Otherwise we would need a logicalSource iterating on 'record/file',
+            # with the appropriate joinCondition.
+
+            subjectMap:
+              termType: BlankNode
+              reference: .
+              graphMap: "#legacy-record-graphMap"
+
+            objectMapsPerPredicate:
+              reg:type:
+                objectMap:
+                  reference: file/@type
+              reg:file:
+                objectMap:
+                  reference: file
+              reg:name:
+                objectMap:
+                  reference: file/@name
+
+      reg:xref:
+        - objectMap:
+            termType: IRI
+            reference: xref[@type="uri"]/@data
+
+        - objectMap:
+            template: https://tools.ietf.org/html/{xref[@type="rfc" or @type="draft"]/@data}
+
+        - objectMap:
+            termType: IRI
+            reference: |
+              for $person in xref[@type="person"]/@data return
+              concat("x-relative:?../../person/", $person, "#")
+            # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+            # NB: see explanation about the 'x-relative:?' hack at the bottom
+
+        - objectMap:
+            # LEGACY: see note about #legacy-record-other-xrefs
+            parentTriplesMap: "#legacy-record-other-xrefs"
+            joinCondition:
+              child: .
+              parent: ..
+
+
+
+  - type: TriplesMap
+    id: "#legacy-record-incoming"
+    # Generate arc from top-level to media-type, in the media-type's file
+
+    logicalSource: "#legacy-record-logicalSource"
+
+    subjectMap:
+      template: "x-relative:?../media-types.ttl#{../@id}"
+      # NB: see explanation about the 'x-relative:?' hack at the bottom
+      # LEGACY: is it deliberate that we keep the '.ttl' extension in this IRI?
+      graphMap: "#legacy-record-graphMap"
+
+    objectMapsPerPredicate:
+      reg:record:
+        objectMap: "#legacy-record-subjectMap"
+
+
+  - type: TriplesMap
+    id: "#legacy-record-other-xrefs"
+    # Generate blank node object of reg:xref when the type is not in ("rfc", "draft", "uri", "person")
+    # LEGACY: I suspect these blank notes are a side rabel.js, rather than a concious design choice (?).
+    # I suggest that "rfc-errata" should be handled like "rfc",
+    # and that "note" could be ignored (or include the text of the note rather than just the number),
+    # and that this rule could then be ignored.
+
+    logicalSource:
+      source: ./media-types.xml
+      referenceFormulation: XPath
+      iterator: /registry/registry/record/xref[not(@type="rfc" or @type="draft" or @type="uri" or @type="person")]
+
+    subjectMap:
+      termType: BlankNode
+      template: gen:{../file}-{@type}
+      graphMap:
+        reference: concat("x-output:/media-types/", ../file, ".ttl")
+        # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+
+    objectMapsPerPredicate:
+      reg:type:
+        objectMap:
+          reference: "@type"
+      reg:data:
+        objectMap:
+          reference: "@data"
+
+
+  - type: TriplesMap
+    id: "#legacy-person"
+    # Generate each person's outgoing triples, in the person's file
+
+    logicalSource:
+      id: "#legacy-person-logicalSource"
+      source: ./media-types.xml
+      referenceFormulation: XPath
+      iterator: "/registry/people/person"
+
+    subjectMap:
+      id: "#legacy-person-subjectMap"
+      template: "x-relative:?#"
+      graphMap:
+        reference: concat("x-output:/person/", @id, ".ttl")
+        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+
+    objectMapsPerPredicate:
+      reg:id:
+        - objectMap:
+            reference: "@id"
+      reg:name:
+        - objectMap:
+            reference: name
+      reg:org:
+        - objectMap:
+            reference: org
+      reg:uri:
+        - objectMap:
+            reference: uri/text()
+            # FUTURE: exposing this information with another vocabulary, we should convert it to an IRI instead
+      reg:updated:
+        - objectMap:
+            reference: updated
+            # LEGACY: should we keep this if we make those instances of foaf:Agent
+
+
+  - type: TriplesMap
+    id: "#legacy-person-incoming"
+    # Generate the triple from media-types.ttl#n0 to each person, in the person's file
+
+    logicalSource: "#legacy-person-logicalSource"
+
+    subjectMap:
+      template: "x-relative:?../media-types/media-types.ttl#n0"
+      # LEGACY: the 'n0' suffix seems to be a mistake; do we want to keep that?
+      graphMap:
+        reference: concat("x-output:/person/", @id, ".ttl")
+        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+
+    objectMapsPerPredicate:
+      reg:person:
+        - objectMap:
+            template: "x-relative:?#"
+
+
+  - type: TriplesMap
+    id: "#legacy-person-incoming-xref"
+    # Generate the 'reg:xref' triples from media-types to persons, in the person's file
+
+    logicalSource:
+      source: ./media-types.xml
+      referenceFormulation: XPath
+      iterator: /registry/registry/record/xref[@type="person"]
+
+    subjectMap:
+      reference: concat("x-relative:?../media-types/", ../file, "#Resource")
+      # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+      graphMap:
+        reference: concat("x-output:/person/", @data, ".ttl")
+        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+
+    objectMapsPerPredicate:
+      reg:xref:
+        - objectMap:
+            template: "x-relative:?#"
+
+
+
+# # The 'x-relative:?' hack:
+# The RDF model only supports absolure IRIs, and so do syntaxes like N-Triples or N-Quads.
+# However, in this case, we want the produced Turtle to use the same relative IRIs as in our mapping.
+# So these relative IRIs are resolved agains the special 'x-relative:/' base,
+# which is stripped away from the Turtle serialization.
+# 
+# (In fact, it is stripped upstream of 'sop', because 'sop' supports "relative RDF")

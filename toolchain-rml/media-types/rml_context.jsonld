@@ -1,0 +1,126 @@
+{
+  "@context": {
+    "rml": "http://semweb.mmlab.be/ns/rml#",
+    "rr": "http://www.w3.org/ns/r2rml#",
+    "ql": "http://semweb.mmlab.be/ns/ql#",
+
+    "id": "@id",
+    "type": "@type",
+
+    "TriplesMap": "rr:TriplesMap",
+    "defaultGraph": "rr:defaultGraph",
+
+    "logicalSource": {
+      "@id": "rml:logicalSource",
+      "@type": "@id"
+    },
+
+    "iterator": {
+      "@id": "rml:iterator"
+    },
+    "referenceFormulation": {
+      "@id": "rml:referenceFormulation",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "http://semweb.mmlab.be/ns/ql#"
+      }
+    },
+    "source": {
+      "@id": "rml:source"
+    },
+
+    "subjectMap": {
+      "@id": "rr:subjectMap",
+      "@type": "@id"
+    },
+    "predicateObjectMap": {
+      "@id": "rr:predicateObjectMap",
+      "@type": "@id"
+    },
+    "predicateMap": {
+      "@id": "rr:predicateMap",
+      "@type": "@id"
+    },
+    "objectMap": {
+      "@id": "rr:objectMap",
+      "@type": "@id"
+    },
+    "graphMap": {
+      "@id": "rr:graphMap",
+      "@type": "@id"
+    },
+    "subject": {
+      "@id": "rr:subject",
+      "@type": "@id"
+    },
+    "predicate": {
+      "@id": "rr:predicate",
+      "@type": "@id"
+    },
+    "object": {
+      "@id": "rr:object",
+      "@type": "@id"
+    },
+    "graph": {
+      "@id": "rr:graph",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "http://www.w3.org/ns/r2rml#"
+      }
+    },
+
+    "child": {
+      "@id": "rr:child"
+    },
+    "class": {
+      "@id": "rr:class",
+      "@type": "@id"
+    },
+    "constant": {
+      "@id": "rr:constant"
+    },
+    "constantIri": {
+      "@id": "rr:constant",
+      "@type": "@id"
+    },
+    "datatype": {
+      "@id": "rr:datatype",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
+      }
+    },
+    "joinCondition": {
+      "@id": "rr:joinCondition",
+      "@type": "@id"
+    },
+    "parentTriplesMap": {
+      "@id": "rr:parentTriplesMap",
+      "@type": "@id"
+    },
+    "parent": {
+      "@id": "rr:parent"
+    },
+    "reference": {
+      "@id": "rml:reference"
+    },
+    "template": {
+      "@id": "rr:template"
+    },
+    "termType": {
+      "@id": "rr:termType",
+      "@type": "@vocab",
+      "@context": {
+        "IRI": "rr:IRI",
+        "BlankNode": "rr:BlankNode",
+        "Literal": "rr:Literal"
+      }
+    },
+
+    "objectMapsPerPredicate": {
+      "@id": "rr:predicateObjectMap",
+      "@container": "@index",
+      "@index": "predicate"
+    }
+  }
+}
