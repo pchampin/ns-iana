@@ -230,9 +230,10 @@
 
 
 # # The 'x-relative:?' hack:
-# The RDF model only supports absolure IRIs, and so do syntaxes like N-Triples or N-Quads.
-# However, in this case, we want the produced Turtle to use the same relative IRIs as in our mapping.
-# So these relative IRIs are resolved agains the special 'x-relative:/' base,
+# The RDF model only supports absolute IRIs, and so do syntaxes like N-Triples or N-Quads.
+# However, in this case, we want the produced Turtle to use specific relative IRI references.
+#
+# These "pseudo-relative" IRIs are represented in the dummy `x-relative:` scheme,
 # which is stripped away from the Turtle serialization.
 # 
 # (In fact, it is stripped upstream of 'sop', because 'sop' supports "relative RDF")
