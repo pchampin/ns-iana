@@ -1,4 +1,3 @@
-YQ ?= /usr/bin/yq
 SOP ?= /home/pa/.cargo/bin/sop
 # RML ?= /opt/BURP/target/burp.jar
 RML ?= /opt/rml/rmlmapper.jar
@@ -31,11 +30,8 @@ clean-all: clean
 media-types.xml:
 	cp ../../toolchain-rabel/media-types/media-types.xml "$@"
 
-%.ttl: %.jsonld rml_context.jsonld .check-tools
+%.ttl: %.yml rml_context.jsonld .check-tools
 	${SOP} parse -u "$<" ! serialize -o "$@" -p "${RML_PREFIXES},${APP_PREFIXES}"
-
-%.jsonld: %.yml .check-tools
-	${YQ} <"$<" >"$@"
 
 .check-tools:
 	@ [ -x "${YQ}" ] || (echo "\nSet env variable YQ with path to yq\nhttps://github.com/mikefarah/yq\n"; false)
