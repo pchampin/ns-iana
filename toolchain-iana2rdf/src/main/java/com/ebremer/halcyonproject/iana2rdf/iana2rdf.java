@@ -72,8 +72,10 @@ public class iana2rdf {
                 Protocol.setNameSpaces(m);
                     
                 if (params.rdf!=null) {
-                    if (!params.rdf.getParentFile().exists()) {
-                        params.rdf.getParentFile().mkdirs();
+                    if (params.rdf.getParentFile()!=null) {
+                        if (!params.rdf.getParentFile().exists()) {
+                            params.rdf.getParentFile().mkdirs();
+                        }
                     }
                     if (params.compress) {
                         File ff = new File(params.rdf.toString()+".gz");
