@@ -12,10 +12,12 @@
 3. SPARQL Update until desired results are achieved.
 4. Season to taste.
 
+*** Note early maven version may not work.  Please use maven 3.9.9
+
 ## Building iana2rdf jar version
 
 1. Must have working JDK21 environment
-2. `mvn -Pnative clean native:compile`
+2. `mvn -Pjar clean package`
 3. A runnable jar version "iana2rdf-1.0.0.jar" will be in the target folder
 
 `java -jar iana2rdf-1.0.0.jar -help` will display instructions.
