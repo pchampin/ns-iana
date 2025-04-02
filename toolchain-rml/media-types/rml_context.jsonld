@@ -1,20 +1,35 @@
 {
   "@context": {
-    "rml": "http://semweb.mmlab.be/ns/rml#",
-    "rr": "http://www.w3.org/ns/r2rml#",
-    "ql": "http://semweb.mmlab.be/ns/ql#",
+    "rml": "http://w3id.org/rml/",
 
     "id": "@id",
     "type": "@type",
 
-    "TriplesMap": "rr:TriplesMap",
-    "defaultGraph": "rr:defaultGraph",
+    "TriplesMap": "rml:TriplesMap",
+    "defaultGraph": "rml:defaultGraph",
 
     "logicalSource": {
       "@id": "rml:logicalSource",
       "@type": "@id"
     },
+    "subjectMap": {
+      "@id": "rml:subjectMap",
+      "@type": "@id"
+    },
+    "subject": {
+      "@id": "rml:subject",
+      "@type": "@id"
+    },
+    "predicateObjectMap": {
+      "@id": "rml:predicateObjectMap",
+      "@type": "@id"
+    },
 
+    "LogicalSource": "rml:LogicalSource",
+    "source": {
+      "@id": "rml:source",
+      "@type": "@id"
+    },
     "iterator": {
       "@id": "rml:iterator"
     },
@@ -22,105 +37,174 @@
       "@id": "rml:referenceFormulation",
       "@type": "@vocab",
       "@context": {
-        "@vocab": "http://semweb.mmlab.be/ns/ql#"
+        "CVS": "rml:CVS",
+        "JSONPath": "rml:JSONPath",
+        "XPath": "rml:XPath",
+        "SQL2008Query": "rml:SQL2008Query",
+        "SQL2008Table": "rml:SQL2008Table",
+
+        "XPathReferenceFormulation": "rml:XPathReferenceFormulation",
+        "namespace": "rml:namespace",
+        "Namespace": "rml:Namespace",
+        "namespacePrefix": "rml:namespacePrefix",
+        "namespaceURL": "rml:namespaceURL",
+        "prefix": "rml:namespacePrefix",
+        "uri": "rml:namespaceURL"
       }
     },
-    "source": {
-      "@id": "rml:source"
-    },
 
-    "subjectMap": {
-      "@id": "rr:subjectMap",
-      "@type": "@id"
-    },
-    "predicateObjectMap": {
-      "@id": "rr:predicateObjectMap",
-      "@type": "@id"
-    },
-    "predicateMap": {
-      "@id": "rr:predicateMap",
-      "@type": "@id"
-    },
-    "objectMap": {
-      "@id": "rr:objectMap",
-      "@type": "@id"
-    },
-    "graphMap": {
-      "@id": "rr:graphMap",
-      "@type": "@id"
-    },
-    "subject": {
-      "@id": "rr:subject",
-      "@type": "@id"
-    },
-    "predicate": {
-      "@id": "rr:predicate",
-      "@type": "@id"
-    },
-    "object": {
-      "@id": "rr:object",
-      "@type": "@id"
-    },
-    "graph": {
-      "@id": "rr:graph",
+    "Source": "rml:Source",
+    "encoding": {
+      "@id": "rml:encoding",
       "@type": "@vocab",
       "@context": {
-        "@vocab": "http://www.w3.org/ns/r2rml#"
+        "UTF-8": "rml:UTF-8",
+        "UTF-16": "rml:UTF-16"
+      }
+    },
+    "null": {
+      "@id": "rml:null"
+    },
+    "compression": {
+      "@id": "rml:compression",
+      "@type": "@vocab",
+      "@context": {
+        "none": "rml:none",
+        "gzip": "rml:gzip",
+        "zip": "rml:zip",
+        "tarx": "rml:tarx",
+        "targz": "rml:targz"
       }
     },
 
-    "child": {
-      "@id": "rr:child"
+    "FilePath": "rml:FilePath",
+    "RelativePathSource": "rml:RelativePathSource",
+    "path": {
+      "@id": "rml:path"
     },
-    "class": {
-      "@id": "rr:class",
-      "@type": "@id"
+    "root": {
+      "@id": "rml:root"
     },
+    "rootType": {
+      "@id": "rml:root",
+      "@type": "@vocab",
+      "@context": {
+        "CurrentWorkingDirectory": "rml:CurrentWorkingDirectory",
+        "MappingDirectory": "rml:MappingDirectory"
+      }
+    },
+
+    "ExpressionMap": "rml:ExpressionMap",
     "constant": {
-      "@id": "rr:constant"
+      "@id": "rml:constant"
     },
     "constantIri": {
-      "@id": "rr:constant",
+      "@id": "rml:constant",
       "@type": "@id"
-    },
-    "datatype": {
-      "@id": "rr:datatype",
-      "@type": "@vocab",
-      "@context": {
-        "@vocab": "http://www.w3.org/2001/XMLSchema#"
-      }
-    },
-    "joinCondition": {
-      "@id": "rr:joinCondition",
-      "@type": "@id"
-    },
-    "parentTriplesMap": {
-      "@id": "rr:parentTriplesMap",
-      "@type": "@id"
-    },
-    "parent": {
-      "@id": "rr:parent"
     },
     "reference": {
       "@id": "rml:reference"
     },
     "template": {
-      "@id": "rr:template"
+      "@id": "rml:template"
     },
+
+    "TermMap": "rml:TermMap",
     "termType": {
-      "@id": "rr:termType",
+      "@id": "rml:termType",
       "@type": "@vocab",
       "@context": {
-        "IRI": "rr:IRI",
-        "BlankNode": "rr:BlankNode",
-        "Literal": "rr:Literal"
+        "IRI": "rml:IRI",
+        "BlankNode": "rml:BlankNode",
+        "Literal": "rml:Literal"
+      }
+    },
+    "languageMap": {
+      "@id": "rml:languageMap",
+      "@type": "@id"
+    },
+    "language": {
+      "@id": "rml:language"
+    },
+    "datatypeMap": {
+      "@id": "rml:datatypeMap",
+      "@type": "@id"
+    },
+    "datatype": {
+      "@id": "rml:datatype",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "http://www.w3.org/2001/XMLSchema#"
       }
     },
 
+    "LanguageMap": "rml:LanguageMap",
+    "DatatypeMap": "rml:DatatypeMap",
+
+    "SubjectMap": "rml:SubjectMap",
+    "class": {
+      "@id": "rml:class",
+      "@type": "@id"
+    },
+    "graphMap": {
+      "@id": "rml:graphMap",
+      "@type": "@id"
+    },
+    "graph": {
+      "@id": "rml:graph",
+      "@type": "@vocab",
+      "@context": {
+        "defaultGraph": "rml:defaultGraph"
+      }
+    },
+    
+    "PredicateObjectMap": "rml:PredicateObjectMap",
+    "predicateMap": {
+      "@id": "rml:predicateMap",
+      "@type": "@id"
+    },
+    "predicate": {
+      "@id": "rml:predicate",
+      "@type": "@id"
+    },
+    "objectMap": {
+      "@id": "rml:objectMap",
+      "@type": "@id"
+    },
+    "object": {
+      "@id": "rml:object",
+      "@type": "@id"
+    },
     "objectMapsPerPredicate": {
-      "@id": "rr:predicateObjectMap",
+      "@id": "rml:predicateObjectMap",
       "@container": "@index",
       "@index": "predicate"
+    },
+
+    "ReferencingObjectMap": "rml:ReferencingObjectMap",
+    "parentTriplesMap": {
+      "@id": "rml:parentTriplesMap",
+      "@type": "@id"
+    },
+    "joinCondition": {
+      "@id": "rml:joinCondition",
+      "@type": "@id",
+      "@context": {
+        "childMap": {
+          "@id": "rml:childMap",
+          "@type": "@id"
+        },
+        "child": {
+          "@id": "rml:child"
+        },
+        "parentMap": {
+          "@id": "rml:parentMap",
+          "@type": "@id"
+        },
+        "parent": {
+          "@id": "rml:parent"
+        }
+      }
     }
   }
 }

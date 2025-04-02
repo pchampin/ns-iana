@@ -1,4 +1,4 @@
-"@context": 
+"@context":
   - "./rml_context.jsonld"
   - reg: https://www.w3.org/ns/assignments/reg#
     dct: http://purl.org/dc/terms/
@@ -14,7 +14,11 @@
 
     logicalSource:
       id: "#legacy-record-logicalSource"
-      source: ./media-types.xml
+      source:
+        id: "#media-types.xml"
+        type: RelativePathSource
+        rootType: CurrentWorkingDirectory
+        path: media-types.xml
       referenceFormulation: XPath
       iterator: "/registry/registry/record"
 
@@ -34,7 +38,7 @@
         - objectMap:
             # ad-hoc rule to handle the few xrefs contained in names
             # (the else returns nothing, by design -- I don't know how to do that more cleanly)
-            reference: | 
+            reference: |
               if (name/xref)
               then replace(string(name), "by ", concat("by  ", name/xref/@data, " "))
               else name/xref
@@ -130,7 +134,7 @@
     # and that this rule could then be ignored.
 
     logicalSource:
-      source: ./media-types.xml
+      source: "#media-types.xml"
       referenceFormulation: XPath
       iterator: /registry/registry/record/xref[not(@type="rfc" or @type="draft" or @type="uri" or @type="person")]
 
@@ -156,7 +160,7 @@
 
     logicalSource:
       id: "#legacy-person-logicalSource"
-      source: ./media-types.xml
+      source: "#media-types.xml"
       referenceFormulation: XPath
       iterator: "/registry/people/person"
 
@@ -211,7 +215,7 @@
     # Generate the 'reg:xref' triples from media-types to persons, in the person's file
 
     logicalSource:
-      source: ./media-types.xml
+      source: "#media-types.xml"
       referenceFormulation: XPath
       iterator: /registry/registry/record/xref[@type="person"]
 
@@ -235,5 +239,5 @@
 #
 # These "pseudo-relative" IRIs are represented in the dummy `x-relative:` scheme,
 # which is stripped away from the Turtle serialization.
-# 
+#
 # (In fact, it is stripped upstream of 'sop', because 'sop' supports "relative RDF")

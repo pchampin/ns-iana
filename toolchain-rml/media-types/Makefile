@@ -3,7 +3,7 @@ SOP ?= /home/pa/.cargo/bin/sop
 RML ?= /opt/rml/rmlmapper.jar
 
 # ⚠ the hash character ('#') MUST be escaped in the prefix declarations
-RML_PREFIXES=rml:http://semweb.mmlab.be/ns/rml\#,rr:http://www.w3.org/ns/r2rml\#
+RML_PREFIXES=rml:http://w3id.org/rml/
 APP_PREFIXES=reg:https://www.w3.org/ns/assignments/reg\#,dct:http://purl.org/dc/terms/
 
 .PHONY: dispatch
