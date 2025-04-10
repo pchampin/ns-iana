@@ -40,6 +40,36 @@
           # ⚠  do not use 'template' here, because some characters like '+' would be escaped
           # NB: see explanation about the 'x-relative:?' hack at the bottom
           termType: IRI
+      dct:identifier:
+        objectMap:
+          reference: file
+      rdfs:definedBy:
+        objectMap:
+          reference: concat("https://www.iana.org/assignments/media-types/", file)
+          termType: IRI
+          # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+      dct:created:
+        objectMap:
+          reference: "@date"
+          datatype: date
+      dct:modified:
+        objectMap:
+          reference: "@updated"
+          datatype: date
+      rdfs:seeAlso:
+        - object:Map:
+            termType: IRI
+            reference: xref[@type="uri"]/@data
+        - objectMap:
+            template: https://datatracker.ietf.org/doc/{xref[@type="rfc" or @type="draft"]/@data}/
+        - objectMap:
+            termType: IRI
+            reference: |
+              for $person in xref[@type="person"]/@data return
+              concat("x-relative:?../../person/", $person, "#")
+            # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+            # NB: see explanation about the 'x-relative:?' hack at the bottom
+
 
   - type: TriplesMap
     id: "#legacy-record"
