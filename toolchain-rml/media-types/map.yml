@@ -36,8 +36,10 @@
     objectMapsPerPredicate:
       owl:sameAs:
         objectMap:
-          template: "x-relative:?#Resource"
+          reference: concat("x-relative:?", substring-after(file, '/'), '#Resource')
+          # ⚠  do not use 'template' here, because some characters like '+' would be escaped
           # NB: see explanation about the 'x-relative:?' hack at the bottom
+          termType: IRI
 
   - type: TriplesMap
     id: "#legacy-record"
@@ -47,7 +49,8 @@
 
     subjectMap:
       id: "#legacy-record-subjectMap"
-      template: "x-relative:?#Resource"
+      reference: concat("x-relative:?", substring-after(file, '/'), '#Resource')
+      # ⚠  do not use 'template' here, because some characters like '+' would be escaped
       # NB: see explanation about the 'x-relative:?' hack at the bottom
       graphMap: "#record-graphMap"
 
@@ -241,7 +244,7 @@
 
     subjectMap:
       reference: concat("x-relative:?../media-types/", ../file, "#Resource")
-      # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+      # ⚠  do not use 'template' here, because characters like '/' or '+' in 'file' would be escaped
       graphMap:
         reference: concat("x-output:/person/", @data, ".ttl")
         # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
