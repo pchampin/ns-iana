@@ -82,6 +82,7 @@
       reference: concat("x-relative:?", substring-after(file, '/'), '#Resource')
       # ⚠  do not use 'template' here, because some characters like '+' would be escaped
       # NB: see explanation about the 'x-relative:?' hack at the bottom
+      termType: IRI # ← required because this map is also used as an objectMap
       graphMap: "#record-graphMap"
 
     objectMapsPerPredicate:
