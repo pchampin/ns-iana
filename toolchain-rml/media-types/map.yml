@@ -10,7 +10,7 @@
 "@included":
 
   - type: TriplesMap
-    id: "record"
+    id: "#record"
     # Generate each media-type's outgoing triples, in the media-type's file
 
     logicalSource:
@@ -69,6 +69,24 @@
 
 
   - type: TriplesMap
+    id: "#top-level"
+    # Generate classes for top-level
+    # TODO decide on a destination named graph, and populate this
+
+    logicalSource:
+      id: "#top-level-logicalSource"
+      source: "#media-types.xml"
+      referenceFormulation: XPath
+      iterator: "/registry/registry"
+
+    subjectMap:
+      template: https://www.w3.org/ns/iana/media-types/{@id}
+
+    #
+    # BELOW ARE THE LEGACY TRIPLE MAPS RE-GENERATING TIM'S ORGINAL DATA
+    #
+
+  - type: TriplesMap
     id: "#legacy-record"
     # Generate each media-type's outgoing legacy triples, in the media-type's file
 
@@ -77,19 +95,23 @@
     subjectMap:
       reference: concat("https://www.w3.org/ns/iana/media-types/", file, '#Resource')
       # ⚠  do not use 'template' here, because some characters like '/' or '+' would be escaped
-      graphMap: "#record-graphMap"
+      graphMap:
+        - "#record-graphMap"
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:name:
         - objectMap:
             reference: name[not(./xref)]
         - objectMap:
-            # ad-hoc rule to handle the few xrefs contained in names
-            # (the else returns nothing, by design -- I don't know how to do that more cleanly)
+            # concatenate text with @data of inner <xref>s
             reference: |
-              if (name/xref)
-              then replace(string(name), "by ", concat("by  ", name/xref/@data, " "))
-              else name/xref
+              for $elt in name[xref] return
+              string-join(
+                for $node in $elt/node() return
+                  if ($node/@data) then $node/@data else $node,
+                " "
+              )
 
       dct:date:
         objectMap:
@@ -118,7 +140,9 @@
             subjectMap:
               termType: BlankNode
               reference: .
-              graphMap: "#record-graphMap"
+              graphMap:
+                - "#record-graphMap"
+                - "#legacy-media-types.ttl-graphMap"
 
             objectMapsPerPredicate:
               reg:type:
@@ -132,27 +156,24 @@
                   reference: file/@name
 
       reg:xref:
-        - objectMap:
-            termType: IRI
+        id: "#xref-predicateObjectMap"
+        objectMap:
+          - termType: IRI
             reference: xref[@type="uri"]/@data
 
-        - objectMap:
-            template: https://tools.ietf.org/html/{xref[@type="rfc" or @type="draft"]/@data}
+          - template: https://tools.ietf.org/html/{xref[@type="rfc" or @type="draft"]/@data}
 
-        - objectMap:
-            termType: IRI
+          - termType: IRI
             reference: |
               for $person in xref[@type="person"]/@data return
               concat("https://www.w3.org/ns/iana/person/", $person, "#")
             # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
 
-        - objectMap:
             # LEGACY: see note about #legacy-record-other-xrefs
-            parentTriplesMap: "#legacy-record-other-xrefs"
+          - parentTriplesMap: "#legacy-record-other-xrefs"
             joinCondition:
               child: .
               parent: ..
-
 
 
   - type: TriplesMap
@@ -164,7 +185,9 @@
     subjectMap:
       template: "https://www.w3.org/ns/iana/media-types/media-types.ttl#{../@id}"
       # LEGACY: is it deliberate that we keep the '.ttl' extension in this IRI?
-      graphMap: "#record-graphMap"
+      graphMap:
+        - "#record-graphMap"
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:record:
@@ -191,8 +214,9 @@
       termType: BlankNode
       template: gen:{../file}-{@type}
       graphMap:
-        reference: concat("https://www.w3.org/ns/iana/media-types/", ../file, ".ttl")
-        # ⚠  do not use 'template' here, because the '/' in 'file' would be escaped
+        - reference: concat("https://www.w3.org/ns/iana/media-types/", ../file, ".ttl")
+          # ⚠  do not use 'template' here, because some characters like '/' or '+' would be escaped
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:type:
@@ -201,6 +225,146 @@
       reg:data:
         objectMap:
           reference: "@data"
+
+
+  - type: TriplesMap
+    id: "#legacy-top-level"
+    # Generate each top-level type's outgoing triples, in the media-type's file
+
+    logicalSource: "#top-level-logicalSource"
+
+    subjectMap:
+      template: https://www.w3.org/ns/iana/media-types/media-types.ttl#{@id}
+      graphMap:
+        id: "#legacy-media-types.ttl-graphMap"
+        constantIri: "https://www.w3.org/ns/iana/media-types/media-types.ttl"
+
+    objectMapsPerPredicate:
+      dct:title:
+        objectMap:
+          reference: "@id"
+      reg:id:
+        objectMap:
+          reference: "@id"
+      rdfs:comment:
+        objectMap:
+          # concatenate text with @data of inner <xref>s
+          reference: |
+            for $elt in note return
+            string-join(
+              for $node in $elt/node() return
+                if ($node/@data) then $node/@data else $node,
+              " "
+            )
+      reg:footnote:
+        objectMap:
+          joinCondition:
+            child: .
+            parent: ..
+          parentTriplesMap:
+            type: TriplesMap
+            # Generate the blank node object of reg:footnotes with its properties
+
+            logicalSource:
+              source: "#media-types.xml"
+              referenceFormulation: XPath
+              iterator: "/registry/registry/footnote"
+
+            subjectMap:
+              termType: BlankNode
+              reference: .
+              graphMap:
+                - "#legacy-media-types.ttl-graphMap"
+
+            objectMapsPerPredicate:
+              reg:anchor:
+                objectMap:
+                  reference: "@anchor"
+              reg:footnote:
+                objectMap:
+                  reference: |
+                    for $text in text() return
+                    normalize-space($text)
+
+            predicateObjectMap: "#xref-predicateObjectMap"
+
+
+  - type: TriplesMap
+    id: "#legacy-root"
+    # Generate root registry
+
+    logicalSource:
+      source: "#media-types.xml"
+      referenceFormulation: XPath
+      iterator: "/registry"
+
+    subjectMap:
+      constantIri: https://www.w3.org/ns/iana/media-types/media-types.ttl#media-types
+      graphMap: "#legacy-media-types.ttl-graphMap"
+
+    objectMapsPerPredicate:
+      reg:id:
+        objectMap:
+          reference: "@id"
+      reg:registry:
+        objectMap:
+          template: https://www.w3.org/ns/iana/media-types/media-types.ttl#{registry/@id}
+          termType: IRI
+      dct:title:
+        objectMap:
+          reference: title
+      reg:category:
+        objectMap:
+          reference: category
+      reg:updated:
+        objectMap:
+          reference: updated
+      reg:registration_rule:
+        objectMap:
+          # concatenate text with @data of inner <xref>s
+          reference: |
+            for $elt in registration_rule return
+            string-join(
+              for $node in $elt/node() return
+                if ($node/@data) then $node/@data else $node,
+              " "
+            )
+      reg:expert:
+        objectMap:
+          reference: expert
+      rdfs:comment:
+        objectMap:
+          # concatenate text with @data of inner <xref>s
+          reference: |
+            for $elt in note return
+            string-join(
+              for $node in $elt/node() return
+                if ($node/@data) then $node/@data else $node,
+              " "
+            )
+      reg:people:
+        object: https://www.w3.org/ns/iana/media-types/media-types.ttl#n0
+
+    predicateObjectMap:
+      - "#xref-predicateObjectMap"
+
+
+  - type: TriplesMap
+    id: "#legacy-root-incoming"
+    # Generate incoming arcs for the root registry
+
+    logicalSource:
+      source: "#media-types.xml"
+      referenceFormulation: XPath
+      iterator: "/registry"
+
+    subjectMap:
+      constantIri: https://www.w3.org/ns/iana/media-types/media-types.ttl
+      graphMap: "#legacy-media-types.ttl-graphMap"
+
+    objectMapsPerPredicate:
+      https://www.w3.org/ns/iana/media-types/media-types.ttl#registry:  # sic!
+        object: https://www.w3.org/ns/iana/media-types/media-types.ttl#media-types
 
 
   - type: TriplesMap
@@ -218,8 +382,10 @@
       reference: concat("https://www.w3.org/ns/iana/person/", @id, "#")
       # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
       graphMap:
-        reference: concat("https://www.w3.org/ns/iana/person/", @id, ".ttl")
-        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+        - id: "#legacy-person-graphMap"
+          reference: concat("https://www.w3.org/ns/iana/person/", @id, ".ttl")
+          # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:id:
@@ -248,11 +414,11 @@
     logicalSource: "#legacy-person-logicalSource"
 
     subjectMap:
-      template: "https://www.w3.org/ns/iana/media-types/media-types.ttl#n0"
+      constantIri: https://www.w3.org/ns/iana/media-types/media-types.ttl#n0
       # LEGACY: the 'n0' suffix seems to be a mistake; do we want to keep that?
       graphMap:
-        reference: concat("https://www.w3.org/ns/iana/person/", @id, ".ttl")
-        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+        - "#legacy-person-graphMap"
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:person:
@@ -275,8 +441,9 @@
       reference: concat("https://www.w3.org/ns/iana/media-types/", ../file, "#Resource")
       # ⚠  do not use 'template' here, because characters like '/' or '+' in 'file' would be escaped
       graphMap:
-        reference: concat("https://www.w3.org/ns/iana/person/", @data, ".ttl")
-        # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+        - reference: concat("https://www.w3.org/ns/iana/person/", @data, ".ttl")
+          # ⚠  do not use 'template' here, because non-ASCII characters in person IDs would be escaped
+        - "#legacy-media-types.ttl-graphMap"
 
     objectMapsPerPredicate:
       reg:xref:
