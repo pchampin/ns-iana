@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mikusiak_Lubos#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.latex-z#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/vnd.latex-z"; reg:type "template" ];
-    reg:name "vnd.latex-z";
-    reg:xref Mik:.
+<vnd.latex-z> a rdfs:Class;
+  dct:identifier "text/vnd.latex-z";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.latex-z>;
+  rdfs:seeAlso <../../person/Mikusiak_Lubos#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.latex-z#Resource>.
+
+<vnd.latex-z#Resource>
+  reg:file [
+      reg:file "text/vnd.latex-z";
+      reg:type "template"];
+  reg:name "vnd.latex-z";
+  reg:xref <../../person/Mikusiak_Lubos#>.

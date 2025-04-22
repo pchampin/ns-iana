@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Chr: <../../person/Christopher_Snazell#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.astraea-software.iota"; reg:type "template" ];
-    reg:name "vnd.astraea-software.iota";
-    reg:xref Chr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.astraea-software.iota#Resource>.
 
+<vnd.astraea-software.iota> a rdfs:Class;
+  dct:identifier "application/vnd.astraea-software.iota";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.astraea-software.iota>;
+  rdfs:seeAlso <../../person/Christopher_Snazell#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.astraea-software.iota#Resource>.
+
+<vnd.astraea-software.iota#Resource>
+  reg:file [
+      reg:file "application/vnd.astraea-software.iota";
+      reg:type "template"];
+  reg:name "vnd.astraea-software.iota";
+  reg:xref <../../person/Christopher_Snazell#>.

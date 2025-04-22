@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix xht: <../media-types/application/xhtml+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix x: <../media-types/multipart/x-mixed-replace#>.
-@prefix c: <../media-types/text/cache-manifest#>.
-@prefix html: <../media-types/text/html#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-xht:Resource reg:xref :.
+<../media-types/application/xhtml+xml#Resource>
+  reg:xref <Robin_Berjon#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Robin_Berjon#>.
 
-x:Resource reg:xref :.
+<../media-types/multipart/x-mixed-replace#Resource>
+  reg:xref <Robin_Berjon#>.
 
-c:Resource reg:xref :.
+<../media-types/text/cache-manifest#Resource>
+  reg:xref <Robin_Berjon#>.
 
-html:Resource reg:xref :.
+<../media-types/text/html#Resource>
+  reg:xref <Robin_Berjon#>.
 
-:
-    reg:id "Robin_Berjon";
-    reg:name "Robin Berjon";
-    reg:updated "2014-10-23";
-    reg:uri "mailto:robin&w3.org".
+<Robin_Berjon#>
+  reg:id "Robin_Berjon";
+  reg:name "Robin Berjon";
+  reg:updated "2014-10-23";
+  reg:uri "mailto:robin&w3.org".

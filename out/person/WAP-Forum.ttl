@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.wap.sic#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.wap.slc#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix v: <../media-types/text/vnd.wap.si#>.
-@prefix n1: <../media-types/text/vnd.wap.sl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.wap.sic#Resource>
+  reg:xref <WAP-Forum#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.wap.slc#Resource>
+  reg:xref <WAP-Forum#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <WAP-Forum#>.
 
-v:Resource reg:xref :.
+<../media-types/text/vnd.wap.si#Resource>
+  reg:xref <WAP-Forum#>.
 
-n1:Resource reg:xref :.
+<../media-types/text/vnd.wap.sl#Resource>
+  reg:xref <WAP-Forum#>.
 
-:
-    reg:id "WAP-Forum";
-    reg:name "WAP Forum Ltd.";
-    reg:updated "2000-02-20";
-    reg:uri "mailto:wap-feedback&mail.wapforum.org".
+<WAP-Forum#>
+  reg:id "WAP-Forum";
+  reg:name "WAP Forum Ltd.";
+  reg:updated "2000-02-20";
+  reg:uri "mailto:wap-feedback&mail.wapforum.org".

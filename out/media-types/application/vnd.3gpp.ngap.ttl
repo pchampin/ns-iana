@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix Y: <../../person/Yang_Yong#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-09"^^XML:date;
-    reg:file [ reg:file "application/vnd.3gpp.ngap"; reg:type "template" ];
-    reg:name "vnd.3gpp.ngap";
-    reg:xref n1:, Y:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.3gpp.ngap#Resource>.
 
+<vnd.3gpp.ngap> a rdfs:Class;
+  dct:created "2021-04-09"^^xsd:date;
+  dct:identifier "application/vnd.3gpp.ngap";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.3gpp.ngap>;
+  rdfs:seeAlso <../../person/Yang_Yong#>,
+    <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp.ngap#Resource>.
+
+<vnd.3gpp.ngap#Resource>
+  dct:date "2021-04-09"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.3gpp.ngap";
+      reg:type "template"];
+  reg:name "vnd.3gpp.ngap";
+  reg:xref <../../person/Yang_Yong#>,
+    <../../person/_3GPP#>.

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mic: <../../person/Mick_Conley#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <vnd.wfa.wsc#Resource>.
 
-:Resource
-    reg:file [ reg:file "message/vnd.wfa.wsc"; reg:type "template" ];
-    reg:name "vnd.wfa.wsc";
-    reg:xref Mic:.
+<vnd.wfa.wsc> a rdfs:Class;
+  dct:identifier "message/vnd.wfa.wsc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/vnd.wfa.wsc>;
+  rdfs:seeAlso <../../person/Mick_Conley#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.wfa.wsc#Resource>.
+
+<vnd.wfa.wsc#Resource>
+  reg:file [
+      reg:file "message/vnd.wfa.wsc";
+      reg:type "template"];
+  reg:name "vnd.wfa.wsc";
+  reg:xref <../../person/Mick_Conley#>.

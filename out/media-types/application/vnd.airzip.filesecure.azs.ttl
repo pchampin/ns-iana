@@ -1,13 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/Daniel_Mould#>.
-@prefix G: <../../person/Gary_Clueit#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.airzip.filesecure.azs"; reg:type "template" ];
-    reg:name "vnd.airzip.filesecure.azs";
-    reg:xref D:, G:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.airzip.filesecure.azs#Resource>.
 
+<vnd.airzip.filesecure.azs> a rdfs:Class;
+  dct:identifier "application/vnd.airzip.filesecure.azs";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.airzip.filesecure.azs>;
+  rdfs:seeAlso <../../person/Daniel_Mould#>,
+    <../../person/Gary_Clueit#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.airzip.filesecure.azs#Resource>.
+
+<vnd.airzip.filesecure.azs#Resource>
+  reg:file [
+      reg:file "application/vnd.airzip.filesecure.azs";
+      reg:type "template"];
+  reg:name "vnd.airzip.filesecure.azs";
+  reg:xref <../../person/Daniel_Mould#>,
+    <../../person/Gary_Clueit#>.

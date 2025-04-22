@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix CWL: <../../person/CWL_Project#>.
-@prefix Mich: <../../person/Michael_R._Crusoe#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-05-09"^^XML:date;
-    reg:file [ reg:file "application/cwl"; reg:type "template" ];
-    reg:name "cwl";
-    reg:xref CWL:, Mich:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <cwl#Resource>.
 
+<cwl> a rdfs:Class;
+  dct:created "2022-05-09"^^xsd:date;
+  dct:identifier "application/cwl";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/cwl>;
+  rdfs:seeAlso <../../person/CWL_Project#>,
+    <../../person/Michael_R._Crusoe#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <cwl#Resource>.
+
+<cwl#Resource>
+  dct:date "2022-05-09"^^xsd:date;
+  reg:file [
+      reg:file "application/cwl";
+      reg:type "template"];
+  reg:name "cwl";
+  reg:xref <../../person/CWL_Project#>,
+    <../../person/Michael_R._Crusoe#>.

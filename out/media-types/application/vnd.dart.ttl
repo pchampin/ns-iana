@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix And: <../../person/Anders_Sandholm#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.dart"; reg:type "template" ];
-    reg:name "vnd.dart";
-    reg:xref And:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.dart#Resource>.
 
+<vnd.dart> a rdfs:Class;
+  dct:identifier "application/vnd.dart";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.dart>;
+  rdfs:seeAlso <../../person/Anders_Sandholm#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dart#Resource>.
+
+<vnd.dart#Resource>
+  reg:file [
+      reg:file "application/vnd.dart";
+      reg:type "template"];
+  reg:name "vnd.dart";
+  reg:xref <../../person/Anders_Sandholm#>.

@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Waltermire#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix Ron: <../../person/Ron_Brill#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-09-03"^^XML:date;
-    reg:file [ reg:file "application/swid+xml"; reg:type "template" ];
-    reg:name "swid+xml";
-    reg:xref D:, ISO:, Ron:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <swid+xml#Resource>.
 
+<swid+xml> a rdfs:Class;
+  dct:created "2019-09-03"^^xsd:date;
+  dct:identifier "application/swid+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/swid+xml>;
+  rdfs:seeAlso <../../person/David_Waltermire#>,
+    <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Ron_Brill#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <swid+xml#Resource>.
+
+<swid+xml#Resource>
+  dct:date "2019-09-03"^^xsd:date;
+  reg:file [
+      reg:file "application/swid+xml";
+      reg:type "template"];
+  reg:name "swid+xml";
+  reg:xref <../../person/David_Waltermire#>,
+    <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Ron_Brill#>.

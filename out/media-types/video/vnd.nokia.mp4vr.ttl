@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Misk: <../../person/Miska_M._Hannuksela#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.nokia.mp4vr#Resource>.
 
-:Resource
-    terms:date "2017-09-15"^^XML:date;
-    reg:file [ reg:file "video/vnd.nokia.mp4vr"; reg:type "template" ];
-    reg:name "vnd.nokia.mp4vr";
-    reg:xref Misk:.
+<vnd.nokia.mp4vr> a rdfs:Class;
+  dct:created "2017-09-15"^^xsd:date;
+  dct:identifier "video/vnd.nokia.mp4vr";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.nokia.mp4vr>;
+  rdfs:seeAlso <../../person/Miska_M._Hannuksela#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.nokia.mp4vr#Resource>.
+
+<vnd.nokia.mp4vr#Resource>
+  dct:date "2017-09-15"^^xsd:date;
+  reg:file [
+      reg:file "video/vnd.nokia.mp4vr";
+      reg:type "template"];
+  reg:name "vnd.nokia.mp4vr";
+  reg:xref <../../person/Miska_M._Hannuksela#>.

@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Eri: <../../person/Eric_Prudhommeaux#>.
-@prefix W3C: <../../person/W3C#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <turtle#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/turtle"; reg:type "template" ];
-    reg:name "turtle";
-    reg:xref Eri:, W3C:.
+<turtle> a rdfs:Class;
+  dct:identifier "text/turtle";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/turtle>;
+  rdfs:seeAlso <../../person/Eric_Prudhommeaux#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <turtle#Resource>.
+
+<turtle#Resource>
+  reg:file [
+      reg:file "text/turtle";
+      reg:type "template"];
+  reg:name "turtle";
+  reg:xref <../../person/Eric_Prudhommeaux#>,
+    <../../person/W3C#>.

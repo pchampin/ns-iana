@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/EVRCNW0"; reg:type "template" ];
-    reg:name "EVRCNW0";
-    reg:xref html:rfc6884.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <EVRCNW0#Resource>.
 
+<EVRCNW0> a rdfs:Class;
+  dct:identifier "audio/EVRCNW0";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/EVRCNW0>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6884/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <EVRCNW0#Resource>.
+
+<EVRCNW0#Resource>
+  reg:file [
+      reg:file "audio/EVRCNW0";
+      reg:type "template"];
+  reg:name "EVRCNW0";
+  reg:xref <https://tools.ietf.org/html/rfc6884>.

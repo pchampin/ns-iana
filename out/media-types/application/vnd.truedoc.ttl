@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Br: <../../person/Brad_Chase#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.truedoc"; reg:type "template" ];
-    reg:name "vnd.truedoc";
-    reg:xref Br:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.truedoc#Resource>.
 
+<vnd.truedoc> a rdfs:Class;
+  dct:identifier "application/vnd.truedoc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.truedoc>;
+  rdfs:seeAlso <../../person/Brad_Chase#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.truedoc#Resource>.
+
+<vnd.truedoc#Resource>
+  reg:file [
+      reg:file "application/vnd.truedoc";
+      reg:type "template"];
+  reg:name "vnd.truedoc";
+  reg:xref <../../person/Brad_Chase#>.

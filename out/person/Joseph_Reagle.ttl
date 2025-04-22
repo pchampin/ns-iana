@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix xen: <../media-types/application/xenc+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-xen:Resource reg:xref :.
+<../media-types/application/xenc+xml#Resource>
+  reg:xref <Joseph_Reagle#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Joseph_Reagle#>.
 
-:
-    reg:id "Joseph_Reagle";
-    reg:name "Joseph Reagle";
-    reg:updated "2006-03-20";
-    reg:uri "mailto:reagle&w3.org".
+<Joseph_Reagle#>
+  reg:id "Joseph_Reagle";
+  reg:name "Joseph Reagle";
+  reg:updated "2006-03-20";
+  reg:uri "mailto:reagle&w3.org".

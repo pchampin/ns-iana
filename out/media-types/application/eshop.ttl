@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steve_Katz#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/eshop"; reg:type "template" ];
-    reg:name "eshop";
-    reg:xref Ste:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <eshop#Resource>.
 
+<eshop> a rdfs:Class;
+  dct:identifier "application/eshop";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/eshop>;
+  rdfs:seeAlso <../../person/Steve_Katz#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <eshop#Resource>.
+
+<eshop#Resource>
+  reg:file [
+      reg:file "application/eshop";
+      reg:type "template"];
+  reg:name "eshop";
+  reg:xref <../../person/Steve_Katz#>.

@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.bluetooth.le.oob#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.bluetooth.le.oob#Resource>
+  reg:xref <Mark_Powell#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Mark_Powell#>.
 
-:
-    reg:id "Mark_Powell";
-    reg:name "Mark Powell";
-    reg:updated "2013-09-06";
-    reg:uri "mailto:mpowell&bluetooth.com".
+<Mark_Powell#>
+  reg:id "Mark_Powell";
+  reg:name "Mark Powell";
+  reg:updated "2013-09-06";
+  reg:uri "mailto:mpowell&bluetooth.com".

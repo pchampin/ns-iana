@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mich: <../../person/Michael_Ashbridge#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.google-earth.kml+xml"; reg:type "template" ];
-    reg:name "vnd.google-earth.kml+xml";
-    reg:xref Mich:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.google-earth.kml+xml#Resource>.
 
+<vnd.google-earth.kml+xml> a rdfs:Class;
+  dct:identifier "application/vnd.google-earth.kml+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml>;
+  rdfs:seeAlso <../../person/Michael_Ashbridge#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.google-earth.kml+xml#Resource>.
+
+<vnd.google-earth.kml+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.google-earth.kml+xml";
+      reg:type "template"];
+  reg:name "vnd.google-earth.kml+xml";
+  reg:xref <../../person/Michael_Ashbridge#>.

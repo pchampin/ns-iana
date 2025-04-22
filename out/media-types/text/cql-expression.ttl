@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Bry: <../../person/Bryn_Rhodes#>.
-@prefix HL7: <../../person/HL7#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <cql-expression#Resource>.
 
-:Resource
-    terms:date "2020-12-08"^^XML:date;
-    reg:file [ reg:file "text/cql-expression"; reg:type "template" ];
-    reg:name "cql-expression";
-    reg:xref Bry:, HL7:.
+<cql-expression> a rdfs:Class;
+  dct:created "2020-12-08"^^xsd:date;
+  dct:identifier "text/cql-expression";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/cql-expression>;
+  rdfs:seeAlso <../../person/Bryn_Rhodes#>,
+    <../../person/HL7#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <cql-expression#Resource>.
+
+<cql-expression#Resource>
+  dct:date "2020-12-08"^^xsd:date;
+  reg:file [
+      reg:file "text/cql-expression";
+      reg:type "template"];
+  reg:name "cql-expression";
+  reg:xref <../../person/Bryn_Rhodes#>,
+    <../../person/HL7#>.

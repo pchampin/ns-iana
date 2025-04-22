@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Benj: <../../person/Benja_Fallenstein#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <prs.fallenstein.rst#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/prs.fallenstein.rst"; reg:type "template" ];
-    reg:name "prs.fallenstein.rst";
-    reg:xref Benj:.
+<prs.fallenstein.rst> a rdfs:Class;
+  dct:identifier "text/prs.fallenstein.rst";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/prs.fallenstein.rst>;
+  rdfs:seeAlso <../../person/Benja_Fallenstein#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.fallenstein.rst#Resource>.
+
+<prs.fallenstein.rst#Resource>
+  reg:file [
+      reg:file "text/prs.fallenstein.rst";
+      reg:type "template"];
+  reg:name "prs.fallenstein.rst";
+  reg:xref <../../person/Benja_Fallenstein#>.

@@ -1,13 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix T: <../../person/Takatomo_Wakibayashi#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.fujixerox.docuworks"; reg:type "template" ];
-    reg:name "vnd.fujixerox.docuworks";
-    reg:updated "2019-12-03";
-    reg:xref T:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fujixerox.docuworks#Resource>.
 
+<vnd.fujixerox.docuworks> a rdfs:Class;
+  dct:identifier "application/vnd.fujixerox.docuworks";
+  dct:modified "2019-12-03"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fujixerox.docuworks>;
+  rdfs:seeAlso <../../person/Takatomo_Wakibayashi#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fujixerox.docuworks#Resource>.
+
+<vnd.fujixerox.docuworks#Resource>
+  reg:file [
+      reg:file "application/vnd.fujixerox.docuworks";
+      reg:type "template"];
+  reg:name "vnd.fujixerox.docuworks";
+  reg:updated "2019-12-03";
+  reg:xref <../../person/Takatomo_Wakibayashi#>.

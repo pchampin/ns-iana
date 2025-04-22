@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Joe: <../../person/Joerg_Falkenberg#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.cab-jscript"; reg:type "template" ];
-    reg:name "vnd.cab-jscript";
-    reg:xref Joe:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cab-jscript#Resource>.
 
+<vnd.cab-jscript> a rdfs:Class;
+  dct:identifier "application/vnd.cab-jscript";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cab-jscript>;
+  rdfs:seeAlso <../../person/Joerg_Falkenberg#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cab-jscript#Resource>.
+
+<vnd.cab-jscript#Resource>
+  reg:file [
+      reg:file "application/vnd.cab-jscript";
+      reg:type "template"];
+  reg:name "vnd.cab-jscript";
+  reg:xref <../../person/Joerg_Falkenberg#>.

@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ned: <../../person/Ned_M._Smith#>.
-@prefix TCG: <../../person/TCG_DICE#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2025-01-02"^^XML:date;
-    reg:file [ reg:file "application/ce+cbor"; reg:type "template" ];
-    reg:name "ce+cbor";
-    reg:xref Ned:, TCG:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <ce+cbor#Resource>.
 
+<ce+cbor> a rdfs:Class;
+  dct:created "2025-01-02"^^xsd:date;
+  dct:identifier "application/ce+cbor";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/ce+cbor>;
+  rdfs:seeAlso <../../person/Ned_M._Smith#>,
+    <../../person/TCG_DICE#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <ce+cbor#Resource>.
+
+<ce+cbor#Resource>
+  dct:date "2025-01-02"^^xsd:date;
+  reg:file [
+      reg:file "application/ce+cbor";
+      reg:type "template"];
+  reg:name "ce+cbor";
+  reg:xref <../../person/Ned_M._Smith#>,
+    <../../person/TCG_DICE#>.

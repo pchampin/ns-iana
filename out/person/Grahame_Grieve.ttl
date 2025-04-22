@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix fhi: <../media-types/application/fhir+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix fh: <../media-types/application/fhir+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-fhi:Resource reg:xref :.
+<../media-types/application/fhir+json#Resource>
+  reg:xref <Grahame_Grieve#>.
 
-fh:Resource reg:xref :.
+<../media-types/application/fhir+xml#Resource>
+  reg:xref <Grahame_Grieve#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Grahame_Grieve#>.
 
-:
-    reg:id "Grahame_Grieve";
-    reg:name "Grahame Grieve";
-    reg:updated "2018-03-06";
-    reg:uri "mailto:fhir-director&hl7.org".
+<Grahame_Grieve#>
+  reg:id "Grahame_Grieve";
+  reg:name "Grahame Grieve";
+  reg:updated "2018-03-06";
+  reg:uri "mailto:fhir-director&hl7.org".

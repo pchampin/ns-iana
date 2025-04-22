@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mike_Kelly#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.hal+xml"; reg:type "template" ];
-    reg:name "vnd.hal+xml";
-    reg:xref Mik:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.hal+xml#Resource>.
 
+<vnd.hal+xml> a rdfs:Class;
+  dct:identifier "application/vnd.hal+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.hal+xml>;
+  rdfs:seeAlso <../../person/Mike_Kelly#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hal+xml#Resource>.
+
+<vnd.hal+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.hal+xml";
+      reg:type "template"];
+  reg:name "vnd.hal+xml";
+  reg:xref <../../person/Mike_Kelly#>.

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Joh: <../../person/John_Wolfe#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.vivo#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.vivo"; reg:type "template" ];
-    reg:name "vnd.vivo";
-    reg:xref Joh:.
+<vnd.vivo> a rdfs:Class;
+  dct:identifier "video/vnd.vivo";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.vivo>;
+  rdfs:seeAlso <../../person/John_Wolfe#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.vivo#Resource>.
+
+<vnd.vivo#Resource>
+  reg:file [
+      reg:file "video/vnd.vivo";
+      reg:type "template"];
+  reg:name "vnd.vivo";
+  reg:xref <../../person/John_Wolfe#>.

@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-02-24"^^XML:date;
-    reg:file
-    [ reg:file "application/EmergencyCallData.eCall.MSD"; reg:type "template" ];
-    reg:name "EmergencyCallData.eCall.MSD";
-    reg:xref html:rfc8147.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <EmergencyCallData.eCall.MSD#Resource>.
 
+<EmergencyCallData.eCall.MSD> a rdfs:Class;
+  dct:created "2017-02-24"^^xsd:date;
+  dct:identifier "application/EmergencyCallData.eCall.MSD";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/EmergencyCallData.eCall.MSD>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8147/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <EmergencyCallData.eCall.MSD#Resource>.
+
+<EmergencyCallData.eCall.MSD#Resource>
+  dct:date "2017-02-24"^^xsd:date;
+  reg:file [
+      reg:file "application/EmergencyCallData.eCall.MSD";
+      reg:type "template"];
+  reg:name "EmergencyCallData.eCall.MSD";
+  reg:xref <https://tools.ietf.org/html/rfc8147>.

@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Fr: <../../person/Frank_Kilcommins#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-11-29"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.oai.workflows+yaml"; reg:type "template" ];
-    reg:name "vnd.oai.workflows+yaml";
-    reg:xref Fr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.oai.workflows+yaml#Resource>.
 
+<vnd.oai.workflows+yaml> a rdfs:Class;
+  dct:created "2023-11-29"^^xsd:date;
+  dct:identifier "application/vnd.oai.workflows+yaml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.oai.workflows+yaml>;
+  rdfs:seeAlso <../../person/Frank_Kilcommins#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.oai.workflows+yaml#Resource>.
+
+<vnd.oai.workflows+yaml#Resource>
+  dct:date "2023-11-29"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.oai.workflows+yaml";
+      reg:type "template"];
+  reg:name "vnd.oai.workflows+yaml";
+  reg:xref <../../person/Frank_Kilcommins#>.

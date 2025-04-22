@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/Jörg_Palmer#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-10-14"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.afpc.modca-formdef"; reg:type "template" ];
-    reg:name "vnd.afpc.modca-formdef";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.afpc.modca-formdef#Resource>.
 
+<vnd.afpc.modca-formdef> a rdfs:Class;
+  dct:created "2019-10-14"^^xsd:date;
+  dct:identifier "application/vnd.afpc.modca-formdef";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.afpc.modca-formdef>;
+  rdfs:seeAlso <../../person/Jörg_Palmer#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.afpc.modca-formdef#Resource>.
+
+<vnd.afpc.modca-formdef#Resource>
+  dct:date "2019-10-14"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.afpc.modca-formdef";
+      reg:type "template"];
+  reg:name "vnd.afpc.modca-formdef";
+  reg:xref <../../person/Jörg_Palmer#>.

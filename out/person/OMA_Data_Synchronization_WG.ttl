@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.omads-email+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.omads-file+xml#>.
-@prefix v: <../media-types/application/vnd.omads-folder+xml#>.
-@prefix n1: <../media-types/application/vnd.syncml.ds.notification#>.
-@prefix n2: <../media-types/application/vnd.syncml+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.omads-email+xml#Resource>
+  reg:xref <OMA_Data_Synchronization_WG#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.omads-file+xml#Resource>
+  reg:xref <OMA_Data_Synchronization_WG#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.omads-folder+xml#Resource>
+  reg:xref <OMA_Data_Synchronization_WG#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.syncml+xml#Resource>
+  reg:xref <OMA_Data_Synchronization_WG#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.syncml.ds.notification#Resource>
+  reg:xref <OMA_Data_Synchronization_WG#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <OMA_Data_Synchronization_WG#>.
 
-:
-    reg:id "OMA_Data_Synchronization_WG";
-    reg:name "OMA Data Synchronization Working Group";
-    reg:updated "2014-05-01";
-    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+<OMA_Data_Synchronization_WG#>
+  reg:id "OMA_Data_Synchronization_WG";
+  reg:name "OMA Data Synchronization Working Group";
+  reg:updated "2014-05-01";
+  reg:uri "mailto:technical-comments&mail.openmobilealliance.org".

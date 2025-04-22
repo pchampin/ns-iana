@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Szi: <../../person/Szilveszter_Tóth#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.eszigno3+xml"; reg:type "template" ];
-    reg:name "vnd.eszigno3+xml";
-    reg:xref Szi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.eszigno3+xml#Resource>.
 
+<vnd.eszigno3+xml> a rdfs:Class;
+  dct:identifier "application/vnd.eszigno3+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.eszigno3+xml>;
+  rdfs:seeAlso <../../person/Szilveszter_Tóth#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.eszigno3+xml#Resource>.
+
+<vnd.eszigno3+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.eszigno3+xml";
+      reg:type "template"];
+  reg:name "vnd.eszigno3+xml";
+  reg:xref <../../person/Szilveszter_Tóth#>.

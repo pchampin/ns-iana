@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix glt: <../media-types/model/gltf+json#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Uli_Klumpp#>.
 
-glt:Resource reg:xref :.
+<../media-types/model/gltf+json#Resource>
+  reg:xref <Uli_Klumpp#>.
 
-:
-    reg:id "Uli_Klumpp";
-    reg:name "Uli Klumpp";
-    reg:updated "2016-07-01";
-    reg:uri "mailto:iana&uliklumpp.com".
+<Uli_Klumpp#>
+  reg:id "Uli_Klumpp";
+  reg:name "Uli Klumpp";
+  reg:updated "2016-07-01";
+  reg:uri "mailto:iana&uliklumpp.com".

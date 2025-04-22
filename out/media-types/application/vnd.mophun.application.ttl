@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bjo: <../../person/Bjorn_Wennerstrom#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.mophun.application"; reg:type "template" ];
-    reg:name "vnd.mophun.application";
-    reg:xref Bjo:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.mophun.application#Resource>.
 
+<vnd.mophun.application> a rdfs:Class;
+  dct:identifier "application/vnd.mophun.application";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.mophun.application>;
+  rdfs:seeAlso <../../person/Bjorn_Wennerstrom#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mophun.application#Resource>.
+
+<vnd.mophun.application#Resource>
+  reg:file [
+      reg:file "application/vnd.mophun.application";
+      reg:type "template"];
+  reg:name "vnd.mophun.application";
+  reg:xref <../../person/Bjorn_Wennerstrom#>.

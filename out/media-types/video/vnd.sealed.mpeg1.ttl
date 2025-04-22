@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Petersen#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.sealed.mpeg1#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.sealed.mpeg1"; reg:type "template" ];
-    reg:name "vnd.sealed.mpeg1";
-    reg:xref D:.
+<vnd.sealed.mpeg1> a rdfs:Class;
+  dct:identifier "video/vnd.sealed.mpeg1";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.sealed.mpeg1>;
+  rdfs:seeAlso <../../person/David_Petersen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sealed.mpeg1#Resource>.
+
+<vnd.sealed.mpeg1#Resource>
+  reg:file [
+      reg:file "video/vnd.sealed.mpeg1";
+      reg:type "template"];
+  reg:name "vnd.sealed.mpeg1";
+  reg:xref <../../person/David_Petersen#>.

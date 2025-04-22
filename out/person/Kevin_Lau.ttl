@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ms-wmdrm.lic-chlg-req#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.ms-wmdrm.lic-resp#>.
-@prefix v: <../media-types/application/vnd.ms-wmdrm.meter-chlg-req#>.
-@prefix n1: <../media-types/application/vnd.ms-wmdrm.meter-resp#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ms-wmdrm.lic-chlg-req#Resource>
+  reg:xref <Kevin_Lau#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.ms-wmdrm.lic-resp#Resource>
+  reg:xref <Kevin_Lau#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.ms-wmdrm.meter-chlg-req#Resource>
+  reg:xref <Kevin_Lau#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.ms-wmdrm.meter-resp#Resource>
+  reg:xref <Kevin_Lau#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Kevin_Lau#>.
 
-:
-    reg:id "Kevin_Lau";
-    reg:name "Kevin Lau";
-    reg:updated "2006-09-29";
-    reg:uri "mailto:kevinlau&microsoft.com".
+<Kevin_Lau#>
+  reg:id "Kevin_Lau";
+  reg:name "Kevin Lau";
+  reg:updated "2006-09-29";
+  reg:uri "mailto:kevinlau&microsoft.com".

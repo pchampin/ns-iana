@@ -1,34 +1,37 @@
-@prefix : <#>.
-@prefix hej2k: <../media-types/image/hej2k#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix hsj2: <../media-types/image/hsj2#>.
-@prefix j2c: <../media-types/image/j2c#>.
-@prefix jph: <../media-types/image/jph#>.
-@prefix jphc: <../media-types/image/jphc#>.
-@prefix jxr: <../media-types/image/jxr#>.
-@prefix jxrA: <../media-types/image/jxrA#>.
-@prefix jxrS: <../media-types/image/jxrS#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-hej2k:Resource reg:xref :.
+<../media-types/image/hej2k#Resource>
+  reg:xref <ITU-T#>.
 
-hsj2:Resource reg:xref :.
+<../media-types/image/hsj2#Resource>
+  reg:xref <ITU-T#>.
 
-j2c:Resource reg:xref :.
+<../media-types/image/j2c#Resource>
+  reg:xref <ITU-T#>.
 
-jph:Resource reg:xref :.
+<../media-types/image/jph#Resource>
+  reg:xref <ITU-T#>.
 
-jphc:Resource reg:xref :.
+<../media-types/image/jphc#Resource>
+  reg:xref <ITU-T#>.
 
-jxr:Resource reg:xref :.
+<../media-types/image/jxr#Resource>
+  reg:xref <ITU-T#>.
 
-jxrA:Resource reg:xref :.
+<../media-types/image/jxrA#Resource>
+  reg:xref <ITU-T#>.
 
-jxrS:Resource reg:xref :.
+<../media-types/image/jxrS#Resource>
+  reg:xref <ITU-T#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ITU-T#>.
 
-:
-    reg:id "ITU-T";
-    reg:name "ITU Telecommunication Standardization Sector";
-    reg:uri "https://www.itu.int".
+<ITU-T#>
+  reg:id "ITU-T";
+  reg:name "ITU Telecommunication Standardization Sector";
+  reg:uri "https://www.itu.int".

@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix S: <../../person/Samu_Sarivaara#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.f-secure.mobile"; reg:type "template" ];
-    reg:name "vnd.f-secure.mobile";
-    reg:xref S:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.f-secure.mobile#Resource>.
 
+<vnd.f-secure.mobile> a rdfs:Class;
+  dct:identifier "application/vnd.f-secure.mobile";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.f-secure.mobile>;
+  rdfs:seeAlso <../../person/Samu_Sarivaara#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.f-secure.mobile#Resource>.
+
+<vnd.f-secure.mobile#Resource>
+  reg:file [
+      reg:file "application/vnd.f-secure.mobile";
+      reg:type "template"];
+  reg:name "vnd.f-secure.mobile";
+  reg:xref <../../person/Samu_Sarivaara#>.

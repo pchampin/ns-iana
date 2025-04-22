@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ICT: <../../person/ICT_Manager#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-09-30"^^XML:date;
-    reg:file [ reg:file "application/vnd.seis+json"; reg:type "template" ];
-    reg:name "vnd.seis+json";
-    reg:xref ICT:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.seis+json#Resource>.
 
+<vnd.seis+json> a rdfs:Class;
+  dct:created "2020-09-30"^^xsd:date;
+  dct:identifier "application/vnd.seis+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.seis+json>;
+  rdfs:seeAlso <../../person/ICT_Manager#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.seis+json#Resource>.
+
+<vnd.seis+json#Resource>
+  dct:date "2020-09-30"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.seis+json";
+      reg:type "template"];
+  reg:name "vnd.seis+json";
+  reg:xref <../../person/ICT_Manager#>.

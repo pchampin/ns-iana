@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp.seal-info+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp.seal-location-info+xml#>.
-@prefix v: <../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#>.
-@prefix n1: <../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#>.
-@prefix n2: <../media-types/application/vnd.3gpp.seal-unicast-info+xml#>.
-@prefix n3: <../media-types/application/vnd.3gpp.vae-info+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-location-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-unicast-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.vae-info+xml#Resource>
+  reg:xref <Christian_Herrero-Veron#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Christian_Herrero-Veron#>.
 
-:
-    reg:id "Christian_Herrero-Veron";
-    reg:name "Christian Herrero-Veron";
-    reg:updated "2023-03-17";
-    reg:uri "mailto:christian.herrero&huawei.com".
+<Christian_Herrero-Veron#>
+  reg:id "Christian_Herrero-Veron";
+  reg:name "Christian Herrero-Veron";
+  reg:updated "2023-03-17";
+  reg:uri "mailto:christian.herrero&huawei.com".

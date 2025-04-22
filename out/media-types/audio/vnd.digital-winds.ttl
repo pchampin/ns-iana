@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Arm: <../../person/Armands_Strazds#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.digital-winds"; reg:type "template" ];
-    reg:name "vnd.digital-winds";
-    reg:xref Arm:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.digital-winds#Resource>.
 
+<vnd.digital-winds> a rdfs:Class;
+  dct:identifier "audio/vnd.digital-winds";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.digital-winds>;
+  rdfs:seeAlso <../../person/Armands_Strazds#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.digital-winds#Resource>.
+
+<vnd.digital-winds#Resource>
+  reg:file [
+      reg:file "audio/vnd.digital-winds";
+      reg:type "template"];
+  reg:name "vnd.digital-winds";
+  reg:xref <../../person/Armands_Strazds#>.

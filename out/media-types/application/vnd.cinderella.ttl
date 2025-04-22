@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ulr: <../../person/Ulrich_Kortenkamp#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.cinderella"; reg:type "template" ];
-    reg:name "vnd.cinderella";
-    reg:xref Ulr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cinderella#Resource>.
 
+<vnd.cinderella> a rdfs:Class;
+  dct:identifier "application/vnd.cinderella";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cinderella>;
+  rdfs:seeAlso <../../person/Ulrich_Kortenkamp#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cinderella#Resource>.
+
+<vnd.cinderella#Resource>
+  reg:file [
+      reg:file "application/vnd.cinderella";
+      reg:type "template"];
+  reg:name "vnd.cinderella";
+  reg:xref <../../person/Ulrich_Kortenkamp#>.

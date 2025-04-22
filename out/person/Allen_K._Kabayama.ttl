@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.Mobius.DAF#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.Mobius.DIS#>.
-@prefix v: <../media-types/application/vnd.Mobius.MSL#>.
-@prefix n1: <../media-types/application/vnd.Mobius.PLC#>.
-@prefix n2: <../media-types/application/vnd.Mobius.TXF#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.Mobius.DAF#Resource>
+  reg:xref <Allen_K._Kabayama#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.Mobius.DIS#Resource>
+  reg:xref <Allen_K._Kabayama#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.Mobius.MSL#Resource>
+  reg:xref <Allen_K._Kabayama#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.Mobius.PLC#Resource>
+  reg:xref <Allen_K._Kabayama#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.Mobius.TXF#Resource>
+  reg:xref <Allen_K._Kabayama#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Allen_K._Kabayama#>.
 
-:
-    reg:id "Allen_K._Kabayama";
-    reg:name "Allen K. Kabayama";
-    reg:updated "1999-06-19";
-    reg:uri "mailto:akabayam&mobius.com".
+<Allen_K._Kabayama#>
+  reg:id "Allen_K._Kabayama";
+  reg:name "Allen K. Kabayama";
+  reg:updated "1999-06-19";
+  reg:uri "mailto:akabayam&mobius.com".

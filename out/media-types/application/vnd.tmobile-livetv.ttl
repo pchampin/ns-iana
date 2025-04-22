@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Nicol: <../../person/Nicolas_Helin#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.tmobile-livetv"; reg:type "template" ];
-    reg:name "vnd.tmobile-livetv";
-    reg:xref Nicol:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.tmobile-livetv#Resource>.
 
+<vnd.tmobile-livetv> a rdfs:Class;
+  dct:identifier "application/vnd.tmobile-livetv";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.tmobile-livetv>;
+  rdfs:seeAlso <../../person/Nicolas_Helin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.tmobile-livetv#Resource>.
+
+<vnd.tmobile-livetv#Resource>
+  reg:file [
+      reg:file "application/vnd.tmobile-livetv";
+      reg:type "template"];
+  reg:name "vnd.tmobile-livetv";
+  reg:xref <../../person/Nicolas_Helin#>.

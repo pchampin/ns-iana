@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Vl: <../../person/Vladimir_Alexiev#>.
-@prefix W3C: <../../person/W3C_SHACL_Community_Group#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <shaclc#Resource>.
 
-:Resource
-    terms:date "2020-06-30"^^XML:date;
-    reg:file [ reg:file "text/shaclc"; reg:type "template" ];
-    reg:name "shaclc";
-    reg:xref Vl:, W3C:.
+<shaclc> a rdfs:Class;
+  dct:created "2020-06-30"^^xsd:date;
+  dct:identifier "text/shaclc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/shaclc>;
+  rdfs:seeAlso <../../person/Vladimir_Alexiev#>,
+    <../../person/W3C_SHACL_Community_Group#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <shaclc#Resource>.
+
+<shaclc#Resource>
+  dct:date "2020-06-30"^^xsd:date;
+  reg:file [
+      reg:file "text/shaclc";
+      reg:type "template"];
+  reg:name "shaclc";
+  reg:xref <../../person/Vladimir_Alexiev#>,
+    <../../person/W3C_SHACL_Community_Group#>.

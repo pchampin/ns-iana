@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
-@prefix ITU: <../../person/ITU-T_ASN.1_Rapporteur#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/fastinfoset"; reg:type "template" ];
-    reg:name "fastinfoset";
-    reg:xref ISO:, ITU:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <fastinfoset#Resource>.
 
+<fastinfoset> a rdfs:Class;
+  dct:identifier "application/fastinfoset";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/fastinfoset>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>,
+    <../../person/ITU-T_ASN.1_Rapporteur#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <fastinfoset#Resource>.
+
+<fastinfoset#Resource>
+  reg:file [
+      reg:file "application/fastinfoset";
+      reg:type "template"];
+  reg:name "fastinfoset";
+  reg:xref <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>,
+    <../../person/ITU-T_ASN.1_Rapporteur#>.

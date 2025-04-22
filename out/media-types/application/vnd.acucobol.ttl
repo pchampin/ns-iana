@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Dov: <../../person/Dovid_Lubin#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.acucobol"; reg:type "template" ];
-    reg:name "vnd.acucobol";
-    reg:xref Dov:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.acucobol#Resource>.
 
+<vnd.acucobol> a rdfs:Class;
+  dct:identifier "application/vnd.acucobol";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.acucobol>;
+  rdfs:seeAlso <../../person/Dovid_Lubin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.acucobol#Resource>.
+
+<vnd.acucobol#Resource>
+  reg:file [
+      reg:file "application/vnd.acucobol";
+      reg:type "template"];
+  reg:name "vnd.acucobol";
+  reg:xref <../../person/Dovid_Lubin#>.

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-10-27"^^XML:date;
-    reg:file [ reg:file "application/cose-x509"; reg:type "template" ];
-    reg:name "cose-x509";
-    reg:xref html:rfc9360.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <cose-x509#Resource>.
 
+<cose-x509> a rdfs:Class;
+  dct:created "2022-10-27"^^xsd:date;
+  dct:identifier "application/cose-x509";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/cose-x509>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9360/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <cose-x509#Resource>.
+
+<cose-x509#Resource>
+  dct:date "2022-10-27"^^xsd:date;
+  reg:file [
+      reg:file "application/cose-x509";
+      reg:type "template"];
+  reg:name "cose-x509";
+  reg:xref <https://tools.ietf.org/html/rfc9360>.

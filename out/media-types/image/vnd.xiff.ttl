@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steven_Martin#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/vnd.xiff"; reg:type "template" ];
-    reg:name "vnd.xiff";
-    reg:xref Ste:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.xiff#Resource>.
 
+<vnd.xiff> a rdfs:Class;
+  dct:identifier "image/vnd.xiff";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.xiff>;
+  rdfs:seeAlso <../../person/Steven_Martin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.xiff#Resource>.
+
+<vnd.xiff#Resource>
+  reg:file [
+      reg:file "image/vnd.xiff";
+      reg:type "template"];
+  reg:name "vnd.xiff";
+  reg:xref <../../person/Steven_Martin#>.

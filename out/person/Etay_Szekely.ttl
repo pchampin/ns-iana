@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.rapid#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.rapid#Resource>
+  reg:xref <Etay_Szekely#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Etay_Szekely#>.
 
-:
-    reg:id "Etay_Szekely";
-    reg:name "Etay Szekely";
-    reg:updated "1996-10-19";
-    reg:uri "mailto:etay&emultek.co.il".
+<Etay_Szekely#>
+  reg:id "Etay_Szekely";
+  reg:name "Etay Szekely";
+  reg:updated "1996-10-19";
+  reg:uri "mailto:etay&emultek.co.il".

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sco: <../../person/Scott_Becker#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/vnd.fastbidsheet"; reg:type "template" ];
-    reg:name "vnd.fastbidsheet";
-    reg:xref Sco:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.fastbidsheet#Resource>.
 
+<vnd.fastbidsheet> a rdfs:Class;
+  dct:identifier "image/vnd.fastbidsheet";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.fastbidsheet>;
+  rdfs:seeAlso <../../person/Scott_Becker#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fastbidsheet#Resource>.
+
+<vnd.fastbidsheet#Resource>
+  reg:file [
+      reg:file "image/vnd.fastbidsheet";
+      reg:type "template"];
+  reg:name "vnd.fastbidsheet";
+  reg:xref <../../person/Scott_Becker#>.

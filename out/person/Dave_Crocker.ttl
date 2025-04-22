@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix he: <../media-types/multipart/header-set#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Dave_Crocker#>.
 
-he:Resource reg:xref :.
+<../media-types/multipart/header-set#Resource>
+  reg:xref <Dave_Crocker#>.
 
-:
-    reg:id "Dave_Crocker";
-    reg:name "Dave Crocker";
-    reg:updated "2011-03-10";
-    reg:uri "mailto:dcrocker@mordor.stanford.edu%3E%3Cbr%3E".
+<Dave_Crocker#>
+  reg:id "Dave_Crocker";
+  reg:name "Dave Crocker";
+  reg:updated "2011-03-10";
+  reg:uri "mailto:dcrocker@mordor.stanford.edu%3E%3Cbr%3E".

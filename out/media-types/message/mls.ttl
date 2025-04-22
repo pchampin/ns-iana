@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <mls#Resource>.
 
-:Resource
-    terms:date "2023-04-06"^^XML:date;
-    reg:file [ reg:file "message/mls"; reg:type "template" ];
-    reg:name "mls";
-    reg:xref html:rfc9420.
+<mls> a rdfs:Class;
+  dct:created "2023-04-06"^^xsd:date;
+  dct:identifier "message/mls";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/mls>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9420/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mls#Resource>.
+
+<mls#Resource>
+  dct:date "2023-04-06"^^xsd:date;
+  reg:file [
+      reg:file "message/mls";
+      reg:type "template"];
+  reg:name "mls";
+  reg:xref <https://tools.ietf.org/html/rfc9420>.

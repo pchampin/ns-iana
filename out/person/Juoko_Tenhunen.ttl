@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.preminet#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.preminet#Resource>
+  reg:xref <Juoko_Tenhunen#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Juoko_Tenhunen#>.
 
-:
-    reg:id "Juoko_Tenhunen";
-    reg:name "Jouko Tenhunen";
-    reg:updated "2003-11-01";
-    reg:uri "mailto:jouko.tenhunen&nokia.com".
+<Juoko_Tenhunen#>
+  reg:id "Juoko_Tenhunen";
+  reg:name "Jouko Tenhunen";
+  reg:updated "2003-11-01";
+  reg:uri "mailto:jouko.tenhunen&nokia.com".

@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix P: <../../person/Paul_Lindner#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <quicktime#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/quicktime"; reg:type "template" ];
-    reg:name "quicktime";
-    reg:xref P:, html:rfc6381.
+<quicktime> a rdfs:Class;
+  dct:identifier "video/quicktime";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/quicktime>;
+  rdfs:seeAlso <../../person/Paul_Lindner#>,
+    <https://datatracker.ietf.org/doc/rfc6381/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <quicktime#Resource>.
+
+<quicktime#Resource>
+  reg:file [
+      reg:file "video/quicktime";
+      reg:type "template"];
+  reg:name "quicktime";
+  reg:xref <../../person/Paul_Lindner#>,
+    <https://tools.ietf.org/html/rfc6381>.

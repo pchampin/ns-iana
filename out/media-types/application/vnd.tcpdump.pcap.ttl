@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gle: <../../person/Glen_Turner#>.
-@prefix Guy: <../../person/Guy_Harris#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.tcpdump.pcap"; reg:type "template" ];
-    reg:name "vnd.tcpdump.pcap";
-    reg:xref Gle:, Guy:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.tcpdump.pcap#Resource>.
 
+<vnd.tcpdump.pcap> a rdfs:Class;
+  dct:identifier "application/vnd.tcpdump.pcap";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.tcpdump.pcap>;
+  rdfs:seeAlso <../../person/Glen_Turner#>,
+    <../../person/Guy_Harris#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.tcpdump.pcap#Resource>.
+
+<vnd.tcpdump.pcap#Resource>
+  reg:file [
+      reg:file "application/vnd.tcpdump.pcap";
+      reg:type "template"];
+  reg:name "vnd.tcpdump.pcap";
+  reg:xref <../../person/Glen_Turner#>,
+    <../../person/Guy_Harris#>.

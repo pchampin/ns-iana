@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix gff3: <../media-types/text/gff3#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Sequence_Ontology#>.
 
-gff3:Resource reg:xref :.
+<../media-types/text/gff3#Resource>
+  reg:xref <Sequence_Ontology#>.
 
-:
-    reg:id "Sequence_Ontology";
-    reg:name "Sequence Ontology";
-    reg:updated "2020-08-17";
-    reg:uri "mailto:song-devel&lists.utah.edu".
+<Sequence_Ontology#>
+  reg:id "Sequence_Ontology";
+  reg:name "Sequence Ontology";
+  reg:updated "2020-08-17";
+  reg:uri "mailto:song-devel&lists.utah.edu".

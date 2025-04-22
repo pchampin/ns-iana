@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-05-11"^^XML:date;
-    reg:file [ reg:file "application/linkset+json"; reg:type "template" ];
-    reg:name "linkset+json";
-    reg:xref html:rfc9264.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <linkset+json#Resource>.
 
+<linkset+json> a rdfs:Class;
+  dct:created "2022-05-11"^^xsd:date;
+  dct:identifier "application/linkset+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/linkset+json>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9264/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <linkset+json#Resource>.
+
+<linkset+json#Resource>
+  dct:date "2022-05-11"^^xsd:date;
+  reg:file [
+      reg:file "application/linkset+json";
+      reg:type "template"];
+  reg:name "linkset+json";
+  reg:xref <https://tools.ietf.org/html/rfc9264>.

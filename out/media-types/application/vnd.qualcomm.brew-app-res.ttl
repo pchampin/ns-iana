@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gle: <../../person/Glenn_Forrester#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.qualcomm.brew-app-res"; reg:type "template" ];
-    reg:name "vnd.qualcomm.brew-app-res";
-    reg:xref Gle:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.qualcomm.brew-app-res#Resource>.
 
+<vnd.qualcomm.brew-app-res> a rdfs:Class;
+  dct:identifier "application/vnd.qualcomm.brew-app-res";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.qualcomm.brew-app-res>;
+  rdfs:seeAlso <../../person/Glenn_Forrester#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.qualcomm.brew-app-res#Resource>.
+
+<vnd.qualcomm.brew-app-res#Resource>
+  reg:file [
+      reg:file "application/vnd.qualcomm.brew-app-res";
+      reg:type "template"];
+  reg:name "vnd.qualcomm.brew-app-res";
+  reg:xref <../../person/Glenn_Forrester#>.

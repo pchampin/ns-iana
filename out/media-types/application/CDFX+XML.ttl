@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ASAM: <../../person/ASAM#>.
-@prefix Thom: <../../person/Thomas_Thomsen#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-11-11"^^XML:date;
-    reg:file [ reg:file "application/CDFX+XML"; reg:type "template" ];
-    reg:name "CDFX+XML";
-    reg:xref ASAM:, Thom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <CDFX+XML#Resource>.
 
+<CDFX+XML> a rdfs:Class;
+  dct:created "2014-11-11"^^xsd:date;
+  dct:identifier "application/CDFX+XML";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/CDFX+XML>;
+  rdfs:seeAlso <../../person/ASAM#>,
+    <../../person/Thomas_Thomsen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <CDFX+XML#Resource>.
+
+<CDFX+XML#Resource>
+  dct:date "2014-11-11"^^xsd:date;
+  reg:file [
+      reg:file "application/CDFX+XML";
+      reg:type "template"];
+  reg:name "CDFX+XML";
+  reg:xref <../../person/ASAM#>,
+    <../../person/Thomas_Thomsen#>.

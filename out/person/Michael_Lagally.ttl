@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dvb.ait#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dvb.dvbj#>.
-@prefix v: <../media-types/application/vnd.dvb.pfr#>.
-@prefix n1: <../media-types/application/vnd.dvb.service#>.
-@prefix n2: <../media-types/image/vnd.dvb.subtitle#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n3: <../media-types/text/vnd.dvb.subtitle#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.dvb.ait#Resource>
+  reg:xref <Michael_Lagally#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.dvb.dvbj#Resource>
+  reg:xref <Michael_Lagally#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.dvb.pfr#Resource>
+  reg:xref <Michael_Lagally#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.dvb.service#Resource>
+  reg:xref <Michael_Lagally#>.
 
-n2:Resource reg:xref :.
+<../media-types/image/vnd.dvb.subtitle#Resource>
+  reg:xref <Michael_Lagally#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Michael_Lagally#>.
 
-n3:Resource reg:xref :.
+<../media-types/text/vnd.dvb.subtitle#Resource>
+  reg:xref <Michael_Lagally#>.
 
-:
-    reg:id "Michael_Lagally";
-    reg:name "Michael Lagally";
-    reg:updated "2011-06-08";
-    reg:uri "mailto:Michael.Lagally&oracle.com".
+<Michael_Lagally#>
+  reg:id "Michael_Lagally";
+  reg:name "Michael Lagally";
+  reg:updated "2011-06-08";
+  reg:uri "mailto:Michael.Lagally&oracle.com".

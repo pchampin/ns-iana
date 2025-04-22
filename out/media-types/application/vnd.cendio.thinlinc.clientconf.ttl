@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pet: <../../person/Peter_Astrand#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/vnd.cendio.thinlinc.clientconf";
-                reg:type "template"
-            ];
-    reg:name "vnd.cendio.thinlinc.clientconf";
-    reg:xref Pet:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cendio.thinlinc.clientconf#Resource>.
 
+<vnd.cendio.thinlinc.clientconf> a rdfs:Class;
+  dct:identifier "application/vnd.cendio.thinlinc.clientconf";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cendio.thinlinc.clientconf>;
+  rdfs:seeAlso <../../person/Peter_Astrand#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cendio.thinlinc.clientconf#Resource>.
+
+<vnd.cendio.thinlinc.clientconf#Resource>
+  reg:file [
+      reg:file "application/vnd.cendio.thinlinc.clientconf";
+      reg:type "template"];
+  reg:name "vnd.cendio.thinlinc.clientconf";
+  reg:xref <../../person/Peter_Astrand#>.

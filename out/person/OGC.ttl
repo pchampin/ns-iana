@@ -1,31 +1,34 @@
-@prefix : <#>.
-@prefix cit: <../media-types/application/city+json-seq#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ci: <../media-types/application/city+json#>.
-@prefix geop: <../media-types/application/geopackage+sqlite3#>.
-@prefix geo: <../media-types/application/geopose+json#>.
-@prefix geox: <../media-types/application/geoxacml+json#>.
-@prefix ge: <../media-types/application/geoxacml+xml#>.
-@prefix gml: <../media-types/application/gml+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-cit:Resource reg:xref :.
+<../media-types/application/city+json#Resource>
+  reg:xref <OGC#>.
 
-ci:Resource reg:xref :.
+<../media-types/application/city+json-seq#Resource>
+  reg:xref <OGC#>.
 
-geop:Resource reg:xref :.
+<../media-types/application/geopackage+sqlite3#Resource>
+  reg:xref <OGC#>.
 
-geo:Resource reg:xref :.
+<../media-types/application/geopose+json#Resource>
+  reg:xref <OGC#>.
 
-geox:Resource reg:xref :.
+<../media-types/application/geoxacml+json#Resource>
+  reg:xref <OGC#>.
 
-ge:Resource reg:xref :.
+<../media-types/application/geoxacml+xml#Resource>
+  reg:xref <OGC#>.
 
-gml:Resource reg:xref :.
+<../media-types/application/gml+xml#Resource>
+  reg:xref <OGC#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <OGC#>.
 
-:
-    reg:id "OGC";
-    reg:name "Open Geospatial Consortium (OGC)";
-    reg:uri "http://www.opengeospatial.org".
+<OGC#>
+  reg:id "OGC";
+  reg:name "Open Geospatial Consortium (OGC)";
+  reg:uri "http://www.opengeospatial.org".

@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix n1: <../media-types/audio/aac#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix us: <../media-types/audio/usac#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/audio/aac#Resource>
+  reg:xref <Max_Neuendorf#>.
 
-us:Resource reg:xref :.
+<../media-types/audio/usac#Resource>
+  reg:xref <Max_Neuendorf#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Max_Neuendorf#>.
 
-:
-    reg:id "Max_Neuendorf";
-    reg:name "Max Neuendorf";
-    reg:updated "2018-04-06";
-    reg:uri "mailto:max.neuendorf&iis.fraunhofer.de".
+<Max_Neuendorf#>
+  reg:id "Max_Neuendorf";
+  reg:name "Max Neuendorf";
+  reg:updated "2018-04-06";
+  reg:uri "mailto:max.neuendorf&iis.fraunhofer.de".

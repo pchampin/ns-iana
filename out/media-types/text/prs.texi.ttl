@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix M: <../../person/Matin_Bavardi#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <prs.texi#Resource>.
 
-:Resource
-    terms:date "2023-09-06"^^XML:date;
-    reg:file [ reg:file "text/prs.texi"; reg:type "template" ];
-    reg:name "prs.texi";
-    reg:xref M:.
+<prs.texi> a rdfs:Class;
+  dct:created "2023-09-06"^^xsd:date;
+  dct:identifier "text/prs.texi";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/prs.texi>;
+  rdfs:seeAlso <../../person/Matin_Bavardi#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.texi#Resource>.
+
+<prs.texi#Resource>
+  dct:date "2023-09-06"^^xsd:date;
+  reg:file [
+      reg:file "text/prs.texi";
+      reg:type "template"];
+  reg:name "prs.texi";
+  reg:xref <../../person/Matin_Bavardi#>.

@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix set: <../media-types/application/set-payment-initiation#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix se: <../media-types/application/set-payment#>.
-@prefix s: <../media-types/application/set-registration-initiation#>.
-@prefix n1: <../media-types/application/set-registration#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-set:Resource reg:xref :.
+<../media-types/application/set-payment#Resource>
+  reg:xref <Brian_Korver#>.
 
-se:Resource reg:xref :.
+<../media-types/application/set-payment-initiation#Resource>
+  reg:xref <Brian_Korver#>.
 
-s:Resource reg:xref :.
+<../media-types/application/set-registration#Resource>
+  reg:xref <Brian_Korver#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/set-registration-initiation#Resource>
+  reg:xref <Brian_Korver#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Brian_Korver#>.
 
-:
-    reg:id "Brian_Korver";
-    reg:name "Brian Korver";
-    reg:updated "1996-10-19";
-    reg:uri "mailto:briank&terisa.com".
+<Brian_Korver#>
+  reg:id "Brian_Korver";
+  reg:name "Brian Korver";
+  reg:updated "1996-10-19";
+  reg:uri "mailto:briank&terisa.com".

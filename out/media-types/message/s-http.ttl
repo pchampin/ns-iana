@@ -1,13 +1,24 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix doc: <https://datatracker.ietf.org/doc/>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <s-http#Resource>.
 
-:Resource
-    reg:file [ reg:file "message/s-http"; reg:type "template" ];
-    reg:name "s-http (OBSOLETE)";
-    reg:updated "2021-12-23";
-    reg:xref doc:status-change-http-experiments-to-historic, html:rfc2660.
+<s-http> a rdfs:Class;
+  dct:identifier "message/s-http";
+  dct:modified "2021-12-23"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/s-http>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc2660/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <s-http#Resource>.
+
+<s-http#Resource>
+  reg:file [
+      reg:file "message/s-http";
+      reg:type "template"];
+  reg:name "s-http (OBSOLETE)";
+  reg:updated "2021-12-23";
+  reg:xref <https://datatracker.ietf.org/doc/status-change-http-experiments-to-historic>,
+    <https://tools.ietf.org/html/rfc2660>.

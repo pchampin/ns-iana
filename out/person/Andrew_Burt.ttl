@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.crick.clicker.keyboard#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.crick.clicker.palette#>.
-@prefix v: <../media-types/application/vnd.crick.clicker.template#>.
-@prefix n1: <../media-types/application/vnd.crick.clicker.wordbank#>.
-@prefix n2: <../media-types/application/vnd.crick.clicker#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.crick.clicker#Resource>
+  reg:xref <Andrew_Burt#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.crick.clicker.keyboard#Resource>
+  reg:xref <Andrew_Burt#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.crick.clicker.palette#Resource>
+  reg:xref <Andrew_Burt#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.crick.clicker.template#Resource>
+  reg:xref <Andrew_Burt#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.crick.clicker.wordbank#Resource>
+  reg:xref <Andrew_Burt#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Andrew_Burt#>.
 
-:
-    reg:id "Andrew_Burt";
-    reg:name "Andrew Burt";
-    reg:updated "2006-03-20";
-    reg:uri "mailto:andrewburt&cricksoft.com".
+<Andrew_Burt#>
+  reg:id "Andrew_Burt";
+  reg:name "Andrew Burt";
+  reg:updated "2006-03-20";
+  reg:uri "mailto:andrewburt&cricksoft.com".

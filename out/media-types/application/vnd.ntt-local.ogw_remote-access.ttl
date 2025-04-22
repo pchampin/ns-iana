@@ -1,18 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix NTT: <../../person/NTT-local#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-07-25"^^XML:date;
-    reg:file
-            [
-                reg:file "application/vnd.ntt-local.ogw_remote-access";
-                reg:type "template"
-            ];
-    reg:name "vnd.ntt-local.ogw_remote-access";
-    reg:xref NTT:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ntt-local.ogw_remote-access#Resource>.
 
+<vnd.ntt-local.ogw_remote-access> a rdfs:Class;
+  dct:created "2014-07-25"^^xsd:date;
+  dct:identifier "application/vnd.ntt-local.ogw_remote-access";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ntt-local.ogw_remote-access>;
+  rdfs:seeAlso <../../person/NTT-local#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ntt-local.ogw_remote-access#Resource>.
+
+<vnd.ntt-local.ogw_remote-access#Resource>
+  dct:date "2014-07-25"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.ntt-local.ogw_remote-access";
+      reg:type "template"];
+  reg:name "vnd.ntt-local.ogw_remote-access";
+  reg:xref <../../person/NTT-local#>.

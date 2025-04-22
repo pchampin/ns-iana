@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pet: <../../person/Petteri_Kangaslampi#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.nokia.interleaved-multimedia#Resource>.
 
-:Resource
-    reg:file
-    [ reg:file "video/vnd.nokia.interleaved-multimedia"; reg:type "template" ];
-    reg:name "vnd.nokia.interleaved-multimedia";
-    reg:xref Pet:.
+<vnd.nokia.interleaved-multimedia> a rdfs:Class;
+  dct:identifier "video/vnd.nokia.interleaved-multimedia";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.nokia.interleaved-multimedia>;
+  rdfs:seeAlso <../../person/Petteri_Kangaslampi#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.nokia.interleaved-multimedia#Resource>.
+
+<vnd.nokia.interleaved-multimedia#Resource>
+  reg:file [
+      reg:file "video/vnd.nokia.interleaved-multimedia";
+      reg:type "template"];
+  reg:name "vnd.nokia.interleaved-multimedia";
+  reg:xref <../../person/Petteri_Kangaslampi#>.

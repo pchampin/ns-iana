@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.hdt#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.hdt#Resource>
+  reg:xref <Javier_D._Fernández#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Javier_D._Fernández#>.
 
-:
-    reg:id "Javier_D._Fern\u00e1ndez";
-    reg:name "Javier D. Fern\u00e1ndez";
-    reg:updated "2016-01-07";
-    reg:uri "mailto:javier.fernandez&wu.ac.at".
+<Javier_D._Fernández#>
+  reg:id "Javier_D._Fernández";
+  reg:name "Javier D. Fernández";
+  reg:updated "2016-01-07";
+  reg:uri "mailto:javier.fernandez&wu.ac.at".

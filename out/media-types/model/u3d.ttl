@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix PDF: <../../person/PDF_Association#>.
-@prefix Pet: <../../person/Peter_Wyatt#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <u3d#Resource>.
 
-:Resource
-    terms:date "2022-02-25"^^XML:date;
-    reg:file [ reg:file "model/u3d"; reg:type "template" ];
-    reg:name "u3d";
-    reg:xref PDF:, Pet:.
+<u3d> a rdfs:Class;
+  dct:created "2022-02-25"^^xsd:date;
+  dct:identifier "model/u3d";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/u3d>;
+  rdfs:seeAlso <../../person/PDF_Association#>,
+    <../../person/Peter_Wyatt#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <u3d#Resource>.
+
+<u3d#Resource>
+  dct:date "2022-02-25"^^xsd:date;
+  reg:file [
+      reg:file "model/u3d";
+      reg:type "template"];
+  reg:name "u3d";
+  reg:xref <../../person/PDF_Association#>,
+    <../../person/Peter_Wyatt#>.

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix H: <../../person/Harms_Moeller#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-12-23"^^XML:date;
-    reg:file [ reg:file "application/vnd.filmit.zfc"; reg:type "template" ];
-    reg:name "vnd.filmit.zfc";
-    reg:xref H:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.filmit.zfc#Resource>.
 
+<vnd.filmit.zfc> a rdfs:Class;
+  dct:created "2015-12-23"^^xsd:date;
+  dct:identifier "application/vnd.filmit.zfc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.filmit.zfc>;
+  rdfs:seeAlso <../../person/Harms_Moeller#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.filmit.zfc#Resource>.
+
+<vnd.filmit.zfc#Resource>
+  dct:date "2015-12-23"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.filmit.zfc";
+      reg:type "template"];
+  reg:name "vnd.filmit.zfc";
+  reg:xref <../../person/Harms_Moeller#>.

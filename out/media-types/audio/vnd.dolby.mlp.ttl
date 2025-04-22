@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mike_Ward#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.dolby.mlp"; reg:type "template" ];
-    reg:name "vnd.dolby.mlp";
-    reg:xref Mik:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.dolby.mlp#Resource>.
 
+<vnd.dolby.mlp> a rdfs:Class;
+  dct:identifier "audio/vnd.dolby.mlp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.dolby.mlp>;
+  rdfs:seeAlso <../../person/Mike_Ward#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dolby.mlp#Resource>.
+
+<vnd.dolby.mlp#Resource>
+  reg:file [
+      reg:file "audio/vnd.dolby.mlp";
+      reg:type "template"];
+  reg:name "vnd.dolby.mlp";
+  reg:xref <../../person/Mike_Ward#>.

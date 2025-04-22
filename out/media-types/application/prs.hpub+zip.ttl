@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Giu: <../../person/Giulio_Zambon#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/prs.hpub+zip"; reg:type "template" ];
-    reg:name "prs.hpub+zip";
-    reg:xref Giu:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <prs.hpub+zip#Resource>.
 
+<prs.hpub+zip> a rdfs:Class;
+  dct:identifier "application/prs.hpub+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/prs.hpub+zip>;
+  rdfs:seeAlso <../../person/Giulio_Zambon#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.hpub+zip#Resource>.
+
+<prs.hpub+zip#Resource>
+  reg:file [
+      reg:file "application/prs.hpub+zip";
+      reg:type "template"];
+  reg:name "prs.hpub+zip";
+  reg:xref <../../person/Giulio_Zambon#>.

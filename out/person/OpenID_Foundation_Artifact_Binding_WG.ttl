@@ -1,32 +1,35 @@
-@prefix : <#>.
-@prefix ent: <../media-types/application/entity-statement+jwt#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix jwk: <../media-types/application/jwk-set+jwt#>.
-@prefix log: <../media-types/application/logout+jwt#>.
-@prefix res: <../media-types/application/resolve-response+jwt#>.
-@prefix tru: <../media-types/application/trust-chain+json#>.
-@prefix tr: <../media-types/application/trust-mark-delegation+jwt#>.
-@prefix trus: <../media-types/application/trust-mark+jwt#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-ent:Resource reg:xref :.
+<../media-types/application/entity-statement+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-jwk:Resource reg:xref :.
+<../media-types/application/jwk-set+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-log:Resource reg:xref :.
+<../media-types/application/logout+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-res:Resource reg:xref :.
+<../media-types/application/resolve-response+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-tru:Resource reg:xref :.
+<../media-types/application/trust-chain+json#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-tr:Resource reg:xref :.
+<../media-types/application/trust-mark+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-trus:Resource reg:xref :.
+<../media-types/application/trust-mark-delegation+jwt#Resource>
+  reg:xref <OpenID_Foundation_Artifact_Binding_WG#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <OpenID_Foundation_Artifact_Binding_WG#>.
 
-:
-    reg:id "OpenID_Foundation_Artifact_Binding_WG";
-    reg:name "OpenID Foundation Artifact Binding Working Group";
-    reg:updated "2024-11-26";
-    reg:uri "https://lists.openid.net/mailman/listinfo/openid-specs-ab".
+<OpenID_Foundation_Artifact_Binding_WG#>
+  reg:id "OpenID_Foundation_Artifact_Binding_WG";
+  reg:name "OpenID Foundation Artifact Binding Working Group";
+  reg:updated "2024-11-26";
+  reg:uri "https://lists.openid.net/mailman/listinfo/openid-specs-ab".

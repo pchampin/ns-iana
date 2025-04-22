@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ipfs.ipns-record#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.ipld.car#>.
-@prefix v: <../media-types/application/vnd.ipld.dag-cbor#>.
-@prefix n1: <../media-types/application/vnd.ipld.dag-json#>.
-@prefix n2: <../media-types/application/vnd.ipld.raw#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ipfs.ipns-record#Resource>
+  reg:xref <Marcin_Rataj#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.ipld.car#Resource>
+  reg:xref <Marcin_Rataj#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.ipld.dag-cbor#Resource>
+  reg:xref <Marcin_Rataj#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.ipld.dag-json#Resource>
+  reg:xref <Marcin_Rataj#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.ipld.raw#Resource>
+  reg:xref <Marcin_Rataj#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Marcin_Rataj#>.
 
-:
-    reg:id "Marcin_Rataj";
-    reg:name "Marcin Rataj";
-    reg:updated "2024-02-08";
-    reg:uri "mailto:lidel&ipshipyard.com".
+<Marcin_Rataj#>
+  reg:id "Marcin_Rataj";
+  reg:name "Marcin Rataj";
+  reg:updated "2024-02-08";
+  reg:uri "mailto:lidel&ipshipyard.com".

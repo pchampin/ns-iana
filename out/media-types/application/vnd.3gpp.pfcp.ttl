@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix Bru: <../../person/Bruno_Landais#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-09"^^XML:date;
-    reg:file [ reg:file "application/vnd.3gpp.pfcp"; reg:type "template" ];
-    reg:name "vnd.3gpp.pfcp";
-    reg:xref n1:, Bru:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.3gpp.pfcp#Resource>.
 
+<vnd.3gpp.pfcp> a rdfs:Class;
+  dct:created "2021-04-09"^^xsd:date;
+  dct:identifier "application/vnd.3gpp.pfcp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.3gpp.pfcp>;
+  rdfs:seeAlso <../../person/Bruno_Landais#>,
+    <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp.pfcp#Resource>.
+
+<vnd.3gpp.pfcp#Resource>
+  dct:date "2021-04-09"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.3gpp.pfcp";
+      reg:type "template"];
+  reg:name "vnd.3gpp.pfcp";
+  reg:xref <../../person/Bruno_Landais#>,
+    <../../person/_3GPP#>.

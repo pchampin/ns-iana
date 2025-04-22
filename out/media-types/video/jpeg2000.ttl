@@ -1,11 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <jpeg2000#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/jpeg2000"; reg:type "template" ];
-    reg:name "jpeg2000";
-    reg:xref html:rfc5371, html:rfc5372.
+<jpeg2000> a rdfs:Class;
+  dct:identifier "video/jpeg2000";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/jpeg2000>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc5371/>,
+    <https://datatracker.ietf.org/doc/rfc5372/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <jpeg2000#Resource>.
+
+<jpeg2000#Resource>
+  reg:file [
+      reg:file "video/jpeg2000";
+      reg:type "template"];
+  reg:name "jpeg2000";
+  reg:xref <https://tools.ietf.org/html/rfc5371>,
+    <https://tools.ietf.org/html/rfc5372>.

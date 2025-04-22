@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix mh: <../media-types/audio/mhas#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-mh:Resource reg:xref :.
+<../media-types/audio/mhas#Resource>
+  reg:xref <Nils_Peters#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Nils_Peters#>.
 
-:
-    reg:id "Nils_Peters";
-    reg:name "Nils Peters";
-    reg:updated "2020-04-04";
-    reg:uri "mailto:npeters&qti.qualcomm.com".
+<Nils_Peters#>
+  reg:id "Nils_Peters";
+  reg:name "Nils Peters";
+  reg:updated "2020-04-04";
+  reg:uri "mailto:npeters&qti.qualcomm.com".

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <VP9#Resource>.
 
-:Resource
-    terms:date "2021-06-11"^^XML:date;
-    reg:file [ reg:file "video/VP9"; reg:type "template" ];
-    reg:name "VP9";
-    reg:xref html:RFC-ietf-payload-vp9-16.
+<VP9> a rdfs:Class;
+  dct:created "2021-06-11"^^xsd:date;
+  dct:identifier "video/VP9";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/VP9>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/RFC-ietf-payload-vp9-16/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <VP9#Resource>.
+
+<VP9#Resource>
+  dct:date "2021-06-11"^^xsd:date;
+  reg:file [
+      reg:file "video/VP9";
+      reg:type "template"];
+  reg:name "VP9";
+  reg:xref <https://tools.ietf.org/html/RFC-ietf-payload-vp9-16>.

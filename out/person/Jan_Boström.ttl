@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dcmp+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.wqd#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.dcmp+xml#Resource>
+  reg:xref <Jan_Boström#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.wqd#Resource>
+  reg:xref <Jan_Boström#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Jan_Boström#>.
 
-:
-    reg:id "Jan_Bostr\u00f6m";
-    reg:name "Jan Bostr\u00f6m";
-    reg:updated "2024-12-23";
-    reg:uri "mailto:jan&sundahus.se".
+<Jan_Boström#>
+  reg:id "Jan_Boström";
+  reg:name "Jan Boström";
+  reg:updated "2024-12-23";
+  reg:uri "mailto:jan&sundahus.se".

@@ -1,50 +1,53 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.adobe.flash.movie#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.desmume.movie#>.
-@prefix v: <../media-types/application/vnd.microsoft.portable-executable#>.
-@prefix n1: <../media-types/application/vnd.microsoft.windows.thumbnail-cache#>.
-@prefix n2: <../media-types/application/vnd.nintendo.nitro.rom#>.
-@prefix n3: <../media-types/application/vnd.nintendo.snes.rom#>.
-@prefix n4: <../media-types/application/vnd.stepmania.package#>.
-@prefix n5: <../media-types/application/vnd.stepmania.stepchart#>.
-@prefix n6: <../media-types/application/vnd.valve.source.material#>.
-@prefix n7: <../media-types/image/vnd.valve.source.texture#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n8: <../media-types/model/vnd.valve.source.compiled-map#>.
-@prefix n9: <../media-types/video/vnd.radgamettools.bink#>.
-@prefix n10: <../media-types/video/vnd.radgamettools.smacker#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.adobe.flash.movie#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.desmume.movie#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.microsoft.portable-executable#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.microsoft.windows.thumbnail-cache#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.nintendo.nitro.rom#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.nintendo.snes.rom#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.stepmania.package#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.stepmania.stepchart#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.valve.source.material#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n7:Resource reg:xref :.
+<../media-types/image/vnd.valve.source.texture#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Henrik_Andersson#>.
 
-n8:Resource reg:xref :.
+<../media-types/model/vnd.valve.source.compiled-map#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n9:Resource reg:xref :.
+<../media-types/video/vnd.radgamettools.bink#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-n10:Resource reg:xref :.
+<../media-types/video/vnd.radgamettools.smacker#Resource>
+  reg:xref <Henrik_Andersson#>.
 
-:
-    reg:id "Henrik_Andersson";
-    reg:name "Henrik Andersson";
-    reg:updated "2017-04-06";
-    reg:uri "mailto:henke&henke37.cjb.net".
+<Henrik_Andersson#>
+  reg:id "Henrik_Andersson";
+  reg:name "Henrik Andersson";
+  reg:updated "2017-04-06";
+  reg:uri "mailto:henke&henke37.cjb.net".

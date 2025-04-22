@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jim: <../../person/Jim_Zubov#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-05-02"^^XML:date;
-    reg:file [ reg:file "application/vnd.ves.encrypted"; reg:type "template" ];
-    reg:name "vnd.ves.encrypted";
-    reg:xref Jim:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ves.encrypted#Resource>.
 
+<vnd.ves.encrypted> a rdfs:Class;
+  dct:created "2019-05-02"^^xsd:date;
+  dct:identifier "application/vnd.ves.encrypted";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ves.encrypted>;
+  rdfs:seeAlso <../../person/Jim_Zubov#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ves.encrypted#Resource>.
+
+<vnd.ves.encrypted#Resource>
+  dct:date "2019-05-02"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.ves.encrypted";
+      reg:type "template"];
+  reg:name "vnd.ves.encrypted";
+  reg:xref <../../person/Jim_Zubov#>.

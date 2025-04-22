@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Int: <../../person/International_FDSN#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.fdsn.mseed"; reg:type "template" ];
-    reg:name "vnd.fdsn.mseed";
-    reg:updated "2025-01-02";
-    reg:xref Int:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fdsn.mseed#Resource>.
 
+<vnd.fdsn.mseed> a rdfs:Class;
+  dct:identifier "application/vnd.fdsn.mseed";
+  dct:modified "2025-01-02"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fdsn.mseed>;
+  rdfs:seeAlso <../../person/International_FDSN#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fdsn.mseed#Resource>.
+
+<vnd.fdsn.mseed#Resource>
+  reg:file [
+      reg:file "application/vnd.fdsn.mseed";
+      reg:type "template"];
+  reg:name "vnd.fdsn.mseed";
+  reg:updated "2025-01-02";
+  reg:xref <../../person/International_FDSN#>.

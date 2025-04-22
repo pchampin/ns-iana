@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Mario_Demuth#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-05-11"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.hyper-item+json"; reg:type "template" ];
-    reg:name "vnd.hyper-item+json";
-    reg:xref M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.hyper-item+json#Resource>.
 
+<vnd.hyper-item+json> a rdfs:Class;
+  dct:created "2017-05-11"^^xsd:date;
+  dct:identifier "application/vnd.hyper-item+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.hyper-item+json>;
+  rdfs:seeAlso <../../person/Mario_Demuth#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hyper-item+json#Resource>.
+
+<vnd.hyper-item+json#Resource>
+  dct:date "2017-05-11"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.hyper-item+json";
+      reg:type "template"];
+  reg:name "vnd.hyper-item+json";
+  reg:xref <../../person/Mario_Demuth#>.

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pet: <../../person/Peter_Stark#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.wap.wmlc"; reg:type "template" ];
-    reg:name "vnd.wap.wmlc";
-    reg:xref Pet:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.wap.wmlc#Resource>.
 
+<vnd.wap.wmlc> a rdfs:Class;
+  dct:identifier "application/vnd.wap.wmlc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.wap.wmlc>;
+  rdfs:seeAlso <../../person/Peter_Stark#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.wap.wmlc#Resource>.
+
+<vnd.wap.wmlc#Resource>
+  reg:file [
+      reg:file "application/vnd.wap.wmlc";
+      reg:type "template"];
+  reg:name "vnd.wap.wmlc";
+  reg:xref <../../person/Peter_Stark#>.

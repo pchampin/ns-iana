@@ -1,18 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Rin: <../../person/Rintze_M._Zelle#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-02-23"^^XML:date;
-    reg:file
-            [
-                reg:file "application/vnd.citationstyles.style+xml";
-                reg:type "template"
-            ];
-    reg:name "vnd.citationstyles.style+xml";
-    reg:xref Rin:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.citationstyles.style+xml#Resource>.
 
+<vnd.citationstyles.style+xml> a rdfs:Class;
+  dct:created "2015-02-23"^^xsd:date;
+  dct:identifier "application/vnd.citationstyles.style+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.citationstyles.style+xml>;
+  rdfs:seeAlso <../../person/Rintze_M._Zelle#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.citationstyles.style+xml#Resource>.
+
+<vnd.citationstyles.style+xml#Resource>
+  dct:date "2015-02-23"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.citationstyles.style+xml";
+      reg:type "template"];
+  reg:name "vnd.citationstyles.style+xml";
+  reg:xref <../../person/Rintze_M._Zelle#>.

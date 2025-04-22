@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-03-18"^^XML:date;
-    reg:file [ reg:file "application/alto-error+json"; reg:type "template" ];
-    reg:name "alto-error+json";
-    reg:xref html:rfc7285.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <alto-error+json#Resource>.
 
+<alto-error+json> a rdfs:Class;
+  dct:created "2014-03-18"^^xsd:date;
+  dct:identifier "application/alto-error+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/alto-error+json>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7285/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <alto-error+json#Resource>.
+
+<alto-error+json#Resource>
+  dct:date "2014-03-18"^^xsd:date;
+  reg:file [
+      reg:file "application/alto-error+json";
+      reg:type "template"];
+  reg:name "alto-error+json";
+  reg:xref <https://tools.ietf.org/html/rfc7285>.

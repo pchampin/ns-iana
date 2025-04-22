@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oma.poc.detailed-progress-report+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.oma.poc.final-report+xml#>.
-@prefix v: <../media-types/application/vnd.oma.poc.groups+xml#>.
-@prefix n1: <../media-types/application/vnd.oma.poc.invocation-descriptor+xml#>.
-@prefix n2: <../media-types/application/vnd.oma.poc.optimized-progress-report+xml#>.
-@prefix n3: <../media-types/application/vnd.poc.group-advertisement+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.detailed-progress-report+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.final-report+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.groups+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.invocation-descriptor+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.optimized-progress-report+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.poc.group-advertisement+xml#Resource>
+  reg:xref <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <OMA_Push_to_Talk_over_Cellular_POC_WG#>.
 
-:
-    reg:id "OMA_Push_to_Talk_over_Cellular_POC_WG";
-    reg:name "OMA Push to Talk over Cellular (POC) Working Group";
-    reg:updated "2008-01-24";
-    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+<OMA_Push_to_Talk_over_Cellular_POC_WG#>
+  reg:id "OMA_Push_to_Talk_over_Cellular_POC_WG";
+  reg:name "OMA Push to Talk over Cellular (POC) Working Group";
+  reg:updated "2008-01-24";
+  reg:uri "mailto:technical-comments&mail.openmobilealliance.org".

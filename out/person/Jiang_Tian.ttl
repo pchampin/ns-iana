@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/audio/vnd.dra#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/audio/vnd.dra#Resource>
+  reg:xref <Jiang_Tian#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Jiang_Tian#>.
 
-:
-    reg:id "Jiang_Tian";
-    reg:name "Jiang Tian";
-    reg:updated "2009-06-02";
-    reg:uri "mailto:jiangt&digitalwave.cn".
+<Jiang_Tian#>
+  reg:id "Jiang_Tian";
+  reg:name "Jiang Tian";
+  reg:updated "2009-06-02";
+  reg:uri "mailto:jiangt&digitalwave.cn".

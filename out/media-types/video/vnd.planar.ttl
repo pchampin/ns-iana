@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix D: <../../person/David_Atkins#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.planar#Resource>.
 
-:Resource
-    terms:date "2025-01-22"^^XML:date;
-    reg:file [ reg:file "video/vnd.planar"; reg:type "template" ];
-    reg:name "vnd.planar";
-    reg:xref D:.
+<vnd.planar> a rdfs:Class;
+  dct:created "2025-01-22"^^xsd:date;
+  dct:identifier "video/vnd.planar";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.planar>;
+  rdfs:seeAlso <../../person/David_Atkins#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.planar#Resource>.
+
+<vnd.planar#Resource>
+  dct:date "2025-01-22"^^xsd:date;
+  reg:file [
+      reg:file "video/vnd.planar";
+      reg:type "template"];
+  reg:name "vnd.planar";
+  reg:xref <../../person/David_Atkins#>.

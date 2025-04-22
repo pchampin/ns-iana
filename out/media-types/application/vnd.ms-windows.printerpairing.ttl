@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jus: <../../person/Justin_Hutchings#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/vnd.ms-windows.printerpairing";
-                reg:type "template"
-            ];
-    reg:name "vnd.ms-windows.printerpairing";
-    reg:xref Jus:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ms-windows.printerpairing#Resource>.
 
+<vnd.ms-windows.printerpairing> a rdfs:Class;
+  dct:identifier "application/vnd.ms-windows.printerpairing";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ms-windows.printerpairing>;
+  rdfs:seeAlso <../../person/Justin_Hutchings#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ms-windows.printerpairing#Resource>.
+
+<vnd.ms-windows.printerpairing#Resource>
+  reg:file [
+      reg:file "application/vnd.ms-windows.printerpairing";
+      reg:type "template"];
+  reg:name "vnd.ms-windows.printerpairing";
+  reg:xref <../../person/Justin_Hutchings#>.

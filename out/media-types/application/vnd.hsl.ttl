@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Heu: <../../person/Heungsub_Lee#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-02-13"^^XML:date;
-    reg:file [ reg:file "application/vnd.hsl"; reg:type "template" ];
-    reg:name "vnd.hsl";
-    reg:xref Heu:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.hsl#Resource>.
 
+<vnd.hsl> a rdfs:Class;
+  dct:created "2023-02-13"^^xsd:date;
+  dct:identifier "application/vnd.hsl";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.hsl>;
+  rdfs:seeAlso <../../person/Heungsub_Lee#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hsl#Resource>.
+
+<vnd.hsl#Resource>
+  dct:date "2023-02-13"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.hsl";
+      reg:type "template"];
+  reg:name "vnd.hsl";
+  reg:xref <../../person/Heungsub_Lee#>.

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mich: <../../person/Michał_Górny#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-11-07"^^XML:date;
-    reg:file [ reg:file "application/vnd.gentoo.eclass"; reg:type "template" ];
-    reg:name "vnd.gentoo.eclass";
-    reg:xref Mich:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.gentoo.eclass#Resource>.
 
+<vnd.gentoo.eclass> a rdfs:Class;
+  dct:created "2022-11-07"^^xsd:date;
+  dct:identifier "application/vnd.gentoo.eclass";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.gentoo.eclass>;
+  rdfs:seeAlso <../../person/Michał_Górny#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.gentoo.eclass#Resource>.
+
+<vnd.gentoo.eclass#Resource>
+  dct:date "2022-11-07"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.gentoo.eclass";
+      reg:type "template"];
+  reg:name "vnd.gentoo.eclass";
+  reg:xref <../../person/Michał_Górny#>.

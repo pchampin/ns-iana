@@ -1,19 +1,22 @@
-@prefix : <#>.
-@prefix ST2: <../media-types/application/ST2110-41#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../media-types/image/aces#>.
-@prefix dpx: <../media-types/image/dpx#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-ST2:Resource reg:xref :.
+<../media-types/application/ST2110-41#Resource>
+  reg:xref <SMPTE#>.
 
-n1:Resource reg:xref :.
+<../media-types/image/aces#Resource>
+  reg:xref <SMPTE#>.
 
-dpx:Resource reg:xref :.
+<../media-types/image/dpx#Resource>
+  reg:xref <SMPTE#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <SMPTE#>.
 
-:
-    reg:id "SMPTE";
-    reg:name "Society of Motion Picture and Television Engineers (SMPTE)";
-    reg:uri "http://www.smpte.org".
+<SMPTE#>
+  reg:id "SMPTE";
+  reg:name "Society of Motion Picture and Television Engineers (SMPTE)";
+  reg:uri "http://www.smpte.org".

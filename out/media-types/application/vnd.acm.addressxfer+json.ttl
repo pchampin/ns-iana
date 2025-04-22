@@ -1,16 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sridh: <../../person/Sridhar_Ramakrishnan#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-03-02"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.acm.addressxfer+json"; reg:type "template" ];
-    reg:name "vnd.acm.addressxfer+json";
-    reg:updated "2023-05-25"^^XML:date;
-    reg:xref Sridh:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.acm.addressxfer+json#Resource>.
 
+<vnd.acm.addressxfer+json> a rdfs:Class;
+  dct:created "2023-03-02"^^xsd:date;
+  dct:identifier "application/vnd.acm.addressxfer+json";
+  dct:modified "2023-05-25"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.acm.addressxfer+json>;
+  rdfs:seeAlso <../../person/Sridhar_Ramakrishnan#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.acm.addressxfer+json#Resource>.
+
+<vnd.acm.addressxfer+json#Resource>
+  dct:date "2023-03-02"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.acm.addressxfer+json";
+      reg:type "template"];
+  reg:name "vnd.acm.addressxfer+json";
+  reg:updated "2023-05-25"^^xsd:date;
+  reg:xref <../../person/Sridhar_Ramakrishnan#>.

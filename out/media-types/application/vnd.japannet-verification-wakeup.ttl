@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Kiy: <../../person/Kiyofusa_Fujii#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/vnd.japannet-verification-wakeup";
-                reg:type "template"
-            ];
-    reg:name "vnd.japannet-verification-wakeup";
-    reg:xref Kiy:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.japannet-verification-wakeup#Resource>.
 
+<vnd.japannet-verification-wakeup> a rdfs:Class;
+  dct:identifier "application/vnd.japannet-verification-wakeup";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.japannet-verification-wakeup>;
+  rdfs:seeAlso <../../person/Kiyofusa_Fujii#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.japannet-verification-wakeup#Resource>.
+
+<vnd.japannet-verification-wakeup#Resource>
+  reg:file [
+      reg:file "application/vnd.japannet-verification-wakeup";
+      reg:type "template"];
+  reg:name "vnd.japannet-verification-wakeup";
+  reg:xref <../../person/Kiyofusa_Fujii#>.

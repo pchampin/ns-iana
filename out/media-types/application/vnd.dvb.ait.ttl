@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mich: <../../person/Michael_Lagally#>.
-@prefix Pet: <../../person/Peter_Siebert#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.dvb.ait"; reg:type "template" ];
-    reg:name "vnd.dvb.ait";
-    reg:xref Mich:, Pet:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.dvb.ait#Resource>.
 
+<vnd.dvb.ait> a rdfs:Class;
+  dct:identifier "application/vnd.dvb.ait";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.dvb.ait>;
+  rdfs:seeAlso <../../person/Michael_Lagally#>,
+    <../../person/Peter_Siebert#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dvb.ait#Resource>.
+
+<vnd.dvb.ait#Resource>
+  reg:file [
+      reg:file "application/vnd.dvb.ait";
+      reg:type "template"];
+  reg:name "vnd.dvb.ait";
+  reg:xref <../../person/Michael_Lagally#>,
+    <../../person/Peter_Siebert#>.

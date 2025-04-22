@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.think-cell.ppttc+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.think-cell.ppttc+json#Resource>
+  reg:xref <Arno_Schoedl#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Arno_Schoedl#>.
 
-:
-    reg:id "Arno_Schoedl";
-    reg:name "Arno Schoedl";
-    reg:updated "2018-04-16";
-    reg:uri "mailto:aschoedl&think-cell.com".
+<Arno_Schoedl#>
+  reg:id "Arno_Schoedl";
+  reg:name "Arno Schoedl";
+  reg:updated "2018-04-16";
+  reg:uri "mailto:aschoedl&think-cell.com".

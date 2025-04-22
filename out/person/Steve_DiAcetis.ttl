@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/audio/vnd.ms-playready.media.pya#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix vn: <../media-types/video/vnd.ms-playready.media.pyv#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/audio/vnd.ms-playready.media.pya#Resource>
+  reg:xref <Steve_DiAcetis#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Steve_DiAcetis#>.
 
-vn:Resource reg:xref :.
+<../media-types/video/vnd.ms-playready.media.pyv#Resource>
+  reg:xref <Steve_DiAcetis#>.
 
-:
-    reg:id "Steve_DiAcetis";
-    reg:name "Steve DiAcetis";
-    reg:updated "2008-06-03";
-    reg:uri "mailto:stevedia&microsoft.com".
+<Steve_DiAcetis#>
+  reg:id "Steve_DiAcetis";
+  reg:name "Steve DiAcetis";
+  reg:updated "2008-06-03";
+  reg:uri "mailto:stevedia&microsoft.com".

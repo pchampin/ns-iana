@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ben: <../../person/Ben_Simon#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/prs.btif"; reg:type "template" ];
-    reg:name "prs.btif";
-    reg:xref Ben:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <prs.btif#Resource>.
 
+<prs.btif> a rdfs:Class;
+  dct:identifier "image/prs.btif";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/prs.btif>;
+  rdfs:seeAlso <../../person/Ben_Simon#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.btif#Resource>.
+
+<prs.btif#Resource>
+  reg:file [
+      reg:file "image/prs.btif";
+      reg:type "template"];
+  reg:name "prs.btif";
+  reg:xref <../../person/Ben_Simon#>.

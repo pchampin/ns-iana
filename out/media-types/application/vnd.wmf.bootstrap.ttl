@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pr: <../../person/Prakash_Iyer#>.
-@prefix Thi: <../../person/Thinh_Nguyenphu#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.wmf.bootstrap"; reg:type "template" ];
-    reg:name "vnd.wmf.bootstrap";
-    reg:xref Pr:, Thi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.wmf.bootstrap#Resource>.
 
+<vnd.wmf.bootstrap> a rdfs:Class;
+  dct:identifier "application/vnd.wmf.bootstrap";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.wmf.bootstrap>;
+  rdfs:seeAlso <../../person/Prakash_Iyer#>,
+    <../../person/Thinh_Nguyenphu#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.wmf.bootstrap#Resource>.
+
+<vnd.wmf.bootstrap#Resource>
+  reg:file [
+      reg:file "application/vnd.wmf.bootstrap";
+      reg:type "template"];
+  reg:name "vnd.wmf.bootstrap";
+  reg:xref <../../person/Prakash_Iyer#>,
+    <../../person/Thinh_Nguyenphu#>.

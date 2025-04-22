@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp.mcdata-msgstore-ctrl-request+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp.mcdata-regroup+xml#>.
-@prefix v: <../media-types/application/vnd.3gpp.mcptt-regroup+xml#>.
-@prefix n1: <../media-types/application/vnd.3gpp.mcvideo-regroup+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.mcdata-msgstore-ctrl-request+xml#Resource>
+  reg:xref <Kiran_Kapale#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.mcdata-regroup+xml#Resource>
+  reg:xref <Kiran_Kapale#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.mcptt-regroup+xml#Resource>
+  reg:xref <Kiran_Kapale#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.mcvideo-regroup+xml#Resource>
+  reg:xref <Kiran_Kapale#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Kiran_Kapale#>.
 
-:
-    reg:id "Kiran_Kapale";
-    reg:name "Kiran Kapale";
-    reg:updated "2023-03-16";
-    reg:uri "mailto:kiran.kapale&samsung.com".
+<Kiran_Kapale#>
+  reg:id "Kiran_Kapale";
+  reg:name "Kiran Kapale";
+  reg:updated "2023-03-16";
+  reg:uri "mailto:kiran.kapale&samsung.com".

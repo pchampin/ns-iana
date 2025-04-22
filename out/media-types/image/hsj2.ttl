@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix ITU: <../../person/ITU-T#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-05-17"^^XML:date;
-    reg:file [ reg:file "image/hsj2"; reg:type "template" ];
-    reg:name "hsj2 (OBSOLETE)";
-    reg:updated "2024-10-16"^^XML:date;
-    reg:xref ISO:, ITU:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <hsj2#Resource>.
 
+<hsj2> a rdfs:Class;
+  dct:created "2019-05-17"^^xsd:date;
+  dct:identifier "image/hsj2";
+  dct:modified "2024-10-16"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/hsj2>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
+    <../../person/ITU-T#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <hsj2#Resource>.
+
+<hsj2#Resource>
+  dct:date "2019-05-17"^^xsd:date;
+  reg:file [
+      reg:file "image/hsj2";
+      reg:type "template"];
+  reg:name "hsj2 (OBSOLETE)";
+  reg:updated "2024-10-16"^^xsd:date;
+  reg:xref <../../person/ISO-IEC_JTC_1#>,
+    <../../person/ITU-T#>.

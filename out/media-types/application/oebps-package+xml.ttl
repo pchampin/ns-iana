@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix EPU: <../../person/EPUB_3_WG#>.
-@prefix W3C: <../../person/W3C#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-08-16"^^XML:date;
-    reg:file [ reg:file "application/oebps-package+xml"; reg:type "template" ];
-    reg:name "oebps-package+xml";
-    reg:xref EPU:, W3C:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <oebps-package+xml#Resource>.
 
+<oebps-package+xml> a rdfs:Class;
+  dct:created "2022-08-16"^^xsd:date;
+  dct:identifier "application/oebps-package+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/oebps-package+xml>;
+  rdfs:seeAlso <../../person/EPUB_3_WG#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <oebps-package+xml#Resource>.
+
+<oebps-package+xml#Resource>
+  dct:date "2022-08-16"^^xsd:date;
+  reg:file [
+      reg:file "application/oebps-package+xml";
+      reg:type "template"];
+  reg:name "oebps-package+xml";
+  reg:xref <../../person/EPUB_3_WG#>,
+    <../../person/W3C#>.

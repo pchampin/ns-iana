@@ -1,11 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/mpeg4-generic"; reg:type "template" ];
-    reg:name "mpeg4-generic";
-    reg:xref html:rfc3640, html:rfc5691, html:rfc6295.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <mpeg4-generic#Resource>.
 
+<mpeg4-generic> a rdfs:Class;
+  dct:identifier "audio/mpeg4-generic";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/mpeg4-generic>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc3640/>,
+    <https://datatracker.ietf.org/doc/rfc5691/>,
+    <https://datatracker.ietf.org/doc/rfc6295/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mpeg4-generic#Resource>.
+
+<mpeg4-generic#Resource>
+  reg:file [
+      reg:file "audio/mpeg4-generic";
+      reg:type "template"];
+  reg:name "mpeg4-generic";
+  reg:xref <https://tools.ietf.org/html/rfc3640>,
+    <https://tools.ietf.org/html/rfc5691>,
+    <https://tools.ietf.org/html/rfc6295>.

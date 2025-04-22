@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Int: <../../person/International_FDSN#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2025-01-02"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.fdsn.stationxml+xml"; reg:type "template" ];
-    reg:name "vnd.fdsn.stationxml+xml";
-    reg:xref Int:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fdsn.stationxml+xml#Resource>.
 
+<vnd.fdsn.stationxml+xml> a rdfs:Class;
+  dct:created "2025-01-02"^^xsd:date;
+  dct:identifier "application/vnd.fdsn.stationxml+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fdsn.stationxml+xml>;
+  rdfs:seeAlso <../../person/International_FDSN#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fdsn.stationxml+xml#Resource>.
+
+<vnd.fdsn.stationxml+xml#Resource>
+  dct:date "2025-01-02"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.fdsn.stationxml+xml";
+      reg:type "template"];
+  reg:name "vnd.fdsn.stationxml+xml";
+  reg:xref <../../person/International_FDSN#>.

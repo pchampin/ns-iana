@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-08-01"^^XML:date;
-    reg:file [ reg:file "application/swid+cbor"; reg:type "template" ];
-    reg:name "swid+cbor";
-    reg:xref html:rfc9393.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <swid+cbor#Resource>.
 
+<swid+cbor> a rdfs:Class;
+  dct:created "2022-08-01"^^xsd:date;
+  dct:identifier "application/swid+cbor";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/swid+cbor>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9393/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <swid+cbor#Resource>.
+
+<swid+cbor#Resource>
+  dct:date "2022-08-01"^^xsd:date;
+  reg:file [
+      reg:file "application/swid+cbor";
+      reg:type "template"];
+  reg:name "swid+cbor";
+  reg:xref <https://tools.ietf.org/html/rfc9393>.

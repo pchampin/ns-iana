@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp.gtpc#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp.ngap#>.
-@prefix v: <../media-types/application/vnd.3gpp.s1ap#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.gtpc#Resource>
+  reg:xref <Yang_Yong#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.ngap#Resource>
+  reg:xref <Yang_Yong#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.s1ap#Resource>
+  reg:xref <Yang_Yong#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Yang_Yong#>.
 
-:
-    reg:id "Yang_Yong";
-    reg:name "Yang Yong";
-    reg:updated "2021-04-09";
-    reg:uri "mailto:frank.yong.yang&ericsson.com".
+<Yang_Yong#>
+  reg:id "Yang_Yong";
+  reg:name "Yang Yong";
+  reg:updated "2021-04-09";
+  reg:uri "mailto:frank.yong.yang&ericsson.com".

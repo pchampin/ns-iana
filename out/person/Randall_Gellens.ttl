@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix Eme: <../media-types/application/EmergencyCallData.LegacyESN+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-Eme:Resource reg:xref :.
+<../media-types/application/EmergencyCallData.LegacyESN+json#Resource>
+  reg:xref <Randall_Gellens#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Randall_Gellens#>.
 
-:
-    reg:id "Randall_Gellens";
-    reg:name "Randall Gellens";
-    reg:updated "2022-10-10";
-    reg:uri "mailto:rg+nena.mime&randy.pensive.org".
+<Randall_Gellens#>
+  reg:id "Randall_Gellens";
+  reg:name "Randall Gellens";
+  reg:updated "2022-10-10";
+  reg:uri "mailto:rg+nena.mime&randy.pensive.org".

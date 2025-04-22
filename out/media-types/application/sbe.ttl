@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Don: <../../person/Donald_L._Mendelson#>.
-@prefix FIX: <../../person/FIX_Trading_Community#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-04-14"^^XML:date;
-    reg:file [ reg:file "application/sbe"; reg:type "template" ];
-    reg:name "sbe";
-    reg:xref Don:, FIX:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <sbe#Resource>.
 
+<sbe> a rdfs:Class;
+  dct:created "2020-04-14"^^xsd:date;
+  dct:identifier "application/sbe";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/sbe>;
+  rdfs:seeAlso <../../person/Donald_L._Mendelson#>,
+    <../../person/FIX_Trading_Community#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <sbe#Resource>.
+
+<sbe#Resource>
+  dct:date "2020-04-14"^^xsd:date;
+  reg:file [
+      reg:file "application/sbe";
+      reg:type "template"];
+  reg:name "sbe";
+  reg:xref <../../person/Donald_L._Mendelson#>,
+    <../../person/FIX_Trading_Community#>.

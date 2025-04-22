@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sv: <../../person/Svante_Seleborg#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-01-03"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.xecrets-encrypted"; reg:type "template" ];
-    reg:name "vnd.xecrets-encrypted";
-    reg:xref Sv:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.xecrets-encrypted#Resource>.
 
+<vnd.xecrets-encrypted> a rdfs:Class;
+  dct:created "2024-01-03"^^xsd:date;
+  dct:identifier "application/vnd.xecrets-encrypted";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.xecrets-encrypted>;
+  rdfs:seeAlso <../../person/Svante_Seleborg#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.xecrets-encrypted#Resource>.
+
+<vnd.xecrets-encrypted#Resource>
+  dct:date "2024-01-03"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.xecrets-encrypted";
+      reg:type "template"];
+  reg:name "vnd.xecrets-encrypted";
+  reg:xref <../../person/Svante_Seleborg#>.

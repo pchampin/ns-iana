@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/G729E"; reg:type "template" ];
-    reg:name "G729E";
-    reg:xref html:rfc4856.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <G729E#Resource>.
 
+<G729E> a rdfs:Class;
+  dct:identifier "audio/G729E";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/G729E>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc4856/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <G729E#Resource>.
+
+<G729E#Resource>
+  reg:file [
+      reg:file "audio/G729E";
+      reg:type "template"];
+  reg:name "G729E";
+  reg:xref <https://tools.ietf.org/html/rfc4856>.

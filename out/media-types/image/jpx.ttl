@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/jpx"; reg:type "template" ];
-    reg:name "jpx";
-    reg:xref ISO:, html:rfc3745.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <jpx#Resource>.
 
+<jpx> a rdfs:Class;
+  dct:identifier "image/jpx";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/jpx>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>,
+    <https://datatracker.ietf.org/doc/rfc3745/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <jpx#Resource>.
+
+<jpx#Resource>
+  reg:file [
+      reg:file "image/jpx";
+      reg:type "template"];
+  reg:name "jpx";
+  reg:xref <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>,
+    <https://tools.ietf.org/html/rfc3745>.

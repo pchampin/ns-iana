@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Se: <../../person/Sean_Gillies#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-05-20"^^XML:date;
-    reg:file [ reg:file "application/vnd.geo+json"; reg:type "template" ];
-    reg:name
-    "vnd.geo+json (OBSOLETED by  rfc7946  in favor of application/geo+json)";
-    reg:xref Se:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.geo+json#Resource>.
 
+<vnd.geo+json> a rdfs:Class;
+  dct:created "2014-05-20"^^xsd:date;
+  dct:identifier "application/vnd.geo+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.geo+json>;
+  rdfs:seeAlso <../../person/Sean_Gillies#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.geo+json#Resource>.
+
+<vnd.geo+json#Resource>
+  dct:date "2014-05-20"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.geo+json";
+      reg:type "template"];
+  reg:name "vnd.geo+json (OBSOLETED by  rfc7946  in favor of application/geo+json)";
+  reg:xref <../../person/Sean_Gillies#>.

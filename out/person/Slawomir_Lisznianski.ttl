@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.pcos#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.pcos#Resource>
+  reg:xref <Slawomir_Lisznianski#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Slawomir_Lisznianski#>.
 
-:
-    reg:id "Slawomir_Lisznianski";
-    reg:name "Slawomir Lisznianski";
-    reg:updated "2014-01-31";
-    reg:uri "mailto:sl&pushcoin.com".
+<Slawomir_Lisznianski#>
+  reg:id "Slawomir_Lisznianski";
+  reg:name "Slawomir Lisznianski";
+  reg:updated "2014-01-31";
+  reg:uri "mailto:sl&pushcoin.com".

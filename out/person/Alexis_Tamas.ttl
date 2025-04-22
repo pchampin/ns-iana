@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.frogans.fnc#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.frogans.ltf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.frogans.fnc#Resource>
+  reg:xref <Alexis_Tamas#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.frogans.ltf#Resource>
+  reg:xref <Alexis_Tamas#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Alexis_Tamas#>.
 
-:
-    reg:id "Alexis_Tamas";
-    reg:name "Alexis Tamas";
-    reg:updated "2020-05-04";
-    reg:uri "mailto:alexis.tamas&op3ft.org".
+<Alexis_Tamas#>
+  reg:id "Alexis_Tamas";
+  reg:name "Alexis Tamas";
+  reg:updated "2020-05-04";
+  reg:uri "mailto:alexis.tamas&op3ft.org".

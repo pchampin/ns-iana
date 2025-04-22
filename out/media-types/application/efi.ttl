@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix S: <../../person/Samer_El-Haj-Mahmoud#>.
-@prefix UEF: <../../person/UEFI_Forum#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2016-04-06"^^XML:date;
-    reg:file [ reg:file "application/efi"; reg:type "template" ];
-    reg:name "efi";
-    reg:xref S:, UEF:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <efi#Resource>.
 
+<efi> a rdfs:Class;
+  dct:created "2016-04-06"^^xsd:date;
+  dct:identifier "application/efi";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/efi>;
+  rdfs:seeAlso <../../person/Samer_El-Haj-Mahmoud#>,
+    <../../person/UEFI_Forum#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <efi#Resource>.
+
+<efi#Resource>
+  dct:date "2016-04-06"^^xsd:date;
+  reg:file [
+      reg:file "application/efi";
+      reg:type "template"];
+  reg:name "efi";
+  reg:xref <../../person/Samer_El-Haj-Mahmoud#>,
+    <../../person/UEFI_Forum#>.

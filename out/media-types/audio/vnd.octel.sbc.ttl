@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gre: <../../person/Greg_Vaudreuil#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.octel.sbc"; reg:type "template" ];
-    reg:name "vnd.octel.sbc";
-    reg:xref Gre:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.octel.sbc#Resource>.
 
+<vnd.octel.sbc> a rdfs:Class;
+  dct:identifier "audio/vnd.octel.sbc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.octel.sbc>;
+  rdfs:seeAlso <../../person/Greg_Vaudreuil#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.octel.sbc#Resource>.
+
+<vnd.octel.sbc#Resource>
+  reg:file [
+      reg:file "audio/vnd.octel.sbc";
+      reg:type "template"];
+  reg:name "vnd.octel.sbc";
+  reg:xref <../../person/Greg_Vaudreuil#>.

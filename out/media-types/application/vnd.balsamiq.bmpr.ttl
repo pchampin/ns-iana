@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gi: <../../person/Giacomo_Guilizzoni#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-05-06"^^XML:date;
-    reg:file [ reg:file "application/vnd.balsamiq.bmpr"; reg:type "template" ];
-    reg:name "vnd.balsamiq.bmpr";
-    reg:xref Gi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.balsamiq.bmpr#Resource>.
 
+<vnd.balsamiq.bmpr> a rdfs:Class;
+  dct:created "2015-05-06"^^xsd:date;
+  dct:identifier "application/vnd.balsamiq.bmpr";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.balsamiq.bmpr>;
+  rdfs:seeAlso <../../person/Giacomo_Guilizzoni#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.balsamiq.bmpr#Resource>.
+
+<vnd.balsamiq.bmpr#Resource>
+  dct:date "2015-05-06"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.balsamiq.bmpr";
+      reg:type "template"];
+  reg:name "vnd.balsamiq.bmpr";
+  reg:xref <../../person/Giacomo_Guilizzoni#>.

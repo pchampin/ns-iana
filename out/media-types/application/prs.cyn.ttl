@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Cyn: <../../person/Cynthia_Revström#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-09-29"^^XML:date;
-    reg:file [ reg:file "application/prs.cyn"; reg:type "template" ];
-    reg:name "prs.cyn";
-    reg:xref Cyn:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <prs.cyn#Resource>.
 
+<prs.cyn> a rdfs:Class;
+  dct:created "2020-09-29"^^xsd:date;
+  dct:identifier "application/prs.cyn";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/prs.cyn>;
+  rdfs:seeAlso <../../person/Cynthia_Revström#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.cyn#Resource>.
+
+<prs.cyn#Resource>
+  dct:date "2020-09-29"^^xsd:date;
+  reg:file [
+      reg:file "application/prs.cyn";
+      reg:type "template"];
+  reg:name "prs.cyn";
+  reg:xref <../../person/Cynthia_Revström#>.

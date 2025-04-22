@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix L: <../../person/Laurence_J._Golding#>.
-@prefix Mich: <../../person/Michael_C._Fanning#>.
-@prefix OASIS: <../../person/OASIS#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-09-15"^^XML:date;
-    reg:file [ reg:file "application/sarif+json"; reg:type "template" ];
-    reg:name "sarif+json";
-    reg:xref L:, Mich:, OASIS:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <sarif+json#Resource>.
 
+<sarif+json> a rdfs:Class;
+  dct:created "2020-09-15"^^xsd:date;
+  dct:identifier "application/sarif+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/sarif+json>;
+  rdfs:seeAlso <../../person/Laurence_J._Golding#>,
+    <../../person/Michael_C._Fanning#>,
+    <../../person/OASIS#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <sarif+json#Resource>.
+
+<sarif+json#Resource>
+  dct:date "2020-09-15"^^xsd:date;
+  reg:file [
+      reg:file "application/sarif+json";
+      reg:type "template"];
+  reg:name "sarif+json";
+  reg:xref <../../person/Laurence_J._Golding#>,
+    <../../person/Michael_C._Fanning#>,
+    <../../person/OASIS#>.

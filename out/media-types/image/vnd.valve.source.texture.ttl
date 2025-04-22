@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Hen: <../../person/Henrik_Andersson#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-04-08"^^XML:date;
-    reg:file [ reg:file "image/vnd.valve.source.texture"; reg:type "template" ];
-    reg:name "vnd.valve.source.texture";
-    reg:xref Hen:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.valve.source.texture#Resource>.
 
+<vnd.valve.source.texture> a rdfs:Class;
+  dct:created "2014-04-08"^^xsd:date;
+  dct:identifier "image/vnd.valve.source.texture";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.valve.source.texture>;
+  rdfs:seeAlso <../../person/Henrik_Andersson#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.valve.source.texture#Resource>.
+
+<vnd.valve.source.texture#Resource>
+  dct:date "2014-04-08"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.valve.source.texture";
+      reg:type "template"];
+  reg:name "vnd.valve.source.texture";
+  reg:xref <../../person/Henrik_Andersson#>.

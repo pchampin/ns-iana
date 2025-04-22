@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.wmf.bootstrap#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.wmf.bootstrap#Resource>
+  reg:xref <Thinh_Nguyenphu#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Thinh_Nguyenphu#>.
 
-:
-    reg:id "Thinh_Nguyenphu";
-    reg:name "Thinh Nguyenphu";
-    reg:updated "2008-02-07";
-    reg:uri "mailto:thinh.nguyenphu&nsn.com".
+<Thinh_Nguyenphu#>
+  reg:id "Thinh_Nguyenphu";
+  reg:name "Thinh Nguyenphu";
+  reg:updated "2008-02-07";
+  reg:uri "mailto:thinh.nguyenphu&nsn.com".

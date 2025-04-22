@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix ce: <../media-types/application/cea-2018+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix urc: <../media-types/application/urc-grpsheet+xml#>.
-@prefix ur: <../media-types/application/urc-ressheet+xml#>.
-@prefix u: <../media-types/application/urc-targetdesc+xml#>.
-@prefix n1: <../media-types/application/urc-uisocketdesc+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-ce:Resource reg:xref :.
+<../media-types/application/cea-2018+xml#Resource>
+  reg:xref <Gottfried_Zimmermann#>.
 
-urc:Resource reg:xref :.
+<../media-types/application/urc-grpsheet+xml#Resource>
+  reg:xref <Gottfried_Zimmermann#>.
 
-ur:Resource reg:xref :.
+<../media-types/application/urc-ressheet+xml#Resource>
+  reg:xref <Gottfried_Zimmermann#>.
 
-u:Resource reg:xref :.
+<../media-types/application/urc-targetdesc+xml#Resource>
+  reg:xref <Gottfried_Zimmermann#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/urc-uisocketdesc+xml#Resource>
+  reg:xref <Gottfried_Zimmermann#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Gottfried_Zimmermann#>.
 
-:
-    reg:id "Gottfried_Zimmermann";
-    reg:name "Gottfried Zimmermann";
-    reg:updated "2013-06-24";
-    reg:uri "mailto:gzimmermann at acm.org".
+<Gottfried_Zimmermann#>
+  reg:id "Gottfried_Zimmermann";
+  reg:name "Gottfried Zimmermann";
+  reg:updated "2013-06-24";
+  reg:uri "mailto:gzimmermann at acm.org".

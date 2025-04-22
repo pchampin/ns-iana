@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:multipart reg:record :Resource.
+<../media-types.ttl#multipart>
+  reg:record <report#Resource>.
 
-:Resource
-    reg:file [ reg:file "multipart/report"; reg:type "template" ];
-    reg:name "report";
-    reg:xref html:rfc6522.
+<report> a rdfs:Class;
+  dct:identifier "multipart/report";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/multipart/report>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6522/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <report#Resource>.
+
+<report#Resource>
+  reg:file [
+      reg:file "multipart/report";
+      reg:type "template"];
+  reg:name "report";
+  reg:xref <https://tools.ietf.org/html/rfc6522>.

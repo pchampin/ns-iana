@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steve_Klabnik#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.api+json"; reg:type "template" ];
-    reg:name "vnd.api+json";
-    reg:xref Ste:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.api+json#Resource>.
 
+<vnd.api+json> a rdfs:Class;
+  dct:identifier "application/vnd.api+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.api+json>;
+  rdfs:seeAlso <../../person/Steve_Klabnik#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.api+json#Resource>.
+
+<vnd.api+json#Resource>
+  reg:file [
+      reg:file "application/vnd.api+json";
+      reg:type "template"];
+  reg:name "vnd.api+json";
+  reg:xref <../../person/Steve_Klabnik#>.

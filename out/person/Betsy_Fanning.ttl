@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix fdf: <../media-types/application/fdf#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix xfdf: <../media-types/application/xfdf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix prc: <../media-types/model/prc#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-fdf:Resource reg:xref :.
+<../media-types/application/fdf#Resource>
+  reg:xref <Betsy_Fanning#>.
 
-xfdf:Resource reg:xref :.
+<../media-types/application/xfdf#Resource>
+  reg:xref <Betsy_Fanning#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Betsy_Fanning#>.
 
-prc:Resource reg:xref :.
+<../media-types/model/prc#Resource>
+  reg:xref <Betsy_Fanning#>.
 
-:
-    reg:id "Betsy_Fanning";
-    reg:name "Betsy Fanning";
-    reg:updated "2022-04-29";
-    reg:uri "mailto:betsy.fanning&pdfa.org".
+<Betsy_Fanning#>
+  reg:id "Betsy_Fanning";
+  reg:name "Betsy Fanning";
+  reg:updated "2022-04-29";
+  reg:uri "mailto:betsy.fanning&pdfa.org".

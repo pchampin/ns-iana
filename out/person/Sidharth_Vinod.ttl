@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.mermaid#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.mermaid#Resource>
+  reg:xref <Sidharth_Vinod#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Sidharth_Vinod#>.
 
-:
-    reg:id "Sidharth_Vinod";
-    reg:name "Sidharth Vinod";
-    reg:updated "2023-09-18";
-    reg:uri "mailto:iana&mermaid.js.org".
+<Sidharth_Vinod#>
+  reg:id "Sidharth_Vinod";
+  reg:name "Sidharth Vinod";
+  reg:updated "2023-09-18";
+  reg:uri "mailto:iana&mermaid.js.org".

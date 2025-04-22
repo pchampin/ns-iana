@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Cle: <../../person/Clemens_Portele#>.
-@prefix OGC: <../../person/OGC#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-01-09"^^XML:date;
-    reg:file [ reg:file "application/gml+xml"; reg:type "template" ];
-    reg:name "gml+xml";
-    reg:xref Cle:, OGC:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <gml+xml#Resource>.
 
+<gml+xml> a rdfs:Class;
+  dct:created "2017-01-09"^^xsd:date;
+  dct:identifier "application/gml+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/gml+xml>;
+  rdfs:seeAlso <../../person/Clemens_Portele#>,
+    <../../person/OGC#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <gml+xml#Resource>.
+
+<gml+xml#Resource>
+  dct:date "2017-01-09"^^xsd:date;
+  reg:file [
+      reg:file "application/gml+xml";
+      reg:type "template"];
+  reg:name "gml+xml";
+  reg:xref <../../person/Clemens_Portele#>,
+    <../../person/OGC#>.

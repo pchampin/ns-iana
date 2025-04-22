@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix j: <../media-types/image/jaii#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix j0: <../media-types/image/jais#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-j:Resource reg:xref :.
+<../media-types/image/jaii#Resource>
+  reg:xref <Ye-Kui_Wang#>.
 
-j0:Resource reg:xref :.
+<../media-types/image/jais#Resource>
+  reg:xref <Ye-Kui_Wang#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Ye-Kui_Wang#>.
 
-:
-    reg:id "Ye-Kui_Wang";
-    reg:name "Ye-Kui Wang";
-    reg:updated "2025-01-01";
-    reg:uri "mailto:yekui.wang&bytedance.com".
+<Ye-Kui_Wang#>
+  reg:id "Ye-Kui_Wang";
+  reg:name "Ye-Kui Wang";
+  reg:updated "2025-01-01";
+  reg:uri "mailto:yekui.wang&bytedance.com".

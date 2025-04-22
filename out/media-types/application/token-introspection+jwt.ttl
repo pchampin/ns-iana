@@ -1,16 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-09-07"^^XML:date;
-    reg:file
-    [ reg:file "application/token-introspection+jwt"; reg:type "template" ];
-    reg:name "token-introspection+jwt";
-    reg:updated "2024-12-11"^^XML:date;
-    reg:xref html:rfc9701.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <token-introspection+jwt#Resource>.
 
+<token-introspection+jwt> a rdfs:Class;
+  dct:created "2021-09-07"^^xsd:date;
+  dct:identifier "application/token-introspection+jwt";
+  dct:modified "2024-12-11"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/token-introspection+jwt>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9701/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <token-introspection+jwt#Resource>.
+
+<token-introspection+jwt#Resource>
+  dct:date "2021-09-07"^^xsd:date;
+  reg:file [
+      reg:file "application/token-introspection+jwt";
+      reg:type "template"];
+  reg:name "token-introspection+jwt";
+  reg:updated "2024-12-11"^^xsd:date;
+  reg:xref <https://tools.ietf.org/html/rfc9701>.

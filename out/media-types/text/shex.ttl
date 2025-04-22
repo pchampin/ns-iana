@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Eri: <../../person/Eric_Prudhommeaux#>.
-@prefix W3C: <../../person/W3C#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <shex#Resource>.
 
-:Resource
-    terms:date "2021-05-10"^^XML:date;
-    reg:file [ reg:file "text/shex"; reg:type "template" ];
-    reg:name "shex";
-    reg:xref Eri:, W3C:.
+<shex> a rdfs:Class;
+  dct:created "2021-05-10"^^xsd:date;
+  dct:identifier "text/shex";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/shex>;
+  rdfs:seeAlso <../../person/Eric_Prudhommeaux#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <shex#Resource>.
+
+<shex#Resource>
+  dct:date "2021-05-10"^^xsd:date;
+  reg:file [
+      reg:file "text/shex";
+      reg:type "template"];
+  reg:name "shex";
+  reg:xref <../../person/Eric_Prudhommeaux#>,
+    <../../person/W3C#>.

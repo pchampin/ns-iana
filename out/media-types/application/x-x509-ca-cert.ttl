@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-03-25"^^XML:date;
-    reg:file [ reg:file "application/x-x509-ca-cert"; reg:type "template" ];
-    reg:name "x-x509-ca-cert";
-    reg:xref html:rfc8894.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <x-x509-ca-cert#Resource>.
 
+<x-x509-ca-cert> a rdfs:Class;
+  dct:created "2020-03-25"^^xsd:date;
+  dct:identifier "application/x-x509-ca-cert";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/x-x509-ca-cert>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8894/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <x-x509-ca-cert#Resource>.
+
+<x-x509-ca-cert#Resource>
+  dct:date "2020-03-25"^^xsd:date;
+  reg:file [
+      reg:file "application/x-x509-ca-cert";
+      reg:type "template"];
+  reg:name "x-x509-ca-cert";
+  reg:xref <https://tools.ietf.org/html/rfc8894>.

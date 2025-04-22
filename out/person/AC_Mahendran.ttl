@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp2.bcmcsinfo+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp2.sms#>.
-@prefix v: <../media-types/application/vnd.3gpp2.tcap#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp2.bcmcsinfo+xml#Resource>
+  reg:xref <AC_Mahendran#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp2.sms#Resource>
+  reg:xref <AC_Mahendran#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp2.tcap#Resource>
+  reg:xref <AC_Mahendran#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <AC_Mahendran#>.
 
-:
-    reg:id "AC_Mahendran";
-    reg:name "AC Mahendran";
-    reg:updated "2007-11-06";
-    reg:uri "mailto:ac&qualcomm.com".
+<AC_Mahendran#>
+  reg:id "AC_Mahendran";
+  reg:name "AC Mahendran";
+  reg:updated "2007-11-06";
+  reg:uri "mailto:ac&qualcomm.com".

@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Seb: <../../person/Sebastian_Kaebisch#>.
-@prefix W3C: <../../person/W3C#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-08-22"^^XML:date;
-    reg:file [ reg:file "application/tm+json"; reg:type "template" ];
-    reg:name "tm+json";
-    reg:xref Seb:, W3C:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <tm+json#Resource>.
 
+<tm+json> a rdfs:Class;
+  dct:created "2022-08-22"^^xsd:date;
+  dct:identifier "application/tm+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/tm+json>;
+  rdfs:seeAlso <../../person/Sebastian_Kaebisch#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <tm+json#Resource>.
+
+<tm+json#Resource>
+  dct:date "2022-08-22"^^xsd:date;
+  reg:file [
+      reg:file "application/tm+json";
+      reg:type "template"];
+  reg:name "tm+json";
+  reg:xref <../../person/Sebastian_Kaebisch#>,
+    <../../person/W3C#>.

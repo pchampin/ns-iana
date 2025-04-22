@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Fei: <../../person/Feiyu_Xie#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.net2phone.commcenter.command#Resource>.
 
-:Resource
-    reg:file
-    [ reg:file "text/vnd.net2phone.commcenter.command"; reg:type "template" ];
-    reg:name "vnd.net2phone.commcenter.command";
-    reg:xref Fei:.
+<vnd.net2phone.commcenter.command> a rdfs:Class;
+  dct:identifier "text/vnd.net2phone.commcenter.command";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.net2phone.commcenter.command>;
+  rdfs:seeAlso <../../person/Feiyu_Xie#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.net2phone.commcenter.command#Resource>.
+
+<vnd.net2phone.commcenter.command#Resource>
+  reg:file [
+      reg:file "text/vnd.net2phone.commcenter.command";
+      reg:type "template"];
+  reg:name "vnd.net2phone.commcenter.command";
+  reg:xref <../../person/Feiyu_Xie#>.

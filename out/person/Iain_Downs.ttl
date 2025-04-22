@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.easykaraoke.cdgdownload#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.easykaraoke.cdgdownload#Resource>
+  reg:xref <Iain_Downs#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Iain_Downs#>.
 
-:
-    reg:id "Iain_Downs";
-    reg:name "Iain Downs";
-    reg:updated "2010-11-16";
-    reg:uri "mailto:iain&easykaraoke.com".
+<Iain_Downs#>
+  reg:id "Iain_Downs";
+  reg:name "Iain Downs";
+  reg:updated "2010-11-16";
+  reg:uri "mailto:iain&easykaraoke.com".

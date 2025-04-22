@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix mtl: <../media-types/model/mtl#>.
-@prefix obj: <../media-types/model/obj#>.
-@prefix stl: <../media-types/model/stl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Carolyn_Hull#>.
 
-mtl:Resource reg:xref :.
+<../media-types/model/mtl#Resource>
+  reg:xref <Carolyn_Hull#>.
 
-obj:Resource reg:xref :.
+<../media-types/model/obj#Resource>
+  reg:xref <Carolyn_Hull#>.
 
-stl:Resource reg:xref :.
+<../media-types/model/stl#Resource>
+  reg:xref <Carolyn_Hull#>.
 
-:
-    reg:id "Carolyn_Hull";
-    reg:name "Carolyn Hull";
-    reg:updated "2022-09-16";
-    reg:uri "mailto:dicom&dicomstandard.org".
+<Carolyn_Hull#>
+  reg:id "Carolyn_Hull";
+  reg:name "Carolyn Hull";
+  reg:updated "2022-09-16";
+  reg:uri "mailto:dicom&dicomstandard.org".

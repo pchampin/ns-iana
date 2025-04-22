@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <evc#Resource>.
 
-:Resource
-    terms:date "2024-02-05"^^XML:date;
-    reg:file [ reg:file "video/evc"; reg:type "template" ];
-    reg:name "evc";
-    reg:xref html:rfc9584.
+<evc> a rdfs:Class;
+  dct:created "2024-02-05"^^xsd:date;
+  dct:identifier "video/evc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/evc>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9584/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <evc#Resource>.
+
+<evc#Resource>
+  dct:date "2024-02-05"^^xsd:date;
+  reg:file [
+      reg:file "video/evc";
+      reg:type "template"];
+  reg:name "evc";
+  reg:xref <https://tools.ietf.org/html/rfc9584>.

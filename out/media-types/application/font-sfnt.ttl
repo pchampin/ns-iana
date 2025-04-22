@@ -1,14 +1,27 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix Lev: <../../person/Levantovsky#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/font-sfnt"; reg:type "template" ];
-    reg:name "font-sfnt - DEPRECATED in favor of font/sfnt";
-    reg:updated "2016-12-21";
-    reg:xref ISO:, Lev:, html:rfc8081.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <font-sfnt#Resource>.
 
+<font-sfnt> a rdfs:Class;
+  dct:identifier "application/font-sfnt";
+  dct:modified "2016-12-21"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/font-sfnt>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Levantovsky#>,
+    <https://datatracker.ietf.org/doc/rfc8081/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <font-sfnt#Resource>.
+
+<font-sfnt#Resource>
+  reg:file [
+      reg:file "application/font-sfnt";
+      reg:type "template"];
+  reg:name "font-sfnt - DEPRECATED in favor of font/sfnt";
+  reg:updated "2016-12-21";
+  reg:xref <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Levantovsky#>,
+    <https://tools.ietf.org/html/rfc8081>.

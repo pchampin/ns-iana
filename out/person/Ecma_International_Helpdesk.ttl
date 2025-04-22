@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix cst: <../media-types/application/csta+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix CSTAd: <../media-types/application/CSTAdata+xml#>.
-@prefix oxps: <../media-types/application/oxps#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-cst:Resource reg:xref :.
+<../media-types/application/CSTAdata+xml#Resource>
+  reg:xref <Ecma_International_Helpdesk#>.
 
-CSTAd:Resource reg:xref :.
+<../media-types/application/csta+xml#Resource>
+  reg:xref <Ecma_International_Helpdesk#>.
 
-oxps:Resource reg:xref :.
+<../media-types/application/oxps#Resource>
+  reg:xref <Ecma_International_Helpdesk#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Ecma_International_Helpdesk#>.
 
-:
-    reg:id "Ecma_International_Helpdesk";
-    reg:name "Ecma International Helpdesk";
-    reg:updated "2011-05-17";
-    reg:uri "mailto:helpdesk&ecma-international.org".
+<Ecma_International_Helpdesk#>
+  reg:id "Ecma_International_Helpdesk";
+  reg:name "Ecma International Helpdesk";
+  reg:updated "2011-05-17";
+  reg:uri "mailto:helpdesk&ecma-international.org".

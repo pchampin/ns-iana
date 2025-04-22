@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ms-excel#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.ms-powerpoint#>.
-@prefix v: <../media-types/application/vnd.ms-project#>.
-@prefix n1: <../media-types/application/vnd.ms-tnef#>.
-@prefix n2: <../media-types/application/vnd.ms-works#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ms-excel#Resource>
+  reg:xref <Sukvinder_S._Gill#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.ms-powerpoint#Resource>
+  reg:xref <Sukvinder_S._Gill#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.ms-project#Resource>
+  reg:xref <Sukvinder_S._Gill#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.ms-tnef#Resource>
+  reg:xref <Sukvinder_S._Gill#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.ms-works#Resource>
+  reg:xref <Sukvinder_S._Gill#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Sukvinder_S._Gill#>.
 
-:
-    reg:id "Sukvinder_S._Gill";
-    reg:name "Sukvinder S. Gill";
-    reg:updated "1996-04-19";
-    reg:uri "mailto:sukvg&microsoft.com".
+<Sukvinder_S._Gill#>
+  reg:id "Sukvinder_S._Gill";
+  reg:name "Sukvinder S. Gill";
+  reg:updated "1996-04-19";
+  reg:uri "mailto:sukvg&microsoft.com".

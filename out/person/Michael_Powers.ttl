@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vnd: <../media-types/model/vnd.flatland.3dml#>.
-@prefix vn: <../media-types/text/vnd.in3d.3dml#>.
-@prefix v: <../media-types/text/vnd.in3d.spot#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Michael_Powers#>.
 
-vnd:Resource reg:xref :.
+<../media-types/model/vnd.flatland.3dml#Resource>
+  reg:xref <Michael_Powers#>.
 
-vn:Resource reg:xref :.
+<../media-types/text/vnd.in3d.3dml#Resource>
+  reg:xref <Michael_Powers#>.
 
-v:Resource reg:xref :.
+<../media-types/text/vnd.in3d.spot#Resource>
+  reg:xref <Michael_Powers#>.
 
-:
-    reg:id "Michael_Powers";
-    reg:name "Michael Powers";
-    reg:updated "1999-01-19";
-    reg:uri "mailto:powers&insideout.net".
+<Michael_Powers#>
+  reg:id "Michael_Powers";
+  reg:name "Michael Powers";
+  reg:updated "1999-01-19";
+  reg:uri "mailto:powers&insideout.net".

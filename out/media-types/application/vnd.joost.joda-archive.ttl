@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Joost: <../../person/Joost#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.joost.joda-archive"; reg:type "template" ];
-    reg:name "vnd.joost.joda-archive";
-    reg:xref Joost:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.joost.joda-archive#Resource>.
 
+<vnd.joost.joda-archive> a rdfs:Class;
+  dct:identifier "application/vnd.joost.joda-archive";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.joost.joda-archive>;
+  rdfs:seeAlso <../../person/Joost#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.joost.joda-archive#Resource>.
+
+<vnd.joost.joda-archive#Resource>
+  reg:file [
+      reg:file "application/vnd.joost.joda-archive";
+      reg:type "template"];
+  reg:name "vnd.joost.joda-archive";
+  reg:xref <../../person/Joost#>.

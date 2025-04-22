@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sw: <../../person/Swaminathan#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.hns.audio"; reg:type "template" ];
-    reg:name "vnd.hns.audio";
-    reg:xref Sw:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.hns.audio#Resource>.
 
+<vnd.hns.audio> a rdfs:Class;
+  dct:identifier "audio/vnd.hns.audio";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.hns.audio>;
+  rdfs:seeAlso <../../person/Swaminathan#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hns.audio#Resource>.
+
+<vnd.hns.audio#Resource>
+  reg:file [
+      reg:file "audio/vnd.hns.audio";
+      reg:type "template"];
+  reg:name "vnd.hns.audio";
+  reg:xref <../../person/Swaminathan#>.

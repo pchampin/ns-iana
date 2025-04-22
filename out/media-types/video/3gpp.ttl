@@ -1,11 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <3gpp#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/3gpp"; reg:type "template" ];
-    reg:name "3gpp";
-    reg:xref html:rfc3839, html:rfc6381.
+<3gpp> a rdfs:Class;
+  dct:identifier "video/3gpp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/3gpp>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc3839/>,
+    <https://datatracker.ietf.org/doc/rfc6381/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <3gpp#Resource>.
+
+<3gpp#Resource>
+  reg:file [
+      reg:file "video/3gpp";
+      reg:type "template"];
+  reg:name "3gpp";
+  reg:xref <https://tools.ietf.org/html/rfc3839>,
+    <https://tools.ietf.org/html/rfc6381>.

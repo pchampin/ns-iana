@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Rob: <../../person/Robin_Berjon#>.
-@prefix W3C: <../../person/W3C#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <html#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/html"; reg:type "template" ];
-    reg:name "html";
-    reg:xref Rob:, W3C:.
+<html> a rdfs:Class;
+  dct:identifier "text/html";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/html>;
+  rdfs:seeAlso <../../person/Robin_Berjon#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <html#Resource>.
+
+<html#Resource>
+  reg:file [
+      reg:file "text/html";
+      reg:type "template"];
+  reg:name "html";
+  reg:xref <../../person/Robin_Berjon#>,
+    <../../person/W3C#>.

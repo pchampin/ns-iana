@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.cncf.helm.chart.content.v1.tar+gzip#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.cncf.helm.chart.provenance.v1.prov#>.
-@prefix v: <../media-types/application/vnd.cncf.helm.config.v1+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.cncf.helm.chart.content.v1.tar+gzip#Resource>
+  reg:xref <Andrew_Block#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.cncf.helm.chart.provenance.v1.prov#Resource>
+  reg:xref <Andrew_Block#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.cncf.helm.config.v1+json#Resource>
+  reg:xref <Andrew_Block#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Andrew_Block#>.
 
-:
-    reg:id "Andrew_Block";
-    reg:name "Andrew Block";
-    reg:updated "2023-02-27";
-    reg:uri "mailto:andy.block&gmail.com".
+<Andrew_Block#>
+  reg:id "Andrew_Block";
+  reg:name "Andrew Block";
+  reg:updated "2023-02-27";
+  reg:uri "mailto:andy.block&gmail.com".

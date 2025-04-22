@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix M: <../../person/Max_Neuendorf#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-03-19"^^XML:date;
-    reg:file [ reg:file "audio/usac"; reg:type "template" ];
-    reg:name "usac";
-    reg:xref ISO:, M:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <usac#Resource>.
 
+<usac> a rdfs:Class;
+  dct:created "2018-03-19"^^xsd:date;
+  dct:identifier "audio/usac";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/usac>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Max_Neuendorf#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <usac#Resource>.
+
+<usac#Resource>
+  dct:date "2018-03-19"^^xsd:date;
+  reg:file [
+      reg:file "audio/usac";
+      reg:type "template"];
+  reg:name "usac";
+  reg:xref <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Max_Neuendorf#>.

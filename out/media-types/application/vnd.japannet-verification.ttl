@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jun: <../../person/Jun_Yoshitake#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.japannet-verification"; reg:type "template" ];
-    reg:name "vnd.japannet-verification";
-    reg:xref Jun:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.japannet-verification#Resource>.
 
+<vnd.japannet-verification> a rdfs:Class;
+  dct:identifier "application/vnd.japannet-verification";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.japannet-verification>;
+  rdfs:seeAlso <../../person/Jun_Yoshitake#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.japannet-verification#Resource>.
+
+<vnd.japannet-verification#Resource>
+  reg:file [
+      reg:file "application/vnd.japannet-verification";
+      reg:type "template"];
+  reg:name "vnd.japannet-verification";
+  reg:xref <../../person/Jun_Yoshitake#>.

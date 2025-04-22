@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/audio/vnd.nuera.ecelp4800#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/audio/vnd.nuera.ecelp7470#>.
-@prefix v: <../media-types/audio/vnd.nuera.ecelp9600#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/audio/vnd.nuera.ecelp4800#Resource>
+  reg:xref <Michael_Fox#>.
 
-vn:Resource reg:xref :.
+<../media-types/audio/vnd.nuera.ecelp7470#Resource>
+  reg:xref <Michael_Fox#>.
 
-v:Resource reg:xref :.
+<../media-types/audio/vnd.nuera.ecelp9600#Resource>
+  reg:xref <Michael_Fox#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Michael_Fox#>.
 
-:
-    reg:id "Michael_Fox";
-    reg:name "Michael Fox";
-    reg:updated "2001-01-20";
-    reg:uri "mailto:mfox&nuera.com".
+<Michael_Fox#>
+  reg:id "Michael_Fox";
+  reg:name "Michael Fox";
+  reg:updated "2001-01-20";
+  reg:uri "mailto:mfox&nuera.com".

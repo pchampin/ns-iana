@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.eszigno3+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.eszigno3+xml#Resource>
+  reg:xref <Szilveszter_Tóth#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Szilveszter_Tóth#>.
 
-:
-    reg:id "Szilveszter_T\u00f3th";
-    reg:name "Szilveszter T\u00f3th";
-    reg:updated "2007-07-31";
-    reg:uri "mailto:sztoth&microsec.hu".
+<Szilveszter_Tóth#>
+  reg:id "Szilveszter_Tóth";
+  reg:name "Szilveszter Tóth";
+  reg:updated "2007-07-31";
+  reg:uri "mailto:sztoth&microsec.hu".

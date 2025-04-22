@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mich: <../../person/Michael_Powers#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.in3d.3dml#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/vnd.in3d.3dml"; reg:type "template" ];
-    reg:name "vnd.in3d.3dml";
-    reg:xref Mich:.
+<vnd.in3d.3dml> a rdfs:Class;
+  dct:identifier "text/vnd.in3d.3dml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.in3d.3dml>;
+  rdfs:seeAlso <../../person/Michael_Powers#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.in3d.3dml#Resource>.
+
+<vnd.in3d.3dml#Resource>
+  reg:file [
+      reg:file "text/vnd.in3d.3dml";
+      reg:type "template"];
+  reg:name "vnd.in3d.3dml";
+  reg:xref <../../person/Michael_Powers#>.

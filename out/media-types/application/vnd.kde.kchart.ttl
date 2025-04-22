@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Faure#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.kde.kchart"; reg:type "template" ];
-    reg:name "vnd.kde.kchart";
-    reg:xref D:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.kde.kchart#Resource>.
 
+<vnd.kde.kchart> a rdfs:Class;
+  dct:identifier "application/vnd.kde.kchart";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.kde.kchart>;
+  rdfs:seeAlso <../../person/David_Faure#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.kde.kchart#Resource>.
+
+<vnd.kde.kchart#Resource>
+  reg:file [
+      reg:file "application/vnd.kde.kchart";
+      reg:type "template"];
+  reg:name "vnd.kde.kchart";
+  reg:xref <../../person/David_Faure#>.

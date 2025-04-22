@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <enriched#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/enriched"; reg:type "template" ];
-    reg:name "enriched";
-    reg:xref html:rfc1896.
+<enriched> a rdfs:Class;
+  dct:identifier "text/enriched";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/enriched>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc1896/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <enriched#Resource>.
+
+<enriched#Resource>
+  reg:file [
+      reg:file "text/enriched";
+      reg:type "template"];
+  reg:name "enriched";
+  reg:xref <https://tools.ietf.org/html/rfc1896>.

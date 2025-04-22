@@ -1,18 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Lis: <../../person/Lisa_Mattson#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-04-28"^^XML:date;
-    reg:file
-            [
-                reg:file "application/vnd.ims.lti.v2.toolproxy+json";
-                reg:type "template"
-            ];
-    reg:name "vnd.ims.lti.v2.toolproxy+json";
-    reg:xref Lis:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ims.lti.v2.toolproxy+json#Resource>.
 
+<vnd.ims.lti.v2.toolproxy+json> a rdfs:Class;
+  dct:created "2014-04-28"^^xsd:date;
+  dct:identifier "application/vnd.ims.lti.v2.toolproxy+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ims.lti.v2.toolproxy+json>;
+  rdfs:seeAlso <../../person/Lisa_Mattson#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ims.lti.v2.toolproxy+json#Resource>.
+
+<vnd.ims.lti.v2.toolproxy+json#Resource>
+  dct:date "2014-04-28"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.ims.lti.v2.toolproxy+json";
+      reg:type "template"];
+  reg:name "vnd.ims.lti.v2.toolproxy+json";
+  reg:xref <../../person/Lisa_Mattson#>.

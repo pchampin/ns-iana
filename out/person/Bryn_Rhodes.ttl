@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix elm: <../media-types/application/elm+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix el: <../media-types/application/elm+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix cql: <../media-types/text/cql-expression#>.
-@prefix cq: <../media-types/text/cql-identifier#>.
-@prefix c: <../media-types/text/cql#>.
-@prefix fhirp: <../media-types/text/fhirpath#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-elm:Resource reg:xref :.
+<../media-types/application/elm+json#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-el:Resource reg:xref :.
+<../media-types/application/elm+xml#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Bryn_Rhodes#>.
 
-cql:Resource reg:xref :.
+<../media-types/text/cql#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-cq:Resource reg:xref :.
+<../media-types/text/cql-expression#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-c:Resource reg:xref :.
+<../media-types/text/cql-identifier#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-fhirp:Resource reg:xref :.
+<../media-types/text/fhirpath#Resource>
+  reg:xref <Bryn_Rhodes#>.
 
-:
-    reg:id "Bryn_Rhodes";
-    reg:name "Bryn Rhodes";
-    reg:updated "2020-12-08";
-    reg:uri "mailto:bryn&dynamiccontentgroup.com".
+<Bryn_Rhodes#>
+  reg:id "Bryn_Rhodes";
+  reg:name "Bryn Rhodes";
+  reg:updated "2020-12-08";
+  reg:uri "mailto:bryn&dynamiccontentgroup.com".

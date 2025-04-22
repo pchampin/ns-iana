@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-01-11"^^XML:date;
-    reg:file [ reg:file "application/cose-key"; reg:type "template" ];
-    reg:name "cose-key";
-    reg:xref html:rfc9052.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <cose-key#Resource>.
 
+<cose-key> a rdfs:Class;
+  dct:created "2017-01-11"^^xsd:date;
+  dct:identifier "application/cose-key";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/cose-key>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9052/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <cose-key#Resource>.
+
+<cose-key#Resource>
+  dct:date "2017-01-11"^^xsd:date;
+  reg:file [
+      reg:file "application/cose-key";
+      reg:type "template"];
+  reg:name "cose-key";
+  reg:xref <https://tools.ietf.org/html/rfc9052>.

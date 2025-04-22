@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/rtp-enc-aescm128"; reg:type "template" ];
-    reg:name "rtp-enc-aescm128";
-    reg:xref n1:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <rtp-enc-aescm128#Resource>.
 
+<rtp-enc-aescm128> a rdfs:Class;
+  dct:identifier "audio/rtp-enc-aescm128";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/rtp-enc-aescm128>;
+  rdfs:seeAlso <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <rtp-enc-aescm128#Resource>.
+
+<rtp-enc-aescm128#Resource>
+  reg:file [
+      reg:file "audio/rtp-enc-aescm128";
+      reg:type "template"];
+  reg:name "rtp-enc-aescm128";
+  reg:xref <../../person/_3GPP#>.

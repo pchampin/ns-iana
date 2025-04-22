@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/timestamped-data"; reg:type "template" ];
-    reg:name "timestamped-data";
-    reg:xref html:rfc5955.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <timestamped-data#Resource>.
 
+<timestamped-data> a rdfs:Class;
+  dct:identifier "application/timestamped-data";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/timestamped-data>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc5955/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <timestamped-data#Resource>.
+
+<timestamped-data#Resource>
+  reg:file [
+      reg:file "application/timestamped-data";
+      reg:type "template"];
+  reg:name "timestamped-data";
+  reg:xref <https://tools.ietf.org/html/rfc5955>.

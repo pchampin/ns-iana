@@ -1,16 +1,28 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-02-28"^^XML:date;
-    reg:file
-    [ reg:file "application/EmergencyCallData.VEDS+xml"; reg:type "template" ];
-    reg:name "EmergencyCallData.VEDS+xml";
-    reg:updated "2022-05-25"^^XML:date;
-    reg:xref html:rfc8148, [ reg:data "6500"; reg:type "rfc-errata" ].
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <EmergencyCallData.VEDS+xml#Resource>.
 
+<EmergencyCallData.VEDS+xml> a rdfs:Class;
+  dct:created "2017-02-28"^^xsd:date;
+  dct:identifier "application/EmergencyCallData.VEDS+xml";
+  dct:modified "2022-05-25"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/EmergencyCallData.VEDS+xml>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8148/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <EmergencyCallData.VEDS+xml#Resource>.
+
+<EmergencyCallData.VEDS+xml#Resource>
+  dct:date "2017-02-28"^^xsd:date;
+  reg:file [
+      reg:file "application/EmergencyCallData.VEDS+xml";
+      reg:type "template"];
+  reg:name "EmergencyCallData.VEDS+xml";
+  reg:updated "2022-05-25"^^xsd:date;
+  reg:xref [
+      reg:data "6500";
+      reg:type "rfc-errata"],
+    <https://tools.ietf.org/html/rfc8148>.

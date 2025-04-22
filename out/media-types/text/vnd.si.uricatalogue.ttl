@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Nic: <../../person/Nicholas_Parks_Young#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.si.uricatalogue#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/vnd.si.uricatalogue"; reg:type "template" ];
-    reg:name "vnd.si.uricatalogue (OBSOLETED by request)";
-    reg:xref Nic:.
+<vnd.si.uricatalogue> a rdfs:Class;
+  dct:identifier "text/vnd.si.uricatalogue";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.si.uricatalogue>;
+  rdfs:seeAlso <../../person/Nicholas_Parks_Young#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.si.uricatalogue#Resource>.
+
+<vnd.si.uricatalogue#Resource>
+  reg:file [
+      reg:file "text/vnd.si.uricatalogue";
+      reg:type "template"];
+  reg:name "vnd.si.uricatalogue (OBSOLETED by request)";
+  reg:xref <../../person/Nicholas_Parks_Young#>.

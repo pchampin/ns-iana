@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix IEE: <../../person/IEEE-ISTO-PWG-PPP#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <strings#Resource>.
 
-:Resource
-    terms:date "2017-05-01"^^XML:date;
-    reg:file [ reg:file "text/strings"; reg:type "template" ];
-    reg:name "strings";
-    reg:xref IEE:.
+<strings> a rdfs:Class;
+  dct:created "2017-05-01"^^xsd:date;
+  dct:identifier "text/strings";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/strings>;
+  rdfs:seeAlso <../../person/IEEE-ISTO-PWG-PPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <strings#Resource>.
+
+<strings#Resource>
+  dct:date "2017-05-01"^^xsd:date;
+  reg:file [
+      reg:file "text/strings";
+      reg:type "template"];
+  reg:name "strings";
+  reg:xref <../../person/IEEE-ISTO-PWG-PPP#>.

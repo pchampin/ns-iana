@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ryo: <../../person/Ryo_Inaba#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2025-03-06"^^XML:date;
-    reg:file [ reg:file "image/vnd.clip"; reg:type "template" ];
-    reg:name "vnd.clip";
-    reg:xref Ryo:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.clip#Resource>.
 
+<vnd.clip> a rdfs:Class;
+  dct:created "2025-03-06"^^xsd:date;
+  dct:identifier "image/vnd.clip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.clip>;
+  rdfs:seeAlso <../../person/Ryo_Inaba#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.clip#Resource>.
+
+<vnd.clip#Resource>
+  dct:date "2025-03-06"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.clip";
+      reg:type "template"];
+  reg:name "vnd.clip";
+  reg:xref <../../person/Ryo_Inaba#>.

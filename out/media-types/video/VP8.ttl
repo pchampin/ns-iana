@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <VP8#Resource>.
 
-:Resource
-    terms:date "2015-09-25"^^XML:date;
-    reg:file [ reg:file "video/VP8"; reg:type "template" ];
-    reg:name "VP8";
-    reg:xref html:rfc7741.
+<VP8> a rdfs:Class;
+  dct:created "2015-09-25"^^xsd:date;
+  dct:identifier "video/VP8";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/VP8>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7741/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <VP8#Resource>.
+
+<VP8#Resource>
+  dct:date "2015-09-25"^^xsd:date;
+  reg:file [
+      reg:file "video/VP8";
+      reg:type "template"];
+  reg:name "VP8";
+  reg:xref <https://tools.ietf.org/html/rfc7741>.

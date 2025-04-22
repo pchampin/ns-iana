@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sl: <../../person/Slawomir_Lisznianski#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-01-31"^^XML:date;
-    reg:file [ reg:file "application/vnd.pcos"; reg:type "template" ];
-    reg:name "vnd.pcos";
-    reg:xref Sl:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.pcos#Resource>.
 
+<vnd.pcos> a rdfs:Class;
+  dct:created "2014-01-31"^^xsd:date;
+  dct:identifier "application/vnd.pcos";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.pcos>;
+  rdfs:seeAlso <../../person/Slawomir_Lisznianski#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.pcos#Resource>.
+
+<vnd.pcos#Resource>
+  dct:date "2014-01-31"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.pcos";
+      reg:type "template"];
+  reg:name "vnd.pcos";
+  reg:xref <../../person/Slawomir_Lisznianski#>.

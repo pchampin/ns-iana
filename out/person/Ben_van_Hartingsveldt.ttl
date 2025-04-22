@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix str: <../media-types/application/stratum#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix toml: <../media-types/application/toml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-str:Resource reg:xref :.
+<../media-types/application/stratum#Resource>
+  reg:xref <Ben_van_Hartingsveldt#>.
 
-toml:Resource reg:xref :.
+<../media-types/application/toml#Resource>
+  reg:xref <Ben_van_Hartingsveldt#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Ben_van_Hartingsveldt#>.
 
-:
-    reg:id "Ben_van_Hartingsveldt";
-    reg:name "Ben van Hartingsveldt";
-    reg:updated "2024-10-21";
-    reg:uri "mailto:ben.vanhartingsveldt&yocto.com".
+<Ben_van_Hartingsveldt#>
+  reg:id "Ben_van_Hartingsveldt";
+  reg:name "Ben van Hartingsveldt";
+  reg:updated "2024-10-21";
+  reg:uri "mailto:ben.vanhartingsveldt&yocto.com".

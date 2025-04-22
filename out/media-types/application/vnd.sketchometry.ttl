@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Cen: <../../person/Center_for_Mobile_Learning_with_Digital_Technology#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-11-26"^^XML:date;
-    reg:file [ reg:file "application/vnd.sketchometry"; reg:type "template" ];
-    reg:name "vnd.sketchometry";
-    reg:xref Cen:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.sketchometry#Resource>.
 
+<vnd.sketchometry> a rdfs:Class;
+  dct:created "2024-11-26"^^xsd:date;
+  dct:identifier "application/vnd.sketchometry";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.sketchometry>;
+  rdfs:seeAlso <../../person/Center_for_Mobile_Learning_with_Digital_Technology#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sketchometry#Resource>.
+
+<vnd.sketchometry#Resource>
+  dct:date "2024-11-26"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.sketchometry";
+      reg:type "template"];
+  reg:name "vnd.sketchometry";
+  reg:xref <../../person/Center_for_Mobile_Learning_with_Digital_Technology#>.

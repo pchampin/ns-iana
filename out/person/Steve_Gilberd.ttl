@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ficlab.flb+zip#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix vn: <../media-types/text/vnd.ficlab.flt#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ficlab.flb+zip#Resource>
+  reg:xref <Steve_Gilberd#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Steve_Gilberd#>.
 
-vn:Resource reg:xref :.
+<../media-types/text/vnd.ficlab.flt#Resource>
+  reg:xref <Steve_Gilberd#>.
 
-:
-    reg:id "Steve_Gilberd";
-    reg:name "Steve Gilberd";
-    reg:updated "2019-09-25";
-    reg:uri "mailto:steve&erayd.net".
+<Steve_Gilberd#>
+  reg:id "Steve_Gilberd";
+  reg:name "Steve Gilberd";
+  reg:updated "2019-09-25";
+  reg:uri "mailto:steve&erayd.net".

@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bru: <../../person/Bruce_Martin#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/vnd.uplanet.bearer-choice-wbxml";
-                reg:type "template"
-            ];
-    reg:name "vnd.uplanet.bearer-choice-wbxml";
-    reg:xref Bru:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.uplanet.bearer-choice-wbxml#Resource>.
 
+<vnd.uplanet.bearer-choice-wbxml> a rdfs:Class;
+  dct:identifier "application/vnd.uplanet.bearer-choice-wbxml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.uplanet.bearer-choice-wbxml>;
+  rdfs:seeAlso <../../person/Bruce_Martin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.uplanet.bearer-choice-wbxml#Resource>.
+
+<vnd.uplanet.bearer-choice-wbxml#Resource>
+  reg:file [
+      reg:file "application/vnd.uplanet.bearer-choice-wbxml";
+      reg:type "template"];
+  reg:name "vnd.uplanet.bearer-choice-wbxml";
+  reg:xref <../../person/Bruce_Martin#>.

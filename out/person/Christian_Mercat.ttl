@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.geoplan#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.geospace#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.geoplan#Resource>
+  reg:xref <Christian_Mercat#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.geospace#Resource>
+  reg:xref <Christian_Mercat#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Christian_Mercat#>.
 
-:
-    reg:id "Christian_Mercat";
-    reg:name "Christian Mercat";
-    reg:updated "2009-05-12";
-    reg:uri "mailto:Christian.Mercat&univ-montp2.fr".
+<Christian_Mercat#>
+  reg:id "Christian_Mercat";
+  reg:name "Christian Mercat";
+  reg:updated "2009-05-12";
+  reg:uri "mailto:Christian.Mercat&univ-montp2.fr".

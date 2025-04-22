@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Hei: <../../person/Heinz-Peter_Schütz#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:multipart reg:record :Resource.
+<../media-types.ttl#multipart>
+  reg:record <vnd.bint.med-plus#Resource>.
 
-:Resource
-    terms:date "2017-04-07"^^XML:date;
-    reg:file [ reg:file "multipart/vnd.bint.med-plus"; reg:type "template" ];
-    reg:name "vnd.bint.med-plus";
-    reg:xref Hei:.
+<vnd.bint.med-plus> a rdfs:Class;
+  dct:created "2017-04-07"^^xsd:date;
+  dct:identifier "multipart/vnd.bint.med-plus";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/multipart/vnd.bint.med-plus>;
+  rdfs:seeAlso <../../person/Heinz-Peter_Schütz#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.bint.med-plus#Resource>.
+
+<vnd.bint.med-plus#Resource>
+  dct:date "2017-04-07"^^xsd:date;
+  reg:file [
+      reg:file "multipart/vnd.bint.med-plus";
+      reg:type "template"];
+  reg:name "vnd.bint.med-plus";
+  reg:xref <../../person/Heinz-Peter_Schütz#>.

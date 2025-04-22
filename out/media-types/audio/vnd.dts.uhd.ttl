@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Phi: <../../person/Phillip_Maness#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-11-14"^^XML:date;
-    reg:file [ reg:file "audio/vnd.dts.uhd"; reg:type "template" ];
-    reg:name "vnd.dts.uhd";
-    reg:xref Phi:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.dts.uhd#Resource>.
 
+<vnd.dts.uhd> a rdfs:Class;
+  dct:created "2018-11-14"^^xsd:date;
+  dct:identifier "audio/vnd.dts.uhd";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.dts.uhd>;
+  rdfs:seeAlso <../../person/Phillip_Maness#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dts.uhd#Resource>.
+
+<vnd.dts.uhd#Resource>
+  dct:date "2018-11-14"^^xsd:date;
+  reg:file [
+      reg:file "audio/vnd.dts.uhd";
+      reg:type "template"];
+  reg:name "vnd.dts.uhd";
+  reg:xref <../../person/Phillip_Maness#>.

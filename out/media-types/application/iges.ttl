@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Cur: <../../person/Curtis_Parks#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/iges"; reg:type "template" ];
-    reg:name "iges";
-    reg:xref Cur:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <iges#Resource>.
 
+<iges> a rdfs:Class;
+  dct:identifier "application/iges";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/iges>;
+  rdfs:seeAlso <../../person/Curtis_Parks#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <iges#Resource>.
+
+<iges#Resource>
+  reg:file [
+      reg:file "application/iges";
+      reg:type "template"];
+  reg:name "iges";
+  reg:xref <../../person/Curtis_Parks#>.

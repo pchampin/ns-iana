@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Joh: <../../person/John_Kwan#>.
-@prefix M: <../../person/Martin_Lambert#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.sealed.tiff"; reg:type "template" ];
-    reg:name "vnd.sealed.tiff";
-    reg:xref Joh:, M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.sealed.tiff#Resource>.
 
+<vnd.sealed.tiff> a rdfs:Class;
+  dct:identifier "application/vnd.sealed.tiff";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.sealed.tiff>;
+  rdfs:seeAlso <../../person/John_Kwan#>,
+    <../../person/Martin_Lambert#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sealed.tiff#Resource>.
+
+<vnd.sealed.tiff#Resource>
+  reg:file [
+      reg:file "application/vnd.sealed.tiff";
+      reg:type "template"];
+  reg:name "vnd.sealed.tiff";
+  reg:xref <../../person/John_Kwan#>,
+    <../../person/Martin_Lambert#>.

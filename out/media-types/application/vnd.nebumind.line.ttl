@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Andre: <../../person/Andreas_Molzer#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-03-17"^^XML:date;
-    reg:file [ reg:file "application/vnd.nebumind.line"; reg:type "template" ];
-    reg:name "vnd.nebumind.line";
-    reg:xref Andre:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.nebumind.line#Resource>.
 
+<vnd.nebumind.line> a rdfs:Class;
+  dct:created "2021-03-17"^^xsd:date;
+  dct:identifier "application/vnd.nebumind.line";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.nebumind.line>;
+  rdfs:seeAlso <../../person/Andreas_Molzer#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.nebumind.line#Resource>.
+
+<vnd.nebumind.line#Resource>
+  dct:date "2021-03-17"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.nebumind.line";
+      reg:type "template"];
+  reg:name "vnd.nebumind.line";
+  reg:xref <../../person/Andreas_Molzer#>.

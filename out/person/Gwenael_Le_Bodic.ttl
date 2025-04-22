@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.mseq#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.mseq#Resource>
+  reg:xref <Gwenael_Le_Bodic#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Gwenael_Le_Bodic#>.
 
-:
-    reg:id "Gwenael_Le_Bodic";
-    reg:name "Gwenael Le Bodic";
-    reg:updated "2001-03-20";
-    reg:uri "mailto:Gwenael.Le_Bodic&alcatel.fr".
+<Gwenael_Le_Bodic#>
+  reg:id "Gwenael_Le_Bodic";
+  reg:name "Gwenael Le Bodic";
+  reg:updated "2001-03-20";
+  reg:uri "mailto:Gwenael.Le_Bodic&alcatel.fr".

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gre: <../../person/Greg_Kaiser#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-06-25"^^XML:date;
-    reg:file [ reg:file "application/vnd.android.ota"; reg:type "template" ];
-    reg:name "vnd.android.ota";
-    reg:xref Gre:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.android.ota#Resource>.
 
+<vnd.android.ota> a rdfs:Class;
+  dct:created "2019-06-25"^^xsd:date;
+  dct:identifier "application/vnd.android.ota";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.android.ota>;
+  rdfs:seeAlso <../../person/Greg_Kaiser#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.android.ota#Resource>.
+
+<vnd.android.ota#Resource>
+  dct:date "2019-06-25"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.android.ota";
+      reg:type "template"];
+  reg:name "vnd.android.ota";
+  reg:xref <../../person/Greg_Kaiser#>.

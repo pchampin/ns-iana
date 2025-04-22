@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix D: <../../person/Dana_Tripp#>.
-@prefix ISO: <../../person/ISO-TC_184-SC_4#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <step-xml+zip#Resource>.
 
-:Resource
-    terms:date "2021-07-20"^^XML:date;
-    reg:file [ reg:file "model/step-xml+zip"; reg:type "template" ];
-    reg:name "step-xml+zip";
-    reg:xref D:, ISO:.
+<step-xml+zip> a rdfs:Class;
+  dct:created "2021-07-20"^^xsd:date;
+  dct:identifier "model/step-xml+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/step-xml+zip>;
+  rdfs:seeAlso <../../person/Dana_Tripp#>,
+    <../../person/ISO-TC_184-SC_4#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <step-xml+zip#Resource>.
+
+<step-xml+zip#Resource>
+  dct:date "2021-07-20"^^xsd:date;
+  reg:file [
+      reg:file "model/step-xml+zip";
+      reg:type "template"];
+  reg:name "step-xml+zip";
+  reg:xref <../../person/Dana_Tripp#>,
+    <../../person/ISO-TC_184-SC_4#>.

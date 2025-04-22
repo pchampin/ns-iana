@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix AC: <../../person/AC_Mahendran#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.3gpp2.sms"; reg:type "template" ];
-    reg:name "vnd.3gpp2.sms";
-    reg:xref AC:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.3gpp2.sms#Resource>.
 
+<vnd.3gpp2.sms> a rdfs:Class;
+  dct:identifier "application/vnd.3gpp2.sms";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.3gpp2.sms>;
+  rdfs:seeAlso <../../person/AC_Mahendran#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp2.sms#Resource>.
+
+<vnd.3gpp2.sms#Resource>
+  reg:file [
+      reg:file "application/vnd.3gpp2.sms";
+      reg:type "template"];
+  reg:name "vnd.3gpp2.sms";
+  reg:xref <../../person/AC_Mahendran#>.

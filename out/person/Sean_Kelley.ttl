@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oma.group-usage-list+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.oma.poc.groups+xml#>.
-@prefix v: <../media-types/application/vnd.oma.xcap-directory+xml#>.
-@prefix n1: <../media-types/application/vnd.poc.group-advertisement+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oma.group-usage-list+xml#Resource>
+  reg:xref <Sean_Kelley#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.oma.poc.groups+xml#Resource>
+  reg:xref <Sean_Kelley#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.oma.xcap-directory+xml#Resource>
+  reg:xref <Sean_Kelley#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.poc.group-advertisement+xml#Resource>
+  reg:xref <Sean_Kelley#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Sean_Kelley#>.
 
-:
-    reg:id "Sean_Kelley";
-    reg:name "Sean Kelley";
-    reg:updated "2006-09-14";
-    reg:uri "mailto:seankelley&motorola.com".
+<Sean_Kelley#>
+  reg:id "Sean_Kelley";
+  reg:name "Sean Kelley";
+  reg:updated "2006-09-14";
+  reg:uri "mailto:seankelley&motorola.com".

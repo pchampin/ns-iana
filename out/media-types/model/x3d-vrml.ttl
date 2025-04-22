@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Web: <../../person/Web3D_X3D#>.
-@prefix Web3D: <../../person/Web3D#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <x3d-vrml#Resource>.
 
-:Resource
-    terms:date "2014-01-15"^^XML:date;
-    reg:file [ reg:file "model/x3d-vrml"; reg:type "template" ];
-    reg:name "x3d-vrml";
-    reg:xref Web:, Web3D:.
+<x3d-vrml> a rdfs:Class;
+  dct:created "2014-01-15"^^xsd:date;
+  dct:identifier "model/x3d-vrml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/x3d-vrml>;
+  rdfs:seeAlso <../../person/Web3D#>,
+    <../../person/Web3D_X3D#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <x3d-vrml#Resource>.
+
+<x3d-vrml#Resource>
+  dct:date "2014-01-15"^^xsd:date;
+  reg:file [
+      reg:file "model/x3d-vrml";
+      reg:type "template"];
+  reg:name "x3d-vrml";
+  reg:xref <../../person/Web3D#>,
+    <../../person/Web3D_X3D#>.

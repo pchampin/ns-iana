@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Khr: <../../person/Khronos#>.
-@prefix S: <../../person/Saurabh_Bhatia#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-05-07"^^XML:date;
-    reg:file [ reg:file "application/gltf-buffer"; reg:type "template" ];
-    reg:name "gltf-buffer";
-    reg:xref Khr:, S:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <gltf-buffer#Resource>.
 
+<gltf-buffer> a rdfs:Class;
+  dct:created "2018-05-07"^^xsd:date;
+  dct:identifier "application/gltf-buffer";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/gltf-buffer>;
+  rdfs:seeAlso <../../person/Khronos#>,
+    <../../person/Saurabh_Bhatia#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <gltf-buffer#Resource>.
+
+<gltf-buffer#Resource>
+  dct:date "2018-05-07"^^xsd:date;
+  reg:file [
+      reg:file "application/gltf-buffer";
+      reg:type "template"];
+  reg:name "gltf-buffer";
+  reg:xref <../../person/Khronos#>,
+    <../../person/Saurabh_Bhatia#>.

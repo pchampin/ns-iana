@@ -1,13 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ale: <../../person/Alexis_Tamas#>.
-@prefix OP3FT: <../../person/OP3FT#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.frogans.fnc"; reg:type "template" ];
-    reg:name "vnd.frogans.fnc (OBSOLETE)";
-    reg:updated "2020-05-04";
-    reg:xref Ale:, OP3FT:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.frogans.fnc#Resource>.
 
+<vnd.frogans.fnc> a rdfs:Class;
+  dct:identifier "application/vnd.frogans.fnc";
+  dct:modified "2020-05-04"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.frogans.fnc>;
+  rdfs:seeAlso <../../person/Alexis_Tamas#>,
+    <../../person/OP3FT#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.frogans.fnc#Resource>.
+
+<vnd.frogans.fnc#Resource>
+  reg:file [
+      reg:file "application/vnd.frogans.fnc";
+      reg:type "template"];
+  reg:name "vnd.frogans.fnc (OBSOLETE)";
+  reg:updated "2020-05-04";
+  reg:xref <../../person/Alexis_Tamas#>,
+    <../../person/OP3FT#>.

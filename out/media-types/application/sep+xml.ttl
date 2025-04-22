@@ -1,13 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix IEEE: <../../person/IEEE#>.
-@prefix Rob: <../../person/Robby_Simpson#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/sep+xml"; reg:type "template" ];
-    reg:name "sep+xml";
-    reg:updated "2024-04-16";
-    reg:xref IEEE:, Rob:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <sep+xml#Resource>.
 
+<sep+xml> a rdfs:Class;
+  dct:identifier "application/sep+xml";
+  dct:modified "2024-04-16"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/sep+xml>;
+  rdfs:seeAlso <../../person/IEEE#>,
+    <../../person/Robby_Simpson#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <sep+xml#Resource>.
+
+<sep+xml#Resource>
+  reg:file [
+      reg:file "application/sep+xml";
+      reg:type "template"];
+  reg:name "sep+xml";
+  reg:updated "2024-04-16";
+  reg:xref <../../person/IEEE#>,
+    <../../person/Robby_Simpson#>.

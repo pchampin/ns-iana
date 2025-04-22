@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Kim: <../../person/Kim_Scarborough#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.ms-cab-compressed"; reg:type "template" ];
-    reg:name "vnd.ms-cab-compressed";
-    reg:xref Kim:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ms-cab-compressed#Resource>.
 
+<vnd.ms-cab-compressed> a rdfs:Class;
+  dct:identifier "application/vnd.ms-cab-compressed";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ms-cab-compressed>;
+  rdfs:seeAlso <../../person/Kim_Scarborough#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ms-cab-compressed#Resource>.
+
+<vnd.ms-cab-compressed#Resource>
+  reg:file [
+      reg:file "application/vnd.ms-cab-compressed";
+      reg:type "template"];
+  reg:name "vnd.ms-cab-compressed";
+  reg:xref <../../person/Kim_Scarborough#>.

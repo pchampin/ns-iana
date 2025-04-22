@@ -1,35 +1,38 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dvb.ipdcdftnotifaccess#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dvb.notif-aggregate-root+xml#>.
-@prefix v: <../media-types/application/vnd.dvb.notif-container+xml#>.
-@prefix n1: <../media-types/application/vnd.dvb.notif-generic+xml#>.
-@prefix n2: <../media-types/application/vnd.dvb.notif-ia-msglist+xml#>.
-@prefix n3: <../media-types/application/vnd.dvb.notif-ia-registration-request+xml#>.
-@prefix n4: <../media-types/application/vnd.dvb.notif-ia-registration-response+xml#>.
-@prefix n5: <../media-types/application/vnd.dvb.notif-init+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.dvb.ipdcdftnotifaccess#Resource>
+  reg:xref <Roy_Yue#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-aggregate-root+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-container+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-generic+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-ia-msglist+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-ia-registration-request+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-ia-registration-response+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.dvb.notif-init+xml#Resource>
+  reg:xref <Roy_Yue#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Roy_Yue#>.
 
-:
-    reg:id "Roy_Yue";
-    reg:name "Roy Yue";
-    reg:updated "2009-03-04";
-    reg:uri "mailto:yuepeiyu&huawei.com".
+<Roy_Yue#>
+  reg:id "Roy_Yue";
+  reg:name "Roy Yue";
+  reg:updated "2009-03-04";
+  reg:uri "mailto:yuepeiyu&huawei.com".

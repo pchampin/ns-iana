@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bil: <../../person/Bill_Kidwell#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-10-18"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.exstream-empower+zip"; reg:type "template" ];
-    reg:name "vnd.exstream-empower+zip";
-    reg:xref Bil:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.exstream-empower+zip#Resource>.
 
+<vnd.exstream-empower+zip> a rdfs:Class;
+  dct:created "2018-10-18"^^xsd:date;
+  dct:identifier "application/vnd.exstream-empower+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.exstream-empower+zip>;
+  rdfs:seeAlso <../../person/Bill_Kidwell#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.exstream-empower+zip#Resource>.
+
+<vnd.exstream-empower+zip#Resource>
+  dct:date "2018-10-18"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.exstream-empower+zip";
+      reg:type "template"];
+  reg:name "vnd.exstream-empower+zip";
+  reg:xref <../../person/Bill_Kidwell#>.

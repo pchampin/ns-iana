@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix I: <../../person/Iain_Downs#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.easykaraoke.cdgdownload"; reg:type "template" ];
-    reg:name "vnd.easykaraoke.cdgdownload";
-    reg:xref I:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.easykaraoke.cdgdownload#Resource>.
 
+<vnd.easykaraoke.cdgdownload> a rdfs:Class;
+  dct:identifier "application/vnd.easykaraoke.cdgdownload";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.easykaraoke.cdgdownload>;
+  rdfs:seeAlso <../../person/Iain_Downs#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.easykaraoke.cdgdownload#Resource>.
+
+<vnd.easykaraoke.cdgdownload#Resource>
+  reg:file [
+      reg:file "application/vnd.easykaraoke.cdgdownload";
+      reg:type "template"];
+  reg:name "vnd.easykaraoke.cdgdownload";
+  reg:xref <../../person/Iain_Downs#>.

@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix G: <../../person/Gaige_Paulsen#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/vnd.cluetrust.cartomobile-config-pkg";
-                reg:type "template"
-            ];
-    reg:name "vnd.cluetrust.cartomobile-config-pkg";
-    reg:xref G:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cluetrust.cartomobile-config-pkg#Resource>.
 
+<vnd.cluetrust.cartomobile-config-pkg> a rdfs:Class;
+  dct:identifier "application/vnd.cluetrust.cartomobile-config-pkg";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cluetrust.cartomobile-config-pkg>;
+  rdfs:seeAlso <../../person/Gaige_Paulsen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cluetrust.cartomobile-config-pkg#Resource>.
+
+<vnd.cluetrust.cartomobile-config-pkg#Resource>
+  reg:file [
+      reg:file "application/vnd.cluetrust.cartomobile-config-pkg";
+      reg:type "template"];
+  reg:name "vnd.cluetrust.cartomobile-config-pkg";
+  reg:xref <../../person/Gaige_Paulsen#>.

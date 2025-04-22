@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bor: <../../person/Boris_Rabinovitch#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <vnd.mts#Resource>.
 
-:Resource
-    reg:file [ reg:file "model/vnd.mts"; reg:type "template" ];
-    reg:name "vnd.mts";
-    reg:xref Bor:.
+<vnd.mts> a rdfs:Class;
+  dct:identifier "model/vnd.mts";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/vnd.mts>;
+  rdfs:seeAlso <../../person/Boris_Rabinovitch#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mts#Resource>.
+
+<vnd.mts#Resource>
+  reg:file [
+      reg:file "model/vnd.mts";
+      reg:type "template"];
+  reg:name "vnd.mts";
+  reg:xref <../../person/Boris_Rabinovitch#>.

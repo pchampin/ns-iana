@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix dic: <../media-types/application/dicom+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix di: <../media-types/application/dicom+xml#>.
-@prefix dico: <../media-types/image/dicom-rle#>.
-@prefix jls: <../media-types/image/jls#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-dic:Resource reg:xref :.
+<../media-types/application/dicom+json#Resource>
+  reg:xref <David_Clunie#>.
 
-di:Resource reg:xref :.
+<../media-types/application/dicom+xml#Resource>
+  reg:xref <David_Clunie#>.
 
-dico:Resource reg:xref :.
+<../media-types/image/dicom-rle#Resource>
+  reg:xref <David_Clunie#>.
 
-jls:Resource reg:xref :.
+<../media-types/image/jls#Resource>
+  reg:xref <David_Clunie#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <David_Clunie#>.
 
-:
-    reg:id "David_Clunie";
-    reg:name "David Clunie";
-    reg:updated "2016-09-26";
-    reg:uri "mailto:dclunie&dclunie.com".
+<David_Clunie#>
+  reg:id "David_Clunie";
+  reg:name "David Clunie";
+  reg:updated "2016-09-26";
+  reg:uri "mailto:dclunie&dclunie.com".

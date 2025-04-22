@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.nato.bindingdataobject+cbor#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.nato.bindingdataobject+json#>.
-@prefix v: <../media-types/application/vnd.nato.bindingdataobject+xml#>.
-@prefix n1: <../media-types/application/vnd.nato.openxmlformats-package.iepd+zip#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.nato.bindingdataobject+cbor#Resource>
+  reg:xref <Aidan_Murdock#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.nato.bindingdataobject+json#Resource>
+  reg:xref <Aidan_Murdock#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.nato.bindingdataobject+xml#Resource>
+  reg:xref <Aidan_Murdock#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.nato.openxmlformats-package.iepd+zip#Resource>
+  reg:xref <Aidan_Murdock#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Aidan_Murdock#>.
 
-:
-    reg:id "Aidan_Murdock";
-    reg:name "Aidan Murdock";
-    reg:updated "2024-12-23";
-    reg:uri "mailto:aidan.murdock&ncia.nato.int".
+<Aidan_Murdock#>
+  reg:id "Aidan_Murdock";
+  reg:name "Aidan Murdock";
+  reg:updated "2024-12-23";
+  reg:uri "mailto:aidan.murdock&ncia.nato.int".

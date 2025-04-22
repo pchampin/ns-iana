@@ -1,14 +1,19 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix x3d: <../media-types/model/x3d-vrml#>.
-@prefix x3: <../media-types/model/x3d+xml#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Web3D#>.
 
-x3d:Resource reg:xref :.
+<../media-types/model/x3d+xml#Resource>
+  reg:xref <Web3D#>.
 
-x3:Resource reg:xref :.
+<../media-types/model/x3d-vrml#Resource>
+  reg:xref <Web3D#>.
 
-: reg:id "Web3D"; reg:name "Web3D Consortium"; reg:updated "2014-01-15".
-
+<Web3D#>
+  reg:id "Web3D";
+  reg:name "Web3D Consortium";
+  reg:updated "2014-01-15".

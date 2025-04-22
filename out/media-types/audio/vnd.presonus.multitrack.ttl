@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Matthias_Juwan#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-08-22"^^XML:date;
-    reg:file [ reg:file "audio/vnd.presonus.multitrack"; reg:type "template" ];
-    reg:name "vnd.presonus.multitrack";
-    reg:xref M:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.presonus.multitrack#Resource>.
 
+<vnd.presonus.multitrack> a rdfs:Class;
+  dct:created "2017-08-22"^^xsd:date;
+  dct:identifier "audio/vnd.presonus.multitrack";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.presonus.multitrack>;
+  rdfs:seeAlso <../../person/Matthias_Juwan#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.presonus.multitrack#Resource>.
+
+<vnd.presonus.multitrack#Resource>
+  dct:date "2017-08-22"^^xsd:date;
+  reg:file [
+      reg:file "audio/vnd.presonus.multitrack";
+      reg:type "template"];
+  reg:name "vnd.presonus.multitrack";
+  reg:xref <../../person/Matthias_Juwan#>.

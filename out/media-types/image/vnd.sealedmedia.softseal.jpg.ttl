@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Petersen#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "image/vnd.sealedmedia.softseal.jpg"; reg:type "template" ];
-    reg:name "vnd.sealedmedia.softseal.jpg";
-    reg:xref D:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.sealedmedia.softseal.jpg#Resource>.
 
+<vnd.sealedmedia.softseal.jpg> a rdfs:Class;
+  dct:identifier "image/vnd.sealedmedia.softseal.jpg";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.sealedmedia.softseal.jpg>;
+  rdfs:seeAlso <../../person/David_Petersen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sealedmedia.softseal.jpg#Resource>.
+
+<vnd.sealedmedia.softseal.jpg#Resource>
+  reg:file [
+      reg:file "image/vnd.sealedmedia.softseal.jpg";
+      reg:type "template"];
+  reg:name "vnd.sealedmedia.softseal.jpg";
+  reg:xref <../../person/David_Petersen#>.

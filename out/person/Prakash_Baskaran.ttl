@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.pawaafile#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.pawaafile#Resource>
+  reg:xref <Prakash_Baskaran#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Prakash_Baskaran#>.
 
-:
-    reg:id "Prakash_Baskaran";
-    reg:name "Prakash Baskaran";
-    reg:updated "2009-12-15";
-    reg:uri "mailto:prakash&pawaa.com".
+<Prakash_Baskaran#>
+  reg:id "Prakash_Baskaran";
+  reg:name "Prakash Baskaran";
+  reg:updated "2009-12-15";
+  reg:uri "mailto:prakash&pawaa.com".

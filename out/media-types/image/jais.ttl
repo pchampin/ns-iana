@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.
-@prefix Ye: <../../person/Ye-Kui_Wang#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2025-01-01"^^XML:date;
-    reg:file [ reg:file "image/jais"; reg:type "template" ];
-    reg:name "jais";
-    reg:xref ISO:, Ye:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <jais#Resource>.
 
+<jais> a rdfs:Class;
+  dct:created "2025-01-01"^^xsd:date;
+  dct:identifier "image/jais";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/jais>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>,
+    <../../person/Ye-Kui_Wang#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <jais#Resource>.
+
+<jais#Resource>
+  dct:date "2025-01-01"^^xsd:date;
+  reg:file [
+      reg:file "image/jais";
+      reg:type "template"];
+  reg:name "jais";
+  reg:xref <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>,
+    <../../person/Ye-Kui_Wang#>.

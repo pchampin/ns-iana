@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.fujixerox.ART-EX#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.fujixerox.ART4#>.
-@prefix v: <../media-types/application/vnd.fujixerox.HBPL#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.fujixerox.ART-EX#Resource>
+  reg:xref <Fumio_Tanabe#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.fujixerox.ART4#Resource>
+  reg:xref <Fumio_Tanabe#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.fujixerox.HBPL#Resource>
+  reg:xref <Fumio_Tanabe#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Fumio_Tanabe#>.
 
-:
-    reg:id "Fumio_Tanabe";
-    reg:name "Fumio Tanabe";
-    reg:updated "2006-05-18";
-    reg:uri "mailto:fumio.tanabe&fujixerox.co.jp".
+<Fumio_Tanabe#>
+  reg:id "Fumio_Tanabe";
+  reg:name "Fumio Tanabe";
+  reg:updated "2006-05-18";
+  reg:uri "mailto:fumio.tanabe&fujixerox.co.jp".

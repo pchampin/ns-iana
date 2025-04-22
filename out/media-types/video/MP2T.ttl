@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <MP2T#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/MP2T"; reg:type "template" ];
-    reg:name "MP2T";
-    reg:xref html:rfc3555.
+<MP2T> a rdfs:Class;
+  dct:identifier "video/MP2T";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/MP2T>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc3555/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <MP2T#Resource>.
+
+<MP2T#Resource>
+  reg:file [
+      reg:file "video/MP2T";
+      reg:type "template"];
+  reg:name "MP2T";
+  reg:xref <https://tools.ietf.org/html/rfc3555>.

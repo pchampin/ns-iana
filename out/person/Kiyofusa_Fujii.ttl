@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.japannet-directory-service#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.japannet-payment-wakeup#>.
-@prefix v: <../media-types/application/vnd.japannet-registration-wakeup#>.
-@prefix n1: <../media-types/application/vnd.japannet-verification-wakeup#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.japannet-directory-service#Resource>
+  reg:xref <Kiyofusa_Fujii#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.japannet-payment-wakeup#Resource>
+  reg:xref <Kiyofusa_Fujii#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.japannet-registration-wakeup#Resource>
+  reg:xref <Kiyofusa_Fujii#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.japannet-verification-wakeup#Resource>
+  reg:xref <Kiyofusa_Fujii#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Kiyofusa_Fujii#>.
 
-:
-    reg:id "Kiyofusa_Fujii";
-    reg:name "Kiyofusa Fujii";
-    reg:updated "1997-02-19";
-    reg:uri "mailto:kfujii&japannet.or.jp".
+<Kiyofusa_Fujii#>
+  reg:id "Kiyofusa_Fujii";
+  reg:name "Kiyofusa Fujii";
+  reg:updated "1997-02-19";
+  reg:uri "mailto:kfujii&japannet.or.jp".

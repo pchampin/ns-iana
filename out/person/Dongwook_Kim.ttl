@@ -1,26 +1,29 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp.5gsa2x-local-service-information#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp.5gsa2x#>.
-@prefix v: <../media-types/application/vnd.3gpp.5gsv2x-local-service-information#>.
-@prefix n1: <../media-types/application/vnd.3gpp.5gsv2x#>.
-@prefix n2: <../media-types/application/vnd.3gpp.pinapp-info+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.5gsa2x#Resource>
+  reg:xref <Dongwook_Kim#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.5gsa2x-local-service-information#Resource>
+  reg:xref <Dongwook_Kim#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.5gsv2x#Resource>
+  reg:xref <Dongwook_Kim#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.5gsv2x-local-service-information#Resource>
+  reg:xref <Dongwook_Kim#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.pinapp-info+xml#Resource>
+  reg:xref <Dongwook_Kim#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Dongwook_Kim#>.
 
-:
-    reg:id "Dongwook_Kim";
-    reg:name "Dongwook Kim";
-    reg:updated "2025-01-02";
-    reg:uri "mailto:dongwook.kim&etsi.org".
+<Dongwook_Kim#>
+  reg:id "Dongwook_Kim";
+  reg:name "Dongwook Kim";
+  reg:updated "2025-01-02";
+  reg:uri "mailto:dongwook.kim&etsi.org".

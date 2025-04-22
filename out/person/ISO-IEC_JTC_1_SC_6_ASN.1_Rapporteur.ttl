@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix f: <../media-types/application/fastinfoset#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix f0: <../media-types/application/fastsoap#>.
-@prefix so: <../media-types/application/soap+fastinfoset#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-f:Resource reg:xref :.
+<../media-types/application/fastinfoset#Resource>
+  reg:xref <ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
 
-f0:Resource reg:xref :.
+<../media-types/application/fastsoap#Resource>
+  reg:xref <ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
 
-so:Resource reg:xref :.
+<../media-types/application/soap+fastinfoset#Resource>
+  reg:xref <ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
 
-:
-    reg:id "ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur";
-    reg:name "ISO/IEC JTC 1/SC 6 ASN.1 Rapporteur";
-    reg:updated "2005-10-31";
-    reg:uri "mailto:secretariat&JTC_1sc06.org".
+<ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>
+  reg:id "ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur";
+  reg:name "ISO/IEC JTC 1/SC 6 ASN.1 Rapporteur";
+  reg:updated "2005-10-31";
+  reg:uri "mailto:secretariat&JTC_1sc06.org".

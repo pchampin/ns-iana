@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ETSI: <../../person/ETSI#>.
-@prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-01-08"^^XML:date;
-    reg:file [ reg:file "application/TETRA_ISI"; reg:type "template" ];
-    reg:name "TETRA_ISI";
-    reg:xref ETSI:, Mig:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <TETRA_ISI#Resource>.
 
+<TETRA_ISI> a rdfs:Class;
+  dct:created "2019-01-08"^^xsd:date;
+  dct:identifier "application/TETRA_ISI";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/TETRA_ISI>;
+  rdfs:seeAlso <../../person/ETSI#>,
+    <../../person/Miguel_Angel_Reina_Ortega#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <TETRA_ISI#Resource>.
+
+<TETRA_ISI#Resource>
+  dct:date "2019-01-08"^^xsd:date;
+  reg:file [
+      reg:file "application/TETRA_ISI";
+      reg:type "template"];
+  reg:name "TETRA_ISI";
+  reg:xref <../../person/ETSI#>,
+    <../../person/Miguel_Angel_Reina_Ortega#>.

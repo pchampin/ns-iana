@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Nod: <../../person/Node.js_TSC#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-12-11"^^XML:date;
-    reg:file [ reg:file "application/node"; reg:type "template" ];
-    reg:name "node";
-    reg:updated "2020-03-30"^^XML:date;
-    reg:xref Nod:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <node#Resource>.
 
+<node> a rdfs:Class;
+  dct:created "2017-12-11"^^xsd:date;
+  dct:identifier "application/node";
+  dct:modified "2020-03-30"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/node>;
+  rdfs:seeAlso <../../person/Node.js_TSC#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <node#Resource>.
+
+<node#Resource>
+  dct:date "2017-12-11"^^xsd:date;
+  reg:file [
+      reg:file "application/node";
+      reg:type "template"];
+  reg:name "node";
+  reg:updated "2020-03-30"^^xsd:date;
+  reg:xref <../../person/Node.js_TSC#>.

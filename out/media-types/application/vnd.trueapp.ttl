@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/J._Scott_Hepler#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.trueapp"; reg:type "template" ];
-    reg:name "vnd.trueapp";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.trueapp#Resource>.
 
+<vnd.trueapp> a rdfs:Class;
+  dct:identifier "application/vnd.trueapp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.trueapp>;
+  rdfs:seeAlso <../../person/J._Scott_Hepler#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.trueapp#Resource>.
+
+<vnd.trueapp#Resource>
+  reg:file [
+      reg:file "application/vnd.trueapp";
+      reg:type "template"];
+  reg:name "vnd.trueapp";
+  reg:xref <../../person/J._Scott_Hepler#>.

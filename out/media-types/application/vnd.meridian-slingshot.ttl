@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Eri: <../../person/Eric_Wedel#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.meridian-slingshot"; reg:type "template" ];
-    reg:name "vnd.meridian-slingshot";
-    reg:xref Eri:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.meridian-slingshot#Resource>.
 
+<vnd.meridian-slingshot> a rdfs:Class;
+  dct:identifier "application/vnd.meridian-slingshot";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.meridian-slingshot>;
+  rdfs:seeAlso <../../person/Eric_Wedel#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.meridian-slingshot#Resource>.
+
+<vnd.meridian-slingshot#Resource>
+  reg:file [
+      reg:file "application/vnd.meridian-slingshot";
+      reg:type "template"];
+  reg:name "vnd.meridian-slingshot";
+  reg:xref <../../person/Eric_Wedel#>.

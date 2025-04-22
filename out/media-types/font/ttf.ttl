@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2016-12-21"^^XML:date;
-    reg:file [ reg:file "font/ttf"; reg:type "template" ];
-    reg:name "ttf";
-    reg:xref html:rfc8081.
-medi:font reg:record :Resource.
+<../media-types.ttl#font>
+  reg:record <ttf#Resource>.
 
+<ttf> a rdfs:Class;
+  dct:created "2016-12-21"^^xsd:date;
+  dct:identifier "font/ttf";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/font/ttf>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8081/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <ttf#Resource>.
+
+<ttf#Resource>
+  dct:date "2016-12-21"^^xsd:date;
+  reg:file [
+      reg:file "font/ttf";
+      reg:type "template"];
+  reg:name "ttf";
+  reg:xref <https://tools.ietf.org/html/rfc8081>.

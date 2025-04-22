@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Shi: <../../person/Shicheng_Hu#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.etsi.iptvsad-cod+xml"; reg:type "template" ];
-    reg:name "vnd.etsi.iptvsad-cod+xml";
-    reg:xref Shi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.etsi.iptvsad-cod+xml#Resource>.
 
+<vnd.etsi.iptvsad-cod+xml> a rdfs:Class;
+  dct:identifier "application/vnd.etsi.iptvsad-cod+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.etsi.iptvsad-cod+xml>;
+  rdfs:seeAlso <../../person/Shicheng_Hu#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.etsi.iptvsad-cod+xml#Resource>.
+
+<vnd.etsi.iptvsad-cod+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.etsi.iptvsad-cod+xml";
+      reg:type "template"];
+  reg:name "vnd.etsi.iptvsad-cod+xml";
+  reg:xref <../../person/Shicheng_Hu#>.

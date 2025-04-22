@@ -1,34 +1,37 @@
-@prefix : <#>.
-@prefix exp: <../media-types/application/express#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix p21: <../media-types/application/p21#>.
-@prefix p2: <../media-types/application/p21+zip#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix JT: <../media-types/model/JT#>.
-@prefix ste: <../media-types/model/step-xml+zip#>.
-@prefix step: <../media-types/model/step#>.
-@prefix st: <../media-types/model/step+xml#>.
-@prefix s: <../media-types/model/step+zip#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-exp:Resource reg:xref :.
+<../media-types/application/express#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-p21:Resource reg:xref :.
+<../media-types/application/p21#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-p2:Resource reg:xref :.
+<../media-types/application/p21+zip#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ISO-TC_184-SC_4#>.
 
-JT:Resource reg:xref :.
+<../media-types/model/JT#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-ste:Resource reg:xref :.
+<../media-types/model/step#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-step:Resource reg:xref :.
+<../media-types/model/step+xml#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-st:Resource reg:xref :.
+<../media-types/model/step+zip#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-s:Resource reg:xref :.
+<../media-types/model/step-xml+zip#Resource>
+  reg:xref <ISO-TC_184-SC_4#>.
 
-:
-    reg:id "ISO-TC_184-SC_4";
-    reg:name "ISO/TC 184/SC 4 - Industrial Data";
-    reg:uri "https://www.iso.org".
+<ISO-TC_184-SC_4#>
+  reg:id "ISO-TC_184-SC_4";
+  reg:name "ISO/TC 184/SC 4 - Industrial Data";
+  reg:uri "https://www.iso.org".

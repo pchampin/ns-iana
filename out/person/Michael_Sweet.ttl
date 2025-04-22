@@ -1,32 +1,35 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.cups-pdf#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.cups-postscript#>.
-@prefix v: <../media-types/application/vnd.cups-ppd#>.
-@prefix n1: <../media-types/application/vnd.cups-raster#>.
-@prefix n2: <../media-types/application/vnd.cups-raw#>.
-@prefix pwg: <../media-types/image/pwg-raster#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n3: <../media-types/model/3mf#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.cups-pdf#Resource>
+  reg:xref <Michael_Sweet#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.cups-postscript#Resource>
+  reg:xref <Michael_Sweet#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.cups-ppd#Resource>
+  reg:xref <Michael_Sweet#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.cups-raster#Resource>
+  reg:xref <Michael_Sweet#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.cups-raw#Resource>
+  reg:xref <Michael_Sweet#>.
 
-pwg:Resource reg:xref :.
+<../media-types/image/pwg-raster#Resource>
+  reg:xref <Michael_Sweet#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Michael_Sweet#>.
 
-n3:Resource reg:xref :.
+<../media-types/model/3mf#Resource>
+  reg:xref <Michael_Sweet#>.
 
-:
-    reg:id "Michael_Sweet";
-    reg:name "Michael Sweet";
-    reg:updated "2017-05-12";
-    reg:uri "mailto:msweet&apple.com".
+<Michael_Sweet#>
+  reg:id "Michael_Sweet";
+  reg:name "Michael Sweet";
+  reg:updated "2017-05-12";
+  reg:uri "mailto:msweet&apple.com".

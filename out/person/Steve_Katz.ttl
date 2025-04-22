@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix eshop: <../media-types/application/eshop#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-eshop:Resource reg:xref :.
+<../media-types/application/eshop#Resource>
+  reg:xref <Steve_Katz#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Steve_Katz#>.
 
-:
-    reg:id "Steve_Katz";
-    reg:name "Steve Katz";
-    reg:updated "1995-06-19";
-    reg:uri "mailto:skatz&eshop.com".
+<Steve_Katz#>
+  reg:id "Steve_Katz";
+  reg:name "Steve Katz";
+  reg:updated "1995-06-19";
+  reg:uri "mailto:skatz&eshop.com".

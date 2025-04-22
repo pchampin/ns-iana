@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Yuk: <../../person/Yukari_Ikeda#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.mfmp"; reg:type "template" ];
-    reg:name "vnd.mfmp";
-    reg:xref Yuk:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.mfmp#Resource>.
 
+<vnd.mfmp> a rdfs:Class;
+  dct:identifier "application/vnd.mfmp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.mfmp>;
+  rdfs:seeAlso <../../person/Yukari_Ikeda#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mfmp#Resource>.
+
+<vnd.mfmp#Resource>
+  reg:file [
+      reg:file "application/vnd.mfmp";
+      reg:type "template"];
+  reg:name "vnd.mfmp";
+  reg:xref <../../person/Yukari_Ikeda#>.

@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ASAM: <../../person/ASAM#>.
-@prefix Thom: <../../person/Thomas_Thomsen#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-10-15"^^XML:date;
-    reg:file [ reg:file "application/DIT"; reg:type "template" ];
-    reg:name "DIT";
-    reg:xref ASAM:, Thom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <DIT#Resource>.
 
+<DIT> a rdfs:Class;
+  dct:created "2014-10-15"^^xsd:date;
+  dct:identifier "application/DIT";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/DIT>;
+  rdfs:seeAlso <../../person/ASAM#>,
+    <../../person/Thomas_Thomsen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <DIT#Resource>.
+
+<DIT#Resource>
+  dct:date "2014-10-15"^^xsd:date;
+  reg:file [
+      reg:file "application/DIT";
+      reg:type "template"];
+  reg:name "DIT";
+  reg:xref <../../person/ASAM#>,
+    <../../person/Thomas_Thomsen#>.

@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP_CT1#>.
-@prefix Don: <../../person/Dongwook_Kim#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2025-01-02"^^XML:date;
-    reg:file [ reg:file "application/vnd.3gpp.5gsv2x"; reg:type "template" ];
-    reg:name "vnd.3gpp.5gsv2x";
-    reg:xref n1:, Don:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.3gpp.5gsv2x#Resource>.
 
+<vnd.3gpp.5gsv2x> a rdfs:Class;
+  dct:created "2025-01-02"^^xsd:date;
+  dct:identifier "application/vnd.3gpp.5gsv2x";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.3gpp.5gsv2x>;
+  rdfs:seeAlso <../../person/Dongwook_Kim#>,
+    <../../person/_3GPP_CT1#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp.5gsv2x#Resource>.
+
+<vnd.3gpp.5gsv2x#Resource>
+  dct:date "2025-01-02"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.3gpp.5gsv2x";
+      reg:type "template"];
+  reg:name "vnd.3gpp.5gsv2x";
+  reg:xref <../../person/Dongwook_Kim#>,
+    <../../person/_3GPP_CT1#>.

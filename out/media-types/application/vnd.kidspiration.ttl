@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/Jack_Bennett#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.kidspiration"; reg:type "template" ];
-    reg:name "vnd.kidspiration";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.kidspiration#Resource>.
 
+<vnd.kidspiration> a rdfs:Class;
+  dct:identifier "application/vnd.kidspiration";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.kidspiration>;
+  rdfs:seeAlso <../../person/Jack_Bennett#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.kidspiration#Resource>.
+
+<vnd.kidspiration#Resource>
+  reg:file [
+      reg:file "application/vnd.kidspiration";
+      reg:type "template"];
+  reg:name "vnd.kidspiration";
+  reg:xref <../../person/Jack_Bennett#>.

@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix n1: <../media-types/image/aces#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/image/aces#Resource>
+  reg:xref <Howard_Lukk#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Howard_Lukk#>.
 
-:
-    reg:id "Howard_Lukk";
-    reg:name "Howard Lukk";
-    reg:updated "2017-12-11";
-    reg:uri "mailto:hlukk&smpte.org".
+<Howard_Lukk#>
+  reg:id "Howard_Lukk";
+  reg:name "Howard Lukk";
+  reg:updated "2017-12-11";
+  reg:uri "mailto:hlukk&smpte.org".

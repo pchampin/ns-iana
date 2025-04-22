@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Igo: <../../person/Igor_Afanasyev#>.
-@prefix SAP: <../../person/SAP_SE#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <vnd.sap.vds#Resource>.
 
-:Resource
-    terms:date "2021-03-23"^^XML:date;
-    reg:file [ reg:file "model/vnd.sap.vds"; reg:type "template" ];
-    reg:name "vnd.sap.vds";
-    reg:xref Igo:, SAP:.
+<vnd.sap.vds> a rdfs:Class;
+  dct:created "2021-03-23"^^xsd:date;
+  dct:identifier "model/vnd.sap.vds";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/vnd.sap.vds>;
+  rdfs:seeAlso <../../person/Igor_Afanasyev#>,
+    <../../person/SAP_SE#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sap.vds#Resource>.
+
+<vnd.sap.vds#Resource>
+  dct:date "2021-03-23"^^xsd:date;
+  reg:file [
+      reg:file "model/vnd.sap.vds";
+      reg:type "template"];
+  reg:name "vnd.sap.vds";
+  reg:xref <../../person/Igor_Afanasyev#>,
+    <../../person/SAP_SE#>.

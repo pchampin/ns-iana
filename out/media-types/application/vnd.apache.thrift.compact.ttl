@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Rog: <../../person/Roger_Meier#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-11-10"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.apache.thrift.compact"; reg:type "template" ];
-    reg:name "vnd.apache.thrift.compact";
-    reg:xref Rog:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.apache.thrift.compact#Resource>.
 
+<vnd.apache.thrift.compact> a rdfs:Class;
+  dct:created "2014-11-10"^^xsd:date;
+  dct:identifier "application/vnd.apache.thrift.compact";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.apache.thrift.compact>;
+  rdfs:seeAlso <../../person/Roger_Meier#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.apache.thrift.compact#Resource>.
+
+<vnd.apache.thrift.compact#Resource>
+  dct:date "2014-11-10"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.apache.thrift.compact";
+      reg:type "template"];
+  reg:name "vnd.apache.thrift.compact";
+  reg:xref <../../person/Roger_Meier#>.

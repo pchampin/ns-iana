@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/x400-bp"; reg:type "template" ];
-    reg:name "x400-bp";
-    reg:xref html:rfc1494.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <x400-bp#Resource>.
 
+<x400-bp> a rdfs:Class;
+  dct:identifier "application/x400-bp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/x400-bp>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc1494/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <x400-bp#Resource>.
+
+<x400-bp#Resource>
+  reg:file [
+      reg:file "application/x400-bp";
+      reg:type "template"];
+  reg:name "x400-bp";
+  reg:xref <https://tools.ietf.org/html/rfc1494>.

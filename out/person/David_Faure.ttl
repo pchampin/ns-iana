@@ -1,35 +1,38 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.kde.karbon#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.kde.kchart#>.
-@prefix v: <../media-types/application/vnd.kde.kformula#>.
-@prefix n1: <../media-types/application/vnd.kde.kivio#>.
-@prefix n2: <../media-types/application/vnd.kde.kontour#>.
-@prefix n3: <../media-types/application/vnd.kde.kpresenter#>.
-@prefix n4: <../media-types/application/vnd.kde.kspread#>.
-@prefix n5: <../media-types/application/vnd.kde.kword#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.kde.karbon#Resource>
+  reg:xref <David_Faure#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.kde.kchart#Resource>
+  reg:xref <David_Faure#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.kde.kformula#Resource>
+  reg:xref <David_Faure#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.kde.kivio#Resource>
+  reg:xref <David_Faure#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.kde.kontour#Resource>
+  reg:xref <David_Faure#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.kde.kpresenter#Resource>
+  reg:xref <David_Faure#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.kde.kspread#Resource>
+  reg:xref <David_Faure#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.kde.kword#Resource>
+  reg:xref <David_Faure#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <David_Faure#>.
 
-:
-    reg:id "David_Faure";
-    reg:name "David Faure";
-    reg:updated "2002-08-20";
-    reg:uri "mailto:faure&kde.org".
+<David_Faure#>
+  reg:id "David_Faure";
+  reg:name "David Faure";
+  reg:updated "2002-08-20";
+  reg:uri "mailto:faure&kde.org".

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix P: <../../person/Patrik_Faltstrom#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/mac-binhex40"; reg:type "template" ];
-    reg:name "mac-binhex40";
-    reg:xref P:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <mac-binhex40#Resource>.
 
+<mac-binhex40> a rdfs:Class;
+  dct:identifier "application/mac-binhex40";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/mac-binhex40>;
+  rdfs:seeAlso <../../person/Patrik_Faltstrom#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mac-binhex40#Resource>.
+
+<mac-binhex40#Resource>
+  reg:file [
+      reg:file "application/mac-binhex40";
+      reg:type "template"];
+  reg:name "mac-binhex40";
+  reg:xref <../../person/Patrik_Faltstrom#>.

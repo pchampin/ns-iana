@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Joh: <../../person/Johann_Terblanche#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-09-02"^^XML:date;
-    reg:file [ reg:file "application/vnd.sycle+xml"; reg:type "template" ];
-    reg:name "vnd.sycle+xml";
-    reg:xref Joh:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.sycle+xml#Resource>.
 
+<vnd.sycle+xml> a rdfs:Class;
+  dct:created "2020-09-02"^^xsd:date;
+  dct:identifier "application/vnd.sycle+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.sycle+xml>;
+  rdfs:seeAlso <../../person/Johann_Terblanche#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sycle+xml#Resource>.
+
+<vnd.sycle+xml#Resource>
+  dct:date "2020-09-02"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.sycle+xml";
+      reg:type "template"];
+  reg:name "vnd.sycle+xml";
+  reg:xref <../../person/Johann_Terblanche#>.

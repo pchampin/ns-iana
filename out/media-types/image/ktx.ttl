@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Khr: <../../person/Khronos#>.
-@prefix M: <../../person/Mark_Callow#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/ktx"; reg:type "template" ];
-    reg:name "ktx";
-    reg:xref Khr:, M:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <ktx#Resource>.
 
+<ktx> a rdfs:Class;
+  dct:identifier "image/ktx";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/ktx>;
+  rdfs:seeAlso <../../person/Khronos#>,
+    <../../person/Mark_Callow#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <ktx#Resource>.
+
+<ktx#Resource>
+  reg:file [
+      reg:file "image/ktx";
+      reg:type "template"];
+  reg:name "ktx";
+  reg:xref <../../person/Khronos#>,
+    <../../person/Mark_Callow#>.

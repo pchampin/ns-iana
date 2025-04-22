@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ale: <../../person/Alex_Crawford#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2016-04-15"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.coreos.ignition+json"; reg:type "template" ];
-    reg:name "vnd.coreos.ignition+json";
-    reg:xref Ale:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.coreos.ignition+json#Resource>.
 
+<vnd.coreos.ignition+json> a rdfs:Class;
+  dct:created "2016-04-15"^^xsd:date;
+  dct:identifier "application/vnd.coreos.ignition+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.coreos.ignition+json>;
+  rdfs:seeAlso <../../person/Alex_Crawford#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.coreos.ignition+json#Resource>.
+
+<vnd.coreos.ignition+json#Resource>
+  dct:date "2016-04-15"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.coreos.ignition+json";
+      reg:type "template"];
+  reg:name "vnd.coreos.ignition+json";
+  reg:xref <../../person/Alex_Crawford#>.

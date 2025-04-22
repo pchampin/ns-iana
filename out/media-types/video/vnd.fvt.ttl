@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ari: <../../person/Arild_Fuldseth#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.fvt#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.fvt"; reg:type "template" ];
-    reg:name "vnd.fvt";
-    reg:xref Ari:.
+<vnd.fvt> a rdfs:Class;
+  dct:identifier "video/vnd.fvt";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.fvt>;
+  rdfs:seeAlso <../../person/Arild_Fuldseth#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fvt#Resource>.
+
+<vnd.fvt#Resource>
+  reg:file [
+      reg:file "video/vnd.fvt";
+      reg:type "template"];
+  reg:name "vnd.fvt";
+  reg:xref <../../person/Arild_Fuldseth#>.

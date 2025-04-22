@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/Jan_Boström#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-12-23"^^XML:date;
-    reg:file [ reg:file "application/vnd.dcmp+xml"; reg:type "template" ];
-    reg:name "vnd.dcmp+xml";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.dcmp+xml#Resource>.
 
+<vnd.dcmp+xml> a rdfs:Class;
+  dct:created "2024-12-23"^^xsd:date;
+  dct:identifier "application/vnd.dcmp+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.dcmp+xml>;
+  rdfs:seeAlso <../../person/Jan_Boström#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dcmp+xml#Resource>.
+
+<vnd.dcmp+xml#Resource>
+  dct:date "2024-12-23"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.dcmp+xml";
+      reg:type "template"];
+  reg:name "vnd.dcmp+xml";
+  reg:xref <../../person/Jan_Boström#>.

@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/audio/vnd.lucent.voice#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/audio/vnd.octel.sbc#>.
-@prefix v: <../media-types/audio/vnd.rhetorex.32kadpcm#>.
-@prefix n1: <../media-types/audio/vnd.vmx.cvsd#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/audio/vnd.lucent.voice#Resource>
+  reg:xref <Greg_Vaudreuil#>.
 
-vn:Resource reg:xref :.
+<../media-types/audio/vnd.octel.sbc#Resource>
+  reg:xref <Greg_Vaudreuil#>.
 
-v:Resource reg:xref :.
+<../media-types/audio/vnd.rhetorex.32kadpcm#Resource>
+  reg:xref <Greg_Vaudreuil#>.
 
-n1:Resource reg:xref :.
+<../media-types/audio/vnd.vmx.cvsd#Resource>
+  reg:xref <Greg_Vaudreuil#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Greg_Vaudreuil#>.
 
-:
-    reg:id "Greg_Vaudreuil";
-    reg:name "Greg Vaudreuil";
-    reg:updated "1999-01-19";
-    reg:uri "mailto:gregv&lucent.com".
+<Greg_Vaudreuil#>
+  reg:id "Greg_Vaudreuil";
+  reg:name "Greg Vaudreuil";
+  reg:updated "1999-01-19";
+  reg:uri "mailto:gregv&lucent.com".

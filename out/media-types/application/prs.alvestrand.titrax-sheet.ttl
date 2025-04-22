@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix H: <../../person/Harald_T._Alvestrand#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/prs.alvestrand.titrax-sheet"; reg:type "template" ];
-    reg:name "prs.alvestrand.titrax-sheet";
-    reg:xref H:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <prs.alvestrand.titrax-sheet#Resource>.
 
+<prs.alvestrand.titrax-sheet> a rdfs:Class;
+  dct:identifier "application/prs.alvestrand.titrax-sheet";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/prs.alvestrand.titrax-sheet>;
+  rdfs:seeAlso <../../person/Harald_T._Alvestrand#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.alvestrand.titrax-sheet#Resource>.
+
+<prs.alvestrand.titrax-sheet#Resource>
+  reg:file [
+      reg:file "application/prs.alvestrand.titrax-sheet";
+      reg:type "template"];
+  reg:name "prs.alvestrand.titrax-sheet";
+  reg:xref <../../person/Harald_T._Alvestrand#>.

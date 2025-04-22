@@ -1,16 +1,30 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2016-05-16"^^XML:date, "2016-05-24"^^XML:date;
-    reg:file
-        [ reg:file "image/wmf"; reg:name "image/x-wmf"; reg:type "template" ],
-        [ reg:file "image/wmf"; reg:type "template" ];
-    reg:name "wmf", "x-wmf - DEPRECATED in favor of image/wmf";
-    reg:xref html:rfc7903.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <wmf#Resource>.
 
+<wmf> a rdfs:Class;
+  dct:created "2016-05-16"^^xsd:date,
+    "2016-05-24"^^xsd:date;
+  dct:identifier "image/wmf";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/wmf>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7903/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <wmf#Resource>.
+
+<wmf#Resource>
+  dct:date "2016-05-16"^^xsd:date,
+    "2016-05-24"^^xsd:date;
+  reg:file [
+      reg:file "image/wmf";
+      reg:type "template"],
+    [
+      reg:file "image/wmf";
+      reg:name "image/x-wmf";
+      reg:type "template"];
+  reg:name "wmf",
+    "x-wmf - DEPRECATED in favor of image/wmf";
+  reg:xref <https://tools.ietf.org/html/rfc7903>.

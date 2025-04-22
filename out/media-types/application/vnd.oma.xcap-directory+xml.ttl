@@ -1,13 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OMA: <../../person/OMA_Presence_and_Availability_PAG_WG#>.
-@prefix Se: <../../person/Sean_Kelley#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.oma.xcap-directory+xml"; reg:type "template" ];
-    reg:name "vnd.oma.xcap-directory+xml";
-    reg:xref OMA:, Se:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.oma.xcap-directory+xml#Resource>.
 
+<vnd.oma.xcap-directory+xml> a rdfs:Class;
+  dct:identifier "application/vnd.oma.xcap-directory+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.oma.xcap-directory+xml>;
+  rdfs:seeAlso <../../person/OMA_Presence_and_Availability_PAG_WG#>,
+    <../../person/Sean_Kelley#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.oma.xcap-directory+xml#Resource>.
+
+<vnd.oma.xcap-directory+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.oma.xcap-directory+xml";
+      reg:type "template"];
+  reg:name "vnd.oma.xcap-directory+xml";
+  reg:xref <../../person/OMA_Presence_and_Availability_PAG_WG#>,
+    <../../person/Sean_Kelley#>.

@@ -1,53 +1,56 @@
-@prefix : <#>.
-@prefix A2L: <../media-types/application/A2L#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix AML: <../media-types/application/AML#>.
-@prefix ATF: <../media-types/application/ATF#>.
-@prefix ATFX: <../media-types/application/ATFX#>.
-@prefix ATXML: <../media-types/application/ATXML#>.
-@prefix CDF: <../media-types/application/CDFX+XML#>.
-@prefix CEA: <../media-types/application/CEA#>.
-@prefix DCD: <../media-types/application/DCD#>.
-@prefix DII: <../media-types/application/DII#>.
-@prefix DIT: <../media-types/application/DIT#>.
-@prefix LXF: <../media-types/application/LXF#>.
-@prefix MF4: <../media-types/application/MF4#>.
-@prefix ODX: <../media-types/application/ODX#>.
-@prefix PDX: <../media-types/application/PDX#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-A2L:Resource reg:xref :.
+<../media-types/application/A2L#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-AML:Resource reg:xref :.
+<../media-types/application/AML#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-ATF:Resource reg:xref :.
+<../media-types/application/ATF#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-ATFX:Resource reg:xref :.
+<../media-types/application/ATFX#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-ATXML:Resource reg:xref :.
+<../media-types/application/ATXML#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-CDF:Resource reg:xref :.
+<../media-types/application/CDFX+XML#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-CEA:Resource reg:xref :.
+<../media-types/application/CEA#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-DCD:Resource reg:xref :.
+<../media-types/application/DCD#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-DII:Resource reg:xref :.
+<../media-types/application/DII#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-DIT:Resource reg:xref :.
+<../media-types/application/DIT#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-LXF:Resource reg:xref :.
+<../media-types/application/LXF#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-MF4:Resource reg:xref :.
+<../media-types/application/MF4#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-ODX:Resource reg:xref :.
+<../media-types/application/ODX#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-PDX:Resource reg:xref :.
+<../media-types/application/PDX#Resource>
+  reg:xref <Thomas_Thomsen#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Thomas_Thomsen#>.
 
-:
-    reg:id "Thomas_Thomsen";
-    reg:name "Thomas Thomsen";
-    reg:updated "2014-12-04";
-    reg:uri "mailto:thomas.thomsen&asam.net".
+<Thomas_Thomsen#>
+  reg:id "Thomas_Thomsen";
+  reg:name "Thomas Thomsen";
+  reg:updated "2014-12-04";
+  reg:uri "mailto:thomas.thomsen&asam.net".

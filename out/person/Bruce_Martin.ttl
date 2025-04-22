@@ -1,50 +1,53 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.uplanet.alert-wbxml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.uplanet.alert#>.
-@prefix v: <../media-types/application/vnd.uplanet.bearer-choice-wbxml#>.
-@prefix n1: <../media-types/application/vnd.uplanet.bearer-choice#>.
-@prefix n2: <../media-types/application/vnd.uplanet.cacheop-wbxml#>.
-@prefix n3: <../media-types/application/vnd.uplanet.cacheop#>.
-@prefix n4: <../media-types/application/vnd.uplanet.channel-wbxml#>.
-@prefix n5: <../media-types/application/vnd.uplanet.channel#>.
-@prefix n6: <../media-types/application/vnd.uplanet.list-wbxml#>.
-@prefix n7: <../media-types/application/vnd.uplanet.list#>.
-@prefix n8: <../media-types/application/vnd.uplanet.listcmd-wbxml#>.
-@prefix n9: <../media-types/application/vnd.uplanet.listcmd#>.
-@prefix n10: <../media-types/application/vnd.uplanet.signal#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.alert#Resource>
+  reg:xref <Bruce_Martin#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.alert-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.bearer-choice#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.bearer-choice-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.cacheop#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.cacheop-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.channel#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.channel-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.list#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n7:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.list-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n8:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.listcmd#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n9:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.listcmd-wbxml#Resource>
+  reg:xref <Bruce_Martin#>.
 
-n10:Resource reg:xref :.
+<../media-types/application/vnd.uplanet.signal#Resource>
+  reg:xref <Bruce_Martin#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Bruce_Martin#>.
 
-:
-    reg:id "Bruce_Martin";
-    reg:name "Bruce Martin";
-    reg:updated "1998-11-19";
-    reg:uri "mailto:iana-registrar&uplanet.com".
+<Bruce_Martin#>
+  reg:id "Bruce_Martin";
+  reg:name "Bruce Martin";
+  reg:updated "1998-11-19";
+  reg:uri "mailto:iana-registrar&uplanet.com".

@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Vic: <../../person/Victor_Kuchynsky#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-05-04"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.logipipe.circuit+zip"; reg:type "template" ];
-    reg:name "vnd.logipipe.circuit+zip";
-    reg:xref Vic:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.logipipe.circuit+zip#Resource>.
 
+<vnd.logipipe.circuit+zip> a rdfs:Class;
+  dct:created "2019-05-04"^^xsd:date;
+  dct:identifier "application/vnd.logipipe.circuit+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.logipipe.circuit+zip>;
+  rdfs:seeAlso <../../person/Victor_Kuchynsky#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.logipipe.circuit+zip#Resource>.
+
+<vnd.logipipe.circuit+zip#Resource>
+  dct:date "2019-05-04"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.logipipe.circuit+zip";
+      reg:type "template"];
+  reg:name "vnd.logipipe.circuit+zip";
+  reg:xref <../../person/Victor_Kuchynsky#>.

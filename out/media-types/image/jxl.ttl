@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.
-@prefix IS: <../../person/ISO-IEC_JTC_1#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-03-04"^^XML:date;
-    reg:file [ reg:file "image/jxl"; reg:type "template" ];
-    reg:name "jxl";
-    reg:xref ISO:, IS:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <jxl#Resource>.
 
+<jxl> a rdfs:Class;
+  dct:created "2024-03-04"^^xsd:date;
+  dct:identifier "image/jxl";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/jxl>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
+    <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <jxl#Resource>.
+
+<jxl#Resource>
+  dct:date "2024-03-04"^^xsd:date;
+  reg:file [
+      reg:file "image/jxl";
+      reg:type "template"];
+  reg:name "jxl";
+  reg:xref <../../person/ISO-IEC_JTC_1#>,
+    <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.

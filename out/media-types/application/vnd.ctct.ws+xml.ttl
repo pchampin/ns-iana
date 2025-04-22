@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jim: <../../person/Jim_Ancona#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.ctct.ws+xml"; reg:type "template" ];
-    reg:name "vnd.ctct.ws+xml";
-    reg:xref Jim:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ctct.ws+xml#Resource>.
 
+<vnd.ctct.ws+xml> a rdfs:Class;
+  dct:identifier "application/vnd.ctct.ws+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ctct.ws+xml>;
+  rdfs:seeAlso <../../person/Jim_Ancona#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ctct.ws+xml#Resource>.
+
+<vnd.ctct.ws+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.ctct.ws+xml";
+      reg:type "template"];
+  reg:name "vnd.ctct.ws+xml";
+  reg:xref <../../person/Jim_Ancona#>.

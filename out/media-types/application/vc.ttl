@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Iv: <../../person/Ivan_Herman#>.
-@prefix W3C: <../../person/W3C_Verifiable_Credentials_WG#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-07-05"^^XML:date;
-    reg:file [ reg:file "application/vc"; reg:type "template" ];
-    reg:name "vc";
-    reg:xref Iv:, W3C:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vc#Resource>.
 
+<vc> a rdfs:Class;
+  dct:created "2024-07-05"^^xsd:date;
+  dct:identifier "application/vc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vc>;
+  rdfs:seeAlso <../../person/Ivan_Herman#>,
+    <../../person/W3C_Verifiable_Credentials_WG#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vc#Resource>.
+
+<vc#Resource>
+  dct:date "2024-07-05"^^xsd:date;
+  reg:file [
+      reg:file "application/vc";
+      reg:type "template"];
+  reg:name "vc";
+  reg:xref <../../person/Ivan_Herman#>,
+    <../../person/W3C_Verifiable_Credentials_WG#>.

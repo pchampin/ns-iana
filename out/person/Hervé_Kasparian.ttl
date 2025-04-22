@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.eu.kasparian.car+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.eu.kasparian.car+json#Resource>
+  reg:xref <Hervé_Kasparian#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Hervé_Kasparian#>.
 
-:
-    reg:id "Herv\u00e9_Kasparian";
-    reg:name "Herv\u00e9 Kasparian";
-    reg:updated "2022-01-03";
-    reg:uri "mailto:herve&kasparian.eu".
+<Hervé_Kasparian#>
+  reg:id "Hervé_Kasparian";
+  reg:name "Hervé Kasparian";
+  reg:updated "2022-01-03";
+  reg:uri "mailto:herve&kasparian.eu".

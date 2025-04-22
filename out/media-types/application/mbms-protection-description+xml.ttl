@@ -1,15 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file "application/mbms-protection-description+xml";
-                reg:type "template"
-            ];
-    reg:name "mbms-protection-description+xml";
-    reg:xref n1:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <mbms-protection-description+xml#Resource>.
 
+<mbms-protection-description+xml> a rdfs:Class;
+  dct:identifier "application/mbms-protection-description+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/mbms-protection-description+xml>;
+  rdfs:seeAlso <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mbms-protection-description+xml#Resource>.
+
+<mbms-protection-description+xml#Resource>
+  reg:file [
+      reg:file "application/mbms-protection-description+xml";
+      reg:type "template"];
+  reg:name "mbms-protection-description+xml";
+  reg:xref <../../person/_3GPP#>.

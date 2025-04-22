@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.liberty-request+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.liberty-request+xml#Resource>
+  reg:xref <Brett_McDowell#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Brett_McDowell#>.
 
-:
-    reg:id "Brett_McDowell";
-    reg:name "Brett McDowell";
-    reg:updated "2003-02-20";
-    reg:uri "mailto:brett.mcdowell&ieee-isto.org".
+<Brett_McDowell#>
+  reg:id "Brett_McDowell";
+  reg:name "Brett McDowell";
+  reg:updated "2003-02-20";
+  reg:uri "mailto:brett.mcdowell&ieee-isto.org".

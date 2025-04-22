@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Kei: <../../person/Keiichi_Shinoda#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.yamaha.smaf-audio"; reg:type "template" ];
-    reg:name "vnd.yamaha.smaf-audio";
-    reg:xref Kei:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.yamaha.smaf-audio#Resource>.
 
+<vnd.yamaha.smaf-audio> a rdfs:Class;
+  dct:identifier "application/vnd.yamaha.smaf-audio";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.yamaha.smaf-audio>;
+  rdfs:seeAlso <../../person/Keiichi_Shinoda#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.yamaha.smaf-audio#Resource>.
+
+<vnd.yamaha.smaf-audio#Resource>
+  reg:file [
+      reg:file "application/vnd.yamaha.smaf-audio";
+      reg:type "template"];
+  reg:name "vnd.yamaha.smaf-audio";
+  reg:xref <../../person/Keiichi_Shinoda#>.

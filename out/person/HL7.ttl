@@ -1,41 +1,46 @@
-@prefix : <#>.
-@prefix cd: <../media-types/application/cda+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix elm: <../media-types/application/elm+json#>.
-@prefix el: <../media-types/application/elm+xml#>.
-@prefix fhi: <../media-types/application/fhir+json#>.
-@prefix fh: <../media-types/application/fhir+xml#>.
-@prefix hl7: <../media-types/application/hl7v2+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix cql: <../media-types/text/cql-expression#>.
-@prefix cq: <../media-types/text/cql-identifier#>.
-@prefix c: <../media-types/text/cql#>.
-@prefix fhirp: <../media-types/text/fhirpath#>.
-@prefix hl7v2: <../media-types/text/hl7v2#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-cd:Resource reg:xref :.
+<../media-types/application/cda+xml#Resource>
+  reg:xref <HL7#>.
 
-elm:Resource reg:xref :.
+<../media-types/application/elm+json#Resource>
+  reg:xref <HL7#>.
 
-el:Resource reg:xref :.
+<../media-types/application/elm+xml#Resource>
+  reg:xref <HL7#>.
 
-fhi:Resource reg:xref :.
+<../media-types/application/fhir+json#Resource>
+  reg:xref <HL7#>.
 
-fh:Resource reg:xref :.
+<../media-types/application/fhir+xml#Resource>
+  reg:xref <HL7#>.
 
-hl7:Resource reg:xref :.
+<../media-types/application/hl7v2+xml#Resource>
+  reg:xref <HL7#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <HL7#>.
 
-cql:Resource reg:xref :.
+<../media-types/text/cql#Resource>
+  reg:xref <HL7#>.
 
-cq:Resource reg:xref :.
+<../media-types/text/cql-expression#Resource>
+  reg:xref <HL7#>.
 
-c:Resource reg:xref :.
+<../media-types/text/cql-identifier#Resource>
+  reg:xref <HL7#>.
 
-fhirp:Resource reg:xref :.
+<../media-types/text/fhirpath#Resource>
+  reg:xref <HL7#>.
 
-hl7v2:Resource reg:xref :.
+<../media-types/text/hl7v2#Resource>
+  reg:xref <HL7#>.
 
-: reg:id "HL7"; reg:name "HL7"; reg:uri "http://www.hl7.org".
-
+<HL7#>
+  reg:id "HL7";
+  reg:name "HL7";
+  reg:uri "http://www.hl7.org".

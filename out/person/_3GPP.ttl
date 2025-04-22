@@ -1,112 +1,115 @@
-@prefix : <#>.
-@prefix n1: <../media-types/application/3gpdash-qoe-report+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n2: <../media-types/application/3gpp-ims+xml#>.
-@prefix n3: <../media-types/application/3gppHal+json#>.
-@prefix n4: <../media-types/application/3gppHalForms+json#>.
-@prefix cccex: <../media-types/application/cccex#>.
-@prefix mbm: <../media-types/application/mbms-associated-procedure-description+xml#>.
-@prefix mb: <../media-types/application/mbms-deregister+xml#>.
-@prefix mbms: <../media-types/application/mbms-envelope+xml#>.
-@prefix m: <../media-types/application/mbms-msk-response+xml#>.
-@prefix n5: <../media-types/application/mbms-msk+xml#>.
-@prefix n6: <../media-types/application/mbms-protection-description+xml#>.
-@prefix n7: <../media-types/application/mbms-reception-report+xml#>.
-@prefix n8: <../media-types/application/mbms-register-response+xml#>.
-@prefix n9: <../media-types/application/mbms-register+xml#>.
-@prefix n10: <../media-types/application/mbms-schedule+xml#>.
-@prefix n11: <../media-types/application/mbms-user-service-description+xml#>.
-@prefix ses: <../media-types/application/session-info#>.
-@prefix sim: <../media-types/application/simpleSymbolContainer#>.
-@prefix vnd: <../media-types/application/vnd.3gpp.5gnas#>.
-@prefix vn: <../media-types/application/vnd.3gpp.gtpc#>.
-@prefix v: <../media-types/application/vnd.3gpp.lpp#>.
-@prefix n12: <../media-types/application/vnd.3gpp.ngap#>.
-@prefix n13: <../media-types/application/vnd.3gpp.pfcp#>.
-@prefix n14: <../media-types/application/vnd.3gpp.s1ap#>.
-@prefix n15: <../media-types/application/vnd.3gpp.seal-info+xml#>.
-@prefix n16: <../media-types/application/vnd.3gpp.seal-location-info+xml#>.
-@prefix n17: <../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#>.
-@prefix n18: <../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#>.
-@prefix n19: <../media-types/application/vnd.3gpp.seal-unicast-info+xml#>.
-@prefix n20: <../media-types/application/vnd.3gpp.vae-info+xml#>.
-@prefix EVS: <../media-types/audio/EVS#>.
-@prefix rtp: <../media-types/audio/rtp-enc-aescm128#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix rt: <../media-types/text/rtp-enc-aescm128#>.
-@prefix r: <../media-types/video/rtp-enc-aescm128#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/application/3gpdash-qoe-report+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/3gpp-ims+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/3gppHal+json#Resource>
+  reg:xref <_3GPP#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/3gppHalForms+json#Resource>
+  reg:xref <_3GPP#>.
 
-cccex:Resource reg:xref :.
+<../media-types/application/cccex#Resource>
+  reg:xref <_3GPP#>.
 
-mbm:Resource reg:xref :.
+<../media-types/application/mbms-associated-procedure-description+xml#Resource>
+  reg:xref <_3GPP#>.
 
-mb:Resource reg:xref :.
+<../media-types/application/mbms-deregister+xml#Resource>
+  reg:xref <_3GPP#>.
 
-mbms:Resource reg:xref :.
+<../media-types/application/mbms-envelope+xml#Resource>
+  reg:xref <_3GPP#>.
 
-m:Resource reg:xref :.
+<../media-types/application/mbms-msk+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/mbms-msk-response+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/mbms-protection-description+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n7:Resource reg:xref :.
+<../media-types/application/mbms-reception-report+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n8:Resource reg:xref :.
+<../media-types/application/mbms-register+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n9:Resource reg:xref :.
+<../media-types/application/mbms-register-response+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n10:Resource reg:xref :.
+<../media-types/application/mbms-schedule+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n11:Resource reg:xref :.
+<../media-types/application/mbms-user-service-description+xml#Resource>
+  reg:xref <_3GPP#>.
 
-ses:Resource reg:xref :.
+<../media-types/application/session-info#Resource>
+  reg:xref <_3GPP#>.
 
-sim:Resource reg:xref :.
+<../media-types/application/simpleSymbolContainer#Resource>
+  reg:xref <_3GPP#>.
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.5gnas#Resource>
+  reg:xref <_3GPP#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.gtpc#Resource>
+  reg:xref <_3GPP#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.lpp#Resource>
+  reg:xref <_3GPP#>.
 
-n12:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.ngap#Resource>
+  reg:xref <_3GPP#>.
 
-n13:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.pfcp#Resource>
+  reg:xref <_3GPP#>.
 
-n14:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.s1ap#Resource>
+  reg:xref <_3GPP#>.
 
-n15:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n16:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-location-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n17:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n18:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n19:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.seal-unicast-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-n20:Resource reg:xref :.
+<../media-types/application/vnd.3gpp.vae-info+xml#Resource>
+  reg:xref <_3GPP#>.
 
-EVS:Resource reg:xref :.
+<../media-types/audio/EVS#Resource>
+  reg:xref <_3GPP#>.
 
-rtp:Resource reg:xref :.
+<../media-types/audio/rtp-enc-aescm128#Resource>
+  reg:xref <_3GPP#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <_3GPP#>.
 
-rt:Resource reg:xref :.
+<../media-types/text/rtp-enc-aescm128#Resource>
+  reg:xref <_3GPP#>.
 
-r:Resource reg:xref :.
+<../media-types/video/rtp-enc-aescm128#Resource>
+  reg:xref <_3GPP#>.
 
-:
-    reg:id "_3GPP";
-    reg:name "3GPP - Third Generation Partnership Project";
-    reg:uri "mailto:3gppContact&etsi.org".
+<_3GPP#>
+  reg:id "_3GPP";
+  reg:name "3GPP - Third Generation Partnership Project";
+  reg:uri "mailto:3gppContact&etsi.org".

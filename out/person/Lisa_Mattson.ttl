@@ -1,38 +1,41 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ims.imsccv1p1#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.ims.imsccv1p2#>.
-@prefix v: <../media-types/application/vnd.ims.imsccv1p3#>.
-@prefix n1: <../media-types/application/vnd.ims.lis.v2.result+json#>.
-@prefix n2: <../media-types/application/vnd.ims.lti.v2.toolconsumerprofile+json#>.
-@prefix n3: <../media-types/application/vnd.ims.lti.v2.toolproxy.id+json#>.
-@prefix n4: <../media-types/application/vnd.ims.lti.v2.toolproxy+json#>.
-@prefix n5: <../media-types/application/vnd.ims.lti.v2.toolsettings.simple+json#>.
-@prefix n6: <../media-types/application/vnd.ims.lti.v2.toolsettings+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ims.imsccv1p1#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.ims.imsccv1p2#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.ims.imsccv1p3#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.ims.lis.v2.result+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.ims.lti.v2.toolconsumerprofile+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.ims.lti.v2.toolproxy+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.ims.lti.v2.toolproxy.id+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.ims.lti.v2.toolsettings+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.ims.lti.v2.toolsettings.simple+json#Resource>
+  reg:xref <Lisa_Mattson#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Lisa_Mattson#>.
 
-:
-    reg:id "Lisa_Mattson";
-    reg:name "Lisa Mattson";
-    reg:updated "2015-01-08";
-    reg:uri "mailto:lmattson&imsglobal.org".
+<Lisa_Mattson#>
+  reg:id "Lisa_Mattson";
+  reg:name "Lisa Mattson";
+  reg:updated "2015-01-08";
+  reg:uri "mailto:lmattson&imsglobal.org".

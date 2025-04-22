@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Keit: <../../person/Keitaro_Ishida#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-27"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.fujifilm.fb.jfi+xml"; reg:type "template" ];
-    reg:name "vnd.fujifilm.fb.jfi+xml";
-    reg:xref Keit:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fujifilm.fb.jfi+xml#Resource>.
 
+<vnd.fujifilm.fb.jfi+xml> a rdfs:Class;
+  dct:created "2021-04-27"^^xsd:date;
+  dct:identifier "application/vnd.fujifilm.fb.jfi+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fujifilm.fb.jfi+xml>;
+  rdfs:seeAlso <../../person/Keitaro_Ishida#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fujifilm.fb.jfi+xml#Resource>.
+
+<vnd.fujifilm.fb.jfi+xml#Resource>
+  dct:date "2021-04-27"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.fujifilm.fb.jfi+xml";
+      reg:type "template"];
+  reg:name "vnd.fujifilm.fb.jfi+xml";
+  reg:xref <../../person/Keitaro_Ishida#>.

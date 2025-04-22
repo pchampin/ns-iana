@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sh: <../../person/Shawn_Maloney#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.ms-3mfdocument"; reg:type "template" ];
-    reg:name "vnd.ms-3mfdocument";
-    reg:xref Sh:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ms-3mfdocument#Resource>.
 
+<vnd.ms-3mfdocument> a rdfs:Class;
+  dct:identifier "application/vnd.ms-3mfdocument";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ms-3mfdocument>;
+  rdfs:seeAlso <../../person/Shawn_Maloney#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ms-3mfdocument#Resource>.
+
+<vnd.ms-3mfdocument#Resource>
+  reg:file [
+      reg:file "application/vnd.ms-3mfdocument";
+      reg:type "template"];
+  reg:name "vnd.ms-3mfdocument";
+  reg:xref <../../person/Shawn_Maloney#>.

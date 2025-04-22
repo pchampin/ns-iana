@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-05-23"^^XML:date;
-    reg:file [ reg:file "audio/flexfec"; reg:type "template" ];
-    reg:name "flexfec";
-    reg:xref html:rfc8627.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <flexfec#Resource>.
 
+<flexfec> a rdfs:Class;
+  dct:created "2019-05-23"^^xsd:date;
+  dct:identifier "audio/flexfec";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/flexfec>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8627/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <flexfec#Resource>.
+
+<flexfec#Resource>
+  dct:date "2019-05-23"^^xsd:date;
+  reg:file [
+      reg:file "audio/flexfec";
+      reg:type "template"];
+  reg:name "flexfec";
+  reg:xref <https://tools.ietf.org/html/rfc8627>.

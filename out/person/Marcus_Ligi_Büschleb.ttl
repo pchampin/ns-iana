@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.espass-espass+zip#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.espass-espass+zip#Resource>
+  reg:xref <Marcus_Ligi_Büschleb#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Marcus_Ligi_Büschleb#>.
 
-:
-    reg:id "Marcus_Ligi_B\u00fcschleb";
-    reg:name "Marcus Ligi B\u00fcschleb";
-    reg:updated "2016-08-12";
-    reg:uri "mailto:marcus.bueschleb&googlemail.com".
+<Marcus_Ligi_Büschleb#>
+  reg:id "Marcus_Ligi_Büschleb";
+  reg:name "Marcus Ligi Büschleb";
+  reg:updated "2016-08-12";
+  reg:uri "mailto:marcus.bueschleb&googlemail.com".

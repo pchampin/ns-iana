@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bru: <../../person/Bruce_Martin#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.uplanet.alert"; reg:type "template" ];
-    reg:name "vnd.uplanet.alert";
-    reg:xref Bru:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.uplanet.alert#Resource>.
 
+<vnd.uplanet.alert> a rdfs:Class;
+  dct:identifier "application/vnd.uplanet.alert";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.uplanet.alert>;
+  rdfs:seeAlso <../../person/Bruce_Martin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.uplanet.alert#Resource>.
+
+<vnd.uplanet.alert#Resource>
+  reg:file [
+      reg:file "application/vnd.uplanet.alert";
+      reg:type "template"];
+  reg:name "vnd.uplanet.alert";
+  reg:xref <../../person/Bruce_Martin#>.

@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jun: <../../person/Jun_Sato#>.
-@prefix Ope: <../../person/Open_Mobile_Alliance_BAC_DLDRM_WG#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.oma.dd2+xml"; reg:type "template" ];
-    reg:name "vnd.oma.dd2+xml";
-    reg:xref Jun:, Ope:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.oma.dd2+xml#Resource>.
 
+<vnd.oma.dd2+xml> a rdfs:Class;
+  dct:identifier "application/vnd.oma.dd2+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.oma.dd2+xml>;
+  rdfs:seeAlso <../../person/Jun_Sato#>,
+    <../../person/Open_Mobile_Alliance_BAC_DLDRM_WG#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.oma.dd2+xml#Resource>.
+
+<vnd.oma.dd2+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.oma.dd2+xml";
+      reg:type "template"];
+  reg:name "vnd.oma.dd2+xml";
+  reg:xref <../../person/Jun_Sato#>,
+    <../../person/Open_Mobile_Alliance_BAC_DLDRM_WG#>.

@@ -1,53 +1,56 @@
-@prefix : <#>.
-@prefix A2L: <../media-types/application/A2L#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix AML: <../media-types/application/AML#>.
-@prefix ATF: <../media-types/application/ATF#>.
-@prefix ATFX: <../media-types/application/ATFX#>.
-@prefix ATXML: <../media-types/application/ATXML#>.
-@prefix CDF: <../media-types/application/CDFX+XML#>.
-@prefix CEA: <../media-types/application/CEA#>.
-@prefix DCD: <../media-types/application/DCD#>.
-@prefix DII: <../media-types/application/DII#>.
-@prefix DIT: <../media-types/application/DIT#>.
-@prefix LXF: <../media-types/application/LXF#>.
-@prefix MF4: <../media-types/application/MF4#>.
-@prefix ODX: <../media-types/application/ODX#>.
-@prefix PDX: <../media-types/application/PDX#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-A2L:Resource reg:xref :.
+<../media-types/application/A2L#Resource>
+  reg:xref <ASAM#>.
 
-AML:Resource reg:xref :.
+<../media-types/application/AML#Resource>
+  reg:xref <ASAM#>.
 
-ATF:Resource reg:xref :.
+<../media-types/application/ATF#Resource>
+  reg:xref <ASAM#>.
 
-ATFX:Resource reg:xref :.
+<../media-types/application/ATFX#Resource>
+  reg:xref <ASAM#>.
 
-ATXML:Resource reg:xref :.
+<../media-types/application/ATXML#Resource>
+  reg:xref <ASAM#>.
 
-CDF:Resource reg:xref :.
+<../media-types/application/CDFX+XML#Resource>
+  reg:xref <ASAM#>.
 
-CEA:Resource reg:xref :.
+<../media-types/application/CEA#Resource>
+  reg:xref <ASAM#>.
 
-DCD:Resource reg:xref :.
+<../media-types/application/DCD#Resource>
+  reg:xref <ASAM#>.
 
-DII:Resource reg:xref :.
+<../media-types/application/DII#Resource>
+  reg:xref <ASAM#>.
 
-DIT:Resource reg:xref :.
+<../media-types/application/DIT#Resource>
+  reg:xref <ASAM#>.
 
-LXF:Resource reg:xref :.
+<../media-types/application/LXF#Resource>
+  reg:xref <ASAM#>.
 
-MF4:Resource reg:xref :.
+<../media-types/application/MF4#Resource>
+  reg:xref <ASAM#>.
 
-ODX:Resource reg:xref :.
+<../media-types/application/ODX#Resource>
+  reg:xref <ASAM#>.
 
-PDX:Resource reg:xref :.
+<../media-types/application/PDX#Resource>
+  reg:xref <ASAM#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ASAM#>.
 
-:
-    reg:id "ASAM";
-    reg:name "ASAM";
-    reg:updated "2014-12-04";
-    reg:uri "mailto:info&asam.net".
+<ASAM#>
+  reg:id "ASAM";
+  reg:name "ASAM";
+  reg:updated "2014-12-04";
+  reg:uri "mailto:info&asam.net".

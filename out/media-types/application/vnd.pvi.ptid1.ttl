@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ch: <../../person/Charles_P._Lamb#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.pvi.ptid1"; reg:type "template" ];
-    reg:name "vnd.pvi.ptid1";
-    reg:xref Ch:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.pvi.ptid1#Resource>.
 
+<vnd.pvi.ptid1> a rdfs:Class;
+  dct:identifier "application/vnd.pvi.ptid1";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.pvi.ptid1>;
+  rdfs:seeAlso <../../person/Charles_P._Lamb#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.pvi.ptid1#Resource>.
+
+<vnd.pvi.ptid1#Resource>
+  reg:file [
+      reg:file "application/vnd.pvi.ptid1";
+      reg:type "template"];
+  reg:name "vnd.pvi.ptid1";
+  reg:xref <../../person/Charles_P._Lamb#>.

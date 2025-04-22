@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix K: <../../person/Kazuyuki_Ashimura#>.
-@prefix W3C: <../../person/W3C#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/emotionml+xml"; reg:type "template" ];
-    reg:name "emotionml+xml";
-    reg:xref K:, W3C:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <emotionml+xml#Resource>.
 
+<emotionml+xml> a rdfs:Class;
+  dct:identifier "application/emotionml+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/emotionml+xml>;
+  rdfs:seeAlso <../../person/Kazuyuki_Ashimura#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <emotionml+xml#Resource>.
+
+<emotionml+xml#Resource>
+  reg:file [
+      reg:file "application/emotionml+xml";
+      reg:type "template"];
+  reg:name "emotionml+xml";
+  reg:xref <../../person/Kazuyuki_Ashimura#>,
+    <../../person/W3C#>.

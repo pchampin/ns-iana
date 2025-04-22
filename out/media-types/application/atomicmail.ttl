@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix N: <../../person/Nathaniel_Borenstein#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/atomicmail"; reg:type "template" ];
-    reg:name "atomicmail";
-    reg:xref N:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <atomicmail#Resource>.
 
+<atomicmail> a rdfs:Class;
+  dct:identifier "application/atomicmail";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/atomicmail>;
+  rdfs:seeAlso <../../person/Nathaniel_Borenstein#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <atomicmail#Resource>.
+
+<atomicmail#Resource>
+  reg:file [
+      reg:file "application/atomicmail";
+      reg:type "template"];
+  reg:name "atomicmail";
+  reg:xref <../../person/Nathaniel_Borenstein#>.

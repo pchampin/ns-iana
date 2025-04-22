@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Kev: <../../person/Kevin_Swiber#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.siren+json"; reg:type "template" ];
-    reg:name "vnd.siren+json";
-    reg:xref Kev:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.siren+json#Resource>.
 
+<vnd.siren+json> a rdfs:Class;
+  dct:identifier "application/vnd.siren+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.siren+json>;
+  rdfs:seeAlso <../../person/Kevin_Swiber#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.siren+json#Resource>.
+
+<vnd.siren+json#Resource>
+  reg:file [
+      reg:file "application/vnd.siren+json";
+      reg:type "template"];
+  reg:name "vnd.siren+json";
+  reg:xref <../../person/Kevin_Swiber#>.

@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Mark_C_Fralick#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-06-26"^^XML:date;
-    reg:file [ reg:file "application/vnd.leap+json"; reg:type "template" ];
-    reg:name "vnd.leap+json";
-    reg:xref M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.leap+json#Resource>.
 
+<vnd.leap+json> a rdfs:Class;
+  dct:created "2018-06-26"^^xsd:date;
+  dct:identifier "application/vnd.leap+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.leap+json>;
+  rdfs:seeAlso <../../person/Mark_C_Fralick#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.leap+json#Resource>.
+
+<vnd.leap+json#Resource>
+  dct:date "2018-06-26"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.leap+json";
+      reg:type "template"];
+  reg:name "vnd.leap+json";
+  reg:xref <../../person/Mark_C_Fralick#>.

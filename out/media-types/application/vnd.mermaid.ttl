@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sidh: <../../person/Sidharth_Vinod#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-09-18"^^XML:date;
-    reg:file [ reg:file "application/vnd.mermaid"; reg:type "template" ];
-    reg:name "vnd.mermaid";
-    reg:xref Sidh:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.mermaid#Resource>.
 
+<vnd.mermaid> a rdfs:Class;
+  dct:created "2023-09-18"^^xsd:date;
+  dct:identifier "application/vnd.mermaid";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.mermaid>;
+  rdfs:seeAlso <../../person/Sidharth_Vinod#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mermaid#Resource>.
+
+<vnd.mermaid#Resource>
+  dct:date "2023-09-18"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.mermaid";
+      reg:type "template"];
+  reg:name "vnd.mermaid";
+  reg:xref <../../person/Sidharth_Vinod#>.

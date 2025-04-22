@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Igo: <../../person/Igor_Lima_Bolacha_Severino#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-05-11"^^XML:date;
-    reg:file [ reg:file "application/vnd.pt.mundusmundi"; reg:type "template" ];
-    reg:name "vnd.pt.mundusmundi";
-    reg:xref Igo:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.pt.mundusmundi#Resource>.
 
+<vnd.pt.mundusmundi> a rdfs:Class;
+  dct:created "2023-05-11"^^xsd:date;
+  dct:identifier "application/vnd.pt.mundusmundi";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.pt.mundusmundi>;
+  rdfs:seeAlso <../../person/Igor_Lima_Bolacha_Severino#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.pt.mundusmundi#Resource>.
+
+<vnd.pt.mundusmundi#Resource>
+  dct:date "2023-05-11"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.pt.mundusmundi";
+      reg:type "template"];
+  reg:name "vnd.pt.mundusmundi";
+  reg:xref <../../person/Igor_Lima_Bolacha_Severino#>.

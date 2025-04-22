@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mike_Foley#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.bluetooth.ep.oob"; reg:type "template" ];
-    reg:name "vnd.bluetooth.ep.oob";
-    reg:xref Mik:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.bluetooth.ep.oob#Resource>.
 
+<vnd.bluetooth.ep.oob> a rdfs:Class;
+  dct:identifier "application/vnd.bluetooth.ep.oob";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.bluetooth.ep.oob>;
+  rdfs:seeAlso <../../person/Mike_Foley#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.bluetooth.ep.oob#Resource>.
+
+<vnd.bluetooth.ep.oob#Resource>
+  reg:file [
+      reg:file "application/vnd.bluetooth.ep.oob";
+      reg:type "template"];
+  reg:name "vnd.bluetooth.ep.oob";
+  reg:xref <../../person/Mike_Foley#>.

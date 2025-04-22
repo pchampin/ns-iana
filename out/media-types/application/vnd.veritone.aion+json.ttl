@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Al: <../../person/Al_Brown#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-06-24"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.veritone.aion+json"; reg:type "template" ];
-    reg:name "vnd.veritone.aion+json";
-    reg:xref Al:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.veritone.aion+json#Resource>.
 
+<vnd.veritone.aion+json> a rdfs:Class;
+  dct:created "2021-06-24"^^xsd:date;
+  dct:identifier "application/vnd.veritone.aion+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.veritone.aion+json>;
+  rdfs:seeAlso <../../person/Al_Brown#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.veritone.aion+json#Resource>.
+
+<vnd.veritone.aion+json#Resource>
+  dct:date "2021-06-24"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.veritone.aion+json";
+      reg:type "template"];
+  reg:name "vnd.veritone.aion+json";
+  reg:xref <../../person/Al_Brown#>.

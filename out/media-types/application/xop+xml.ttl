@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Mark_Nottingham#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/xop+xml"; reg:type "template" ];
-    reg:name "xop+xml";
-    reg:xref M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <xop+xml#Resource>.
 
+<xop+xml> a rdfs:Class;
+  dct:identifier "application/xop+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/xop+xml>;
+  rdfs:seeAlso <../../person/Mark_Nottingham#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <xop+xml#Resource>.
+
+<xop+xml#Resource>
+  reg:file [
+      reg:file "application/xop+xml";
+      reg:type "template"];
+  reg:name "xop+xml";
+  reg:xref <../../person/Mark_Nottingham#>.

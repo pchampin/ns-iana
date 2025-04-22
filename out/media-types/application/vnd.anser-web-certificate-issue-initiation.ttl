@@ -1,16 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Hir: <../../person/Hiroyoshi_Mori#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-            [
-                reg:file
-                "application/vnd.anser-web-certificate-issue-initiation";
-                reg:type "template"
-            ];
-    reg:name "vnd.anser-web-certificate-issue-initiation";
-    reg:xref Hir:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.anser-web-certificate-issue-initiation#Resource>.
 
+<vnd.anser-web-certificate-issue-initiation> a rdfs:Class;
+  dct:identifier "application/vnd.anser-web-certificate-issue-initiation";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.anser-web-certificate-issue-initiation>;
+  rdfs:seeAlso <../../person/Hiroyoshi_Mori#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.anser-web-certificate-issue-initiation#Resource>.
+
+<vnd.anser-web-certificate-issue-initiation#Resource>
+  reg:file [
+      reg:file "application/vnd.anser-web-certificate-issue-initiation";
+      reg:type "template"];
+  reg:name "vnd.anser-web-certificate-issue-initiation";
+  reg:xref <../../person/Hiroyoshi_Mori#>.

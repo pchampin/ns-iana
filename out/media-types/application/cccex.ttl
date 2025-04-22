@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-07-05"^^XML:date;
-    reg:file [ reg:file "application/cccex"; reg:type "template" ];
-    reg:name "cccex";
-    reg:xref n1:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <cccex#Resource>.
 
+<cccex> a rdfs:Class;
+  dct:created "2017-07-05"^^xsd:date;
+  dct:identifier "application/cccex";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/cccex>;
+  rdfs:seeAlso <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <cccex#Resource>.
+
+<cccex#Resource>
+  dct:date "2017-07-05"^^xsd:date;
+  reg:file [
+      reg:file "application/cccex";
+      reg:type "template"];
+  reg:name "cccex";
+  reg:xref <../../person/_3GPP#>.

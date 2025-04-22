@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.fujixerox.ddd#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/image/vnd.fujixerox.edmics-mmr#>.
-@prefix v: <../media-types/image/vnd.fujixerox.edmics-rlc#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.fujixerox.ddd#Resource>
+  reg:xref <Masanori_Onda#>.
 
-vn:Resource reg:xref :.
+<../media-types/image/vnd.fujixerox.edmics-mmr#Resource>
+  reg:xref <Masanori_Onda#>.
 
-v:Resource reg:xref :.
+<../media-types/image/vnd.fujixerox.edmics-rlc#Resource>
+  reg:xref <Masanori_Onda#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Masanori_Onda#>.
 
-:
-    reg:id "Masanori_Onda";
-    reg:name "Masanori Onda";
-    reg:updated "2000-02-20";
-    reg:uri "mailto:Masanori.Onda&fujixerox.co.jp".
+<Masanori_Onda#>
+  reg:id "Masanori_Onda";
+  reg:name "Masanori Onda";
+  reg:updated "2000-02-20";
+  reg:uri "mailto:Masanori.Onda&fujixerox.co.jp".

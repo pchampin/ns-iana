@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
-@prefix ITU: <../../person/ITU-T_ASN.1_Rapporteur#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/soap+fastinfoset"; reg:type "template" ];
-    reg:name "soap+fastinfoset";
-    reg:xref ISO:, ITU:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <soap+fastinfoset#Resource>.
 
+<soap+fastinfoset> a rdfs:Class;
+  dct:identifier "application/soap+fastinfoset";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/soap+fastinfoset>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>,
+    <../../person/ITU-T_ASN.1_Rapporteur#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <soap+fastinfoset#Resource>.
+
+<soap+fastinfoset#Resource>
+  reg:file [
+      reg:file "application/soap+fastinfoset";
+      reg:type "template"];
+  reg:name "soap+fastinfoset";
+  reg:xref <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>,
+    <../../person/ITU-T_ASN.1_Rapporteur#>.

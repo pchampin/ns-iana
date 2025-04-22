@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Et: <../../person/Etay_Szekely#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.rapid"; reg:type "template" ];
-    reg:name "vnd.rapid";
-    reg:xref Et:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.rapid#Resource>.
 
+<vnd.rapid> a rdfs:Class;
+  dct:identifier "application/vnd.rapid";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.rapid>;
+  rdfs:seeAlso <../../person/Etay_Szekely#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.rapid#Resource>.
+
+<vnd.rapid#Resource>
+  reg:file [
+      reg:file "application/vnd.rapid";
+      reg:type "template"];
+  reg:name "vnd.rapid";
+  reg:xref <../../person/Etay_Szekely#>.

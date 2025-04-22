@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <markdown#Resource>.
 
-:Resource
-    terms:date "2014-11-11"^^XML:date;
-    reg:file [ reg:file "text/markdown"; reg:type "template" ];
-    reg:name "markdown";
-    reg:updated "2015-10-22"^^XML:date;
-    reg:xref html:rfc7763.
+<markdown> a rdfs:Class;
+  dct:created "2014-11-11"^^xsd:date;
+  dct:identifier "text/markdown";
+  dct:modified "2015-10-22"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/markdown>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7763/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <markdown#Resource>.
+
+<markdown#Resource>
+  dct:date "2014-11-11"^^xsd:date;
+  reg:file [
+      reg:file "text/markdown";
+      reg:type "template"];
+  reg:name "markdown";
+  reg:updated "2015-10-22"^^xsd:date;
+  reg:xref <https://tools.ietf.org/html/rfc7763>.

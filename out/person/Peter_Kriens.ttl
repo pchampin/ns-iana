@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.osgi.bundle#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.osgi.dp#>.
-@prefix v: <../media-types/application/vnd.osgi.subsystem#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.osgi.bundle#Resource>
+  reg:xref <Peter_Kriens#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.osgi.dp#Resource>
+  reg:xref <Peter_Kriens#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.osgi.subsystem#Resource>
+  reg:xref <Peter_Kriens#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Peter_Kriens#>.
 
-:
-    reg:id "Peter_Kriens";
-    reg:name "Peter Kriens";
-    reg:updated "2012-03-02";
-    reg:uri "mailto:Peter.Kriens&aQute.biz".
+<Peter_Kriens#>
+  reg:id "Peter_Kriens";
+  reg:name "Peter Kriens";
+  reg:updated "2012-03-02";
+  reg:uri "mailto:Peter.Kriens&aQute.biz".

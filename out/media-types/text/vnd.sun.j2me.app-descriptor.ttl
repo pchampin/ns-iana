@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix G: <../../person/Gary_Adams#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.sun.j2me.app-descriptor#Resource>.
 
-:Resource
-    reg:file
-    [ reg:file "text/vnd.sun.j2me.app-descriptor"; reg:type "template" ];
-    reg:name "vnd.sun.j2me.app-descriptor";
-    reg:xref G:.
+<vnd.sun.j2me.app-descriptor> a rdfs:Class;
+  dct:identifier "text/vnd.sun.j2me.app-descriptor";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.sun.j2me.app-descriptor>;
+  rdfs:seeAlso <../../person/Gary_Adams#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sun.j2me.app-descriptor#Resource>.
+
+<vnd.sun.j2me.app-descriptor#Resource>
+  reg:file [
+      reg:file "text/vnd.sun.j2me.app-descriptor";
+      reg:type "template"];
+  reg:name "vnd.sun.j2me.app-descriptor";
+  reg:xref <../../person/Gary_Adams#>.

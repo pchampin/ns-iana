@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.bint.med-content#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix vn: <../media-types/multipart/vnd.bint.med-plus#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.bint.med-content#Resource>
+  reg:xref <Heinz-Peter_Schütz#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Heinz-Peter_Schütz#>.
 
-vn:Resource reg:xref :.
+<../media-types/multipart/vnd.bint.med-plus#Resource>
+  reg:xref <Heinz-Peter_Schütz#>.
 
-:
-    reg:id "Heinz-Peter_Sch\u00fctz";
-    reg:name "Heinz-Peter Sch\u00fctz";
-    reg:updated "2017-04-07";
-    reg:uri "mailto:heinz.schuetz&bint.ch".
+<Heinz-Peter_Schütz#>
+  reg:id "Heinz-Peter_Schütz";
+  reg:name "Heinz-Peter Schütz";
+  reg:updated "2017-04-07";
+  reg:uri "mailto:heinz.schuetz&bint.ch".

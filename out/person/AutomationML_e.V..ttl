@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix n1: <../media-types/application/automationml-aml+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n2: <../media-types/application/automationml-amlx+zip#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/application/automationml-aml+xml#Resource>
+  reg:xref <AutomationML_e.V.#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/automationml-amlx+zip#Resource>
+  reg:xref <AutomationML_e.V.#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <AutomationML_e.V.#>.
 
-:
-    reg:id "AutomationML_e.V.";
-    reg:name "AutomationML e.V.";
-    reg:updated "2022-07-26";
-    reg:uri "mailto:office&automationml.org".
+<AutomationML_e.V.#>
+  reg:id "AutomationML_e.V.";
+  reg:name "AutomationML e.V.";
+  reg:updated "2022-07-26";
+  reg:uri "mailto:office&automationml.org".

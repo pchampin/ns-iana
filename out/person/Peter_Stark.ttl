@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.wap.wbxml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.wap.wmlc#>.
-@prefix v: <../media-types/application/vnd.wap.wmlscriptc#>.
-@prefix n1: <../media-types/image/vnd.wap.wbmp#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n2: <../media-types/text/vnd.wap.wml#>.
-@prefix n3: <../media-types/text/vnd.wap.wmlscript#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.wap.wbxml#Resource>
+  reg:xref <Peter_Stark#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.wap.wmlc#Resource>
+  reg:xref <Peter_Stark#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.wap.wmlscriptc#Resource>
+  reg:xref <Peter_Stark#>.
 
-n1:Resource reg:xref :.
+<../media-types/image/vnd.wap.wbmp#Resource>
+  reg:xref <Peter_Stark#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Peter_Stark#>.
 
-n2:Resource reg:xref :.
+<../media-types/text/vnd.wap.wml#Resource>
+  reg:xref <Peter_Stark#>.
 
-n3:Resource reg:xref :.
+<../media-types/text/vnd.wap.wmlscript#Resource>
+  reg:xref <Peter_Stark#>.
 
-:
-    reg:id "Peter_Stark";
-    reg:name "Peter Stark";
-    reg:updated "1999-03-19";
-    reg:uri "mailto:stark&uplanet.com".
+<Peter_Stark#>
+  reg:id "Peter_Stark";
+  reg:name "Peter Stark";
+  reg:updated "1999-03-19";
+  reg:uri "mailto:stark&uplanet.com".

@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/James_Minnis#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.hzn-3d-crossword"; reg:type "template" ];
-    reg:name "vnd.hzn-3d-crossword";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.hzn-3d-crossword#Resource>.
 
+<vnd.hzn-3d-crossword> a rdfs:Class;
+  dct:identifier "application/vnd.hzn-3d-crossword";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.hzn-3d-crossword>;
+  rdfs:seeAlso <../../person/James_Minnis#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hzn-3d-crossword#Resource>.
+
+<vnd.hzn-3d-crossword#Resource>
+  reg:file [
+      reg:file "application/vnd.hzn-3d-crossword";
+      reg:type "template"];
+  reg:name "vnd.hzn-3d-crossword";
+  reg:xref <../../person/James_Minnis#>.

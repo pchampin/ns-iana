@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Ste: <../../person/Steve_Gilberd#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.ficlab.flt#Resource>.
 
-:Resource
-    terms:date "2019-09-25"^^XML:date;
-    reg:file [ reg:file "text/vnd.ficlab.flt"; reg:type "template" ];
-    reg:name "vnd.ficlab.flt";
-    reg:xref Ste:.
+<vnd.ficlab.flt> a rdfs:Class;
+  dct:created "2019-09-25"^^xsd:date;
+  dct:identifier "text/vnd.ficlab.flt";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.ficlab.flt>;
+  rdfs:seeAlso <../../person/Steve_Gilberd#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ficlab.flt#Resource>.
+
+<vnd.ficlab.flt#Resource>
+  dct:date "2019-09-25"^^xsd:date;
+  reg:file [
+      reg:file "text/vnd.ficlab.flt";
+      reg:type "template"];
+  reg:name "vnd.ficlab.flt";
+  reg:xref <../../person/Steve_Gilberd#>.

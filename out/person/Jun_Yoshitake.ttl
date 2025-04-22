@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.japannet-jpnstore-wakeup#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.japannet-registration#>.
-@prefix v: <../media-types/application/vnd.japannet-setstore-wakeup#>.
-@prefix n1: <../media-types/application/vnd.japannet-verification#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.japannet-jpnstore-wakeup#Resource>
+  reg:xref <Jun_Yoshitake#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.japannet-registration#Resource>
+  reg:xref <Jun_Yoshitake#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.japannet-setstore-wakeup#Resource>
+  reg:xref <Jun_Yoshitake#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.japannet-verification#Resource>
+  reg:xref <Jun_Yoshitake#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Jun_Yoshitake#>.
 
-:
-    reg:id "Jun_Yoshitake";
-    reg:name "Jun Yoshitake";
-    reg:updated "1997-02-19";
-    reg:uri "mailto:yositake&iss.isl.melco.co.jp".
+<Jun_Yoshitake#>
+  reg:id "Jun_Yoshitake";
+  reg:name "Jun Yoshitake";
+  reg:updated "1997-02-19";
+  reg:uri "mailto:yositake&iss.isl.melco.co.jp".

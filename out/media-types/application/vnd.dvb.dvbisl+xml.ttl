@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Emi: <../../person/Emily_DUBS#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-02-07"^^XML:date;
-    reg:file [ reg:file "application/vnd.dvb.dvbisl+xml"; reg:type "template" ];
-    reg:name "vnd.dvb.dvbisl+xml";
-    reg:xref Emi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.dvb.dvbisl+xml#Resource>.
 
+<vnd.dvb.dvbisl+xml> a rdfs:Class;
+  dct:created "2020-02-07"^^xsd:date;
+  dct:identifier "application/vnd.dvb.dvbisl+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.dvb.dvbisl+xml>;
+  rdfs:seeAlso <../../person/Emily_DUBS#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dvb.dvbisl+xml#Resource>.
+
+<vnd.dvb.dvbisl+xml#Resource>
+  dct:date "2020-02-07"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.dvb.dvbisl+xml";
+      reg:type "template"];
+  reg:name "vnd.dvb.dvbisl+xml";
+  reg:xref <../../person/Emily_DUBS#>.

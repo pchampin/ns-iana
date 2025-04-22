@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Masahiko_Sugimoto#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.fujitsu.oasysgp"; reg:type "template" ];
-    reg:name "vnd.fujitsu.oasysgp";
-    reg:xref M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fujitsu.oasysgp#Resource>.
 
+<vnd.fujitsu.oasysgp> a rdfs:Class;
+  dct:identifier "application/vnd.fujitsu.oasysgp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fujitsu.oasysgp>;
+  rdfs:seeAlso <../../person/Masahiko_Sugimoto#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fujitsu.oasysgp#Resource>.
+
+<vnd.fujitsu.oasysgp#Resource>
+  reg:file [
+      reg:file "application/vnd.fujitsu.oasysgp";
+      reg:type "template"];
+  reg:name "vnd.fujitsu.oasysgp";
+  reg:xref <../../person/Masahiko_Sugimoto#>.

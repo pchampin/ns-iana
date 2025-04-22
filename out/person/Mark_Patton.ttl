@@ -1,35 +1,38 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.motorola.flexsuite.adsi#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.motorola.flexsuite.fis#>.
-@prefix v: <../media-types/application/vnd.motorola.flexsuite.gotap#>.
-@prefix n1: <../media-types/application/vnd.motorola.flexsuite.kmr#>.
-@prefix n2: <../media-types/application/vnd.motorola.flexsuite.ttc#>.
-@prefix n3: <../media-types/application/vnd.motorola.flexsuite.wem#>.
-@prefix n4: <../media-types/application/vnd.motorola.flexsuite#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n5: <../media-types/text/vnd.motorola.reflex#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite#Resource>
+  reg:xref <Mark_Patton#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.adsi#Resource>
+  reg:xref <Mark_Patton#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.fis#Resource>
+  reg:xref <Mark_Patton#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.gotap#Resource>
+  reg:xref <Mark_Patton#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.kmr#Resource>
+  reg:xref <Mark_Patton#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.ttc#Resource>
+  reg:xref <Mark_Patton#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.motorola.flexsuite.wem#Resource>
+  reg:xref <Mark_Patton#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Mark_Patton#>.
 
-n5:Resource reg:xref :.
+<../media-types/text/vnd.motorola.reflex#Resource>
+  reg:xref <Mark_Patton#>.
 
-:
-    reg:id "Mark_Patton";
-    reg:name "Mark Patton";
-    reg:updated "1999-03-19";
-    reg:uri "mailto:fmp014&email.mot.com".
+<Mark_Patton#>
+  reg:id "Mark_Patton";
+  reg:name "Mark Patton";
+  reg:updated "1999-03-19";
+  reg:uri "mailto:fmp014&email.mot.com".

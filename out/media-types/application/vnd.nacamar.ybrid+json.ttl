@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Seb: <../../person/Sebastian_A._Weiss#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-09-27"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.nacamar.ybrid+json"; reg:type "template" ];
-    reg:name "vnd.nacamar.ybrid+json";
-    reg:xref Seb:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.nacamar.ybrid+json#Resource>.
 
+<vnd.nacamar.ybrid+json> a rdfs:Class;
+  dct:created "2021-09-27"^^xsd:date;
+  dct:identifier "application/vnd.nacamar.ybrid+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.nacamar.ybrid+json>;
+  rdfs:seeAlso <../../person/Sebastian_A._Weiss#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.nacamar.ybrid+json#Resource>.
+
+<vnd.nacamar.ybrid+json#Resource>
+  dct:date "2021-09-27"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.nacamar.ybrid+json";
+      reg:type "template"];
+  reg:name "vnd.nacamar.ybrid+json";
+  reg:xref <../../person/Sebastian_A._Weiss#>.

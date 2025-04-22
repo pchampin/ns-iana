@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix m: <../media-types/application/mathematica#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vnd: <../media-types/application/vnd.wolfram.mathematica.package#>.
-@prefix vn: <../media-types/application/vnd.wolfram.mathematica#>.
-@prefix v: <../media-types/application/vnd.wolfram.player#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-m:Resource reg:xref :.
+<../media-types/application/mathematica#Resource>
+  reg:xref <Wolfram#>.
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.wolfram.mathematica#Resource>
+  reg:xref <Wolfram#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.wolfram.mathematica.package#Resource>
+  reg:xref <Wolfram#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.wolfram.player#Resource>
+  reg:xref <Wolfram#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Wolfram#>.
 
-:
-    reg:id "Wolfram";
-    reg:name "Wolfram Research";
-    reg:updated "2009-10-15";
-    reg:uri "mailto:info&wolfram.com".
+<Wolfram#>
+  reg:id "Wolfram";
+  reg:name "Wolfram Research";
+  reg:updated "2009-10-15";
+  reg:uri "mailto:info&wolfram.com".

@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Hen: <../../person/Henry_Spencer#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <news#Resource>.
 
-:Resource
-    reg:file [ reg:file "message/news"; reg:type "template" ];
-    reg:name "news (OBSOLETED by  rfc5537 )";
-    reg:xref Hen:, html:rfc5537.
+<news> a rdfs:Class;
+  dct:identifier "message/news";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/news>;
+  rdfs:seeAlso <../../person/Henry_Spencer#>,
+    <https://datatracker.ietf.org/doc/rfc5537/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <news#Resource>.
+
+<news#Resource>
+  reg:file [
+      reg:file "message/news";
+      reg:type "template"];
+  reg:name "news (OBSOLETED by  rfc5537 )";
+  reg:xref <../../person/Henry_Spencer#>,
+    <https://tools.ietf.org/html/rfc5537>.

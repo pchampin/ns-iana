@@ -1,35 +1,38 @@
-@prefix : <#>.
-@prefix mp21: <../media-types/application/mp21#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../media-types/image/avci#>.
-@prefix n2: <../media-types/image/avcs#>.
-@prefix hei: <../media-types/image/heic-sequence#>.
-@prefix heic: <../media-types/image/heic#>.
-@prefix he: <../media-types/image/heif-sequence#>.
-@prefix heif: <../media-types/image/heif#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix iso: <../media-types/video/iso.segment#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-mp21:Resource reg:xref :.
+<../media-types/application/mp21#Resource>
+  reg:xref <David_Singer#>.
 
-n1:Resource reg:xref :.
+<../media-types/image/avci#Resource>
+  reg:xref <David_Singer#>.
 
-n2:Resource reg:xref :.
+<../media-types/image/avcs#Resource>
+  reg:xref <David_Singer#>.
 
-hei:Resource reg:xref :.
+<../media-types/image/heic#Resource>
+  reg:xref <David_Singer#>.
 
-heic:Resource reg:xref :.
+<../media-types/image/heic-sequence#Resource>
+  reg:xref <David_Singer#>.
 
-he:Resource reg:xref :.
+<../media-types/image/heif#Resource>
+  reg:xref <David_Singer#>.
 
-heif:Resource reg:xref :.
+<../media-types/image/heif-sequence#Resource>
+  reg:xref <David_Singer#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <David_Singer#>.
 
-iso:Resource reg:xref :.
+<../media-types/video/iso.segment#Resource>
+  reg:xref <David_Singer#>.
 
-:
-    reg:id "David_Singer";
-    reg:name "David Singer";
-    reg:updated "2018-07-30";
-    reg:uri "mailto:singer&apple.com".
+<David_Singer#>
+  reg:id "David_Singer";
+  reg:name "David Singer";
+  reg:updated "2018-07-30";
+  reg:uri "mailto:singer&apple.com".

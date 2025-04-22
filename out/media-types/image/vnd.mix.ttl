@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix S: <../../person/Saveen_Reddy#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/vnd.mix"; reg:type "template" ];
-    reg:name "vnd.mix";
-    reg:xref S:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.mix#Resource>.
 
+<vnd.mix> a rdfs:Class;
+  dct:identifier "image/vnd.mix";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.mix>;
+  rdfs:seeAlso <../../person/Saveen_Reddy#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mix#Resource>.
+
+<vnd.mix#Resource>
+  reg:file [
+      reg:file "image/vnd.mix";
+      reg:type "template"];
+  reg:name "vnd.mix";
+  reg:xref <../../person/Saveen_Reddy#>.

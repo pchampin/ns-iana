@@ -1,53 +1,56 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oma.bcast.associated-procedure-parameter+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.oma.bcast.drm-trigger+xml#>.
-@prefix v: <../media-types/application/vnd.oma.bcast.imd+xml#>.
-@prefix n1: <../media-types/application/vnd.oma.bcast.ltkm#>.
-@prefix n2: <../media-types/application/vnd.oma.bcast.notification+xml#>.
-@prefix n3: <../media-types/application/vnd.oma.bcast.provisioningtrigger#>.
-@prefix n4: <../media-types/application/vnd.oma.bcast.sgboot#>.
-@prefix n5: <../media-types/application/vnd.oma.bcast.sgdd+xml#>.
-@prefix n6: <../media-types/application/vnd.oma.bcast.sgdu#>.
-@prefix n7: <../media-types/application/vnd.oma.bcast.simple-symbol-container#>.
-@prefix n8: <../media-types/application/vnd.oma.bcast.smartcard-trigger+xml#>.
-@prefix n9: <../media-types/application/vnd.oma.bcast.sprov+xml#>.
-@prefix n10: <../media-types/application/vnd.oma.bcast.stkm#>.
-@prefix n11: <../media-types/application/vnd.oma.drm.risd+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.associated-procedure-parameter+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.drm-trigger+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.imd+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.ltkm#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.notification+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.provisioningtrigger#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.sgboot#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.sgdd+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.sgdu#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n7:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.simple-symbol-container#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n8:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.smartcard-trigger+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n9:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.sprov+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n10:Resource reg:xref :.
+<../media-types/application/vnd.oma.bcast.stkm#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-n11:Resource reg:xref :.
+<../media-types/application/vnd.oma.drm.risd+xml#Resource>
+  reg:xref <Uwe_Rauschenbach#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Uwe_Rauschenbach#>.
 
-:
-    reg:id "Uwe_Rauschenbach";
-    reg:name "Uwe Rauschenbach";
-    reg:updated "2015-03-05";
-    reg:uri "mailto:uwe.rauschenbach&nokia.com".
+<Uwe_Rauschenbach#>
+  reg:id "Uwe_Rauschenbach";
+  reg:name "Uwe Rauschenbach";
+  reg:updated "2015-03-05";
+  reg:uri "mailto:uwe.rauschenbach&nokia.com".

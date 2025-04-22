@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steve_Hattersley#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.dolby.mobile.2"; reg:type "template" ];
-    reg:name "vnd.dolby.mobile.2";
-    reg:xref Ste:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.dolby.mobile.2#Resource>.
 
+<vnd.dolby.mobile.2> a rdfs:Class;
+  dct:identifier "application/vnd.dolby.mobile.2";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.dolby.mobile.2>;
+  rdfs:seeAlso <../../person/Steve_Hattersley#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dolby.mobile.2#Resource>.
+
+<vnd.dolby.mobile.2#Resource>
+  reg:file [
+      reg:file "application/vnd.dolby.mobile.2";
+      reg:type "template"];
+  reg:name "vnd.dolby.mobile.2";
+  reg:xref <../../person/Steve_Hattersley#>.

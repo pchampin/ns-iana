@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Seb: <../../person/Sebastian_Stenzel#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-12"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.cryptomator.vault"; reg:type "template" ];
-    reg:name "vnd.cryptomator.vault";
-    reg:xref Seb:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cryptomator.vault#Resource>.
 
+<vnd.cryptomator.vault> a rdfs:Class;
+  dct:created "2021-04-12"^^xsd:date;
+  dct:identifier "application/vnd.cryptomator.vault";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cryptomator.vault>;
+  rdfs:seeAlso <../../person/Sebastian_Stenzel#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cryptomator.vault#Resource>.
+
+<vnd.cryptomator.vault#Resource>
+  dct:date "2021-04-12"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.cryptomator.vault";
+      reg:type "template"];
+  reg:name "vnd.cryptomator.vault";
+  reg:xref <../../person/Sebastian_Stenzel#>.

@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.marlin.drm.actiontoken+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.marlin.drm.conftoken+xml#>.
-@prefix v: <../media-types/application/vnd.marlin.drm.license+xml#>.
-@prefix n1: <../media-types/application/vnd.marlin.drm.mdcf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.marlin.drm.actiontoken+xml#Resource>
+  reg:xref <Gary_Ellison#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.marlin.drm.conftoken+xml#Resource>
+  reg:xref <Gary_Ellison#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.marlin.drm.license+xml#Resource>
+  reg:xref <Gary_Ellison#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.marlin.drm.mdcf#Resource>
+  reg:xref <Gary_Ellison#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Gary_Ellison#>.
 
-:
-    reg:id "Gary_Ellison";
-    reg:name "Gary Ellison";
-    reg:updated "2008-07-23";
-    reg:uri "mailto:gary.ellison&intertrust.com".
+<Gary_Ellison#>
+  reg:id "Gary_Ellison";
+  reg:name "Gary Ellison";
+  reg:updated "2008-07-23";
+  reg:uri "mailto:gary.ellison&intertrust.com".

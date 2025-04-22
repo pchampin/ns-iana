@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ecm: <../../person/Ecma_International_Helpdesk#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/csta+xml"; reg:type "template" ];
-    reg:name "csta+xml";
-    reg:xref Ecm:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <csta+xml#Resource>.
 
+<csta+xml> a rdfs:Class;
+  dct:identifier "application/csta+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/csta+xml>;
+  rdfs:seeAlso <../../person/Ecma_International_Helpdesk#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <csta+xml#Resource>.
+
+<csta+xml#Resource>
+  reg:file [
+      reg:file "application/csta+xml";
+      reg:type "template"];
+  reg:name "csta+xml";
+  reg:xref <../../person/Ecma_International_Helpdesk#>.

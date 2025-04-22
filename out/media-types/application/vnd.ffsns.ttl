@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Holst: <../../person/Holstage#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.ffsns"; reg:type "template" ];
-    reg:name "vnd.ffsns";
-    reg:xref Holst:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ffsns#Resource>.
 
+<vnd.ffsns> a rdfs:Class;
+  dct:identifier "application/vnd.ffsns";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ffsns>;
+  rdfs:seeAlso <../../person/Holstage#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ffsns#Resource>.
+
+<vnd.ffsns#Resource>
+  reg:file [
+      reg:file "application/vnd.ffsns";
+      reg:type "template"];
+  reg:name "vnd.ffsns";
+  reg:xref <../../person/Holstage#>.

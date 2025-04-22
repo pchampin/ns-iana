@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix NTT: <../../person/NTT-local#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.ntt-local.file-transfer"; reg:type "template" ];
-    reg:name "vnd.ntt-local.file-transfer";
-    reg:xref NTT:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ntt-local.file-transfer#Resource>.
 
+<vnd.ntt-local.file-transfer> a rdfs:Class;
+  dct:identifier "application/vnd.ntt-local.file-transfer";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ntt-local.file-transfer>;
+  rdfs:seeAlso <../../person/NTT-local#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ntt-local.file-transfer#Resource>.
+
+<vnd.ntt-local.file-transfer#Resource>
+  reg:file [
+      reg:file "application/vnd.ntt-local.file-transfer";
+      reg:type "template"];
+  reg:name "vnd.ntt-local.file-transfer";
+  reg:xref <../../person/NTT-local#>.

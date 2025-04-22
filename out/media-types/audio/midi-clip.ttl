@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Benj: <../../person/Benjamin_Israel#>.
-@prefix MID: <../../person/MIDI_Association#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-03-18"^^XML:date;
-    reg:file [ reg:file "audio/midi-clip"; reg:type "template" ];
-    reg:name "midi-clip";
-    reg:xref Benj:, MID:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <midi-clip#Resource>.
 
+<midi-clip> a rdfs:Class;
+  dct:created "2024-03-18"^^xsd:date;
+  dct:identifier "audio/midi-clip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/midi-clip>;
+  rdfs:seeAlso <../../person/Benjamin_Israel#>,
+    <../../person/MIDI_Association#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <midi-clip#Resource>.
+
+<midi-clip#Resource>
+  dct:date "2024-03-18"^^xsd:date;
+  reg:file [
+      reg:file "audio/midi-clip";
+      reg:type "template"];
+  reg:name "midi-clip";
+  reg:xref <../../person/Benjamin_Israel#>,
+    <../../person/MIDI_Association#>.

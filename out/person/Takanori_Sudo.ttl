@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.innopath.wamp.notification#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.innopath.wamp.notification#Resource>
+  reg:xref <Takanori_Sudo#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Takanori_Sudo#>.
 
-:
-    reg:id "Takanori_Sudo";
-    reg:name "Takanori Sudo";
-    reg:updated "2011-12-14";
-    reg:uri "mailto:tsudo&innopath.com".
+<Takanori_Sudo#>
+  reg:id "Takanori_Sudo";
+  reg:name "Takanori Sudo";
+  reg:updated "2011-12-14";
+  reg:uri "mailto:tsudo&innopath.com".

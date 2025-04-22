@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Got: <../../person/Gottfried_Zimmermann#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/urc-targetdesc+xml"; reg:type "template" ];
-    reg:name "urc-targetdesc+xml";
-    reg:xref Got:, ISO:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <urc-targetdesc+xml#Resource>.
 
+<urc-targetdesc+xml> a rdfs:Class;
+  dct:identifier "application/urc-targetdesc+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/urc-targetdesc+xml>;
+  rdfs:seeAlso <../../person/Gottfried_Zimmermann#>,
+    <../../person/ISO-IEC_JTC_1#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <urc-targetdesc+xml#Resource>.
+
+<urc-targetdesc+xml#Resource>
+  reg:file [
+      reg:file "application/urc-targetdesc+xml";
+      reg:type "template"];
+  reg:name "urc-targetdesc+xml";
+  reg:xref <../../person/Gottfried_Zimmermann#>,
+    <../../person/ISO-IEC_JTC_1#>.

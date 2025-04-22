@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.datapackage+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dataresource+json#>.
-@prefix v: <../media-types/application/vnd.tableschema+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.datapackage+json#Resource>
+  reg:xref <Paul_Walsh#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.dataresource+json#Resource>
+  reg:xref <Paul_Walsh#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.tableschema+json#Resource>
+  reg:xref <Paul_Walsh#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Paul_Walsh#>.
 
-:
-    reg:id "Paul_Walsh";
-    reg:name "Paul Walsh";
-    reg:updated "2017-05-01";
-    reg:uri "mailto:paul.walsh&okfn.org".
+<Paul_Walsh#>
+  reg:id "Paul_Walsh";
+  reg:name "Paul Walsh";
+  reg:updated "2017-05-01";
+  reg:uri "mailto:paul.walsh&okfn.org".

@@ -1,41 +1,44 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.amazon.mobi8-ebook#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.chess-pgn#>.
-@prefix v: <../media-types/application/vnd.comicbook-rar#>.
-@prefix n1: <../media-types/application/vnd.comicbook+zip#>.
-@prefix n2: <../media-types/application/vnd.ms-cab-compressed#>.
-@prefix n3: <../media-types/application/vnd.ms-fontobject#>.
-@prefix n4: <../media-types/application/vnd.rar#>.
-@prefix n5: <../media-types/application/vnd.wordperfect#>.
-@prefix n6: <../media-types/image/vnd.adobe.photoshop#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n7: <../media-types/text/vnd.ascii-art#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.amazon.mobi8-ebook#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.chess-pgn#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.comicbook+zip#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.comicbook-rar#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.ms-cab-compressed#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.ms-fontobject#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.rar#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.wordperfect#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-n6:Resource reg:xref :.
+<../media-types/image/vnd.adobe.photoshop#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Kim_Scarborough#>.
 
-n7:Resource reg:xref :.
+<../media-types/text/vnd.ascii-art#Resource>
+  reg:xref <Kim_Scarborough#>.
 
-:
-    reg:id "Kim_Scarborough";
-    reg:name "Kim Scarborough";
-    reg:updated "2017-12-11";
-    reg:uri "mailto:user&unknown.nu".
+<Kim_Scarborough#>
+  reg:id "Kim_Scarborough";
+  reg:name "Kim Scarborough";
+  reg:updated "2017-12-11";
+  reg:uri "mailto:user&unknown.nu".

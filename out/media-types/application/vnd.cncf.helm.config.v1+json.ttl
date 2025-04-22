@@ -1,18 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix And: <../../person/Andrew_Block#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-02-27"^^XML:date;
-    reg:file
-            [
-                reg:file "application/vnd.cncf.helm.config.v1+json";
-                reg:type "template"
-            ];
-    reg:name "vnd.cncf.helm.config.v1+json";
-    reg:xref And:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cncf.helm.config.v1+json#Resource>.
 
+<vnd.cncf.helm.config.v1+json> a rdfs:Class;
+  dct:created "2023-02-27"^^xsd:date;
+  dct:identifier "application/vnd.cncf.helm.config.v1+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cncf.helm.config.v1+json>;
+  rdfs:seeAlso <../../person/Andrew_Block#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cncf.helm.config.v1+json#Resource>.
+
+<vnd.cncf.helm.config.v1+json#Resource>
+  dct:date "2023-02-27"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.cncf.helm.config.v1+json";
+      reg:type "template"];
+  reg:name "vnd.cncf.helm.config.v1+json";
+  reg:xref <../../person/Andrew_Block#>.

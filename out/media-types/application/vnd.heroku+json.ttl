@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Wes: <../../person/Wesley_Beary#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.heroku+json"; reg:type "template" ];
-    reg:name "vnd.heroku+json";
-    reg:xref Wes:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.heroku+json#Resource>.
 
+<vnd.heroku+json> a rdfs:Class;
+  dct:identifier "application/vnd.heroku+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.heroku+json>;
+  rdfs:seeAlso <../../person/Wesley_Beary#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.heroku+json#Resource>.
+
+<vnd.heroku+json#Resource>
+  reg:file [
+      reg:file "application/vnd.heroku+json";
+      reg:type "template"];
+  reg:name "vnd.heroku+json";
+  reg:xref <../../person/Wesley_Beary#>.

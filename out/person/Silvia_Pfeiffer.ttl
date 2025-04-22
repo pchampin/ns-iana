@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vtt: <../media-types/text/vtt#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Silvia_Pfeiffer#>.
 
-vtt:Resource reg:xref :.
+<../media-types/text/vtt#Resource>
+  reg:xref <Silvia_Pfeiffer#>.
 
-:
-    reg:id "Silvia_Pfeiffer";
-    reg:name "Silvia Pfeiffer";
-    reg:updated "2019-10-14";
-    reg:uri "mailto:silviapfeiffer1&gmail.com".
+<Silvia_Pfeiffer#>
+  reg:id "Silvia_Pfeiffer";
+  reg:name "Silvia Pfeiffer";
+  reg:updated "2019-10-14";
+  reg:uri "mailto:silviapfeiffer1&gmail.com".

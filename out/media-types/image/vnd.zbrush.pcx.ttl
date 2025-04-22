@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Chr: <../../person/Chris_Charabaruk#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-04-03"^^XML:date;
-    reg:file [ reg:file "image/vnd.zbrush.pcx"; reg:type "template" ];
-    reg:name "vnd.zbrush.pcx";
-    reg:xref Chr:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.zbrush.pcx#Resource>.
 
+<vnd.zbrush.pcx> a rdfs:Class;
+  dct:created "2015-04-03"^^xsd:date;
+  dct:identifier "image/vnd.zbrush.pcx";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.zbrush.pcx>;
+  rdfs:seeAlso <../../person/Chris_Charabaruk#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.zbrush.pcx#Resource>.
+
+<vnd.zbrush.pcx#Resource>
+  dct:date "2015-04-03"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.zbrush.pcx";
+      reg:type "template"];
+  reg:name "vnd.zbrush.pcx";
+  reg:xref <../../person/Chris_Charabaruk#>.

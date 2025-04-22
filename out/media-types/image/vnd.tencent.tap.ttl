@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ni: <../../person/Ni_Hui#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-09-10"^^XML:date;
-    reg:file [ reg:file "image/vnd.tencent.tap"; reg:type "template" ];
-    reg:name "vnd.tencent.tap";
-    reg:xref Ni:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.tencent.tap#Resource>.
 
+<vnd.tencent.tap> a rdfs:Class;
+  dct:created "2014-09-10"^^xsd:date;
+  dct:identifier "image/vnd.tencent.tap";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.tencent.tap>;
+  rdfs:seeAlso <../../person/Ni_Hui#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.tencent.tap#Resource>.
+
+<vnd.tencent.tap#Resource>
+  dct:date "2014-09-10"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.tencent.tap";
+      reg:type "template"];
+  reg:name "vnd.tencent.tap";
+  reg:xref <../../person/Ni_Hui#>.

@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.ms-PrintDeviceCapabilities+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.ms-PrintSchemaTicket+xml#>.
-@prefix v: <../media-types/application/vnd.ms-windows.devicepairing#>.
-@prefix n1: <../media-types/application/vnd.ms-windows.nwprinting.oob#>.
-@prefix n2: <../media-types/application/vnd.ms-windows.printerpairing#>.
-@prefix n3: <../media-types/application/vnd.ms-windows.wsd.oob#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.ms-PrintDeviceCapabilities+xml#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.ms-PrintSchemaTicket+xml#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.ms-windows.devicepairing#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.ms-windows.nwprinting.oob#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.ms-windows.printerpairing#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.ms-windows.wsd.oob#Resource>
+  reg:xref <Justin_Hutchings#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Justin_Hutchings#>.
 
-:
-    reg:id "Justin_Hutchings";
-    reg:name "Justin Hutchings";
-    reg:updated "2016-01-27";
-    reg:uri "mailto:justhu at microsoft.com".
+<Justin_Hutchings#>
+  reg:id "Justin_Hutchings";
+  reg:name "Justin Hutchings";
+  reg:updated "2016-01-27";
+  reg:uri "mailto:justhu at microsoft.com".

@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ing: <../../person/Ingo_Hofmann#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix Nil: <../../person/Nils_Peters#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-04-04"^^XML:date;
-    reg:file [ reg:file "audio/mhas"; reg:type "template" ];
-    reg:name "mhas";
-    reg:xref Ing:, ISO:, Nil:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <mhas#Resource>.
 
+<mhas> a rdfs:Class;
+  dct:created "2020-04-04"^^xsd:date;
+  dct:identifier "audio/mhas";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/mhas>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Ingo_Hofmann#>,
+    <../../person/Nils_Peters#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mhas#Resource>.
+
+<mhas#Resource>
+  dct:date "2020-04-04"^^xsd:date;
+  reg:file [
+      reg:file "audio/mhas";
+      reg:type "template"];
+  reg:name "mhas";
+  reg:xref <../../person/ISO-IEC_JTC_1#>,
+    <../../person/Ingo_Hofmann#>,
+    <../../person/Nils_Peters#>.

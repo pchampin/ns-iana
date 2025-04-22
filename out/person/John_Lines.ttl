@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix prs: <../media-types/text/prs.lines.tag#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <John_Lines#>.
 
-prs:Resource reg:xref :.
+<../media-types/text/prs.lines.tag#Resource>
+  reg:xref <John_Lines#>.
 
-:
-    reg:id "John_Lines";
-    reg:name "John Lines";
-    reg:updated "1998-01-19";
-    reg:uri "mailto:john&paladin.demon.co.uk".
+<John_Lines#>
+  reg:id "John_Lines";
+  reg:name "John Lines";
+  reg:updated "1998-01-19";
+  reg:uri "mailto:john&paladin.demon.co.uk".

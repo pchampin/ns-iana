@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-07-25"^^XML:date;
-    reg:file [ reg:file "image/jxsi"; reg:type "template" ];
-    reg:name "jxsi";
-    reg:xref ISO:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <jxsi#Resource>.
 
+<jxsi> a rdfs:Class;
+  dct:created "2019-07-25"^^xsd:date;
+  dct:identifier "image/jxsi";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/jxsi>;
+  rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <jxsi#Resource>.
+
+<jxsi#Resource>
+  dct:date "2019-07-25"^^xsd:date;
+  reg:file [
+      reg:file "image/jxsi";
+      reg:type "template"];
+  reg:name "jxsi";
+  reg:xref <../../person/ISO-IEC_JTC_1#>.

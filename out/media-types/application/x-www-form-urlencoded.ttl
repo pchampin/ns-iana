@@ -1,14 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ann: <../../person/Anne_van_Kesteren#>.
-@prefix WHA: <../../person/WHATWG#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/x-www-form-urlencoded"; reg:type "template" ];
-    reg:name "x-www-form-urlencoded";
-    reg:updated "2020-07-14";
-    reg:xref Ann:, WHA:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <x-www-form-urlencoded#Resource>.
 
+<x-www-form-urlencoded> a rdfs:Class;
+  dct:identifier "application/x-www-form-urlencoded";
+  dct:modified "2020-07-14"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/x-www-form-urlencoded>;
+  rdfs:seeAlso <../../person/Anne_van_Kesteren#>,
+    <../../person/WHATWG#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <x-www-form-urlencoded#Resource>.
+
+<x-www-form-urlencoded#Resource>
+  reg:file [
+      reg:file "application/x-www-form-urlencoded";
+      reg:type "template"];
+  reg:name "x-www-form-urlencoded";
+  reg:updated "2020-07-14";
+  reg:xref <../../person/Anne_van_Kesteren#>,
+    <../../person/WHATWG#>.

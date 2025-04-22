@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pet: <../../person/Pete_Cole#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.koan"; reg:type "template" ];
-    reg:name "vnd.koan";
-    reg:xref Pet:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.koan#Resource>.
 
+<vnd.koan> a rdfs:Class;
+  dct:identifier "application/vnd.koan";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.koan>;
+  rdfs:seeAlso <../../person/Pete_Cole#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.koan#Resource>.
+
+<vnd.koan#Resource>
+  reg:file [
+      reg:file "application/vnd.koan";
+      reg:type "template"];
+  reg:name "vnd.koan";
+  reg:xref <../../person/Pete_Cole#>.

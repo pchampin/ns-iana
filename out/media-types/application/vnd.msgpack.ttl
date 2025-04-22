@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Alex: <../../person/Alexander_Ivanov#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-05-13"^^XML:date;
-    reg:file [ reg:file "application/vnd.msgpack"; reg:type "template" ];
-    reg:name "vnd.msgpack";
-    reg:xref Alex:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.msgpack#Resource>.
 
+<vnd.msgpack> a rdfs:Class;
+  dct:created "2024-05-13"^^xsd:date;
+  dct:identifier "application/vnd.msgpack";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.msgpack>;
+  rdfs:seeAlso <../../person/Alexander_Ivanov#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.msgpack#Resource>.
+
+<vnd.msgpack#Resource>
+  dct:date "2024-05-13"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.msgpack";
+      reg:type "template"];
+  reg:name "vnd.msgpack";
+  reg:xref <../../person/Alexander_Ivanov#>.

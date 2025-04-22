@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Her: <../../person/Hervé_Kasparian#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-01-03"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.eu.kasparian.car+json"; reg:type "template" ];
-    reg:name "vnd.eu.kasparian.car+json";
-    reg:xref Her:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.eu.kasparian.car+json#Resource>.
 
+<vnd.eu.kasparian.car+json> a rdfs:Class;
+  dct:created "2022-01-03"^^xsd:date;
+  dct:identifier "application/vnd.eu.kasparian.car+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.eu.kasparian.car+json>;
+  rdfs:seeAlso <../../person/Hervé_Kasparian#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.eu.kasparian.car+json#Resource>.
+
+<vnd.eu.kasparian.car+json#Resource>
+  dct:date "2022-01-03"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.eu.kasparian.car+json";
+      reg:type "template"];
+  reg:name "vnd.eu.kasparian.car+json";
+  reg:xref <../../person/Hervé_Kasparian#>.

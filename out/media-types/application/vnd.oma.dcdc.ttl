@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Avi: <../../person/Avi_Primo#>.
-@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.oma.dcdc"; reg:type "template" ];
-    reg:name "vnd.oma.dcdc";
-    reg:xref Avi:, Ope:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.oma.dcdc#Resource>.
 
+<vnd.oma.dcdc> a rdfs:Class;
+  dct:identifier "application/vnd.oma.dcdc";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.oma.dcdc>;
+  rdfs:seeAlso <../../person/Avi_Primo#>,
+    <../../person/Open_Mobile_Naming_Authority#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.oma.dcdc#Resource>.
+
+<vnd.oma.dcdc#Resource>
+  reg:file [
+      reg:file "application/vnd.oma.dcdc";
+      reg:type "template"];
+  reg:name "vnd.oma.dcdc";
+  reg:xref <../../person/Avi_Primo#>,
+    <../../person/Open_Mobile_Naming_Authority#>.

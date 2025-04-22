@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.gentoo.catmetadata+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.gentoo.ebuild#>.
-@prefix v: <../media-types/application/vnd.gentoo.eclass#>.
-@prefix n1: <../media-types/application/vnd.gentoo.gpkg#>.
-@prefix n2: <../media-types/application/vnd.gentoo.manifest#>.
-@prefix n3: <../media-types/application/vnd.gentoo.pkgmetadata+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.catmetadata+xml#Resource>
+  reg:xref <Michał_Górny#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.ebuild#Resource>
+  reg:xref <Michał_Górny#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.eclass#Resource>
+  reg:xref <Michał_Górny#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.gpkg#Resource>
+  reg:xref <Michał_Górny#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.manifest#Resource>
+  reg:xref <Michał_Górny#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.gentoo.pkgmetadata+xml#Resource>
+  reg:xref <Michał_Górny#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Michał_Górny#>.
 
-:
-    reg:id "Micha\u0142_G\u00f3rny";
-    reg:name "Micha\u0142 G\u00f3rny";
-    reg:updated "2022-11-30";
-    reg:uri "mailto:mgorny&gentoo.org".
+<Michał_Górny#>
+  reg:id "Michał_Górny";
+  reg:name "Michał Górny";
+  reg:updated "2022-11-30";
+  reg:uri "mailto:mgorny&gentoo.org".

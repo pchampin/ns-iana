@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/msc-mixer+xml"; reg:type "template" ];
-    reg:name "msc-mixer+xml";
-    reg:xref html:rfc6505.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <msc-mixer+xml#Resource>.
 
+<msc-mixer+xml> a rdfs:Class;
+  dct:identifier "application/msc-mixer+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/msc-mixer+xml>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6505/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <msc-mixer+xml#Resource>.
+
+<msc-mixer+xml#Resource>
+  reg:file [
+      reg:file "application/msc-mixer+xml";
+      reg:type "template"];
+  reg:name "msc-mixer+xml";
+  reg:xref <https://tools.ietf.org/html/rfc6505>.

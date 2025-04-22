@@ -1,11 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <csv#Resource>.
 
-:Resource
-    reg:file [ reg:file "text/csv"; reg:type "template" ];
-    reg:name "csv";
-    reg:xref html:rfc4180, html:rfc7111.
+<csv> a rdfs:Class;
+  dct:identifier "text/csv";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/csv>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc4180/>,
+    <https://datatracker.ietf.org/doc/rfc7111/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <csv#Resource>.
+
+<csv#Resource>
+  reg:file [
+      reg:file "text/csv";
+      reg:type "template"];
+  reg:name "csv";
+  reg:xref <https://tools.ietf.org/html/rfc4180>,
+    <https://tools.ietf.org/html/rfc7111>.

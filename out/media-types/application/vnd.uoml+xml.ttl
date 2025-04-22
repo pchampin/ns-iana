@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Arn: <../../person/Arne_Gerdes#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.uoml+xml"; reg:type "template" ];
-    reg:name "vnd.uoml+xml";
-    reg:xref Arn:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.uoml+xml#Resource>.
 
+<vnd.uoml+xml> a rdfs:Class;
+  dct:identifier "application/vnd.uoml+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.uoml+xml>;
+  rdfs:seeAlso <../../person/Arne_Gerdes#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.uoml+xml#Resource>.
+
+<vnd.uoml+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.uoml+xml";
+      reg:type "template"];
+  reg:name "vnd.uoml+xml";
+  reg:xref <../../person/Arne_Gerdes#>.

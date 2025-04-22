@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.sycle+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.sycle+xml#Resource>
+  reg:xref <Johann_Terblanche#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Johann_Terblanche#>.
 
-:
-    reg:id "Johann_Terblanche";
-    reg:name "Johann Terblanche";
-    reg:updated "2020-09-02";
-    reg:uri "mailto:johann.terblanche&sycle.net".
+<Johann_Terblanche#>
+  reg:id "Johann_Terblanche";
+  reg:name "Johann Terblanche";
+  reg:updated "2020-09-02";
+  reg:uri "mailto:johann.terblanche&sycle.net".

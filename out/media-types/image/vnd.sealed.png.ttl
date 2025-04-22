@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Petersen#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/vnd.sealed.png"; reg:type "template" ];
-    reg:name "vnd.sealed.png";
-    reg:xref D:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.sealed.png#Resource>.
 
+<vnd.sealed.png> a rdfs:Class;
+  dct:identifier "image/vnd.sealed.png";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.sealed.png>;
+  rdfs:seeAlso <../../person/David_Petersen#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.sealed.png#Resource>.
+
+<vnd.sealed.png#Resource>
+  reg:file [
+      reg:file "image/vnd.sealed.png";
+      reg:type "template"];
+  reg:name "vnd.sealed.png";
+  reg:xref <../../person/David_Petersen#>.

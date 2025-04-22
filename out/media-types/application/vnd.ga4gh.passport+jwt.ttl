@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix GA4: <../../person/GA4GH_Secretariat#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-05-14"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.ga4gh.passport+jwt"; reg:type "template" ];
-    reg:name "vnd.ga4gh.passport+jwt";
-    reg:xref GA4:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ga4gh.passport+jwt#Resource>.
 
+<vnd.ga4gh.passport+jwt> a rdfs:Class;
+  dct:created "2024-05-14"^^xsd:date;
+  dct:identifier "application/vnd.ga4gh.passport+jwt";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ga4gh.passport+jwt>;
+  rdfs:seeAlso <../../person/GA4GH_Secretariat#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ga4gh.passport+jwt#Resource>.
+
+<vnd.ga4gh.passport+jwt#Resource>
+  dct:date "2024-05-14"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.ga4gh.passport+jwt";
+      reg:type "template"];
+  reg:name "vnd.ga4gh.passport+jwt";
+  reg:xref <../../person/GA4GH_Secretariat#>.

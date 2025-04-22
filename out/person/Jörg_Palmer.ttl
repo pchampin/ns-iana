@@ -1,50 +1,53 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.afpc.afplinedata-pagedef#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.afpc.afplinedata#>.
-@prefix v: <../media-types/application/vnd.afpc.cmoca-cmresource#>.
-@prefix n1: <../media-types/application/vnd.afpc.foca-charset#>.
-@prefix n2: <../media-types/application/vnd.afpc.foca-codedfont#>.
-@prefix n3: <../media-types/application/vnd.afpc.foca-codepage#>.
-@prefix n4: <../media-types/application/vnd.afpc.modca-cmtable#>.
-@prefix n5: <../media-types/application/vnd.afpc.modca-formdef#>.
-@prefix n6: <../media-types/application/vnd.afpc.modca-mediummap#>.
-@prefix n7: <../media-types/application/vnd.afpc.modca-objectcontainer#>.
-@prefix n8: <../media-types/application/vnd.afpc.modca-overlay#>.
-@prefix n9: <../media-types/application/vnd.afpc.modca-pagesegment#>.
-@prefix n10: <../media-types/application/vnd.afpc.modca#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.afpc.afplinedata#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.afpc.afplinedata-pagedef#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.afpc.cmoca-cmresource#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.afpc.foca-charset#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.afpc.foca-codedfont#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.afpc.foca-codepage#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-cmtable#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-formdef#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n7:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-mediummap#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n8:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-objectcontainer#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n9:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-overlay#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-n10:Resource reg:xref :.
+<../media-types/application/vnd.afpc.modca-pagesegment#Resource>
+  reg:xref <Jörg_Palmer#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Jörg_Palmer#>.
 
-:
-    reg:id "J\u00f6rg_Palmer";
-    reg:name "J\u00f6rg Palmer";
-    reg:updated "2020-10-12";
-    reg:uri "mailto:Joerg.Palmer&compart.com".
+<Jörg_Palmer#>
+  reg:id "Jörg_Palmer";
+  reg:name "Jörg Palmer";
+  reg:updated "2020-10-12";
+  reg:uri "mailto:Joerg.Palmer&compart.com".

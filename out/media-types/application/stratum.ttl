@@ -1,14 +1,26 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ben: <../../person/Ben_van_Hartingsveldt#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-05-06"^^XML:date;
-    reg:file [ reg:file "application/stratum"; reg:type "template" ];
-    reg:name "stratum";
-    reg:xref Ben:, [ reg:data "1"; reg:type "note" ].
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <stratum#Resource>.
 
+<stratum> a rdfs:Class;
+  dct:created "2024-05-06"^^xsd:date;
+  dct:identifier "application/stratum";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/stratum>;
+  rdfs:seeAlso <../../person/Ben_van_Hartingsveldt#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <stratum#Resource>.
+
+<stratum#Resource>
+  dct:date "2024-05-06"^^xsd:date;
+  reg:file [
+      reg:file "application/stratum";
+      reg:type "template"];
+  reg:name "stratum";
+  reg:xref [
+      reg:data "1";
+      reg:type "note"],
+    <../../person/Ben_van_Hartingsveldt#>.

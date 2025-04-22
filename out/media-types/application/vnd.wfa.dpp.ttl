@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Dr: <../../person/Dr._Jun_Tian#>.
-@prefix Wi: <../../person/Wi-Fi_Alliance#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-10-19"^^XML:date;
-    reg:file [ reg:file "application/vnd.wfa.dpp"; reg:type "template" ];
-    reg:name "vnd.wfa.dpp";
-    reg:xref Dr:, Wi:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.wfa.dpp#Resource>.
 
+<vnd.wfa.dpp> a rdfs:Class;
+  dct:created "2020-10-19"^^xsd:date;
+  dct:identifier "application/vnd.wfa.dpp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.wfa.dpp>;
+  rdfs:seeAlso <../../person/Dr._Jun_Tian#>,
+    <../../person/Wi-Fi_Alliance#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.wfa.dpp#Resource>.
+
+<vnd.wfa.dpp#Resource>
+  dct:date "2020-10-19"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.wfa.dpp";
+      reg:type "template"];
+  reg:name "vnd.wfa.dpp";
+  reg:xref <../../person/Dr._Jun_Tian#>,
+    <../../person/Wi-Fi_Alliance#>.

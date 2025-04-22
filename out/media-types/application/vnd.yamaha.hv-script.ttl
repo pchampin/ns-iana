@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Tom: <../../person/Tomohiro_Yamamoto#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.yamaha.hv-script"; reg:type "template" ];
-    reg:name "vnd.yamaha.hv-script";
-    reg:xref Tom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.yamaha.hv-script#Resource>.
 
+<vnd.yamaha.hv-script> a rdfs:Class;
+  dct:identifier "application/vnd.yamaha.hv-script";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.yamaha.hv-script>;
+  rdfs:seeAlso <../../person/Tomohiro_Yamamoto#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.yamaha.hv-script#Resource>.
+
+<vnd.yamaha.hv-script#Resource>
+  reg:file [
+      reg:file "application/vnd.yamaha.hv-script";
+      reg:type "template"];
+  reg:name "vnd.yamaha.hv-script";
+  reg:xref <../../person/Tomohiro_Yamamoto#>.

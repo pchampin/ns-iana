@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ETSI: <../../person/ETSI#>.
-@prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-01-10"^^XML:date;
-    reg:file [ reg:file "audio/TETRA_ACELP_BB"; reg:type "template" ];
-    reg:name "TETRA_ACELP_BB";
-    reg:xref ETSI:, Mig:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <TETRA_ACELP_BB#Resource>.
 
+<TETRA_ACELP_BB> a rdfs:Class;
+  dct:created "2020-01-10"^^xsd:date;
+  dct:identifier "audio/TETRA_ACELP_BB";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/TETRA_ACELP_BB>;
+  rdfs:seeAlso <../../person/ETSI#>,
+    <../../person/Miguel_Angel_Reina_Ortega#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <TETRA_ACELP_BB#Resource>.
+
+<TETRA_ACELP_BB#Resource>
+  dct:date "2020-01-10"^^xsd:date;
+  reg:file [
+      reg:file "audio/TETRA_ACELP_BB";
+      reg:type "template"];
+  reg:name "TETRA_ACELP_BB";
+  reg:xref <../../person/ETSI#>,
+    <../../person/Miguel_Angel_Reina_Ortega#>.

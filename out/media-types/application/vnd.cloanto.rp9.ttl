@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mike_Labatt#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.cloanto.rp9"; reg:type "template" ];
-    reg:name "vnd.cloanto.rp9";
-    reg:xref Mik:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.cloanto.rp9#Resource>.
 
+<vnd.cloanto.rp9> a rdfs:Class;
+  dct:identifier "application/vnd.cloanto.rp9";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cloanto.rp9>;
+  rdfs:seeAlso <../../person/Mike_Labatt#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cloanto.rp9#Resource>.
+
+<vnd.cloanto.rp9#Resource>
+  reg:file [
+      reg:file "application/vnd.cloanto.rp9";
+      reg:type "template"];
+  reg:name "vnd.cloanto.rp9";
+  reg:xref <../../person/Mike_Labatt#>.

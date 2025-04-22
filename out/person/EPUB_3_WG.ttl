@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix epu: <../media-types/application/epub+zip#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix oeb: <../media-types/application/oebps-package+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-epu:Resource reg:xref :.
+<../media-types/application/epub+zip#Resource>
+  reg:xref <EPUB_3_WG#>.
 
-oeb:Resource reg:xref :.
+<../media-types/application/oebps-package+xml#Resource>
+  reg:xref <EPUB_3_WG#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <EPUB_3_WG#>.
 
-:
-    reg:id "EPUB_3_WG";
-    reg:name "EPUB 3 Working Group";
-    reg:updated "2022-08-16";
-    reg:uri "mailto:public-epub-wg&w3.org".
+<EPUB_3_WG#>
+  reg:id "EPUB_3_WG";
+  reg:name "EPUB 3 Working Group";
+  reg:updated "2022-08-16";
+  reg:uri "mailto:public-epub-wg&w3.org".

@@ -1,23 +1,26 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.shana.informed.formdata#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.shana.informed.formtemplate#>.
-@prefix v: <../media-types/application/vnd.shana.informed.interchange#>.
-@prefix n1: <../media-types/application/vnd.shana.informed.package#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.shana.informed.formdata#Resource>
+  reg:xref <Guy_Selzler#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.shana.informed.formtemplate#Resource>
+  reg:xref <Guy_Selzler#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.shana.informed.interchange#Resource>
+  reg:xref <Guy_Selzler#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.shana.informed.package#Resource>
+  reg:xref <Guy_Selzler#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Guy_Selzler#>.
 
-:
-    reg:id "Guy_Selzler";
-    reg:name "Guy Selzler";
-    reg:updated "1997-02-19";
-    reg:uri "mailto:gselzler&shana.com".
+<Guy_Selzler#>
+  reg:id "Guy_Selzler";
+  reg:name "Guy Selzler";
+  reg:updated "1997-02-19";
+  reg:uri "mailto:gselzler&shana.com".

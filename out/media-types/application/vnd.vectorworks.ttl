@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bipl: <../../person/Biplab_Sarkar#>.
-@prefix Lyn: <../../person/Lyndsey_Ferguson#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.vectorworks"; reg:type "template" ];
-    reg:name "vnd.vectorworks";
-    reg:xref Bipl:, Lyn:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.vectorworks#Resource>.
 
+<vnd.vectorworks> a rdfs:Class;
+  dct:identifier "application/vnd.vectorworks";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.vectorworks>;
+  rdfs:seeAlso <../../person/Biplab_Sarkar#>,
+    <../../person/Lyndsey_Ferguson#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.vectorworks#Resource>.
+
+<vnd.vectorworks#Resource>
+  reg:file [
+      reg:file "application/vnd.vectorworks";
+      reg:type "template"];
+  reg:name "vnd.vectorworks";
+  reg:xref <../../person/Biplab_Sarkar#>,
+    <../../person/Lyndsey_Ferguson#>.

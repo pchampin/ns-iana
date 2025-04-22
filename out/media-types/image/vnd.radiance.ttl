@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gre: <../../person/Greg_Ward#>.
-@prefix R: <../../person/Randolph_Fritz#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/vnd.radiance"; reg:type "template" ];
-    reg:name "vnd.radiance";
-    reg:xref Gre:, R:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.radiance#Resource>.
 
+<vnd.radiance> a rdfs:Class;
+  dct:identifier "image/vnd.radiance";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.radiance>;
+  rdfs:seeAlso <../../person/Greg_Ward#>,
+    <../../person/Randolph_Fritz#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.radiance#Resource>.
+
+<vnd.radiance#Resource>
+  reg:file [
+      reg:file "image/vnd.radiance";
+      reg:type "template"];
+  reg:name "vnd.radiance";
+  reg:xref <../../person/Greg_Ward#>,
+    <../../person/Randolph_Fritz#>.

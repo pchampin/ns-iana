@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.yellowriver-custom-menu#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.yellowriver-custom-menu#Resource>
+  reg:xref <Mr._Yellow#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Mr._Yellow#>.
 
-:
-    reg:id "Mr._Yellow";
-    reg:name "Mr. Yellow";
-    reg:updated "1998-03-19";
-    reg:uri "mailto:yellowriversw&yahoo.com".
+<Mr._Yellow#>
+  reg:id "Mr._Yellow";
+  reg:name "Mr. Yellow";
+  reg:updated "1998-03-19";
+  reg:uri "mailto:yellowriversw&yahoo.com".

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix K: <../../person/Katsuhiko_Ichinose#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.ah-barcode"; reg:type "template" ];
-    reg:name "vnd.ah-barcode";
-    reg:xref K:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.ah-barcode#Resource>.
 
+<vnd.ah-barcode> a rdfs:Class;
+  dct:identifier "application/vnd.ah-barcode";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.ah-barcode>;
+  rdfs:seeAlso <../../person/Katsuhiko_Ichinose#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ah-barcode#Resource>.
+
+<vnd.ah-barcode#Resource>
+  reg:file [
+      reg:file "application/vnd.ah-barcode";
+      reg:type "template"];
+  reg:name "vnd.ah-barcode";
+  reg:xref <../../person/Katsuhiko_Ichinose#>.

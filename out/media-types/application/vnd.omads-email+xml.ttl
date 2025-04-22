@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OMA: <../../person/OMA_Data_Synchronization_WG#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.omads-email+xml"; reg:type "template" ];
-    reg:name "vnd.omads-email+xml";
-    reg:xref OMA:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.omads-email+xml#Resource>.
 
+<vnd.omads-email+xml> a rdfs:Class;
+  dct:identifier "application/vnd.omads-email+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.omads-email+xml>;
+  rdfs:seeAlso <../../person/OMA_Data_Synchronization_WG#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.omads-email+xml#Resource>.
+
+<vnd.omads-email+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.omads-email+xml";
+      reg:type "template"];
+  reg:name "vnd.omads-email+xml";
+  reg:xref <../../person/OMA_Data_Synchronization_WG#>.

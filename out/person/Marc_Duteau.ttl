@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix cd: <../media-types/application/cda+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix hl7: <../media-types/application/hl7v2+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix hl7v2: <../media-types/text/hl7v2#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-cd:Resource reg:xref :.
+<../media-types/application/cda+xml#Resource>
+  reg:xref <Marc_Duteau#>.
 
-hl7:Resource reg:xref :.
+<../media-types/application/hl7v2+xml#Resource>
+  reg:xref <Marc_Duteau#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Marc_Duteau#>.
 
-hl7v2:Resource reg:xref :.
+<../media-types/text/hl7v2#Resource>
+  reg:xref <Marc_Duteau#>.
 
-:
-    reg:id "Marc_Duteau";
-    reg:name "Marc Duteau";
-    reg:updated "2022-07-07";
-    reg:uri "mailto:marc&hl7.org".
+<Marc_Duteau#>
+  reg:id "Marc_Duteau";
+  reg:name "Marc Duteau";
+  reg:updated "2022-07-07";
+  reg:uri "mailto:marc&hl7.org".

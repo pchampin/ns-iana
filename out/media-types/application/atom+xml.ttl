@@ -1,11 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/atom+xml"; reg:type "template" ];
-    reg:name "atom+xml";
-    reg:xref html:rfc4287, html:rfc5023.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <atom+xml#Resource>.
 
+<atom+xml> a rdfs:Class;
+  dct:identifier "application/atom+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/atom+xml>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc4287/>,
+    <https://datatracker.ietf.org/doc/rfc5023/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <atom+xml#Resource>.
+
+<atom+xml#Resource>
+  reg:file [
+      reg:file "application/atom+xml";
+      reg:type "template"];
+  reg:name "atom+xml";
+  reg:xref <https://tools.ietf.org/html/rfc4287>,
+    <https://tools.ietf.org/html/rfc5023>.

@@ -1,47 +1,50 @@
-@prefix : <#>.
-@prefix csv: <../media-types/application/csvm+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix jf2: <../media-types/application/jf2feed+json#>.
-@prefix ld: <../media-types/application/ld+json#>.
-@prefix lpf: <../media-types/application/lpf+zip#>.
-@prefix pro: <../media-types/application/provenance+xml#>.
-@prefix vc: <../media-types/application/vc#>.
-@prefix v: <../media-types/application/vc+cose#>.
-@prefix n1: <../media-types/application/vc+jwt#>.
-@prefix vp: <../media-types/application/vp#>.
-@prefix n2: <../media-types/application/vp+cose#>.
-@prefix n3: <../media-types/application/vp+jwt#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix pr: <../media-types/text/provenance-notation#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-csv:Resource reg:xref :.
+<../media-types/application/csvm+json#Resource>
+  reg:xref <Ivan_Herman#>.
 
-jf2:Resource reg:xref :.
+<../media-types/application/jf2feed+json#Resource>
+  reg:xref <Ivan_Herman#>.
 
-ld:Resource reg:xref :.
+<../media-types/application/ld+json#Resource>
+  reg:xref <Ivan_Herman#>.
 
-lpf:Resource reg:xref :.
+<../media-types/application/lpf+zip#Resource>
+  reg:xref <Ivan_Herman#>.
 
-pro:Resource reg:xref :.
+<../media-types/application/provenance+xml#Resource>
+  reg:xref <Ivan_Herman#>.
 
-vc:Resource reg:xref :.
+<../media-types/application/vc#Resource>
+  reg:xref <Ivan_Herman#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vc+cose#Resource>
+  reg:xref <Ivan_Herman#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vc+jwt#Resource>
+  reg:xref <Ivan_Herman#>.
 
-vp:Resource reg:xref :.
+<../media-types/application/vp#Resource>
+  reg:xref <Ivan_Herman#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vp+cose#Resource>
+  reg:xref <Ivan_Herman#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vp+jwt#Resource>
+  reg:xref <Ivan_Herman#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Ivan_Herman#>.
 
-pr:Resource reg:xref :.
+<../media-types/text/provenance-notation#Resource>
+  reg:xref <Ivan_Herman#>.
 
-:
-    reg:id "Ivan_Herman";
-    reg:name "Ivan Herman";
-    reg:updated "2024-12-09";
-    reg:uri "mailto:ivan&w3.org".
+<Ivan_Herman#>
+  reg:id "Ivan_Herman";
+  reg:name "Ivan Herman";
+  reg:updated "2024-12-09";
+  reg:uri "mailto:ivan&w3.org".

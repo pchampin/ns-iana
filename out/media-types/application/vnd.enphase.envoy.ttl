@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Chr: <../../person/Chris_Eich#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2014-11-10"^^XML:date;
-    reg:file [ reg:file "application/vnd.enphase.envoy"; reg:type "template" ];
-    reg:name "vnd.enphase.envoy";
-    reg:xref Chr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.enphase.envoy#Resource>.
 
+<vnd.enphase.envoy> a rdfs:Class;
+  dct:created "2014-11-10"^^xsd:date;
+  dct:identifier "application/vnd.enphase.envoy";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.enphase.envoy>;
+  rdfs:seeAlso <../../person/Chris_Eich#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.enphase.envoy#Resource>.
+
+<vnd.enphase.envoy#Resource>
+  dct:date "2014-11-10"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.enphase.envoy";
+      reg:type "template"];
+  reg:name "vnd.enphase.envoy";
+  reg:xref <../../person/Chris_Eich#>.

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Guy#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.powerbuilder6"; reg:type "template" ];
-    reg:name "vnd.powerbuilder6";
-    reg:xref D:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.powerbuilder6#Resource>.
 
+<vnd.powerbuilder6> a rdfs:Class;
+  dct:identifier "application/vnd.powerbuilder6";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.powerbuilder6>;
+  rdfs:seeAlso <../../person/David_Guy#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.powerbuilder6#Resource>.
+
+<vnd.powerbuilder6#Resource>
+  reg:file [
+      reg:file "application/vnd.powerbuilder6";
+      reg:type "template"];
+  reg:name "vnd.powerbuilder6";
+  reg:xref <../../person/David_Guy#>.

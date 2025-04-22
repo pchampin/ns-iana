@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Autom: <../../person/AutomationML_e.V.#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-07-20"^^XML:date;
-    reg:file
-    [ reg:file "application/automationml-amlx+zip"; reg:type "template" ];
-    reg:name "automationml-amlx+zip";
-    reg:xref Autom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <automationml-amlx+zip#Resource>.
 
+<automationml-amlx+zip> a rdfs:Class;
+  dct:created "2022-07-20"^^xsd:date;
+  dct:identifier "application/automationml-amlx+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/automationml-amlx+zip>;
+  rdfs:seeAlso <../../person/AutomationML_e.V.#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <automationml-amlx+zip#Resource>.
+
+<automationml-amlx+zip#Resource>
+  dct:date "2022-07-20"^^xsd:date;
+  reg:file [
+      reg:file "application/automationml-amlx+zip";
+      reg:type "template"];
+  reg:name "automationml-amlx+zip";
+  reg:xref <../../person/AutomationML_e.V.#>.

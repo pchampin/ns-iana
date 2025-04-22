@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steve_DiAcetis#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "audio/vnd.ms-playready.media.pya"; reg:type "template" ];
-    reg:name "vnd.ms-playready.media.pya";
-    reg:xref Ste:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.ms-playready.media.pya#Resource>.
 
+<vnd.ms-playready.media.pya> a rdfs:Class;
+  dct:identifier "audio/vnd.ms-playready.media.pya";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.ms-playready.media.pya>;
+  rdfs:seeAlso <../../person/Steve_DiAcetis#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.ms-playready.media.pya#Resource>.
+
+<vnd.ms-playready.media.pya#Resource>
+  reg:file [
+      reg:file "audio/vnd.ms-playready.media.pya";
+      reg:type "template"];
+  reg:name "vnd.ms-playready.media.pya";
+  reg:xref <../../person/Steve_DiAcetis#>.

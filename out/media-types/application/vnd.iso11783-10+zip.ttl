@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Fr: <../../person/Frank_Wiebeler#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2019-05-17"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.iso11783-10+zip"; reg:type "template" ];
-    reg:name "vnd.iso11783-10+zip";
-    reg:xref Fr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.iso11783-10+zip#Resource>.
 
+<vnd.iso11783-10+zip> a rdfs:Class;
+  dct:created "2019-05-17"^^xsd:date;
+  dct:identifier "application/vnd.iso11783-10+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.iso11783-10+zip>;
+  rdfs:seeAlso <../../person/Frank_Wiebeler#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.iso11783-10+zip#Resource>.
+
+<vnd.iso11783-10+zip#Resource>
+  dct:date "2019-05-17"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.iso11783-10+zip";
+      reg:type "template"];
+  reg:name "vnd.iso11783-10+zip";
+  reg:xref <../../person/Frank_Wiebeler#>.

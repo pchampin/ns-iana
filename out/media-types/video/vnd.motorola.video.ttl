@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Tom: <../../person/Tom_McGinty#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.motorola.video#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.motorola.video"; reg:type "template" ];
-    reg:name "vnd.motorola.video";
-    reg:xref Tom:.
+<vnd.motorola.video> a rdfs:Class;
+  dct:identifier "video/vnd.motorola.video";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.motorola.video>;
+  rdfs:seeAlso <../../person/Tom_McGinty#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.motorola.video#Resource>.
+
+<vnd.motorola.video#Resource>
+  reg:file [
+      reg:file "video/vnd.motorola.video";
+      reg:type "template"];
+  reg:name "vnd.motorola.video";
+  reg:xref <../../person/Tom_McGinty#>.

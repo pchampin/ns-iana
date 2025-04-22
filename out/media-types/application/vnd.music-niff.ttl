@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Tim: <../../person/Tim_Butler#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.music-niff"; reg:type "template" ];
-    reg:name "vnd.music-niff";
-    reg:xref Tim:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.music-niff#Resource>.
 
+<vnd.music-niff> a rdfs:Class;
+  dct:identifier "application/vnd.music-niff";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.music-niff>;
+  rdfs:seeAlso <../../person/Tim_Butler#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.music-niff#Resource>.
+
+<vnd.music-niff#Resource>
+  reg:file [
+      reg:file "application/vnd.music-niff";
+      reg:type "template"];
+  reg:name "vnd.music-niff";
+  reg:xref <../../person/Tim_Butler#>.

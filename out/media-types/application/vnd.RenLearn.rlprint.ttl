@@ -1,13 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix J: <../../person/James_Wick#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.RenLearn.rlprint"; reg:type "template" ];
-    reg:name "vnd.RenLearn.rlprint";
-    reg:updated "2018-09-25";
-    reg:xref J:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.RenLearn.rlprint#Resource>.
 
+<vnd.RenLearn.rlprint> a rdfs:Class;
+  dct:identifier "application/vnd.RenLearn.rlprint";
+  dct:modified "2018-09-25"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.RenLearn.rlprint>;
+  rdfs:seeAlso <../../person/James_Wick#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.RenLearn.rlprint#Resource>.
+
+<vnd.RenLearn.rlprint#Resource>
+  reg:file [
+      reg:file "application/vnd.RenLearn.rlprint";
+      reg:type "template"];
+  reg:name "vnd.RenLearn.rlprint";
+  reg:updated "2018-09-25";
+  reg:xref <../../person/James_Wick#>.

@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix HL7: <../../person/HL7#>.
-@prefix M: <../../person/Marc_Duteau#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-12-15"^^XML:date;
-    reg:file [ reg:file "application/hl7v2+xml"; reg:type "template" ];
-    reg:name "hl7v2+xml";
-    reg:updated "2022-04-13"^^XML:date;
-    reg:xref HL7:, M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <hl7v2+xml#Resource>.
 
+<hl7v2+xml> a rdfs:Class;
+  dct:created "2021-12-15"^^xsd:date;
+  dct:identifier "application/hl7v2+xml";
+  dct:modified "2022-04-13"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/hl7v2+xml>;
+  rdfs:seeAlso <../../person/HL7#>,
+    <../../person/Marc_Duteau#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <hl7v2+xml#Resource>.
+
+<hl7v2+xml#Resource>
+  dct:date "2021-12-15"^^xsd:date;
+  reg:file [
+      reg:file "application/hl7v2+xml";
+      reg:type "template"];
+  reg:name "hl7v2+xml";
+  reg:updated "2022-04-13"^^xsd:date;
+  reg:xref <../../person/HL7#>,
+    <../../person/Marc_Duteau#>.

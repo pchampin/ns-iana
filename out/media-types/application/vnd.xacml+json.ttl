@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix D: <../../person/David_Brossard#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.xacml+json"; reg:type "template" ];
-    reg:name "vnd.xacml+json";
-    reg:xref D:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.xacml+json#Resource>.
 
+<vnd.xacml+json> a rdfs:Class;
+  dct:identifier "application/vnd.xacml+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.xacml+json>;
+  rdfs:seeAlso <../../person/David_Brossard#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.xacml+json#Resource>.
+
+<vnd.xacml+json#Resource>
+  reg:file [
+      reg:file "application/vnd.xacml+json";
+      reg:type "template"];
+  reg:name "vnd.xacml+json";
+  reg:xref <../../person/David_Brossard#>.

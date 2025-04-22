@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix sti: <../media-types/application/stix+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix t: <../media-types/application/taxii+json#>.
-@prefix xli: <../media-types/application/xliff+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-sti:Resource reg:xref :.
+<../media-types/application/stix+json#Resource>
+  reg:xref <Chet_Ensign#>.
 
-t:Resource reg:xref :.
+<../media-types/application/taxii+json#Resource>
+  reg:xref <Chet_Ensign#>.
 
-xli:Resource reg:xref :.
+<../media-types/application/xliff+xml#Resource>
+  reg:xref <Chet_Ensign#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Chet_Ensign#>.
 
-:
-    reg:id "Chet_Ensign";
-    reg:name "Chet Ensign";
-    reg:updated "2020-04-23";
-    reg:uri "mailto:chet.ensign&oasis-open.org".
+<Chet_Ensign#>
+  reg:id "Chet_Ensign";
+  reg:name "Chet Ensign";
+  reg:updated "2020-04-23";
+  reg:uri "mailto:chet.ensign&oasis-open.org".

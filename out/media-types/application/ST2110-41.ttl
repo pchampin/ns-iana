@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix SMP: <../../person/SMPTE_Director_of_Standards_Development#>.
-@prefix SMPTE: <../../person/SMPTE#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-06-07"^^XML:date;
-    reg:file [ reg:file "application/ST2110-41"; reg:type "template" ];
-    reg:name "ST2110-41";
-    reg:xref SMP:, SMPTE:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <ST2110-41#Resource>.
 
+<ST2110-41> a rdfs:Class;
+  dct:created "2024-06-07"^^xsd:date;
+  dct:identifier "application/ST2110-41";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/ST2110-41>;
+  rdfs:seeAlso <../../person/SMPTE#>,
+    <../../person/SMPTE_Director_of_Standards_Development#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <ST2110-41#Resource>.
+
+<ST2110-41#Resource>
+  dct:date "2024-06-07"^^xsd:date;
+  reg:file [
+      reg:file "application/ST2110-41";
+      reg:type "template"];
+  reg:name "ST2110-41";
+  reg:xref <../../person/SMPTE#>,
+    <../../person/SMPTE_Director_of_Standards_Development#>.

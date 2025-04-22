@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bry: <../../person/Bryn_Rhodes#>.
-@prefix HL7: <../../person/HL7#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-11-23"^^XML:date;
-    reg:file [ reg:file "application/elm+xml"; reg:type "template" ];
-    reg:name "elm+xml";
-    reg:xref Bry:, HL7:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <elm+xml#Resource>.
 
+<elm+xml> a rdfs:Class;
+  dct:created "2020-11-23"^^xsd:date;
+  dct:identifier "application/elm+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/elm+xml>;
+  rdfs:seeAlso <../../person/Bryn_Rhodes#>,
+    <../../person/HL7#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <elm+xml#Resource>.
+
+<elm+xml#Resource>
+  dct:date "2020-11-23"^^xsd:date;
+  reg:file [
+      reg:file "application/elm+xml";
+      reg:type "template"];
+  reg:name "elm+xml";
+  reg:xref <../../person/Bryn_Rhodes#>,
+    <../../person/HL7#>.

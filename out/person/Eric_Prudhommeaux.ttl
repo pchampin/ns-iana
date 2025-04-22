@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix n: <../media-types/application/n-quads#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../media-types/application/n-triples#>.
-@prefix w: <../media-types/application/wasm#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n3: <../media-types/text/n3#>.
-@prefix shex: <../media-types/text/shex#>.
-@prefix tur: <../media-types/text/turtle#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n:Resource reg:xref :.
+<../media-types/application/n-quads#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/n-triples#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-w:Resource reg:xref :.
+<../media-types/application/wasm#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Eric_Prudhommeaux#>.
 
-n3:Resource reg:xref :.
+<../media-types/text/n3#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-shex:Resource reg:xref :.
+<../media-types/text/shex#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-tur:Resource reg:xref :.
+<../media-types/text/turtle#Resource>
+  reg:xref <Eric_Prudhommeaux#>.
 
-:
-    reg:id "Eric_Prudhommeaux";
-    reg:name "Eric Prud'hommeaux";
-    reg:updated "2021-05-10";
-    reg:uri "mailto:eric at w3.org".
+<Eric_Prudhommeaux#>
+  reg:id "Eric_Prudhommeaux";
+  reg:name "Eric Prud'hommeaux";
+  reg:updated "2021-05-10";
+  reg:uri "mailto:eric at w3.org".

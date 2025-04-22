@@ -1,17 +1,29 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix C: <../../person/Carolyn_Hull#>.
-@prefix DIC: <../../person/DICOM_Standard_Committee#>.
-@prefix DI: <../../person/DICOM_WG_17#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <obj#Resource>.
 
-:Resource
-    terms:date "2020-02-13"^^XML:date;
-    reg:file [ reg:file "model/obj"; reg:type "template" ];
-    reg:name "obj";
-    reg:updated "2022-09-20"^^XML:date;
-    reg:xref C:, DIC:, DI:.
+<obj> a rdfs:Class;
+  dct:created "2020-02-13"^^xsd:date;
+  dct:identifier "model/obj";
+  dct:modified "2022-09-20"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/obj>;
+  rdfs:seeAlso <../../person/Carolyn_Hull#>,
+    <../../person/DICOM_Standard_Committee#>,
+    <../../person/DICOM_WG_17#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <obj#Resource>.
+
+<obj#Resource>
+  dct:date "2020-02-13"^^xsd:date;
+  reg:file [
+      reg:file "model/obj";
+      reg:type "template"];
+  reg:name "obj";
+  reg:updated "2022-09-20"^^xsd:date;
+  reg:xref <../../person/Carolyn_Hull#>,
+    <../../person/DICOM_Standard_Committee#>,
+    <../../person/DICOM_WG_17#>.

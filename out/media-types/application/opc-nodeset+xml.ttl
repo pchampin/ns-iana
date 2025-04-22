@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OPC: <../../person/OPC_Foundation#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-09-01"^^XML:date;
-    reg:file [ reg:file "application/opc-nodeset+xml"; reg:type "template" ];
-    reg:name "opc-nodeset+xml";
-    reg:xref OPC:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <opc-nodeset+xml#Resource>.
 
+<opc-nodeset+xml> a rdfs:Class;
+  dct:created "2020-09-01"^^xsd:date;
+  dct:identifier "application/opc-nodeset+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/opc-nodeset+xml>;
+  rdfs:seeAlso <../../person/OPC_Foundation#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <opc-nodeset+xml#Resource>.
+
+<opc-nodeset+xml#Resource>
+  dct:date "2020-09-01"^^xsd:date;
+  reg:file [
+      reg:file "application/opc-nodeset+xml";
+      reg:type "template"];
+  reg:name "opc-nodeset+xml";
+  reg:xref <../../person/OPC_Foundation#>.

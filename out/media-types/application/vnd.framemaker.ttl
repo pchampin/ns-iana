@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mik: <../../person/Mike_Wexler#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.framemaker"; reg:type "template" ];
-    reg:name "vnd.framemaker";
-    reg:xref Mik:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.framemaker#Resource>.
 
+<vnd.framemaker> a rdfs:Class;
+  dct:identifier "application/vnd.framemaker";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.framemaker>;
+  rdfs:seeAlso <../../person/Mike_Wexler#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.framemaker#Resource>.
+
+<vnd.framemaker#Resource>
+  reg:file [
+      reg:file "application/vnd.framemaker";
+      reg:type "template"];
+  reg:name "vnd.framemaker";
+  reg:xref <../../person/Mike_Wexler#>.

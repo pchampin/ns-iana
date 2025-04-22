@@ -1,35 +1,38 @@
-@prefix : <#>.
-@prefix m: <../media-types/application/macwriteii#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix msw: <../media-types/application/msword#>.
-@prefix rtf: <../media-types/application/rtf#>.
-@prefix wor: <../media-types/application/wordperfect5.1#>.
-@prefix zip: <../media-types/application/zip#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix rt: <../media-types/text/rtf#>.
-@prefix t: <../media-types/text/tab-separated-values#>.
-@prefix qui: <../media-types/video/quicktime#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-m:Resource reg:xref :.
+<../media-types/application/macwriteii#Resource>
+  reg:xref <Paul_Lindner#>.
 
-msw:Resource reg:xref :.
+<../media-types/application/msword#Resource>
+  reg:xref <Paul_Lindner#>.
 
-rtf:Resource reg:xref :.
+<../media-types/application/rtf#Resource>
+  reg:xref <Paul_Lindner#>.
 
-wor:Resource reg:xref :.
+<../media-types/application/wordperfect5.1#Resource>
+  reg:xref <Paul_Lindner#>.
 
-zip:Resource reg:xref :.
+<../media-types/application/zip#Resource>
+  reg:xref <Paul_Lindner#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Paul_Lindner#>.
 
-rt:Resource reg:xref :.
+<../media-types/text/rtf#Resource>
+  reg:xref <Paul_Lindner#>.
 
-t:Resource reg:xref :.
+<../media-types/text/tab-separated-values#Resource>
+  reg:xref <Paul_Lindner#>.
 
-qui:Resource reg:xref :.
+<../media-types/video/quicktime#Resource>
+  reg:xref <Paul_Lindner#>.
 
-:
-    reg:id "Paul_Lindner";
-    reg:name "Paul Lindner";
-    reg:updated "1993-06-19";
-    reg:uri "mailto:lindner&mudhoney.micro.umn.edu".
+<Paul_Lindner#>
+  reg:id "Paul_Lindner";
+  reg:name "Paul Lindner";
+  reg:updated "1993-06-19";
+  reg:uri "mailto:lindner&mudhoney.micro.umn.edu".

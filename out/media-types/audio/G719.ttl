@@ -1,11 +1,24 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/G719"; reg:type "template" ];
-    reg:name "G719";
-    reg:xref html:rfc5404, [ reg:data "3245"; reg:type "rfc-errata" ].
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <G719#Resource>.
 
+<G719> a rdfs:Class;
+  dct:identifier "audio/G719";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/G719>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc5404/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <G719#Resource>.
+
+<G719#Resource>
+  reg:file [
+      reg:file "audio/G719";
+      reg:type "template"];
+  reg:name "G719";
+  reg:xref [
+      reg:data "3245";
+      reg:type "rfc-errata"],
+    <https://tools.ietf.org/html/rfc5404>.

@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix C2PA: <../../person/C2PA#>.
-@prefix Leon: <../../person/Leonard_Rosenthol#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2023-09-25"^^XML:date;
-    reg:file [ reg:file "application/c2pa"; reg:type "template" ];
-    reg:name "c2pa";
-    reg:xref C2PA:, Leon:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <c2pa#Resource>.
 
+<c2pa> a rdfs:Class;
+  dct:created "2023-09-25"^^xsd:date;
+  dct:identifier "application/c2pa";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/c2pa>;
+  rdfs:seeAlso <../../person/C2PA#>,
+    <../../person/Leonard_Rosenthol#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <c2pa#Resource>.
+
+<c2pa#Resource>
+  dct:date "2023-09-25"^^xsd:date;
+  reg:file [
+      reg:file "application/c2pa";
+      reg:type "template"];
+  reg:name "c2pa";
+  reg:xref <../../person/C2PA#>,
+    <../../person/Leonard_Rosenthol#>.

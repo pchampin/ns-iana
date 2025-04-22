@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Thom: <../../person/Thomas_Belling#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.3gpp.iufp"; reg:type "template" ];
-    reg:name "vnd.3gpp.iufp";
-    reg:xref Thom:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.3gpp.iufp#Resource>.
 
+<vnd.3gpp.iufp> a rdfs:Class;
+  dct:identifier "audio/vnd.3gpp.iufp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.3gpp.iufp>;
+  rdfs:seeAlso <../../person/Thomas_Belling#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp.iufp#Resource>.
+
+<vnd.3gpp.iufp#Resource>
+  reg:file [
+      reg:file "audio/vnd.3gpp.iufp";
+      reg:type "template"];
+  reg:name "vnd.3gpp.iufp";
+  reg:xref <../../person/Thomas_Belling#>.

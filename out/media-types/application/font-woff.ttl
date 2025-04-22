@@ -1,13 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix W3C: <../../person/W3C#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/font-woff"; reg:type "template" ];
-    reg:name "font-woff - DEPRECATED in favor of font/woff";
-    reg:updated "2016-12-21";
-    reg:xref W3C:, html:rfc8081.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <font-woff#Resource>.
 
+<font-woff> a rdfs:Class;
+  dct:identifier "application/font-woff";
+  dct:modified "2016-12-21"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/font-woff>;
+  rdfs:seeAlso <../../person/W3C#>,
+    <https://datatracker.ietf.org/doc/rfc8081/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <font-woff#Resource>.
+
+<font-woff#Resource>
+  reg:file [
+      reg:file "application/font-woff";
+      reg:type "template"];
+  reg:name "font-woff - DEPRECATED in favor of font/woff";
+  reg:updated "2016-12-21";
+  reg:xref <../../person/W3C#>,
+    <https://tools.ietf.org/html/rfc8081>.

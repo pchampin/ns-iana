@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Der: <../../person/Derek_Smith#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.fsc.weblaunch"; reg:type "template" ];
-    reg:name "vnd.fsc.weblaunch";
-    reg:xref Der:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.fsc.weblaunch#Resource>.
 
+<vnd.fsc.weblaunch> a rdfs:Class;
+  dct:identifier "application/vnd.fsc.weblaunch";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fsc.weblaunch>;
+  rdfs:seeAlso <../../person/Derek_Smith#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.fsc.weblaunch#Resource>.
+
+<vnd.fsc.weblaunch#Resource>
+  reg:file [
+      reg:file "application/vnd.fsc.weblaunch";
+      reg:type "template"];
+  reg:name "vnd.fsc.weblaunch";
+  reg:xref <../../person/Derek_Smith#>.

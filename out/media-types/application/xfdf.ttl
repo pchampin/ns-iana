@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bet: <../../person/Betsy_Fanning#>.
-@prefix ISO: <../../person/ISO-TC_171-SC_2#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-04-29"^^XML:date;
-    reg:file [ reg:file "application/xfdf"; reg:type "template" ];
-    reg:name "xfdf";
-    reg:xref Bet:, ISO:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <xfdf#Resource>.
 
+<xfdf> a rdfs:Class;
+  dct:created "2022-04-29"^^xsd:date;
+  dct:identifier "application/xfdf";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/xfdf>;
+  rdfs:seeAlso <../../person/Betsy_Fanning#>,
+    <../../person/ISO-TC_171-SC_2#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <xfdf#Resource>.
+
+<xfdf#Resource>
+  dct:date "2022-04-29"^^xsd:date;
+  reg:file [
+      reg:file "application/xfdf";
+      reg:type "template"];
+  reg:name "xfdf";
+  reg:xref <../../person/Betsy_Fanning#>,
+    <../../person/ISO-TC_171-SC_2#>.

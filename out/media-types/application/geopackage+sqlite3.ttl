@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OGC: <../../person/OGC#>.
-@prefix Sco: <../../person/Scott_Simmons#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-08-10"^^XML:date;
-    reg:file [ reg:file "application/geopackage+sqlite3"; reg:type "template" ];
-    reg:name "geopackage+sqlite3";
-    reg:xref OGC:, Sco:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <geopackage+sqlite3#Resource>.
 
+<geopackage+sqlite3> a rdfs:Class;
+  dct:created "2018-08-10"^^xsd:date;
+  dct:identifier "application/geopackage+sqlite3";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/geopackage+sqlite3>;
+  rdfs:seeAlso <../../person/OGC#>,
+    <../../person/Scott_Simmons#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <geopackage+sqlite3#Resource>.
+
+<geopackage+sqlite3#Resource>
+  dct:date "2018-08-10"^^xsd:date;
+  reg:file [
+      reg:file "application/geopackage+sqlite3";
+      reg:type "template"];
+  reg:name "geopackage+sqlite3";
+  reg:xref <../../person/OGC#>,
+    <../../person/Scott_Simmons#>.

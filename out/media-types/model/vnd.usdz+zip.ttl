@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Seb: <../../person/Sebastian_Grassia#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <vnd.usdz+zip#Resource>.
 
-:Resource
-    terms:date "2018-06-01"^^XML:date;
-    reg:file [ reg:file "model/vnd.usdz+zip"; reg:type "template" ];
-    reg:name "vnd.usdz+zip";
-    reg:xref Seb:.
+<vnd.usdz+zip> a rdfs:Class;
+  dct:created "2018-06-01"^^xsd:date;
+  dct:identifier "model/vnd.usdz+zip";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/vnd.usdz+zip>;
+  rdfs:seeAlso <../../person/Sebastian_Grassia#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.usdz+zip#Resource>.
+
+<vnd.usdz+zip#Resource>
+  dct:date "2018-06-01"^^xsd:date;
+  reg:file [
+      reg:file "model/vnd.usdz+zip";
+      reg:type "template"];
+  reg:name "vnd.usdz+zip";
+  reg:xref <../../person/Sebastian_Grassia#>.

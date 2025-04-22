@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Seq: <../../person/Sequence_Ontology#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <gff3#Resource>.
 
-:Resource
-    terms:date "2020-08-17"^^XML:date;
-    reg:file [ reg:file "text/gff3"; reg:type "template" ];
-    reg:name "gff3";
-    reg:xref Seq:.
+<gff3> a rdfs:Class;
+  dct:created "2020-08-17"^^xsd:date;
+  dct:identifier "text/gff3";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/gff3>;
+  rdfs:seeAlso <../../person/Sequence_Ontology#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <gff3#Resource>.
+
+<gff3#Resource>
+  dct:date "2020-08-17"^^xsd:date;
+  reg:file [
+      reg:file "text/gff3";
+      reg:type "template"];
+  reg:name "gff3";
+  reg:xref <../../person/Sequence_Ontology#>.

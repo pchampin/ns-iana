@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix spd: <../media-types/application/spdx+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix spdx: <../media-types/text/spdx#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-spd:Resource reg:xref :.
+<../media-types/application/spdx+json#Resource>
+  reg:xref <Linux_Foundation#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Linux_Foundation#>.
 
-spdx:Resource reg:xref :.
+<../media-types/text/spdx#Resource>
+  reg:xref <Linux_Foundation#>.
 
-:
-    reg:id "Linux_Foundation";
-    reg:name "Linux Foundation";
-    reg:updated "2021-11-03";
-    reg:uri "mailto:kstewart&linuxfoundation.org".
+<Linux_Foundation#>
+  reg:id "Linux_Foundation";
+  reg:name "Linux Foundation";
+  reg:updated "2021-11-03";
+  reg:uri "mailto:kstewart&linuxfoundation.org".

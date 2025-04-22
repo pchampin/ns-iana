@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Mich: <../../person/Michael_J._Donahue#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file
-    [ reg:file "application/vnd.kodak-descriptor"; reg:type "template" ];
-    reg:name "vnd.kodak-descriptor";
-    reg:xref Mich:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.kodak-descriptor#Resource>.
 
+<vnd.kodak-descriptor> a rdfs:Class;
+  dct:identifier "application/vnd.kodak-descriptor";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.kodak-descriptor>;
+  rdfs:seeAlso <../../person/Michael_J._Donahue#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.kodak-descriptor#Resource>.
+
+<vnd.kodak-descriptor#Resource>
+  reg:file [
+      reg:file "application/vnd.kodak-descriptor";
+      reg:type "template"];
+  reg:name "vnd.kodak-descriptor";
+  reg:xref <../../person/Michael_J._Donahue#>.

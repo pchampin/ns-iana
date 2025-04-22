@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <parameters#Resource>.
 
-:Resource
-    terms:date "2014-02-21"^^XML:date;
-    reg:file [ reg:file "text/parameters"; reg:type "template" ];
-    reg:name "parameters";
-    reg:xref html:rfc7826.
+<parameters> a rdfs:Class;
+  dct:created "2014-02-21"^^xsd:date;
+  dct:identifier "text/parameters";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/parameters>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7826/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <parameters#Resource>.
+
+<parameters#Resource>
+  dct:date "2014-02-21"^^xsd:date;
+  reg:file [
+      reg:file "text/parameters";
+      reg:type "template"];
+  reg:name "parameters";
+  reg:xref <https://tools.ietf.org/html/rfc7826>.

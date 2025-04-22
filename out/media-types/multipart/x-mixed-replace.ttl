@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Rob: <../../person/Robin_Berjon#>.
-@prefix W3C: <../../person/W3C#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:multipart reg:record :Resource.
+<../media-types.ttl#multipart>
+  reg:record <x-mixed-replace#Resource>.
 
-:Resource
-    terms:date "2014-08-27"^^XML:date;
-    reg:file [ reg:file "multipart/x-mixed-replace"; reg:type "template" ];
-    reg:name "x-mixed-replace";
-    reg:xref Rob:, W3C:.
+<x-mixed-replace> a rdfs:Class;
+  dct:created "2014-08-27"^^xsd:date;
+  dct:identifier "multipart/x-mixed-replace";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/multipart/x-mixed-replace>;
+  rdfs:seeAlso <../../person/Robin_Berjon#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <x-mixed-replace#Resource>.
+
+<x-mixed-replace#Resource>
+  dct:date "2014-08-27"^^xsd:date;
+  reg:file [
+      reg:file "multipart/x-mixed-replace";
+      reg:type "template"];
+  reg:name "x-mixed-replace";
+  reg:xref <../../person/Robin_Berjon#>,
+    <../../person/W3C#>.

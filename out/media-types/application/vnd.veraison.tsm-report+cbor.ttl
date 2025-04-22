@@ -1,18 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Thom: <../../person/Thomas_Fossati#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2024-12-24"^^XML:date;
-    reg:file
-            [
-                reg:file "application/vnd.veraison.tsm-report+cbor";
-                reg:type "template"
-            ];
-    reg:name "vnd.veraison.tsm-report+cbor";
-    reg:xref Thom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.veraison.tsm-report+cbor#Resource>.
 
+<vnd.veraison.tsm-report+cbor> a rdfs:Class;
+  dct:created "2024-12-24"^^xsd:date;
+  dct:identifier "application/vnd.veraison.tsm-report+cbor";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.veraison.tsm-report+cbor>;
+  rdfs:seeAlso <../../person/Thomas_Fossati#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.veraison.tsm-report+cbor#Resource>.
+
+<vnd.veraison.tsm-report+cbor#Resource>
+  dct:date "2024-12-24"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.veraison.tsm-report+cbor";
+      reg:type "template"];
+  reg:name "vnd.veraison.tsm-report+cbor";
+  reg:xref <../../person/Thomas_Fossati#>.

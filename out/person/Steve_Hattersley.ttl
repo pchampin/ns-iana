@@ -1,38 +1,41 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dolby.mobile.1#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dolby.mobile.2#>.
-@prefix v: <../media-types/audio/vnd.dolby.heaac.1#>.
-@prefix n1: <../media-types/audio/vnd.dolby.heaac.2#>.
-@prefix n2: <../media-types/audio/vnd.dolby.mps#>.
-@prefix n3: <../media-types/audio/vnd.dolby.pl2#>.
-@prefix n4: <../media-types/audio/vnd.dolby.pl2x#>.
-@prefix n5: <../media-types/audio/vnd.dolby.pl2z#>.
-@prefix n6: <../media-types/audio/vnd.dolby.pulse.1#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.dolby.mobile.1#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.dolby.mobile.2#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-v:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.heaac.1#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n1:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.heaac.2#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n2:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.mps#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n3:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.pl2#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n4:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.pl2x#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n5:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.pl2z#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-n6:Resource reg:xref :.
+<../media-types/audio/vnd.dolby.pulse.1#Resource>
+  reg:xref <Steve_Hattersley#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Steve_Hattersley#>.
 
-:
-    reg:id "Steve_Hattersley";
-    reg:name "Steve Hattersley";
-    reg:updated "2009-06-02";
-    reg:uri "mailto:steve.hattersley&dolby.com".
+<Steve_Hattersley#>
+  reg:id "Steve_Hattersley";
+  reg:name "Steve Hattersley";
+  reg:updated "2009-06-02";
+  reg:uri "mailto:steve.hattersley&dolby.com".

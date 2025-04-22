@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/mpeg4-iod-xmt"; reg:type "template" ];
-    reg:name "mpeg4-iod-xmt";
-    reg:xref html:rfc4337.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <mpeg4-iod-xmt#Resource>.
 
+<mpeg4-iod-xmt> a rdfs:Class;
+  dct:identifier "application/mpeg4-iod-xmt";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/mpeg4-iod-xmt>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc4337/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <mpeg4-iod-xmt#Resource>.
+
+<mpeg4-iod-xmt#Resource>
+  reg:file [
+      reg:file "application/mpeg4-iod-xmt";
+      reg:type "template"];
+  reg:name "mpeg4-iod-xmt";
+  reg:xref <https://tools.ietf.org/html/rfc4337>.

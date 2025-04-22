@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/scvp-cv-response"; reg:type "template" ];
-    reg:name "scvp-cv-response";
-    reg:xref html:rfc5055.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <scvp-cv-response#Resource>.
 
+<scvp-cv-response> a rdfs:Class;
+  dct:identifier "application/scvp-cv-response";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/scvp-cv-response>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc5055/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <scvp-cv-response#Resource>.
+
+<scvp-cv-response#Resource>
+  reg:file [
+      reg:file "application/scvp-cv-response";
+      reg:type "template"];
+  reg:name "scvp-cv-response";
+  reg:xref <https://tools.ietf.org/html/rfc5055>.

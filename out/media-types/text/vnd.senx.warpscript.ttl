@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Pie: <../../person/Pierre_Papin#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:text reg:record :Resource.
+<../media-types.ttl#text>
+  reg:record <vnd.senx.warpscript#Resource>.
 
-:Resource
-    terms:date "2018-11-21"^^XML:date;
-    reg:file [ reg:file "text/vnd.senx.warpscript"; reg:type "template" ];
-    reg:name "vnd.senx.warpscript";
-    reg:xref Pie:.
+<vnd.senx.warpscript> a rdfs:Class;
+  dct:created "2018-11-21"^^xsd:date;
+  dct:identifier "text/vnd.senx.warpscript";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.senx.warpscript>;
+  rdfs:seeAlso <../../person/Pierre_Papin#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.senx.warpscript#Resource>.
+
+<vnd.senx.warpscript#Resource>
+  dct:date "2018-11-21"^^xsd:date;
+  reg:file [
+      reg:file "text/vnd.senx.warpscript";
+      reg:type "template"];
+  reg:name "vnd.senx.warpscript";
+  reg:xref <../../person/Pierre_Papin#>.

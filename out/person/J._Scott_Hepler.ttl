@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.trueapp#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.trueapp#Resource>
+  reg:xref <J._Scott_Hepler#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <J._Scott_Hepler#>.
 
-:
-    reg:id "J._Scott_Hepler";
-    reg:name "J. Scott Hepler";
-    reg:updated "2000-05-20";
-    reg:uri "mailto:scott&truebasic.com".
+<J._Scott_Hepler#>
+  reg:id "J._Scott_Hepler";
+  reg:name "J. Scott Hepler";
+  reg:updated "2000-05-20";
+  reg:uri "mailto:scott&truebasic.com".

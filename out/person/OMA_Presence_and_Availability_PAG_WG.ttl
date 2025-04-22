@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oma.group-usage-list+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.oma.xcap-directory+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oma.group-usage-list+xml#Resource>
+  reg:xref <OMA_Presence_and_Availability_PAG_WG#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.oma.xcap-directory+xml#Resource>
+  reg:xref <OMA_Presence_and_Availability_PAG_WG#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <OMA_Presence_and_Availability_PAG_WG#>.
 
-:
-    reg:id "OMA_Presence_and_Availability_PAG_WG";
-    reg:name "OMA Presence and Availability (PAG) Working Group";
-    reg:updated "2006-09-14";
-    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+<OMA_Presence_and_Availability_PAG_WG#>
+  reg:id "OMA_Presence_and_Availability_PAG_WG";
+  reg:name "OMA Presence and Availability (PAG) Working Group";
+  reg:updated "2006-09-14";
+  reg:uri "mailto:technical-comments&mail.openmobilealliance.org".

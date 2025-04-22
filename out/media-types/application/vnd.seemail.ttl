@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ste: <../../person/Steve_Webb#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.seemail"; reg:type "template" ];
-    reg:name "vnd.seemail";
-    reg:xref Ste:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.seemail#Resource>.
 
+<vnd.seemail> a rdfs:Class;
+  dct:identifier "application/vnd.seemail";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.seemail>;
+  rdfs:seeAlso <../../person/Steve_Webb#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.seemail#Resource>.
+
+<vnd.seemail#Resource>
+  reg:file [
+      reg:file "application/vnd.seemail";
+      reg:type "template"];
+  reg:name "vnd.seemail";
+  reg:xref <../../person/Steve_Webb#>.

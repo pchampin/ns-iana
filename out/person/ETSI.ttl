@@ -1,17 +1,21 @@
-@prefix : <#>.
-@prefix TET: <../media-types/application/TETRA_ISI#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix TE: <../media-types/audio/TETRA_ACELP_BB#>.
-@prefix TETR: <../media-types/audio/TETRA_ACELP#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-TET:Resource reg:xref :.
+<../media-types/application/TETRA_ISI#Resource>
+  reg:xref <ETSI#>.
 
-TE:Resource reg:xref :.
+<../media-types/audio/TETRA_ACELP#Resource>
+  reg:xref <ETSI#>.
 
-TETR:Resource reg:xref :.
+<../media-types/audio/TETRA_ACELP_BB#Resource>
+  reg:xref <ETSI#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ETSI#>.
 
-: reg:id "ETSI"; reg:name "ETSI".
-
+<ETSI#>
+  reg:id "ETSI";
+  reg:name "ETSI".

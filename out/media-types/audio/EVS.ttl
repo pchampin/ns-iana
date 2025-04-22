@@ -1,16 +1,27 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix Kyu: <../../person/Kyunghun_Jung#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-12-21"^^XML:date;
-    reg:file [ reg:file "audio/EVS"; reg:type "template" ];
-    reg:name "EVS";
-    reg:updated "2017-12-04"^^XML:date;
-    reg:xref n1:, Kyu:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <EVS#Resource>.
 
+<EVS> a rdfs:Class;
+  dct:created "2015-12-21"^^xsd:date;
+  dct:identifier "audio/EVS";
+  dct:modified "2017-12-04"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/EVS>;
+  rdfs:seeAlso <../../person/Kyunghun_Jung#>,
+    <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <EVS#Resource>.
+
+<EVS#Resource>
+  dct:date "2015-12-21"^^xsd:date;
+  reg:file [
+      reg:file "audio/EVS";
+      reg:type "template"];
+  reg:name "EVS";
+  reg:updated "2017-12-04"^^xsd:date;
+  reg:xref <../../person/Kyunghun_Jung#>,
+    <../../person/_3GPP#>.

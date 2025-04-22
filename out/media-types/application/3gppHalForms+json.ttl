@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix Ulr: <../../person/Ulrich_Wiehe#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-28"^^XML:date;
-    reg:file [ reg:file "application/3gppHalForms+json"; reg:type "template" ];
-    reg:name "3gppHalForms+json";
-    reg:xref n1:, Ulr:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <3gppHalForms+json#Resource>.
 
+<3gppHalForms+json> a rdfs:Class;
+  dct:created "2021-04-28"^^xsd:date;
+  dct:identifier "application/3gppHalForms+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/3gppHalForms+json>;
+  rdfs:seeAlso <../../person/Ulrich_Wiehe#>,
+    <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <3gppHalForms+json#Resource>.
+
+<3gppHalForms+json#Resource>
+  dct:date "2021-04-28"^^xsd:date;
+  reg:file [
+      reg:file "application/3gppHalForms+json";
+      reg:type "template"];
+  reg:name "3gppHalForms+json";
+  reg:xref <../../person/Ulrich_Wiehe#>,
+    <../../person/_3GPP#>.

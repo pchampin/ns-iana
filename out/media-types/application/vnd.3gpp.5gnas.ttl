@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n1: <../../person/_3GPP#>.
-@prefix Jon: <../../person/Jones_Lu_Yunjie#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2021-04-09"^^XML:date;
-    reg:file [ reg:file "application/vnd.3gpp.5gnas"; reg:type "template" ];
-    reg:name "vnd.3gpp.5gnas";
-    reg:xref n1:, Jon:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.3gpp.5gnas#Resource>.
 
+<vnd.3gpp.5gnas> a rdfs:Class;
+  dct:created "2021-04-09"^^xsd:date;
+  dct:identifier "application/vnd.3gpp.5gnas";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.3gpp.5gnas>;
+  rdfs:seeAlso <../../person/Jones_Lu_Yunjie#>,
+    <../../person/_3GPP#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.3gpp.5gnas#Resource>.
+
+<vnd.3gpp.5gnas#Resource>
+  dct:date "2021-04-09"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.3gpp.5gnas";
+      reg:type "template"];
+  reg:name "vnd.3gpp.5gnas";
+  reg:xref <../../person/Jones_Lu_Yunjie#>,
+    <../../person/_3GPP#>.

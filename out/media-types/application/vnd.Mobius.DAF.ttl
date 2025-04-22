@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix All: <../../person/Allen_K._Kabayama#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.Mobius.DAF"; reg:type "template" ];
-    reg:name "vnd.Mobius.DAF";
-    reg:xref All:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.Mobius.DAF#Resource>.
 
+<vnd.Mobius.DAF> a rdfs:Class;
+  dct:identifier "application/vnd.Mobius.DAF";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.Mobius.DAF>;
+  rdfs:seeAlso <../../person/Allen_K._Kabayama#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.Mobius.DAF#Resource>.
+
+<vnd.Mobius.DAF#Resource>
+  reg:file [
+      reg:file "application/vnd.Mobius.DAF";
+      reg:type "template"];
+  reg:name "vnd.Mobius.DAF";
+  reg:xref <../../person/Allen_K._Kabayama#>.

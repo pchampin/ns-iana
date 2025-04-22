@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:multipart reg:record :Resource.
+<../media-types.ttl#multipart>
+  reg:record <multilingual#Resource>.
 
-:Resource
-    terms:date "2017-08-30"^^XML:date;
-    reg:file [ reg:file "multipart/multilingual"; reg:type "template" ];
-    reg:name "multilingual";
-    reg:xref html:rfc8255.
+<multilingual> a rdfs:Class;
+  dct:created "2017-08-30"^^xsd:date;
+  dct:identifier "multipart/multilingual";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/multipart/multilingual>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc8255/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <multilingual#Resource>.
+
+<multilingual#Resource>
+  dct:date "2017-08-30"^^xsd:date;
+  reg:file [
+      reg:file "multipart/multilingual";
+      reg:type "template"];
+  reg:name "multilingual";
+  reg:xref <https://tools.ietf.org/html/rfc8255>.

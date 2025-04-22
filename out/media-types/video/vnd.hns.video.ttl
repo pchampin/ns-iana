@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Sw: <../../person/Swaminathan#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.hns.video#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.hns.video"; reg:type "template" ];
-    reg:name "vnd.hns.video";
-    reg:xref Sw:.
+<vnd.hns.video> a rdfs:Class;
+  dct:identifier "video/vnd.hns.video";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.hns.video>;
+  rdfs:seeAlso <../../person/Swaminathan#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.hns.video#Resource>.
+
+<vnd.hns.video#Resource>
+  reg:file [
+      reg:file "video/vnd.hns.video";
+      reg:type "template"];
+  reg:name "vnd.hns.video";
+  reg:xref <../../person/Swaminathan#>.

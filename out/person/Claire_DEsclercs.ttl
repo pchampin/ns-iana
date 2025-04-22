@@ -1,44 +1,47 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oipf.contentaccessdownload+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.oipf.contentaccessstreaming+xml#>.
-@prefix v: <../media-types/application/vnd.oipf.cspg-hexbinary#>.
-@prefix n1: <../media-types/application/vnd.oipf.dae.svg+xml#>.
-@prefix n2: <../media-types/application/vnd.oipf.dae.xhtml+xml#>.
-@prefix n3: <../media-types/application/vnd.oipf.mippvcontrolmessage+xml#>.
-@prefix n4: <../media-types/application/vnd.oipf.pae.gem#>.
-@prefix n5: <../media-types/application/vnd.oipf.spdiscovery+xml#>.
-@prefix n6: <../media-types/application/vnd.oipf.spdlist+xml#>.
-@prefix n7: <../media-types/application/vnd.oipf.ueprofile+xml#>.
-@prefix n8: <../media-types/application/vnd.oipf.userprofile+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oipf.contentaccessdownload+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.oipf.contentaccessstreaming+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-v:Resource reg:xref :.
+<../media-types/application/vnd.oipf.cspg-hexbinary#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/vnd.oipf.dae.svg+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/vnd.oipf.dae.xhtml+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/vnd.oipf.mippvcontrolmessage+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/vnd.oipf.pae.gem#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/vnd.oipf.spdiscovery+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n6:Resource reg:xref :.
+<../media-types/application/vnd.oipf.spdlist+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n7:Resource reg:xref :.
+<../media-types/application/vnd.oipf.ueprofile+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-n8:Resource reg:xref :.
+<../media-types/application/vnd.oipf.userprofile+xml#Resource>
+  reg:xref <Claire_DEsclercs#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Claire_DEsclercs#>.
 
-:
-    reg:id "Claire_DEsclercs";
-    reg:name "Claire D'Esclercs";
-    reg:updated "2011-02-25";
-    reg:uri "mailto:contact&oipf.tv".
+<Claire_DEsclercs#>
+  reg:id "Claire_DEsclercs";
+  reg:name "Claire D'Esclercs";
+  reg:updated "2011-02-25";
+  reg:uri "mailto:contact&oipf.tv".

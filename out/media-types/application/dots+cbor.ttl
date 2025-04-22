@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-01-16"^^XML:date;
-    reg:file [ reg:file "application/dots+cbor"; reg:type "template" ];
-    reg:name "dots+cbor";
-    reg:updated "2021-06-11"^^XML:date;
-    reg:xref html:rfc9132.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <dots+cbor#Resource>.
 
+<dots+cbor> a rdfs:Class;
+  dct:created "2020-01-16"^^xsd:date;
+  dct:identifier "application/dots+cbor";
+  dct:modified "2021-06-11"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/dots+cbor>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9132/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <dots+cbor#Resource>.
+
+<dots+cbor#Resource>
+  dct:date "2020-01-16"^^xsd:date;
+  reg:file [
+      reg:file "application/dots+cbor";
+      reg:type "template"];
+  reg:name "dots+cbor";
+  reg:updated "2021-06-11"^^xsd:date;
+  reg:xref <https://tools.ietf.org/html/rfc9132>.

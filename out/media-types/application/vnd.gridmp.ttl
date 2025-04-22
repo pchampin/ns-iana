@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jef: <../../person/Jeff_Lawson#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.gridmp"; reg:type "template" ];
-    reg:name "vnd.gridmp";
-    reg:xref Jef:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.gridmp#Resource>.
 
+<vnd.gridmp> a rdfs:Class;
+  dct:identifier "application/vnd.gridmp";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.gridmp>;
+  rdfs:seeAlso <../../person/Jeff_Lawson#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.gridmp#Resource>.
+
+<vnd.gridmp#Resource>
+  reg:file [
+      reg:file "application/vnd.gridmp";
+      reg:type "template"];
+  reg:name "vnd.gridmp";
+  reg:xref <../../person/Jeff_Lawson#>.

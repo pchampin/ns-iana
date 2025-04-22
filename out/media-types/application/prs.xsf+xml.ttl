@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix M: <../../person/Maik_Stührenberg#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/prs.xsf+xml"; reg:type "template" ];
-    reg:name "prs.xsf+xml";
-    reg:xref M:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <prs.xsf+xml#Resource>.
 
+<prs.xsf+xml> a rdfs:Class;
+  dct:identifier "application/prs.xsf+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/prs.xsf+xml>;
+  rdfs:seeAlso <../../person/Maik_Stührenberg#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <prs.xsf+xml#Resource>.
+
+<prs.xsf+xml#Resource>
+  reg:file [
+      reg:file "application/prs.xsf+xml";
+      reg:type "template"];
+  reg:name "prs.xsf+xml";
+  reg:xref <../../person/Maik_Stührenberg#>.

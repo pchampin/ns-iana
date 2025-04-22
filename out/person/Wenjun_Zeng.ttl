@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.oma.scidm.messages+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.oma.scidm.messages+xml#Resource>
+  reg:xref <Wenjun_Zeng#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Wenjun_Zeng#>.
 
-:
-    reg:id "Wenjun_Zeng";
-    reg:name "Wenjun Zeng";
-    reg:updated "2009-12-15";
-    reg:uri "mailto:zengw&huawei.com".
+<Wenjun_Zeng#>
+  reg:id "Wenjun_Zeng";
+  reg:name "Wenjun Zeng";
+  reg:updated "2009-12-15";
+  reg:uri "mailto:zengw&huawei.com".

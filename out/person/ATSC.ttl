@@ -1,41 +1,44 @@
-@prefix : <#>.
-@prefix n1: <../media-types/application/atsc-dwd+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix n2: <../media-types/application/atsc-dynamic-event-message#>.
-@prefix n3: <../media-types/application/atsc-held+xml#>.
-@prefix n4: <../media-types/application/atsc-rdt+json#>.
-@prefix n5: <../media-types/application/atsc-rsat+xml#>.
-@prefix mmt: <../media-types/application/mmt-aei+xml#>.
-@prefix mm: <../media-types/application/mmt-usd+xml#>.
-@prefix rou: <../media-types/application/route-apd+xml#>.
-@prefix ro: <../media-types/application/route-s-tsid+xml#>.
-@prefix rout: <../media-types/application/route-usd+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/application/atsc-dwd+xml#Resource>
+  reg:xref <ATSC#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/atsc-dynamic-event-message#Resource>
+  reg:xref <ATSC#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/atsc-held+xml#Resource>
+  reg:xref <ATSC#>.
 
-n4:Resource reg:xref :.
+<../media-types/application/atsc-rdt+json#Resource>
+  reg:xref <ATSC#>.
 
-n5:Resource reg:xref :.
+<../media-types/application/atsc-rsat+xml#Resource>
+  reg:xref <ATSC#>.
 
-mmt:Resource reg:xref :.
+<../media-types/application/mmt-aei+xml#Resource>
+  reg:xref <ATSC#>.
 
-mm:Resource reg:xref :.
+<../media-types/application/mmt-usd+xml#Resource>
+  reg:xref <ATSC#>.
 
-rou:Resource reg:xref :.
+<../media-types/application/route-apd+xml#Resource>
+  reg:xref <ATSC#>.
 
-ro:Resource reg:xref :.
+<../media-types/application/route-s-tsid+xml#Resource>
+  reg:xref <ATSC#>.
 
-rout:Resource reg:xref :.
+<../media-types/application/route-usd+xml#Resource>
+  reg:xref <ATSC#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ATSC#>.
 
-:
-    reg:id "ATSC";
-    reg:name "Advanced Television Systems Committee";
-    reg:updated "2020-03-18";
-    reg:uri "mailto:jwhitaker&atsc.org".
+<ATSC#>
+  reg:id "ATSC";
+  reg:name "Advanced Television Systems Committee";
+  reg:updated "2020-03-18";
+  reg:uri "mailto:jwhitaker&atsc.org".

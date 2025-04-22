@@ -1,12 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix P: <../../person/Parasolid#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <vnd.parasolid.transmit.binary#Resource>.
 
-:Resource
-    reg:file
-    [ reg:file "model/vnd.parasolid.transmit.binary"; reg:type "template" ];
-    reg:name "vnd.parasolid.transmit.binary";
-    reg:xref P:.
+<vnd.parasolid.transmit.binary> a rdfs:Class;
+  dct:identifier "model/vnd.parasolid.transmit.binary";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/vnd.parasolid.transmit.binary>;
+  rdfs:seeAlso <../../person/Parasolid#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.parasolid.transmit.binary#Resource>.
+
+<vnd.parasolid.transmit.binary#Resource>
+  reg:file [
+      reg:file "model/vnd.parasolid.transmit.binary";
+      reg:type "template"];
+  reg:name "vnd.parasolid.transmit.binary";
+  reg:xref <../../person/Parasolid#>.

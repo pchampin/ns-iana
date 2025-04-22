@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix odm: <../media-types/application/odm+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-odm:Resource reg:xref :.
+<../media-types/application/odm+xml#Resource>
+  reg:xref <Sam_Hume#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Sam_Hume#>.
 
-:
-    reg:id "Sam_Hume";
-    reg:name "Sam Hume";
-    reg:updated "2018-11-28";
-    reg:uri "mailto:shume&cdisc.org".
+<Sam_Hume#>
+  reg:id "Sam_Hume";
+  reg:name "Sam Hume";
+  reg:updated "2018-11-28";
+  reg:uri "mailto:shume&cdisc.org".

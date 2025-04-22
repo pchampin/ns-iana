@@ -1,29 +1,32 @@
-@prefix : <#>.
-@prefix prs: <../media-types/application/prs.implied-document+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix pr: <../media-types/application/prs.implied-executable#>.
-@prefix p: <../media-types/application/prs.implied-object+json-seq#>.
-@prefix n1: <../media-types/application/prs.implied-object+json#>.
-@prefix n2: <../media-types/application/prs.implied-object+yaml#>.
-@prefix n3: <../media-types/application/prs.implied-structure#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-prs:Resource reg:xref :.
+<../media-types/application/prs.implied-document+xml#Resource>
+  reg:xref <Marek_Čermák#>.
 
-pr:Resource reg:xref :.
+<../media-types/application/prs.implied-executable#Resource>
+  reg:xref <Marek_Čermák#>.
 
-p:Resource reg:xref :.
+<../media-types/application/prs.implied-object+json#Resource>
+  reg:xref <Marek_Čermák#>.
 
-n1:Resource reg:xref :.
+<../media-types/application/prs.implied-object+json-seq#Resource>
+  reg:xref <Marek_Čermák#>.
 
-n2:Resource reg:xref :.
+<../media-types/application/prs.implied-object+yaml#Resource>
+  reg:xref <Marek_Čermák#>.
 
-n3:Resource reg:xref :.
+<../media-types/application/prs.implied-structure#Resource>
+  reg:xref <Marek_Čermák#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Marek_Čermák#>.
 
-:
-    reg:id "Marek_\u010cerm\u00e1k";
-    reg:name "Marek \u010cerm\u00e1k";
-    reg:updated "2024-01-11";
-    reg:uri "mailto:cermmarek&gmail.com".
+<Marek_Čermák#>
+  reg:id "Marek_Čermák";
+  reg:name "Marek Čermák";
+  reg:updated "2024-01-11";
+  reg:uri "mailto:cermmarek&gmail.com".

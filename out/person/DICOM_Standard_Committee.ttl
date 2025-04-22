@@ -1,32 +1,35 @@
-@prefix : <#>.
-@prefix dic: <../media-types/application/dicom+json#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix di: <../media-types/application/dicom+xml#>.
-@prefix dico: <../media-types/image/dicom-rle#>.
-@prefix jls: <../media-types/image/jls#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix mtl: <../media-types/model/mtl#>.
-@prefix obj: <../media-types/model/obj#>.
-@prefix stl: <../media-types/model/stl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-dic:Resource reg:xref :.
+<../media-types/application/dicom+json#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-di:Resource reg:xref :.
+<../media-types/application/dicom+xml#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-dico:Resource reg:xref :.
+<../media-types/image/dicom-rle#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-jls:Resource reg:xref :.
+<../media-types/image/jls#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <DICOM_Standard_Committee#>.
 
-mtl:Resource reg:xref :.
+<../media-types/model/mtl#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-obj:Resource reg:xref :.
+<../media-types/model/obj#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-stl:Resource reg:xref :.
+<../media-types/model/stl#Resource>
+  reg:xref <DICOM_Standard_Committee#>.
 
-:
-    reg:id "DICOM_Standard_Committee";
-    reg:name "DICOM Standard Committee";
-    reg:updated "2022-09-16";
-    reg:uri "mailto:dicom&dicomstandard.org".
+<DICOM_Standard_Committee#>
+  reg:id "DICOM_Standard_Committee";
+  reg:name "DICOM Standard Committee";
+  reg:updated "2022-09-16";
+  reg:uri "mailto:dicom&dicomstandard.org".

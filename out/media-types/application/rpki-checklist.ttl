@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2022-09-20"^^XML:date;
-    reg:file [ reg:file "application/rpki-checklist"; reg:type "template" ];
-    reg:name "rpki-checklist";
-    reg:xref html:rfc9323.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <rpki-checklist#Resource>.
 
+<rpki-checklist> a rdfs:Class;
+  dct:created "2022-09-20"^^xsd:date;
+  dct:identifier "application/rpki-checklist";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/rpki-checklist>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9323/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <rpki-checklist#Resource>.
+
+<rpki-checklist#Resource>
+  dct:date "2022-09-20"^^xsd:date;
+  reg:file [
+      reg:file "application/rpki-checklist";
+      reg:type "template"];
+  reg:name "rpki-checklist";
+  reg:xref <https://tools.ietf.org/html/rfc9323>.

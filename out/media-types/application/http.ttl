@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/http"; reg:type "template" ];
-    reg:name "http";
-    reg:updated "2021-10-06";
-    reg:xref html:rfc9112.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <http#Resource>.
 
+<http> a rdfs:Class;
+  dct:identifier "application/http";
+  dct:modified "2021-10-06"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/http>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9112/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <http#Resource>.
+
+<http#Resource>
+  reg:file [
+      reg:file "application/http";
+      reg:type "template"];
+  reg:name "http";
+  reg:updated "2021-10-06";
+  reg:xref <https://tools.ietf.org/html/rfc9112>.

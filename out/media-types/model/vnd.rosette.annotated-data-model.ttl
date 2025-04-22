@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix Ben: <../../person/Benson_Margulies#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:model reg:record :Resource.
+<../media-types.ttl#model>
+  reg:record <vnd.rosette.annotated-data-model#Resource>.
 
-:Resource
-    terms:date "2016-01-27"^^XML:date;
-    reg:file
-    [ reg:file "model/vnd.rosette.annotated-data-model"; reg:type "template" ];
-    reg:name "vnd.rosette.annotated-data-model";
-    reg:xref Ben:.
+<vnd.rosette.annotated-data-model> a rdfs:Class;
+  dct:created "2016-01-27"^^xsd:date;
+  dct:identifier "model/vnd.rosette.annotated-data-model";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/model/vnd.rosette.annotated-data-model>;
+  rdfs:seeAlso <../../person/Benson_Margulies#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.rosette.annotated-data-model#Resource>.
+
+<vnd.rosette.annotated-data-model#Resource>
+  dct:date "2016-01-27"^^xsd:date;
+  reg:file [
+      reg:file "model/vnd.rosette.annotated-data-model";
+      reg:type "template"];
+  reg:name "vnd.rosette.annotated-data-model";
+  reg:xref <../../person/Benson_Margulies#>.

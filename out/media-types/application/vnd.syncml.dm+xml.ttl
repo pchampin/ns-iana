@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bin: <../../person/Bindu_Rama_Rao#>.
-@prefix OMA: <../../person/OMA-DM_Work_Group#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.syncml.dm+xml"; reg:type "template" ];
-    reg:name "vnd.syncml.dm+xml";
-    reg:xref Bin:, OMA:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.syncml.dm+xml#Resource>.
 
+<vnd.syncml.dm+xml> a rdfs:Class;
+  dct:identifier "application/vnd.syncml.dm+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.syncml.dm+xml>;
+  rdfs:seeAlso <../../person/Bindu_Rama_Rao#>,
+    <../../person/OMA-DM_Work_Group#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.syncml.dm+xml#Resource>.
+
+<vnd.syncml.dm+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.syncml.dm+xml";
+      reg:type "template"];
+  reg:name "vnd.syncml.dm+xml";
+  reg:xref <../../person/Bindu_Rama_Rao#>,
+    <../../person/OMA-DM_Work_Group#>.

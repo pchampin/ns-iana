@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Stu: <../../person/Stuart_Parmenter#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-08-04"^^XML:date;
-    reg:file [ reg:file "image/vnd.mozilla.apng"; reg:type "template" ];
-    reg:name "vnd.mozilla.apng";
-    reg:xref Stu:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <vnd.mozilla.apng#Resource>.
 
+<vnd.mozilla.apng> a rdfs:Class;
+  dct:created "2015-08-04"^^xsd:date;
+  dct:identifier "image/vnd.mozilla.apng";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/vnd.mozilla.apng>;
+  rdfs:seeAlso <../../person/Stuart_Parmenter#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.mozilla.apng#Resource>.
+
+<vnd.mozilla.apng#Resource>
+  dct:date "2015-08-04"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.mozilla.apng";
+      reg:type "template"];
+  reg:name "vnd.mozilla.apng";
+  reg:xref <../../person/Stuart_Parmenter#>.

@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:multipart reg:record :Resource.
+<../media-types.ttl#multipart>
+  reg:record <form-data#Resource>.
 
-:Resource
-    reg:file [ reg:file "multipart/form-data"; reg:type "template" ];
-    reg:name "form-data";
-    reg:updated "2015-04-15";
-    reg:xref html:rfc7578.
+<form-data> a rdfs:Class;
+  dct:identifier "multipart/form-data";
+  dct:modified "2015-04-15"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/multipart/form-data>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc7578/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <form-data#Resource>.
+
+<form-data#Resource>
+  reg:file [
+      reg:file "multipart/form-data";
+      reg:type "template"];
+  reg:name "form-data";
+  reg:updated "2015-04-15";
+  reg:xref <https://tools.ietf.org/html/rfc7578>.

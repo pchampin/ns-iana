@@ -1,14 +1,17 @@
-@prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix sh: <../media-types/text/shaclc#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <W3C_SHACL_Community_Group#>.
 
-sh:Resource reg:xref :.
+<../media-types/text/shaclc#Resource>
+  reg:xref <W3C_SHACL_Community_Group#>.
 
-:
-    reg:id "W3C_SHACL_Community_Group";
-    reg:name "W3C SHACL Community Group";
-    reg:updated "2020-06-30";
-    reg:uri "https://www.w3.org/community/shacl".
+<W3C_SHACL_Community_Group#>
+  reg:id "W3C_SHACL_Community_Group";
+  reg:name "W3C SHACL Community Group";
+  reg:updated "2020-06-30";
+  reg:uri "https://www.w3.org/community/shacl".

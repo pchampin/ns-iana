@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Kev: <../../person/Kevin_Murray#>.
-@prefix Pet: <../../person/Peter_Siebert#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:video reg:record :Resource.
+<../media-types.ttl#video>
+  reg:record <vnd.dvb.file#Resource>.
 
-:Resource
-    reg:file [ reg:file "video/vnd.dvb.file"; reg:type "template" ];
-    reg:name "vnd.dvb.file";
-    reg:xref Kev:, Pet:.
+<vnd.dvb.file> a rdfs:Class;
+  dct:identifier "video/vnd.dvb.file";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.dvb.file>;
+  rdfs:seeAlso <../../person/Kevin_Murray#>,
+    <../../person/Peter_Siebert#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.dvb.file#Resource>.
+
+<vnd.dvb.file#Resource>
+  reg:file [
+      reg:file "video/vnd.dvb.file";
+      reg:type "template"];
+  reg:name "vnd.dvb.file";
+  reg:xref <../../person/Kevin_Murray#>,
+    <../../person/Peter_Siebert#>.

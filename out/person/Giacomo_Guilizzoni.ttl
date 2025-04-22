@@ -1,17 +1,20 @@
-@prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.balsamiq.bmml+xml#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.balsamiq.bmpr#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-vnd:Resource reg:xref :.
+<../media-types/application/vnd.balsamiq.bmml+xml#Resource>
+  reg:xref <Giacomo_Guilizzoni#>.
 
-vn:Resource reg:xref :.
+<../media-types/application/vnd.balsamiq.bmpr#Resource>
+  reg:xref <Giacomo_Guilizzoni#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Giacomo_Guilizzoni#>.
 
-:
-    reg:id "Giacomo_Guilizzoni";
-    reg:name "Giacomo Guilizzoni";
-    reg:updated "2015-05-06";
-    reg:uri "mailto:peldi&balsamiq.com".
+<Giacomo_Guilizzoni#>
+  reg:id "Giacomo_Guilizzoni";
+  reg:name "Giacomo Guilizzoni";
+  reg:updated "2015-05-06";
+  reg:uri "mailto:peldi&balsamiq.com".

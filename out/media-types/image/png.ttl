@@ -1,13 +1,25 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix PNG: <../../person/PNG_WG#>.
-@prefix W3C: <../../person/W3C#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "image/png"; reg:type "template" ];
-    reg:name "png";
-    reg:updated "2021-12-07";
-    reg:xref PNG:, W3C:.
-medi:image reg:record :Resource.
+<../media-types.ttl#image>
+  reg:record <png#Resource>.
 
+<png> a rdfs:Class;
+  dct:identifier "image/png";
+  dct:modified "2021-12-07"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/image/png>;
+  rdfs:seeAlso <../../person/PNG_WG#>,
+    <../../person/W3C#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <png#Resource>.
+
+<png#Resource>
+  reg:file [
+      reg:file "image/png";
+      reg:type "template"];
+  reg:name "png";
+  reg:updated "2021-12-07";
+  reg:xref <../../person/PNG_WG#>,
+    <../../person/W3C#>.

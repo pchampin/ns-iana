@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Gr: <../../person/Grahame_Grieve#>.
-@prefix HL7: <../../person/HL7#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-03-06"^^XML:date;
-    reg:file [ reg:file "application/fhir+json"; reg:type "template" ];
-    reg:name "fhir+json";
-    reg:xref Gr:, HL7:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <fhir+json#Resource>.
 
+<fhir+json> a rdfs:Class;
+  dct:created "2018-03-06"^^xsd:date;
+  dct:identifier "application/fhir+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/fhir+json>;
+  rdfs:seeAlso <../../person/Grahame_Grieve#>,
+    <../../person/HL7#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <fhir+json#Resource>.
+
+<fhir+json#Resource>
+  dct:date "2018-03-06"^^xsd:date;
+  reg:file [
+      reg:file "application/fhir+json";
+      reg:type "template"];
+  reg:name "fhir+json";
+  reg:xref <../../person/Grahame_Grieve#>,
+    <../../person/HL7#>.

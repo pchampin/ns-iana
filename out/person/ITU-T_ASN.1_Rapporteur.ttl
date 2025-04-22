@@ -1,20 +1,23 @@
-@prefix : <#>.
-@prefix f: <../media-types/application/fastinfoset#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix f0: <../media-types/application/fastsoap#>.
-@prefix so: <../media-types/application/soap+fastinfoset#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-f:Resource reg:xref :.
+<../media-types/application/fastinfoset#Resource>
+  reg:xref <ITU-T_ASN.1_Rapporteur#>.
 
-f0:Resource reg:xref :.
+<../media-types/application/fastsoap#Resource>
+  reg:xref <ITU-T_ASN.1_Rapporteur#>.
 
-so:Resource reg:xref :.
+<../media-types/application/soap+fastinfoset#Resource>
+  reg:xref <ITU-T_ASN.1_Rapporteur#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <ITU-T_ASN.1_Rapporteur#>.
 
-:
-    reg:id "ITU-T_ASN.1_Rapporteur";
-    reg:name "ITU-T ASN.1 Rapporteur";
-    reg:updated "2005-10-31";
-    reg:uri "mailto:tsb&itu.int".
+<ITU-T_ASN.1_Rapporteur#>
+  reg:id "ITU-T_ASN.1_Rapporteur";
+  reg:name "ITU-T ASN.1 Rapporteur";
+  reg:updated "2005-10-31";
+  reg:uri "mailto:tsb&itu.int".

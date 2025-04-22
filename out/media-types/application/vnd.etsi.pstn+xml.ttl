@@ -1,12 +1,23 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Jiw: <../../person/Jiwan_Han#>.
-@prefix Thom: <../../person/Thomas_Belling#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.etsi.pstn+xml"; reg:type "template" ];
-    reg:name "vnd.etsi.pstn+xml";
-    reg:xref Jiw:, Thom:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.etsi.pstn+xml#Resource>.
 
+<vnd.etsi.pstn+xml> a rdfs:Class;
+  dct:identifier "application/vnd.etsi.pstn+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.etsi.pstn+xml>;
+  rdfs:seeAlso <../../person/Jiwan_Han#>,
+    <../../person/Thomas_Belling#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.etsi.pstn+xml#Resource>.
+
+<vnd.etsi.pstn+xml#Resource>
+  reg:file [
+      reg:file "application/vnd.etsi.pstn+xml";
+      reg:type "template"];
+  reg:name "vnd.etsi.pstn+xml";
+  reg:xref <../../person/Jiwan_Han#>,
+    <../../person/Thomas_Belling#>.

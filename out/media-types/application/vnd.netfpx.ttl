@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix And: <../../person/Andy_Mutz#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/vnd.netfpx"; reg:type "template" ];
-    reg:name "vnd.netfpx";
-    reg:xref And:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.netfpx#Resource>.
 
+<vnd.netfpx> a rdfs:Class;
+  dct:identifier "application/vnd.netfpx";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.netfpx>;
+  rdfs:seeAlso <../../person/Andy_Mutz#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.netfpx#Resource>.
+
+<vnd.netfpx#Resource>
+  reg:file [
+      reg:file "application/vnd.netfpx";
+      reg:type "template"];
+  reg:name "vnd.netfpx";
+  reg:xref <../../person/Andy_Mutz#>.

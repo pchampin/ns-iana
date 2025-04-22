@@ -1,14 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Seb: <../../person/Sebastian_Baer#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2015-07-21"^^XML:date;
-    reg:file [ reg:file "application/vnd.uri-map"; reg:type "template" ];
-    reg:name "vnd.uri-map";
-    reg:xref Seb:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.uri-map#Resource>.
 
+<vnd.uri-map> a rdfs:Class;
+  dct:created "2015-07-21"^^xsd:date;
+  dct:identifier "application/vnd.uri-map";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.uri-map>;
+  rdfs:seeAlso <../../person/Sebastian_Baer#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.uri-map#Resource>.
+
+<vnd.uri-map#Resource>
+  dct:date "2015-07-21"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.uri-map";
+      reg:type "template"];
+  reg:name "vnd.uri-map";
+  reg:xref <../../person/Sebastian_Baer#>.

@@ -1,11 +1,23 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <external-body#Resource>.
 
-:Resource
-    reg:file [ reg:file "message/external-body"; reg:type "template" ];
-    reg:name "external-body";
-    reg:xref html:rfc2045, html:rfc2046.
+<external-body> a rdfs:Class;
+  dct:identifier "message/external-body";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/external-body>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc2045/>,
+    <https://datatracker.ietf.org/doc/rfc2046/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <external-body#Resource>.
+
+<external-body#Resource>
+  reg:file [
+      reg:file "message/external-body";
+      reg:type "template"];
+  reg:name "external-body";
+  reg:xref <https://tools.ietf.org/html/rfc2045>,
+    <https://tools.ietf.org/html/rfc2046>.

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix medi: <../media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-medi:message reg:record :Resource.
+<../media-types.ttl#message>
+  reg:record <global-headers#Resource>.
 
-:Resource
-    reg:file [ reg:file "message/global-headers"; reg:type "template" ];
-    reg:name "global-headers";
-    reg:xref html:rfc6533.
+<global-headers> a rdfs:Class;
+  dct:identifier "message/global-headers";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/message/global-headers>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc6533/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <global-headers#Resource>.
+
+<global-headers#Resource>
+  reg:file [
+      reg:file "message/global-headers";
+      reg:type "template"];
+  reg:name "global-headers";
+  reg:xref <https://tools.ietf.org/html/rfc6533>.

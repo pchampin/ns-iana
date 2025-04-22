@@ -1,19 +1,22 @@
-@prefix : <#>.
-@prefix n1: <../media-types/application/applefile#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix m: <../media-types/application/mac-binhex40#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n2: <../media-types/multipart/appledouble#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-n1:Resource reg:xref :.
+<../media-types/application/applefile#Resource>
+  reg:xref <Patrik_Faltstrom#>.
 
-m:Resource reg:xref :.
+<../media-types/application/mac-binhex40#Resource>
+  reg:xref <Patrik_Faltstrom#>.
 
-medi:n0 reg:person :.
+<../media-types/media-types.ttl#n0>
+  reg:person <Patrik_Faltstrom#>.
 
-n2:Resource reg:xref :.
+<../media-types/multipart/appledouble#Resource>
+  reg:xref <Patrik_Faltstrom#>.
 
-:
-    reg:id "Patrik_Faltstrom";
-    reg:name "Patrik Faltstrom";
-    reg:uri "mailto:paf&nada.kth.se".
+<Patrik_Faltstrom#>
+  reg:id "Patrik_Faltstrom";
+  reg:name "Patrik Faltstrom";
+  reg:uri "mailto:paf&nada.kth.se".

@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ser: <../../person/Serge_De_Jaham#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "audio/vnd.CELP"; reg:type "template" ];
-    reg:name "vnd.CELP";
-    reg:xref Ser:.
-medi:audio reg:record :Resource.
+<../media-types.ttl#audio>
+  reg:record <vnd.CELP#Resource>.
 
+<vnd.CELP> a rdfs:Class;
+  dct:identifier "audio/vnd.CELP";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/audio/vnd.CELP>;
+  rdfs:seeAlso <../../person/Serge_De_Jaham#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.CELP#Resource>.
+
+<vnd.CELP#Resource>
+  reg:file [
+      reg:file "audio/vnd.CELP";
+      reg:type "template"];
+  reg:name "vnd.CELP";
+  reg:xref <../../person/Serge_De_Jaham#>.

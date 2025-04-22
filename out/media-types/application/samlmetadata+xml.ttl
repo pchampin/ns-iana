@@ -1,11 +1,21 @@
-@prefix : <#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix OAS: <../../person/OASIS_Security_Services_Technical_Committee_SSTC#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    reg:file [ reg:file "application/samlmetadata+xml"; reg:type "template" ];
-    reg:name "samlmetadata+xml";
-    reg:xref OAS:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <samlmetadata+xml#Resource>.
 
+<samlmetadata+xml> a rdfs:Class;
+  dct:identifier "application/samlmetadata+xml";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/samlmetadata+xml>;
+  rdfs:seeAlso <../../person/OASIS_Security_Services_Technical_Committee_SSTC#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <samlmetadata+xml#Resource>.
+
+<samlmetadata+xml#Resource>
+  reg:file [
+      reg:file "application/samlmetadata+xml";
+      reg:type "template"];
+  reg:name "samlmetadata+xml";
+  reg:xref <../../person/OASIS_Security_Services_Technical_Committee_SSTC#>.

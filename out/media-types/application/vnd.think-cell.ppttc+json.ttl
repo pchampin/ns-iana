@@ -1,15 +1,23 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Arn: <../../person/Arno_Schoedl#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2018-04-16"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.think-cell.ppttc+json"; reg:type "template" ];
-    reg:name "vnd.think-cell.ppttc+json";
-    reg:xref Arn:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.think-cell.ppttc+json#Resource>.
 
+<vnd.think-cell.ppttc+json> a rdfs:Class;
+  dct:created "2018-04-16"^^xsd:date;
+  dct:identifier "application/vnd.think-cell.ppttc+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.think-cell.ppttc+json>;
+  rdfs:seeAlso <../../person/Arno_Schoedl#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.think-cell.ppttc+json#Resource>.
+
+<vnd.think-cell.ppttc+json#Resource>
+  dct:date "2018-04-16"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.think-cell.ppttc+json";
+      reg:type "template"];
+  reg:name "vnd.think-cell.ppttc+json";
+  reg:xref <../../person/Arno_Schoedl#>.

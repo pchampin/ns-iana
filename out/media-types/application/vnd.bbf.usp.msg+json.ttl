@@ -1,16 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Bro: <../../person/Broadband_Forum#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2017-12-14"^^XML:date;
-    reg:file
-    [ reg:file "application/vnd.bbf.usp.msg+json"; reg:type "template" ];
-    reg:name "vnd.bbf.usp.msg+json";
-    reg:updated "2019-12-13"^^XML:date;
-    reg:xref Bro:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <vnd.bbf.usp.msg+json#Resource>.
 
+<vnd.bbf.usp.msg+json> a rdfs:Class;
+  dct:created "2017-12-14"^^xsd:date;
+  dct:identifier "application/vnd.bbf.usp.msg+json";
+  dct:modified "2019-12-13"^^xsd:date;
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.bbf.usp.msg+json>;
+  rdfs:seeAlso <../../person/Broadband_Forum#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.bbf.usp.msg+json#Resource>.
+
+<vnd.bbf.usp.msg+json#Resource>
+  dct:date "2017-12-14"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.bbf.usp.msg+json";
+      reg:type "template"];
+  reg:name "vnd.bbf.usp.msg+json";
+  reg:updated "2019-12-13"^^xsd:date;
+  reg:xref <../../person/Broadband_Forum#>.

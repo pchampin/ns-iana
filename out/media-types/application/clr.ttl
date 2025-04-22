@@ -1,15 +1,25 @@
-@prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
-@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix And: <../../person/Andy_Miller#>.
-@prefix IMS: <../../person/IMS_Global#>.
-@prefix medi: <../media-types.ttl#>.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-:Resource
-    terms:date "2020-10-02"^^XML:date;
-    reg:file [ reg:file "application/clr"; reg:type "template" ];
-    reg:name "clr";
-    reg:xref And:, IMS:.
-medi:application reg:record :Resource.
+<../media-types.ttl#application>
+  reg:record <clr#Resource>.
 
+<clr> a rdfs:Class;
+  dct:created "2020-10-02"^^xsd:date;
+  dct:identifier "application/clr";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/clr>;
+  rdfs:seeAlso <../../person/Andy_Miller#>,
+    <../../person/IMS_Global#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <clr#Resource>.
+
+<clr#Resource>
+  dct:date "2020-10-02"^^xsd:date;
+  reg:file [
+      reg:file "application/clr";
+      reg:type "template"];
+  reg:name "clr";
+  reg:xref <../../person/Andy_Miller#>,
+    <../../person/IMS_Global#>.
