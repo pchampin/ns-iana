@@ -9,7 +9,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
 
 <vnd.fdsn.mseed> a rdfs:Class;
   dct:identifier "application/vnd.fdsn.mseed";
-  dct:modified "2025-01-02"^^xsd:date;
+  dct:modified "2025-03-31"^^xsd:date;
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.fdsn.mseed>;
   rdfs:seeAlso <../../person/International_FDSN#>;
   <http://www.w3.org/2002/07/owl#sameAs> <vnd.fdsn.mseed#Resource>.
@@ -19,5 +19,5 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "application/vnd.fdsn.mseed";
       reg:type "template"];
   reg:name "vnd.fdsn.mseed";
-  reg:updated "2025-01-02";
+  reg:updated "2025-03-31";
   reg:xref <../../person/International_FDSN#>.

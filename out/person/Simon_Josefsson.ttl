@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types/application/texinfo#Resource>
+  reg:xref <Simon_Josefsson#>.
+
+<../media-types/media-types.ttl#n0>
+  reg:person <Simon_Josefsson#>.
+
+<Simon_Josefsson#>
+  reg:id "Simon_Josefsson";
+  reg:name "Simon Josefsson";
+  reg:updated "2025-04-17";
+  reg:uri "mailto:simon&josefsson.org".

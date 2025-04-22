@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types.ttl#application>
+  reg:record <vnd.cel#Resource>.
+
+<vnd.cel> a rdfs:Class;
+  dct:created "2025-04-21"^^xsd:date;
+  dct:identifier "application/vnd.cel";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.cel>;
+  rdfs:seeAlso <../../person/Tristan_Swadell#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.cel#Resource>.
+
+<vnd.cel#Resource>
+  dct:date "2025-04-21"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.cel";
+      reg:type "template"];
+  reg:name "vnd.cel";
+  reg:xref <../../person/Tristan_Swadell#>.

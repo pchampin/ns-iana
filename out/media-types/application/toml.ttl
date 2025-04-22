@@ -20,5 +20,8 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "application/toml";
       reg:type "template"];
   reg:name "toml";
-  reg:xref <../../person/Ben_van_Hartingsveldt#>,
+  reg:xref [
+      reg:data "2";
+      reg:type "note"],
+    <../../person/Ben_van_Hartingsveldt#>,
     <https://github.com/toml-lang/toml/issues/870>.

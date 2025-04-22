@@ -11,7 +11,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:created "2021-06-11"^^xsd:date;
   dct:identifier "video/VP9";
   rdfs:definedBy <https://www.iana.org/assignments/media-types/video/VP9>;
-  rdfs:seeAlso <https://datatracker.ietf.org/doc/RFC-ietf-payload-vp9-16/>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/rfc9628/>;
   <http://www.w3.org/2002/07/owl#sameAs> <VP9#Resource>.
 
 <VP9#Resource>
@@ -20,4 +20,4 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "video/VP9";
       reg:type "template"];
   reg:name "VP9";
-  reg:xref <https://tools.ietf.org/html/RFC-ietf-payload-vp9-16>.
+  reg:xref <https://tools.ietf.org/html/rfc9628>.

@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types.ttl#text>
+  reg:record <vnd.typst#Resource>.
+
+<vnd.typst> a rdfs:Class;
+  dct:created "2025-04-01"^^xsd:date;
+  dct:identifier "text/vnd.typst";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/text/vnd.typst>;
+  rdfs:seeAlso <../../person/Martin_Haug#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.typst#Resource>.
+
+<vnd.typst#Resource>
+  dct:date "2025-04-01"^^xsd:date;
+  reg:file [
+      reg:file "text/vnd.typst";
+      reg:type "template"];
+  reg:name "vnd.typst";
+  reg:xref <../../person/Martin_Haug#>.

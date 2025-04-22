@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types/application/vnd.wantverse#Resource>
+  reg:xref <John_J_Kolb_V#>.
+
+<../media-types/media-types.ttl#n0>
+  reg:person <John_J_Kolb_V#>.
+
+<John_J_Kolb_V#>
+  reg:id "John_J_Kolb_V";
+  reg:name "John J. Kolb V";
+  reg:updated "2025-04-07";
+  reg:uri "mailto:simulacrum0&gmail.com".

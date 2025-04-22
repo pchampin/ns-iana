@@ -4,7 +4,7 @@
 <registry xmlns="http://www.iana.org/assignments" id="media-types">
   <title>Media Types</title>
   <category>Multipurpose Internet Mail Extensions (MIME) and Media Types</category>
-  <updated>2025-03-20</updated>
+  <updated>2025-04-21</updated>
   
   
  
@@ -470,6 +470,12 @@ same name. Hence, the media type registry disallows parameters named "q".
       <name>cfw</name>
       <xref type="rfc" data="rfc6230"/>
       <file type="template">application/cfw</file>
+    </record>
+    <record date="2025-04-18">
+      <name>cid</name>
+      <xref type="person" data="W3C_Verifiable_Credentials_WG"/>
+      <xref type="person" data="Michael_B_Jones"/>
+      <file type="template">application/cid</file>
     </record>
     <record date="2023-08-29">
       <name>cid-edhoc+cbor-seq</name>
@@ -2204,6 +2210,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="rfc" data="rfc5055"/>
       <file type="template">application/scvp-vp-response</file>
     </record>
+    <record date="2025-03-27">
+      <name>sdf+json</name>
+      <xref type="draft" data="RFC-ietf-asdf-sdf-23"/>
+      <file type="template">application/sdf+json</file>
+    </record>
     <record updated="2019-08-28">
       <name>sdp</name>
       <xref type="rfc" data="rfc8866"/>
@@ -2535,6 +2546,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="person" data="Miguel_Angel_Reina_Ortega"/>
       <file type="template">application/TETRA_ISI</file>
     </record>
+    <record date="2025-04-17">
+      <name>texinfo</name>
+      <xref type="person" data="Simon_Josefsson"/>
+      <file type="template">application/texinfo</file>
+    </record>
     <record>
       <name>thraud+xml</name>
       <xref type="rfc" data="rfc5941"/>
@@ -2591,6 +2607,7 @@ same name. Hence, the media type registry disallows parameters named "q".
       <name>toml</name>
       <xref type="person" data="Ben_van_Hartingsveldt"/>
       <xref type="uri" data="https://github.com/toml-lang/toml/issues/870"/>
+      <xref type="note" data="2"/>
       <file type="template">application/toml</file>
     </record>
     <record date="2018-07-05">
@@ -3582,6 +3599,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="person" data="Yüksel_Aydemir"/>
       <file type="template">application/vnd.capasystems-pg+json</file>
     </record>
+    <record date="2025-04-21">
+      <name>vnd.cel</name>
+      <xref type="person" data="Tristan_Swadell"/>
+      <file type="template">application/vnd.cel</file>
+    </record>
     <record>
       <name>vnd.cendio.thinlinc.clientconf</name>
       <xref type="person" data="Peter_Astrand"/>
@@ -4435,7 +4457,7 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="person" data="Gordon_Clarke"/>
       <file type="template">application/vnd.familysearch.gedcom+zip</file>
     </record>
-    <record updated="2025-01-02">
+    <record updated="2025-03-31">
       <name>vnd.fdsn.mseed</name>
       <xref type="person" data="International_FDSN"/>
       <file type="template">application/vnd.fdsn.mseed</file>
@@ -7129,6 +7151,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="person" data="Rhys_Lewis"/>
       <file type="template">application/vnd.pmi.widget</file>
     </record>
+    <record date="2025-04-17">
+      <name>vnd.pmtiles</name>
+      <xref type="person" data="Sascha_Brawer"/>
+      <file type="template">application/vnd.pmtiles</file>
+    </record>
     <record>
       <name>vnd.poc.group-advertisement+xml</name>
       <xref type="person" data="Sean_Kelley"/>
@@ -7648,6 +7675,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <xref type="person" data="Marc_Hadley"/>
       <file type="template">application/vnd.sun.wadl+xml</file>
     </record>
+    <record date="2025-04-18">
+      <name>vnd.superfile.super</name>
+      <xref type="person" data="Shane_Valdez"/>
+      <file type="template">application/vnd.superfile.super</file>
+    </record>
     <record>
       <name>vnd.sus-calendar</name>
       <xref type="person" data="Jonathan_Niedfeldt"/>
@@ -7976,6 +8008,11 @@ same name. Hence, the media type registry disallows parameters named "q".
       <name>vnd.vsf</name>
       <xref type="person" data="Delton_Rowe"/>
       <file type="template">application/vnd.vsf</file>
+    </record>
+    <record date="2025-04-07">
+      <name>vnd.wantverse</name>
+      <xref type="person" data="John_J_Kolb_V"/>
+      <file type="template">application/vnd.wantverse</file>
     </record>
     <record>
       <name>vnd.wap.sic</name>
@@ -8528,6 +8565,9 @@ same name. Hence, the media type registry disallows parameters named "q".
     </record>
     <footnote anchor="1">Approved by IESG on 2024-05-02 in accordance with <xref type="rfc" data="rfc6838"/>, Appendix A. 
 <xref type="uri" data="https://datatracker.ietf.org/doc/minutes-interim-2024-iesg-10-202405021400/"/>.
+    </footnote>
+    <footnote anchor="2">Approved by IESG on 2024-10-17 in accordance with <xref type="rfc" data="rfc6838"/>, Appendix A. 
+<xref type="uri" data="https://datatracker.ietf.org/doc/minutes-interim-2024-iesg-21-202410171400/"/>.
     </footnote>
   </registry>
   
@@ -9731,6 +9771,11 @@ by the IANA.</note>
       <xref type="person" data="Gary_Clueit"/>
       <file type="template">image/vnd.airzip.accelerator.azv</file>
     </record>
+    <record date="2025-04-18">
+      <name>vnd.blockfact.facti</name>
+      <xref type="person" data="Egbert_von_Frankenberg"/>
+      <file type="template">image/vnd.blockfact.facti</file>
+    </record>
     <record date="2025-03-06">
       <name>vnd.clip</name>
       <xref type="person" data="Ryo_Inaba"/>
@@ -10812,6 +10857,11 @@ by the IANA.</note>
       <xref type="person" data="Petter_Reinholdtsen"/>
       <file type="template">text/vnd.sosi</file>
     </record>
+    <record date="2025-04-01">
+      <name>vnd.typst</name>
+      <xref type="person" data="Martin_Haug"/>
+      <file type="template">text/vnd.typst</file>
+    </record>
     <record>
       <name>vnd.trolltech.linguist</name>
       <xref type="person" data="David_Lee_Lambert"/>
@@ -11351,7 +11401,7 @@ by the IANA.</note>
     </record>
     <record date="2021-06-11">
       <name>VP9</name>
-      <xref type="draft" data="RFC-ietf-payload-vp9-16"/>
+      <xref type="rfc" data="rfc9628"/>
       <file type="template">video/VP9</file>
     </record>
   </registry>
@@ -11712,6 +11762,11 @@ by the IANA.</note>
       <name>Günther Brammer</name>
       <uri>mailto:gbrammer&amp;gmx.de</uri>
       <updated>2007-06-12</updated>
+    </person>
+    <person id="Sascha_Brawer">
+      <name>Sascha Brawer</name>
+      <uri>mailto:sascha&amp;brawer.ch</uri>
+      <updated>2025-04-17</updated>
     </person>
     <person id="Ron_Brill">
       <name>Ron Brill</name>
@@ -12695,6 +12750,11 @@ by the IANA.</note>
       <uri>mailto:steve.hattersley&amp;dolby.com</uri>
       <updated>2009-06-02</updated>
     </person>
+    <person id="Martin_Haug">
+      <name>Martin Haug</name>
+      <uri>mailto:martin.haug&amp;typst.app</uri>
+      <updated>2025-04-01</updated>
+    </person>
     <person id="Mike_Hearn">
       <name>Mike Hearn</name>
       <uri>mailto:mike&amp;navi.cx</uri>
@@ -13057,6 +13117,11 @@ by the IANA.</note>
       <uri>mailto:johnstonskj&amp;gmail.com</uri>
       <updated>2022-07-20</updated>
     </person>
+    <person id="Michael_B_Jones">
+      <name>Michael B Jones</name>
+      <uri>mailto:michael_b_jones&amp;hotmail.com</uri>
+      <updated>2025-04-18</updated>
+    </person>
     <person id="Randy_Jones">
       <name>Randy Jones</name>
       <uri>mailto:randy_jones&amp;archipelago.com</uri>
@@ -13076,6 +13141,11 @@ by the IANA.</note>
       <name>Jens Jorgensen</name>
       <uri>mailto:jbj1&amp;ultraemail.net</uri>
       <updated>2014-05-01</updated>
+    </person>
+    <person id="Simon_Josefsson">
+      <name>Simon Josefsson</name>
+      <uri>mailto:simon&amp;josefsson.org</uri>
+      <updated>2025-04-17</updated>
     </person>
     <person id="Todd_Joseph">
       <name>Todd Joseph</name>
@@ -13235,6 +13305,11 @@ by the IANA.</note>
       <name>Bayard Kohlhepp</name>
       <uri>mailto:bayard&amp;ctcexchange.com</uri>
       <updated>2000-04-20</updated>
+    </person>
+    <person id="John_J_Kolb_V">
+      <name>John J. Kolb V</name>
+      <uri>mailto:simulacrum0&amp;gmail.com</uri>
+      <updated>2025-04-07</updated>
     </person>
     <person id="Ulrich_Kortenkamp">
       <name>Ulrich Kortenkamp</name>
@@ -14745,6 +14820,11 @@ by the IANA.</note>
       <uri>mailto:bryan.sullivan&amp;att.com</uri>
       <updated>2009-08-20</updated>
     </person>
+    <person id="Tristan_Swadell">
+      <name>Tristan Swadell</name>
+      <uri>mailto:tswadell&amp;google.com</uri>
+      <updated>2025-04-21</updated>
+    </person>
     <person id="Swaminathan">
       <name>Kumar Swaminathan</name>
       <uri>mailto:kswami&amp;hns.com</uri>
@@ -14974,6 +15054,11 @@ by the IANA.</note>
       <uri>mailto:oleg&amp;aplextor.com</uri>
       <updated>2019-11-21</updated>
     </person>
+    <person id="Shane_Valdez">
+      <name>Shane Valdez</name>
+      <uri>mailto:shane&amp;superfile.com</uri>
+      <updated>2025-04-18</updated>
+    </person>
     <person id="Filippo_Valsorda">
       <name>Filippo Valsorda</name>
       <uri>mailto:age&amp;filippo.io</uri>
@@ -15013,6 +15098,11 @@ by the IANA.</note>
       <name>Sidharth Vinod</name>
       <uri>mailto:iana&amp;mermaid.js.org</uri>
       <updated>2023-09-18</updated>
+    </person>
+    <person id="Egbert_von_Frankenberg">
+      <name>Egbert von Frankenberg</name>
+      <uri>mailto:egbert&amp;blockfact.io</uri>
+      <updated>2025-04-18</updated>
     </person>
     <person id="Martin_Vondrous">
       <name>Martin Vondrous</name>
@@ -15061,7 +15151,7 @@ by the IANA.</note>
     <person id="W3C_Verifiable_Credentials_WG">
       <name>W3C Verifiable Credentials Working Group</name>
       <uri>mailto:public-vc-wg&amp;w3.org</uri>
-      <updated>2024-12-09</updated>
+      <updated>2025-04-18</updated>
     </person>
     <person id="Takatomo_Wakibayashi">
       <name>Takatomo Wakibayashi</name>

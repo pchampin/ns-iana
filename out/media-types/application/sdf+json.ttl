@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types.ttl#application>
+  reg:record <sdf+json#Resource>.
+
+<sdf+json> a rdfs:Class;
+  dct:created "2025-03-27"^^xsd:date;
+  dct:identifier "application/sdf+json";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/sdf+json>;
+  rdfs:seeAlso <https://datatracker.ietf.org/doc/RFC-ietf-asdf-sdf-23/>;
+  <http://www.w3.org/2002/07/owl#sameAs> <sdf+json#Resource>.
+
+<sdf+json#Resource>
+  dct:date "2025-03-27"^^xsd:date;
+  reg:file [
+      reg:file "application/sdf+json";
+      reg:type "template"];
+  reg:name "sdf+json";
+  reg:xref <https://tools.ietf.org/html/RFC-ietf-asdf-sdf-23>.

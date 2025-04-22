@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+<../media-types.ttl#application>
+  reg:record <vnd.wantverse#Resource>.
+
+<vnd.wantverse> a rdfs:Class;
+  dct:created "2025-04-07"^^xsd:date;
+  dct:identifier "application/vnd.wantverse";
+  rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.wantverse>;
+  rdfs:seeAlso <../../person/John_J_Kolb_V#>;
+  <http://www.w3.org/2002/07/owl#sameAs> <vnd.wantverse#Resource>.
+
+<vnd.wantverse#Resource>
+  dct:date "2025-04-07"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.wantverse";
+      reg:type "template"];
+  reg:name "vnd.wantverse";
+  reg:xref <../../person/John_J_Kolb_V#>.

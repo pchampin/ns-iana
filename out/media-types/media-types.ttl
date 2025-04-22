@@ -15,6 +15,13 @@ PREFIX dct: <http://purl.org/dc/terms/>
         ".",
         "Approved by IESG on 2024-05-02 in accordance with";
       reg:xref <https://datatracker.ietf.org/doc/minutes-interim-2024-iesg-10-202405021400/>,
+        <https://tools.ietf.org/html/rfc6838>],
+    [
+      reg:anchor "2";
+      reg:footnote ", Appendix A.",
+        ".",
+        "Approved by IESG on 2024-10-17 in accordance with";
+      reg:xref <https://datatracker.ietf.org/doc/minutes-interim-2024-iesg-21-202410171400/>,
         <https://tools.ietf.org/html/rfc6838>];
   reg:id "application";
   reg:record <application/1d-interleaved-parityfec#Resource>,
@@ -126,6 +133,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/cea-2018+xml#Resource>,
     <application/cellml+xml#Resource>,
     <application/cfw#Resource>,
+    <application/cid#Resource>,
     <application/cid-edhoc+cbor-seq#Resource>,
     <application/city+json#Resource>,
     <application/city+json-seq#Resource>,
@@ -431,6 +439,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/scvp-cv-response#Resource>,
     <application/scvp-vp-request#Resource>,
     <application/scvp-vp-response#Resource>,
+    <application/sdf+json#Resource>,
     <application/sdp#Resource>,
     <application/secevent+jwt#Resource>,
     <application/senml+cbor#Resource>,
@@ -491,6 +500,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/taxii+json#Resource>,
     <application/td+json#Resource>,
     <application/tei+xml#Resource>,
+    <application/texinfo#Resource>,
     <application/thraud+xml#Resource>,
     <application/timestamp-query#Resource>,
     <application/timestamp-reply#Resource>,
@@ -708,6 +718,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/vnd.canon-cpdl#Resource>,
     <application/vnd.canon-lips#Resource>,
     <application/vnd.capasystems-pg+json#Resource>,
+    <application/vnd.cel#Resource>,
     <application/vnd.cendio.thinlinc.clientconf#Resource>,
     <application/vnd.century-systems.tcp_stream#Resource>,
     <application/vnd.chemdraw+xml#Resource>,
@@ -1393,6 +1404,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/vnd.piaccess.application-licence#Resource>,
     <application/vnd.picsel#Resource>,
     <application/vnd.pmi.widget#Resource>,
+    <application/vnd.pmtiles#Resource>,
     <application/vnd.poc.group-advertisement+xml#Resource>,
     <application/vnd.pocketlearn#Resource>,
     <application/vnd.powerbuilder6#Resource>,
@@ -1493,6 +1505,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/vnd.stepmania.stepchart#Resource>,
     <application/vnd.street-stream#Resource>,
     <application/vnd.sun.wadl+xml#Resource>,
+    <application/vnd.superfile.super#Resource>,
     <application/vnd.sus-calendar#Resource>,
     <application/vnd.svd#Resource>,
     <application/vnd.swiftview-ics#Resource>,
@@ -1558,6 +1571,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <application/vnd.vividence.scriptfile#Resource>,
     <application/vnd.vocalshaper.vsp4#Resource>,
     <application/vnd.vsf#Resource>,
+    <application/vnd.wantverse#Resource>,
     <application/vnd.wap.sic#Resource>,
     <application/vnd.wap.slc#Resource>,
     <application/vnd.wap.wbxml#Resource>,
@@ -1909,6 +1923,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <image/tiff-fx#Resource>,
     <image/vnd.adobe.photoshop#Resource>,
     <image/vnd.airzip.accelerator.azv#Resource>,
+    <image/vnd.blockfact.facti#Resource>,
     <image/vnd.clip#Resource>,
     <image/vnd.cns.inf2#Resource>,
     <image/vnd.dece.graphic#Resource>,
@@ -1962,7 +1977,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <#multipart>,
     <#text>,
     <#video>;
-  reg:updated "2025-03-20";
+  reg:updated "2025-04-21";
   reg:xref <https://tools.ietf.org/html/rfc4855>,
     <https://tools.ietf.org/html/rfc6838>.
 
@@ -2256,6 +2271,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Eclipse_Ditto_developers#>,
     <../person/Ecma_International_Helpdesk#>,
     <../person/Edwin_Heredia#>,
+    <../person/Egbert_von_Frankenberg#>,
     <../person/Ehud_Shapiro#>,
     <../person/ElectronicZombieCorp#>,
     <../person/Eli_Grey#>,
@@ -2431,6 +2447,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/John_Clark#>,
     <../person/John_Ellson#>,
     <../person/John_Ingi_Ingimundarson#>,
+    <../person/John_J_Kolb_V#>,
     <../person/John_Kemp#>,
     <../person/John_Kwan#>,
     <../person/John_Lines#>,
@@ -2529,6 +2546,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Martin_Bailey#>,
     <../person/Martin_Cizek#>,
     <../person/Martin_Dawe#>,
+    <../person/Martin_Haug#>,
     <../person/Martin_Knowles#>,
     <../person/Martin_Lambert#>,
     <../person/Martin_Talbot#>,
@@ -2554,6 +2572,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Mi_Tar#>,
     <../person/Michael_A_Dolan#>,
     <../person/Michael_Ashbridge#>,
+    <../person/Michael_B_Jones#>,
     <../person/Michael_Borcherds#>,
     <../person/Michael_Boyle#>,
     <../person/Michael_C._Fanning#>,
@@ -2718,6 +2737,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Samu_Sarivaara#>,
     <../person/Sang_Min_Park#>,
     <../person/Sapan_Shah#>,
+    <../person/Sascha_Brawer#>,
     <../person/Satish_Navarajan#>,
     <../person/Saurabh_Bhatia#>,
     <../person/Saveen_Reddy#>,
@@ -2734,6 +2754,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Seiji_Okudaira#>,
     <../person/Sequence_Ontology#>,
     <../person/Serge_De_Jaham#>,
+    <../person/Shane_Valdez#>,
     <../person/Shawn_Maloney#>,
     <../person/Shay_Cicelsky#>,
     <../person/Shicheng_Hu#>,
@@ -2747,6 +2768,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Simon_Birtwistle#>,
     <../person/Simon_Butcher#>,
     <../person/Simon_Johnston#>,
+    <../person/Simon_Josefsson#>,
     <../person/Slawomir_Lisznianski#>,
     <../person/Sridhar_Ramakrishnan#>,
     <../person/Stefan_Eilemann#>,
@@ -2815,6 +2837,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <../person/Tomohiro_Yamamoto#>,
     <../person/Tor_Kristensen#>,
     <../person/Torben_Frey#>,
+    <../person/Tristan_Swadell#>,
     <../person/Troy_Sandal#>,
     <../person/UEFI_Forum#>,
     <../person/Uli_Klumpp#>,
@@ -2961,6 +2984,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
     <text/vnd.sosi#Resource>,
     <text/vnd.sun.j2me.app-descriptor#Resource>,
     <text/vnd.trolltech.linguist#Resource>,
+    <text/vnd.typst#Resource>,
     <text/vnd.vcf#Resource>,
     <text/vnd.wap.si#Resource>,
     <text/vnd.wap.sl#Resource>,
@@ -4229,6 +4253,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2005-12-20";
   reg:uri "mailto:eheredia&microsoft.com".
 
+<../person/Egbert_von_Frankenberg#>
+  reg:id "Egbert_von_Frankenberg";
+  reg:name "Egbert von Frankenberg";
+  reg:updated "2025-04-18";
+  reg:uri "mailto:egbert&blockfact.io".
+
 <../person/Ehud_Shapiro#>
   reg:id "Ehud_Shapiro";
   reg:name "Ehud Shapiro".
@@ -5270,6 +5300,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2003-12-20";
   reg:uri "mailto:jii&oz.com".
 
+<../person/John_J_Kolb_V#>
+  reg:id "John_J_Kolb_V";
+  reg:name "John J. Kolb V";
+  reg:updated "2025-04-07";
+  reg:uri "mailto:simulacrum0&gmail.com".
+
 <../person/John_Kemp#>
   reg:id "John_Kemp";
   reg:name "John Kemp";
@@ -5853,6 +5889,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2011-01-27";
   reg:uri "mailto:mdawe&hitnmix.com".
 
+<../person/Martin_Haug#>
+  reg:id "Martin_Haug";
+  reg:name "Martin Haug";
+  reg:updated "2025-04-01";
+  reg:uri "mailto:martin.haug&typst.app".
+
 <../person/Martin_Knowles#>
   reg:id "Martin_Knowles";
   reg:name "Martin Knowles";
@@ -6002,6 +6044,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "Michael Ashbridge";
   reg:updated "2006-12-14";
   reg:uri "mailto:mashbridge+iana&google.com".
+
+<../person/Michael_B_Jones#>
+  reg:id "Michael_B_Jones";
+  reg:name "Michael B Jones";
+  reg:updated "2025-04-18";
+  reg:uri "mailto:michael_b_jones&hotmail.com".
 
 <../person/Michael_Borcherds#>
   reg:id "Michael_Borcherds";
@@ -6982,6 +7030,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2023-03-20";
   reg:uri "mailto:sapan.shah&samsung.com".
 
+<../person/Sascha_Brawer#>
+  reg:id "Sascha_Brawer";
+  reg:name "Sascha Brawer";
+  reg:updated "2025-04-17";
+  reg:uri "mailto:sascha&brawer.ch".
+
 <../person/Satish_Navarajan#>
   reg:id "Satish_Navarajan";
   reg:name "Satish Natarajan";
@@ -7078,6 +7132,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2006-03-27";
   reg:uri "mailto:sdejaham&aeta-audio.com".
 
+<../person/Shane_Valdez#>
+  reg:id "Shane_Valdez";
+  reg:name "Shane Valdez";
+  reg:updated "2025-04-18";
+  reg:uri "mailto:shane&superfile.com".
+
 <../person/Shawn_Maloney#>
   reg:id "Shawn_Maloney";
   reg:name "Shawn Maloney";
@@ -7155,6 +7215,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "Simon Johnston";
   reg:updated "2022-07-20";
   reg:uri "mailto:johnstonskj&gmail.com".
+
+<../person/Simon_Josefsson#>
+  reg:id "Simon_Josefsson";
+  reg:name "Simon Josefsson";
+  reg:updated "2025-04-17";
+  reg:uri "mailto:simon&josefsson.org".
 
 <../person/Slawomir_Lisznianski#>
   reg:id "Slawomir_Lisznianski";
@@ -7561,6 +7627,12 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:updated "2003-10-20";
   reg:uri "mailto:frey&genomatix.de".
 
+<../person/Tristan_Swadell#>
+  reg:id "Tristan_Swadell";
+  reg:name "Tristan Swadell";
+  reg:updated "2025-04-21";
+  reg:uri "mailto:tswadell&google.com".
+
 <../person/Troy_Sandal#>
   reg:id "Troy_Sandal";
   reg:name "Troy Sandal";
@@ -7689,7 +7761,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
 <../person/W3C_Verifiable_Credentials_WG#>
   reg:id "W3C_Verifiable_Credentials_WG";
   reg:name "W3C Verifiable Credentials Working Group";
-  reg:updated "2024-12-09";
+  reg:updated "2025-04-18";
   reg:uri "mailto:public-vc-wg&w3.org".
 
 <../person/WAP-Forum#>
@@ -8754,6 +8826,15 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:type "template"];
   reg:name "cfw";
   reg:xref <https://tools.ietf.org/html/rfc6230>.
+
+<application/cid#Resource>
+  dct:date "2025-04-18"^^xsd:date;
+  reg:file [
+      reg:file "application/cid";
+      reg:type "template"];
+  reg:name "cid";
+  reg:xref <../person/Michael_B_Jones#>,
+    <../person/W3C_Verifiable_Credentials_WG#>.
 
 <application/cid-edhoc+cbor-seq#Resource>
   dct:date "2023-08-29"^^xsd:date;
@@ -11114,6 +11195,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "scvp-vp-response";
   reg:xref <https://tools.ietf.org/html/rfc5055>.
 
+<application/sdf+json#Resource>
+  dct:date "2025-03-27"^^xsd:date;
+  reg:file [
+      reg:file "application/sdf+json";
+      reg:type "template"];
+  reg:name "sdf+json";
+  reg:xref <https://tools.ietf.org/html/RFC-ietf-asdf-sdf-23>.
+
 <application/sdp#Resource>
   reg:file [
       reg:file "application/sdp";
@@ -11575,6 +11664,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "tei+xml";
   reg:xref <https://tools.ietf.org/html/rfc6129>.
 
+<application/texinfo#Resource>
+  dct:date "2025-04-17"^^xsd:date;
+  reg:file [
+      reg:file "application/texinfo";
+      reg:type "template"];
+  reg:name "texinfo";
+  reg:xref <../person/Simon_Josefsson#>.
+
 <application/thraud+xml#Resource>
   reg:file [
       reg:file "application/thraud+xml";
@@ -11660,7 +11757,10 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "application/toml";
       reg:type "template"];
   reg:name "toml";
-  reg:xref <../person/Ben_van_Hartingsveldt#>,
+  reg:xref [
+      reg:data "2";
+      reg:type "note"],
+    <../person/Ben_van_Hartingsveldt#>,
     <https://github.com/toml-lang/toml/issues/870>.
 
 <application/trickle-ice-sdpfrag#Resource>
@@ -13285,6 +13385,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "vnd.capasystems-pg+json";
   reg:xref <../person/Yüksel_Aydemir#>.
 
+<application/vnd.cel#Resource>
+  dct:date "2025-04-21"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.cel";
+      reg:type "template"];
+  reg:name "vnd.cel";
+  reg:xref <../person/Tristan_Swadell#>.
+
 <application/vnd.cendio.thinlinc.clientconf#Resource>
   reg:file [
       reg:file "application/vnd.cendio.thinlinc.clientconf";
@@ -14533,7 +14641,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "application/vnd.fdsn.mseed";
       reg:type "template"];
   reg:name "vnd.fdsn.mseed";
-  reg:updated "2025-01-02";
+  reg:updated "2025-03-31";
   reg:xref <../person/International_FDSN#>.
 
 <application/vnd.fdsn.seed#Resource>
@@ -18354,6 +18462,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "vnd.pmi.widget";
   reg:xref <../person/Rhys_Lewis#>.
 
+<application/vnd.pmtiles#Resource>
+  dct:date "2025-04-17"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.pmtiles";
+      reg:type "template"];
+  reg:name "vnd.pmtiles";
+  reg:xref <../person/Sascha_Brawer#>.
+
 <application/vnd.poc.group-advertisement+xml#Resource>
   reg:file [
       reg:file "application/vnd.poc.group-advertisement+xml";
@@ -19080,6 +19196,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "vnd.sun.wadl+xml";
   reg:xref <../person/Marc_Hadley#>.
 
+<application/vnd.superfile.super#Resource>
+  dct:date "2025-04-18"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.superfile.super";
+      reg:type "template"];
+  reg:name "vnd.superfile.super";
+  reg:xref <../person/Shane_Valdez#>.
+
 <application/vnd.sus-calendar#Resource>
   reg:file [
       reg:file "application/vnd.sus-calendar";
@@ -19556,6 +19680,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:type "template"];
   reg:name "vnd.vsf";
   reg:xref <../person/Delton_Rowe#>.
+
+<application/vnd.wantverse#Resource>
+  dct:date "2025-04-07"^^xsd:date;
+  reg:file [
+      reg:file "application/vnd.wantverse";
+      reg:type "template"];
+  reg:name "vnd.wantverse";
+  reg:xref <../person/John_J_Kolb_V#>.
 
 <application/vnd.wap.sic#Resource>
   reg:file [
@@ -22037,6 +22169,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "vnd.airzip.accelerator.azv";
   reg:xref <../person/Gary_Clueit#>.
 
+<image/vnd.blockfact.facti#Resource>
+  dct:date "2025-04-18"^^xsd:date;
+  reg:file [
+      reg:file "image/vnd.blockfact.facti";
+      reg:type "template"];
+  reg:name "vnd.blockfact.facti";
+  reg:xref <../person/Egbert_von_Frankenberg#>.
+
 <image/vnd.clip#Resource>
   dct:date "2025-03-06"^^xsd:date;
   reg:file [
@@ -23577,6 +23717,14 @@ PREFIX dct: <http://purl.org/dc/terms/>
   reg:name "vnd.trolltech.linguist";
   reg:xref <../person/David_Lee_Lambert#>.
 
+<text/vnd.typst#Resource>
+  dct:date "2025-04-01"^^xsd:date;
+  reg:file [
+      reg:file "text/vnd.typst";
+      reg:type "template"];
+  reg:name "vnd.typst";
+  reg:xref <../person/Martin_Haug#>.
+
 <text/vnd.vcf#Resource>
   dct:date "2024-06-27"^^xsd:date;
   reg:file [
@@ -23855,7 +24003,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
       reg:file "video/VP9";
       reg:type "template"];
   reg:name "VP9";
-  reg:xref <https://tools.ietf.org/html/RFC-ietf-payload-vp9-16>.
+  reg:xref <https://tools.ietf.org/html/rfc9628>.
 
 <video/encaprtp#Resource>
   reg:file [
