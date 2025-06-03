@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -13,7 +14,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/x-www-form-urlencoded>;
   rdfs:seeAlso <../../person/Anne_van_Kesteren#>,
     <../../person/WHATWG#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <x-www-form-urlencoded#Resource>.
+  owl:sameAs <x-www-form-urlencoded#Resource>.
 
 <x-www-form-urlencoded#Resource>
   reg:file [

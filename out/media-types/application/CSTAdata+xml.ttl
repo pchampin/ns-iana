@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -11,7 +12,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:identifier "application/CSTAdata+xml";
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/CSTAdata+xml>;
   rdfs:seeAlso <../../person/Ecma_International_Helpdesk#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <CSTAdata+xml#Resource>.
+  owl:sameAs <CSTAdata+xml#Resource>.
 
 <CSTAdata+xml#Resource>
   reg:file [

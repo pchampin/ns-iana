@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -14,7 +15,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   rdfs:seeAlso <../../person/ISO-IEC_JTC_1#>,
     <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>,
     <../../person/ITU-T#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <j2c#Resource>.
+  owl:sameAs <j2c#Resource>.
 
 <j2c#Resource>
   dct:date "2023-06-12"^^xsd:date;

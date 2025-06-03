@@ -4,7 +4,7 @@ RML ?= /opt/rml/rmlmapper.jar
 
 # ⚠ the hash character ('#') MUST be escaped in the prefix declarations
 RML_PREFIXES=rml:http://w3id.org/rml/
-APP_PREFIXES=reg:https://www.w3.org/ns/assignments/reg\#,dct:http://purl.org/dc/terms/
+APP_PREFIXES=owl:http://www.w3.org/2002/07/owl\#,reg:https://www.w3.org/ns/assignments/reg\#,dct:http://purl.org/dc/terms/
 
 .PHONY: dispatch
 dispatch: out.nq .check-tools

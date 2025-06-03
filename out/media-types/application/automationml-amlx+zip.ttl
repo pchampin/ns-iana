@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -12,7 +13,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:identifier "application/automationml-amlx+zip";
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/automationml-amlx+zip>;
   rdfs:seeAlso <../../person/AutomationML_e.V.#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <automationml-amlx+zip#Resource>.
+  owl:sameAs <automationml-amlx+zip#Resource>.
 
 <automationml-amlx+zip#Resource>
   dct:date "2022-07-20"^^xsd:date;

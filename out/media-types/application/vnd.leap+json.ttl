@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -12,7 +13,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:identifier "application/vnd.leap+json";
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/vnd.leap+json>;
   rdfs:seeAlso <../../person/Mark_C_Fralick#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <vnd.leap+json#Resource>.
+  owl:sameAs <vnd.leap+json#Resource>.
 
 <vnd.leap+json#Resource>
   dct:date "2018-06-26"^^xsd:date;

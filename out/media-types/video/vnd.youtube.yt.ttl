@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -13,7 +14,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:modified "2019-06-07"^^xsd:date;
   rdfs:definedBy <https://www.iana.org/assignments/media-types/video/vnd.youtube.yt>;
   rdfs:seeAlso <../../person/Google#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <vnd.youtube.yt#Resource>.
+  owl:sameAs <vnd.youtube.yt#Resource>.
 
 <vnd.youtube.yt#Resource>
   dct:date "2019-05-24"^^xsd:date;

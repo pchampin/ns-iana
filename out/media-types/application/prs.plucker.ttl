@@ -1,6 +1,7 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX reg: <https://www.w3.org/ns/assignments/reg#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
@@ -11,7 +12,7 @@ PREFIX dct: <http://purl.org/dc/terms/>
   dct:identifier "application/prs.plucker";
   rdfs:definedBy <https://www.iana.org/assignments/media-types/application/prs.plucker>;
   rdfs:seeAlso <../../person/Bill_Janssen#>;
-  <http://www.w3.org/2002/07/owl#sameAs> <prs.plucker#Resource>.
+  owl:sameAs <prs.plucker#Resource>.
 
 <prs.plucker#Resource>
   reg:file [
