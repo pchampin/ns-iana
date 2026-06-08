@@ -34,7 +34,6 @@ media-types.xml:
 	${SOP} parse -u "$<" ! serialize -o "$@" -p "${RML_PREFIXES},${APP_PREFIXES}"
 
 .check-tools:
-	@ [ -x "${YQ}" ] || (echo "\nSet env variable YQ with path to yq\nhttps://github.com/mikefarah/yq\n"; false)
 	@ [ -x "${SOP}" ] || (echo "\nSet env variable SOP with path to sop\nhttps://github.com/pchampin/sophia-cli\n"; false)
 	@ [ -f "${RML}" ] || (echo "\nSet env variable RML with path to rmlmapper.jar\nhttps://github.com/RMLio/rmlmapper-java\n"; false)
 	touch "$@"
