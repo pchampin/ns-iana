@@ -5,6 +5,11 @@
     "id": "@id",
     "type": "@type",
 
+    "byId": {
+      "@id": "_:ignored",
+      "@container": "@id"
+    },
+
     "TriplesMap": "rml:TriplesMap",
     "defaultGraph": "rml:defaultGraph",
 
